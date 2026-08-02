@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Cretáceo Superior",
+    "periodId": 3,
+    "description": "Época final dos dinossauros, apresentando os predadores terrestres mais massivos."
+  },
+  {
+    "id": 2,
+    "name": "Jurássico Superior",
+    "periodId": 2,
+    "description": "O apogeu dos saurópodes gigantes e surgimento das primeiras aves."
+  },
+  {
+    "id": 3,
+    "name": "Cretáceo Inferior",
+    "periodId": 3,
+    "description": "Marcado pela diversificação da flora, com o aparecimento das primeiras angiospermas."
+  }
+]

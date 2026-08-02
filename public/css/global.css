@@ -1,0 +1,100 @@
+/* ==========================================================================
+   global.css — tokens globais do projeto DinoAPI
+   ========================================================================== */
+
+:root {
+  /* Cores — fundo */
+  --cor-fundo: #14100c;
+  --cor-fundo-alt: #1c1712;
+  --cor-fundo-card: #1f1a14;
+  --cor-fundo-card-alt: #2a231c;
+  --cor-borda: #33291d;
+
+  /* Cores — texto */
+  --cor-texto: #ede8de;
+  --cor-texto-suave: #a89e8f;
+  --cor-texto-fraco: #6f665a;
+
+  /* Cores — marca */
+  --cor-laranja: #e8823a;
+  --cor-laranja-claro: #f3a468;
+  --cor-laranja-escuro: #b8611f;
+  --cor-verde: #6fae6a;
+
+  /* Tipografia */
+  --fonte-titulo: "Fraunces", "Georgia", serif;
+  --fonte-corpo: "Inter", "Segoe UI", Arial, sans-serif;
+  --fonte-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  /* Espaçamentos */
+  --espaco-xs: 0.5rem;
+  --espaco-sm: 1rem;
+  --espaco-md: 1.75rem;
+  --espaco-lg: 3rem;
+  --espaco-xl: 6rem;
+
+  /* Layout */
+  --largura-max: 1180px;
+  --raio: 10px;
+  --raio-sm: 6px;
+
+  /* Sombra */
+  --sombra-card: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte-corpo);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--largura-max);
+  margin: 0 auto;
+  padding: 0 var(--espaco-sm);
+}
+
+:focus-visible {
+  outline: 2px solid var(--cor-laranja);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

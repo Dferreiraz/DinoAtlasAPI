@@ -1,0 +1,7 @@
+[
+  { "id": 1, "name": "Estados Unidos", "continentId": 1 },
+  { "id": 2, "name": "Mongólia", "continentId": 2 },
+  { "id": 3, "name": "Egito", "continentId": 3 },
+  { "id": 4, "name": "Inglaterra", "continentId": 4 },
+  { "id": 5, "name": "Canadá", "continentId": 1 }
+]

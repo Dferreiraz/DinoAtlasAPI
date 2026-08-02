@@ -1,0 +1,12 @@
+[
+  { "id": 1, "name": "Tyrannosauridae", "description": "Predadores bípedes dominantes no Cretáceo Superior da América do Norte e Ásia." },
+  { "id": 2, "name": "Ceratopsidae", "description": "Herbívoros com chifres elaborados e escudos ósseos no crânio." },
+  { "id": 3, "name": "Stegosauridae", "description": "Herbívoros que possuíam placas dorsais e caudas com espigões." },
+  { "id": 4, "name": "Brachiosauridae", "description": "Saurópodes gigantes com pernas dianteiras mais longas que as traseiras." },
+  { "id": 5, "name": "Dromaeosauridae", "description": "Terópodes ágeis, com garras em forma de foice nos pés, parentes das aves." },
+  { "id": 6, "name": "Spinosauridae", "description": "Predadores gigantes com focinhos longos semelhantes aos de crocodilos." },
+  { "id": 7, "name": "Allosauridae", "description": "Grandes carnívoros bípedes dominantes do Jurássico Superior." },
+  { "id": 8, "name": "Ankylosauridae", "description": "Herbívoros fortemente blindados com clavas ósseas pesadas na cauda." },
+  { "id": 9, "name": "Diplodocidae", "description": "Saurópodes extremamente longos com caudas em formato de chicote." },
+  { "id": 10, "name": "Hadrosauridae", "description": "Conhecidos como dinossauros bico-de-pato, formavam rebanhos imensos." }
+]

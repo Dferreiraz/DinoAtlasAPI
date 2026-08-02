@@ -1,0 +1,7 @@
+[
+  { "id": 1, "name": "Coelurosauria", "description": "Terópodes mais próximos das aves do que dos carnossauros." },
+  { "id": 2, "name": "Marginocephalia", "description": "Ornitísquios caracterizados por uma franja óssea na parte posterior do crânio." },
+  { "id": 3, "name": "Thyreophora", "description": "Dinossauros encouraçados com placas ou espinhos ósseos." },
+  { "id": 4, "name": "Macronaria", "description": "Saurópodes caracterizados pelas grandes narinas altas no crânio." },
+  { "id": 5, "name": "Ornithopoda", "description": "Herbívoros bípedes/quadrúpedes com bicos sofisticados para mastigação." }
+]

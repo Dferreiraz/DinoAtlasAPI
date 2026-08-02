@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "América do Norte",
+    "description": "Continente que abriga vastas formações fossilíferas, como a Formação Hell Creek e Morrison."
+  },
+  {
+    "id": 2,
+    "name": "Ásia",
+    "description": "Famoso por descobertas em desertos como Gobi, revelando dinossauros com penas e ninhos fossilizados."
+  },
+  {
+    "id": 3,
+    "name": "África",
+    "description": "Continente com descobertas incríveis do Cretáceo e Jurássico, incluindo enormes terópodes."
+  },
+  {
+    "id": 4,
+    "name": "Europa",
+    "description": "Berço das primeiras descobertas de dinossauros na história moderna da paleontologia."
+  }
+]

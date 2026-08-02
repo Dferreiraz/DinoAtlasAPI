@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Planícies de Inundação e Pântanos",
+    "description": "Áreas ricas em vegetação e umidade, suportando imensas populações de herbívoros."
+  },
+  {
+    "id": 2,
+    "name": "Florestas Abertas",
+    "description": "Grandes extensões de florestas de coníferas e cicadófitas."
+  },
+  {
+    "id": 3,
+    "name": "Desertos e Dunas",
+    "description": "Ambientes áridos com tempestades de areia constantes."
+  },
+  {
+    "id": 4,
+    "name": "Costeiros e Manguezais",
+    "description": "Zonas de encontro entre o mar e os rios, ricas em peixes."
+  }
+]

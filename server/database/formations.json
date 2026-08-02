@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Formação Hell Creek",
+    "countryId": 1,
+    "description": "Uma das formações mais estudadas do mundo, abrangendo Montana, Wyoming e as Dakotas nos EUA."
+  },
+  {
+    "id": 2,
+    "name": "Formação Morrison",
+    "countryId": 1,
+    "description": "Extensa sequência de rochas sedimentares do Jurássico Superior no oeste dos EUA."
+  },
+  {
+    "id": 3,
+    "name": "Formação Djadochta",
+    "countryId": 2,
+    "description": "Localizada no Deserto de Gobi, famosa por preservar fósseis incrivelmente detalhados."
+  },
+  {
+    "id": 4,
+    "name": "Formação Bahariya",
+    "countryId": 3,
+    "description": "Oásis no Egito contendo importantes descobertas de grandes terópodes."
+  },
+  {
+    "id": 5,
+    "name": "Formação Dinosaur Park",
+    "countryId": 5,
+    "description": "Localizada em Alberta, Canadá, abriga uma das maiores concentrações de fósseis de dinossauros."
+  }
+]

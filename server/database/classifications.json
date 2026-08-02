@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Theropoda",
+    "description": "Dinossauros bípedes, a maioria carnívoros. É a subordem que deu origem às aves."
+  },
+  {
+    "id": 2,
+    "name": "Sauropodomorpha",
+    "description": "Dinossauros de pescoço e cauda longos, herbívoros gigantescos."
+  },
+  {
+    "id": 3,
+    "name": "Ornithischia",
+    "description": "Dinossauros com pélvis semelhante a das aves. Eram todos herbívoros."
+  }
+]

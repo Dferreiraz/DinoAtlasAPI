@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Triássico",
+    "startMillionYears": 251.9,
+    "endMillionYears": 201.3,
+    "description": "O período inicial da Era Mesozoica, marcado pelo surgimento dos primeiros dinossauros após a extinção do Permiano."
+  },
+  {
+    "id": 2,
+    "name": "Jurássico",
+    "startMillionYears": 201.3,
+    "endMillionYears": 145.0,
+    "description": "Período onde os dinossauros se diversificaram imensamente, dominando o planeta com imensos saurópodes."
+  },
+  {
+    "id": 3,
+    "name": "Cretáceo",
+    "startMillionYears": 145.0,
+    "endMillionYears": 66.0,
+    "description": "O último e mais longo período da Era Mesozoica, que terminou com o impacto do asteroide que extinguiu os dinossauros não-avianos."
+  }
+]

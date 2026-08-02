@@ -1,0 +1,12 @@
+[
+  { "id": 1, "thumbnail": "https://dinoapi.com/img/trex-thumb.jpg", "image": "https://dinoapi.com/img/trex.jpg", "author": "DinoAPI", "license": "Creative Commons" },
+  { "id": 2, "thumbnail": "https://dinoapi.com/img/triceratops-thumb.jpg", "image": "https://dinoapi.com/img/triceratops.jpg", "author": "DinoAPI", "license": "Creative Commons" },
+  { "id": 3, "thumbnail": "https://dinoapi.com/img/stegosaurus-thumb.jpg", "image": "https://dinoapi.com/img/stegosaurus.jpg", "author": "DinoAPI", "license": "Creative Commons" },
+  { "id": 4, "thumbnail": "https://dinoapi.com/img/brachiosaurus-thumb.jpg", "image": "https://dinoapi.com/img/brachiosaurus.jpg", "author": "DinoAPI", "license": "Creative Commons" },
+  { "id": 5, "thumbnail": "https://dinoapi.com/img/velociraptor-thumb.jpg", "image": "https://dinoapi.com/img/velociraptor.jpg", "author": "DinoAPI", "license": "Creative Commons" },
+  { "id": 6, "thumbnail": "https://dinoapi.com/img/spinosaurus-thumb.jpg", "image": "https://dinoapi.com/img/spinosaurus.jpg", "author": "DinoAPI", "license": "Creative Commons" },
+  { "id": 7, "thumbnail": "https://dinoapi.com/img/allosaurus-thumb.jpg", "image": "https://dinoapi.com/img/allosaurus.jpg", "author": "DinoAPI", "license": "Creative Commons" },
+  { "id": 8, "thumbnail": "https://dinoapi.com/img/ankylosaurus-thumb.jpg", "image": "https://dinoapi.com/img/ankylosaurus.jpg", "author": "DinoAPI", "license": "Creative Commons" },
+  { "id": 9, "thumbnail": "https://dinoapi.com/img/diplodocus-thumb.jpg", "image": "https://dinoapi.com/img/diplodocus.jpg", "author": "DinoAPI", "license": "Creative Commons" },
+  { "id": 10, "thumbnail": "https://dinoapi.com/img/parasaurolophus-thumb.jpg", "image": "https://dinoapi.com/img/parasaurolophus.jpg", "author": "DinoAPI", "license": "Creative Commons" }
+]

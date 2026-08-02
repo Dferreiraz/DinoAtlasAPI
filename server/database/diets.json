@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Carnívoro",
+    "description": "Alimentação baseada no consumo de outros animais."
+  },
+  {
+    "id": 2,
+    "name": "Herbívoro",
+    "description": "Alimentação baseada no consumo de plantas."
+  },
+  {
+    "id": 3,
+    "name": "Piscívoro",
+    "description": "Alimentação especializada no consumo de peixes e animais aquáticos."
+  }
+]

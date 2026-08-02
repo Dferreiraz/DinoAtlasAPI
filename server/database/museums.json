@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Field Museum of Natural History",
+    "countryId": 1,
+    "city": "Chicago",
+    "website": "https://www.fieldmuseum.org"
+  },
+  {
+    "id": 2,
+    "name": "American Museum of Natural History",
+    "countryId": 1,
+    "city": "Nova York",
+    "website": "https://www.amnh.org"
+  },
+  {
+    "id": 3,
+    "name": "Egyptian Museum",
+    "countryId": 3,
+    "city": "Cairo",
+    "website": "https://egymonuments.gov.eg"
+  }
+]

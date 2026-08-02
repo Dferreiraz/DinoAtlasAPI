@@ -1,0 +1,11 @@
+{
+  "name": "DinoAPI",
+  "version": "1.0.0",
+  "description": "Uma API RESTful pública e gratuita fornecendo dados estruturados e científicos sobre dinossauros.",
+  "status": "Em desenvolvimento",
+  "totalDinosaurs": 10,
+  "totalEndpoints": 15,
+  "author": "Davi Ferreira",
+  "github": "https://github.com/Dferreiraz/DinoAPI",
+  "lastUpdate": "2026-08-02"
+}

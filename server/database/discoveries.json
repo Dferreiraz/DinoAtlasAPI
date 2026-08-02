@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "discoveredBy": "Barnum Brown",
+    "year": 1902,
+    "location": "Hell Creek, Montana, EUA",
+    "description": "Descoberta do primeiro esqueleto parcial documentado de T. rex."
+  },
+  {
+    "id": 2,
+    "discoveredBy": "Othniel Charles Marsh",
+    "year": 1889,
+    "location": "Wyoming, EUA",
+    "description": "Nomeação do Triceratops baseada num crânio robusto."
+  },
+  {
+    "id": 3,
+    "discoveredBy": "Othniel Charles Marsh",
+    "year": 1877,
+    "location": "Colorado, EUA",
+    "description": "Primeiros vestígios do Stegosaurus durante a Guerra dos Ossos."
+  },
+  {
+    "id": 4,
+    "discoveredBy": "Elmer S. Riggs",
+    "year": 1900,
+    "location": "Colorado, EUA",
+    "description": "Descoberta do gigante Brachiosaurus no oeste americano."
+  },
+  {
+    "id": 5,
+    "discoveredBy": "Peter Kaisen",
+    "year": 1923,
+    "location": "Deserto de Gobi, Mongólia",
+    "description": "O crânio amassado e uma garra do Velociraptor recuperados pela expedição AMNH."
+  },
+  {
+    "id": 6,
+    "discoveredBy": "Ernst Stromer",
+    "year": 1912,
+    "location": "Oásis de Bahariya, Egito",
+    "description": "Fósseis impressionantes de um predador colossal aquático, muitos destruídos na 2ª Guerra Mundial."
+  },
+  {
+    "id": 7,
+    "discoveredBy": "Othniel Charles Marsh",
+    "year": 1877,
+    "location": "Formação Morrison, EUA",
+    "description": "Descoberta do carnívoro jurássico dominante, o Allosaurus."
+  },
+  {
+    "id": 8,
+    "discoveredBy": "Barnum Brown",
+    "year": 1906,
+    "location": "Formação Hell Creek, EUA",
+    "description": "Descoberta da incrível carapaça blindada do Ankylosaurus."
+  },
+  {
+    "id": 9,
+    "discoveredBy": "Othniel Charles Marsh",
+    "year": 1878,
+    "location": "Formação Morrison, EUA",
+    "description": "Descoberta do imenso e longo Diplodocus."
+  },
+  {
+    "id": 10,
+    "discoveredBy": "William Parks",
+    "year": 1922,
+    "location": "Alberta, Canadá",
+    "description": "Descoberta notável do dinossauro bico-de-pato com a crista tubular."
+  }
+]
