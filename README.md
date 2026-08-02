@@ -1,13 +1,3 @@
-Fiz o README seguindo o seu modelo, mas adaptado para a **DinoAPI**.
-
-Algumas mudanças:
-
-* coloquei como **🚧 Em construção**, porque ainda estamos criando o projeto;
-* removi partes de React/Figma porque não fazem sentido agora;
-* deixei preparado para quando você adicionar o frontend depois;
-* mantive estilo de README profissional para GitHub.
-
-````markdown
 <h1 align="center"> 
 	🚧 🦖 DinoAPI - Em construção 🚧
 </h1>
