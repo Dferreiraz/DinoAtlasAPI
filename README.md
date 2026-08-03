@@ -16,7 +16,22 @@
 
 <!-- ---------------------------------------------------------------------- -->
 
-## 📄 Descrição do entregável
+
+
+
+## 🌐 API Online
+
+https://dinoapi-swg8.onrender.com/api
+
+## 📚 Documentação
+
+https://dinoapi-swg8.onrender.com
+
+---
+
+<!-- ---------------------------------------------------------------------- -->
+
+## 📖 Descrição
 
 A **DinoAPI** é uma API REST pública de dinossauros desenvolvida para disponibilizar informações paleontológicas de forma simples, organizada e acessível.
 
@@ -61,18 +76,15 @@ A API foi criada pensando em:
 - [x] Estrutura organizada por controllers, routes e middleware
 - [x] Base de dados utilizando arquivos JSON
 - [x] Consulta de dinossauros
-- [x] Busca por ID
-- [x] Busca por nome
-- [x] Filtros por características
 - [x] Paginação de resultados
 - [x] Ordenação de dados
 - [x] Respostas padronizadas em JSON
 - [x] Tratamento de erros
 - [x] Documentação da API
-
+- [x] Site oficial da API
+- [ ] 
 ### Em desenvolvimento:
 
-- [ ] Site oficial da API
 - [ ] Documentação interativa
 - [ ] Mais espécies cadastradas
 - [ ] Melhorias na busca
@@ -87,7 +99,7 @@ A API foi criada pensando em:
 ### 1 - Clonar o projeto
 
 ```bash
-git clone https://github.com/seu-usuario/dinoapi.git
+ggit clone https://github.com/Dferreiraz/DinoAPI.git
 ````
 
 ### 2 - Entrar na pasta
