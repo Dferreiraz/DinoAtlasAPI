@@ -5,7 +5,7 @@
 <!-- ---------------------------------------------------------------------- -->
 
 <p align="center">
- <a href="#-descrição-do-entregável">Descrição</a> •
+ <a href="#-descrição">Descrição</a> •
  <a href="#-sobre-o-projeto">Sobre</a> •
  <a href="#-funcionalidades">Funcionalidades</a> •
  <a href="#-como-executar-o-projeto">Como executar</a> •
@@ -15,9 +15,6 @@
 </p>
 
 <!-- ---------------------------------------------------------------------- -->
-
-
-
 
 ## 🌐 API Online
 
