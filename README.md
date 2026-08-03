@@ -261,10 +261,12 @@ Desenvolvedor Front-End em formação, estudando desenvolvimento de software, AP
 
 <!-- ---------------------------------------------------------------------- -->
 
+<!--
 ## 📝 Licença
 
 Este projeto está sob a licença [MIT](./LICENSE).
 
 Feito por **Davi Ferreira** 👋🏽
+-->
 
 
