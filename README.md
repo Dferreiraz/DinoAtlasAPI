@@ -85,7 +85,6 @@ A API foi criada pensando em:
 - [ ] Documentação interativa
 - [ ] Mais espécies cadastradas
 - [ ] Melhorias na busca
-- [ ] Novos recursos paleontológicos
 
 ---
 
@@ -96,7 +95,7 @@ A API foi criada pensando em:
 ### 1 - Clonar o projeto
 
 ```bash
-ggit clone https://github.com/Dferreiraz/DinoAPI.git
+git clone https://github.com/Dferreiraz/DinoAPI.git
 ````
 
 ### 2 - Entrar na pasta
