@@ -136,7 +136,7 @@ async function testarAPI() {
 
 async function carregarDinossauros() {
     try {
-        const resposta = await fetch(`${API_URL}/dinosaurs`);
+        const resposta = await fetch(`${API_URL}/dinosaurs?limit=12`);
 
         const dados = await resposta.json();
 
@@ -334,47 +334,34 @@ function iniciarModal() {
 }
 
 async function carregarEstatisticas() {
-
     try {
-
         const [
             dinossauros,
             continentes,
             descobertas
         ] = await Promise.all([
-
-            fetch(`${API_URL}/dinosaurs`).then(res => res.json()),
-
+            
+            fetch(`${API_URL}/dinosaurs?limit=12`).then(res => res.json()),
             fetch(`${API_URL}/continents`).then(res => res.json()),
-
             fetch(`${API_URL}/discoveries`).then(res => res.json())
-
         ]);
-
 
         document.getElementById("totalDinossauros").textContent =
             dinossauros.meta.total;
 
-
         document.getElementById("totalContinentes").textContent =
             continentes.data.length;
-
 
         document.getElementById("totalDescobertas").textContent =
             descobertas.data.length;
 
-
         document.getElementById("totalEndpoints").textContent =
             15;
 
-
     } catch (erro) {
-
         console.error(
             "Erro ao carregar estatísticas:",
             erro
         );
-
     }
-
 }
