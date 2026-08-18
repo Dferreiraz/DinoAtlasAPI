@@ -11,7 +11,6 @@
 
 <p align="center">
   •
-  <a href="#-descrição-do-projeto">Descrição</a> •
   <a href="#-sobre-o-projeto">Sobre</a> •
   <a href="#-deploy">Deploy</a> •
   <a href="#-como-executar-o-projeto">Como executar</a> •
@@ -25,20 +24,6 @@
   <a href="#-autor">Autor</a> 
   •
 </p>
-
-<!-- ---------------------------------------------------------------------- -->
-
-## 📄 Descrição do projeto
-
-## 🌐 API Online
-
-https://dinoapi-swg8.onrender.com/api
-
-## 📚 Documentação
-
-https://dinoapi-swg8.onrender.com
-
----
 
 <!-- ---------------------------------------------------------------------- -->
 
@@ -75,6 +60,14 @@ https://dinoapi-swg8.onrender.com/api
 ```
 
 A API pode ser utilizada por aplicações externas através dos endpoints disponíveis.
+
+## 🌐 API Online
+
+https://dinoapi-swg8.onrender.com/api
+
+## 📚 Documentação
+
+https://dinoapi-swg8.onrender.com
 
 ---
 
