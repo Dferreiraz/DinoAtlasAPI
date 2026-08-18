@@ -1,9 +1,9 @@
 # 🦖 Introdução
 
-Bem-vindo à documentação oficial da **DinoAPI**. 
+Bem-vindo à documentação oficial da **DinoAtlasAPI**. 
 
-## O que é a DinoAPI
-A DinoAPI é uma API RESTful pública e totalmente gratuita dedicada a fornecer dados precisos e estruturados sobre dinossauros e o mundo pré-histórico. Inspirada na simplicidade de projetos como a Api-Brazil, ela entrega informações de forma rápida e padronizada.
+## O que é a DinoAtlasAPI
+A DinoAtlasAPI é uma API RESTful pública e totalmente gratuita dedicada a fornecer dados precisos e estruturados sobre dinossauros e o mundo pré-histórico. Inspirada na simplicidade de projetos como a Api-Brazil, ela entrega informações de forma rápida e padronizada.
 
 ## Objetivo do Projeto
 Fornecer uma base de dados centralizada, confiável e de fácil consumo sobre paleontologia para fins educacionais, acadêmicos e de entretenimento, eliminando a necessidade de raspar dados (web scraping) de múltiplas fontes.

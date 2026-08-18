@@ -1,6 +1,6 @@
 # 🛣️ Endpoints
 
-A DinoAPI possui rotas intuitivas para facilitar a busca de dados. Todas as rotas baseiam-se no método `GET`.
+A DinoAtlasAPI possui rotas intuitivas para facilitar a busca de dados. Todas as rotas baseiam-se no método `GET`.
 
 ## Saúde e Status
 

@@ -1,11 +1,11 @@
 # 📂 Estrutura do Projeto
 
-A organização de pastas da DinoAPI foca na modularidade e na separação de responsabilidades. Isso garante que o projeto seja fácil de navegar para novos contribuidores.
+A organização de pastas da DinoAtlasAPI foca na modularidade e na separação de responsabilidades. Isso garante que o projeto seja fácil de navegar para novos contribuidores.
 
 ## Árvore de Diretórios
 
 ```text
-dinoapi/
+dinoatlasapi/
 ├── data/              # Arquivos JSON atuando como banco de dados
 ├── docs/              # Arquivos de documentação em Markdown
 ├── src/               # Código-fonte principal da API
@@ -19,3 +19,4 @@ dinoapi/
 ├── package.json       # Dependências e scripts do projeto
 ├── README.md          # Apresentação do projeto no GitHub
 └── server.js          # Ponto de entrada da aplicação (Entrypoint)
+```

@@ -1,6 +1,6 @@
 # 🔄 Respostas
 
-A DinoAPI utiliza os códigos de status HTTP padrão para indicar o sucesso ou falha de uma requisição. Todas as respostas trafegam em formato JSON.
+A DinoAtlasAPI utiliza os códigos de status HTTP padrão para indicar o sucesso ou falha de uma requisição. Todas as respostas trafegam em formato JSON.
 
 ## Códigos de Status HTTP
 
@@ -29,3 +29,4 @@ A resposta bem-sucedida engloba os dados solicitados. Para listagens, metadados 
     }
   ]
 }
+```

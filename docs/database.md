@@ -1,6 +1,6 @@
 # 🗄️ Banco de Dados
 
-Para garantir alta performance e manter os custos do projeto nulos, a DinoAPI utiliza arquivos `.json` estáticos como seu banco de dados primário. Estes arquivos são carregados em memória pela aplicação, garantindo respostas instantâneas.
+Para garantir alta performance e manter os custos do projeto nulos, a DinoAtlasAPI utiliza arquivos `.json` estáticos como seu banco de dados primário. Estes arquivos são carregados em memória pela aplicação, garantindo respostas instantâneas.
 
 ## Estrutura dos Arquivos JSON
 
