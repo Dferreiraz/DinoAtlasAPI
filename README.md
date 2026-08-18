@@ -10,16 +10,20 @@
 <!-- ---------------------------------------------------------------------- -->
 
 <p align="center">
+  •
   <a href="#-descrição-do-projeto">Descrição</a> •
   <a href="#-sobre-o-projeto">Sobre</a> •
   <a href="#-deploy">Deploy</a> •
   <a href="#-como-executar-o-projeto">Como executar</a> •
   <a href="#-exemplos-de-endpoints">Endpoints</a> •
+<br>
+  •
   <a href="#-pré-requisitos">Pré-requisitos</a> •
   <a href="#-tecnologias">Tecnologias</a> •
   <a href="#-estrutura-do-projeto">Estrutura</a> •
   <a href="#-como-contribuir">Contribuir</a> •
-  <a href="#-autor">Autor</a> •
+  <a href="#-autor">Autor</a> 
+  •
 </p>
 
 <!-- ---------------------------------------------------------------------- -->
