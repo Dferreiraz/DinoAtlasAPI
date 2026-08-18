@@ -4,10 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DinoAPI — API REST de Dinossauros</title>
-  <meta name="description"
-    content="Uma API REST gratuita com informações científicas sobre dinossauros, períodos geológicos e descobertas fósseis." />
-  <link rel="icon" type="image/x-icon" href="./img/dinoapi_logo.png" />
+  <title>DinoAtlas API - O Atlas Digital dos Dinossauros</title>
+  <meta name="description" content="DinoAtlas API - Uma API REST pública para dados estruturados sobre dinossauros.">
+  <link rel="icon" type="image/x-icon" href="./img/dinoatlasapi_logo.png" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -17,7 +16,7 @@
   <header class="cabecalho">
     <div class="container cabecalho__conteudo">
       <a href="#" class="cabecalho__logo">
-        <img src="./img/dinoapi_logo.png" alt="DinoAPI" />
+        <img src="./img/dinoatlasapi_logo.png" alt="DinoAtlasAPI" />
       </a>
 
       <nav class="navegacao" id="navegacao">
@@ -25,7 +24,7 @@
           <li><a href="#inicio" class="navegacao__link navegacao__link--ativo">Home</a></li>
           <li><a href="#endpoints" class="navegacao__link">Endpoints</a></li>
           <li><a href="#implementacao" class="navegacao__link">Documentação</a></li>
-          <li><a href="https://github.com" class="navegacao__link">GitHub</a></li>
+          <li><a href="https://github.com/Dferreiraz/DinoAtlasAPI" class="navegacao__link">GitHub</a></li>
         </ul>
 
         <div class="navegacao__acoes-mobile">
@@ -62,7 +61,7 @@
       <div class="hero__sombra"></div>
 
       <div class="container hero__conteudo">
-        <span class="etiqueta"><span class="etiqueta__ponto"></span>API V1.0 IS LIVE</span>
+        <span class="etiqueta"><span class="etiqueta__ponto"></span>API V2.0 IS LIVE</span>
 
         <h1 class="hero__titulo">
           Explore milhões<br />
@@ -130,7 +129,7 @@
         <div class="sobre__cabecalho">
           <h2 class="sobre__titulo">Sobre a API: Simples, rápida e gratuita para todos.</h2>
           <p class="sobre__texto">
-            Construída com foco em performance e precisão científica, a DinoAPI é
+            Construída com foco em performance e precisão científica, a DinoAtlasAPI é
             uma ferramenta de código aberto que serve dados curados para projetos
             educacionais, sites informativos e aplicações mobile.
           </p>
@@ -241,7 +240,7 @@
               <span class="janela-codigo__bolinha janela-codigo__bolinha--verde"></span>
               <span class="janela-codigo__nome">fetch-dino.js</span>
             </div>
-            <pre class="janela-codigo__corpo"><code><span class="tk-funcao">fetch</span>(<span class="tk-string">"https://api.dinoapi.com/api/dinosaurs"</span>)
+            <pre class="janela-codigo__corpo"><code><span class="tk-funcao">fetch</span>(<span class="tk-string">"https://api.dinoatlasapi.com/api/dinosaurs"</span>)
   .then(response =&gt; response.json())
   .then(data =&gt; {
     console.log(data);
@@ -303,15 +302,15 @@
   <footer class="rodape">
     <div class="container rodape__conteudo">
       <div class="rodape__marca">
-        <img src="./img/dinoapi_logo.png" alt="DinoAPI" class="rodape__logo" />
-        <p class="rodape__copyright">© 2026 DinoAPI Developed by Davi Ferreira. MIT License.</p>
+        <img src="./img/dinoatlasapi_logo.png" alt="DinoAtlasAPI" class="rodape__logo" />
+        <p class="rodape__copyright">© 2026 DinoAtlasAPI Developed by Davi Ferreira. MIT License.</p>
       </div>
 
       <div class="rodape__colunas">
         <div class="rodape__coluna">
           <h4 class="rodape__titulo-coluna">Resources</h4>
           <a href="#implementacao">Documentation</a>
-          <a href="https://github.com">GitHub</a>
+          <a href="https://github.com/Dferreiraz/DinoAtlasAPI">GitHub</a>
         </div>
         <div class="rodape__coluna">
           <h4 class="rodape__titulo-coluna">Status</h4>

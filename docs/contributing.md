@@ -1,6 +1,6 @@
 # 🤝 Contribuição
 
-A DinoAPI é um projeto colaborativo e todas as contribuições são bem-vindas! Seja adicionando um novo dinossauro, corrigindo um erro ortográfico ou melhorando o código da aplicação.
+A DinoAtlasAPI é um projeto colaborativo e todas as contribuições são bem-vindas! Seja adicionando um novo dinossauro, corrigindo um erro ortográfico ou melhorando o código da aplicação.
 
 ## Como Contribuir
 

@@ -1,6 +1,6 @@
 # 💻 Instalação
 
-Siga os passos abaixo para rodar a DinoAPI no seu ambiente local.
+Siga os passos abaixo para rodar a DinoAtlasAPI no seu ambiente local.
 
 ## Pré-requisitos
 Antes de começar, certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
@@ -11,8 +11,8 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas em s
 Clone o repositório oficial e instale os pacotes necessários:
 
 ```bash
-git clone [https://github.com/seu-usuario/dinoapi.git](https://github.com/seu-usuario/dinoapi.git)
-cd dinoapi
+git clone [https://github.com/Dferreiraz/DinoAtlasAPI.git](https://github.com/Dferreiraz/DinoAtlasAPI.git)
+cd dinoatlasapi
 npm install
 ```
 
