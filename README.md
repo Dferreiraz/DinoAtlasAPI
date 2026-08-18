@@ -119,6 +119,7 @@ A API pode ser utilizada por aplicações externas através dos endpoints dispon
 
 ```bash
 git clone https://github.com/Dferreiraz/DinoAtlasAPI.git
+```
 
 ### 2 - Entrar na pasta
 
