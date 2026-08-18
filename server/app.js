@@ -1,8 +1,3 @@
-/**
- * app.js
- * Configuração principal da aplicação Express (sem inicialização de porta).
- */
-
 const express = require('express');
 const routes = require('./routes');
 const middleware = require('./middleware');

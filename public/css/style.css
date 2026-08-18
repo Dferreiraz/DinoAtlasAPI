@@ -670,6 +670,7 @@
   letter-spacing: 0.12em;
   color: var(--cor-texto-fraco);
   margin-bottom: var(--espaco-md);
+  text-transform: uppercase;
 }
 
 .stack__lista {
