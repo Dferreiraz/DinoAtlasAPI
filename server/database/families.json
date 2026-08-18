@@ -1,12 +1,142 @@
 [
-  { "id": 1, "name": "Tyrannosauridae", "description": "Predadores bípedes dominantes no Cretáceo Superior da América do Norte e Ásia." },
-  { "id": 2, "name": "Ceratopsidae", "description": "Herbívoros com chifres elaborados e escudos ósseos no crânio." },
-  { "id": 3, "name": "Stegosauridae", "description": "Herbívoros que possuíam placas dorsais e caudas com espigões." },
-  { "id": 4, "name": "Brachiosauridae", "description": "Saurópodes gigantes com pernas dianteiras mais longas que as traseiras." },
-  { "id": 5, "name": "Dromaeosauridae", "description": "Terópodes ágeis, com garras em forma de foice nos pés, parentes das aves." },
-  { "id": 6, "name": "Spinosauridae", "description": "Predadores gigantes com focinhos longos semelhantes aos de crocodilos." },
-  { "id": 7, "name": "Allosauridae", "description": "Grandes carnívoros bípedes dominantes do Jurássico Superior." },
-  { "id": 8, "name": "Ankylosauridae", "description": "Herbívoros fortemente blindados com clavas ósseas pesadas na cauda." },
-  { "id": 9, "name": "Diplodocidae", "description": "Saurópodes extremamente longos com caudas em formato de chicote." },
-  { "id": 10, "name": "Hadrosauridae", "description": "Conhecidos como dinossauros bico-de-pato, formavam rebanhos imensos." }
+  {
+    "id": 1,
+    "name": "Tyrannosauridae",
+    "description": "Predadores bípedes dominantes no Cretáceo Superior da América do Norte e Ásia."
+  },
+  {
+    "id": 2,
+    "name": "Ceratopsidae",
+    "description": "Herbívoros com chifres elaborados e escudos ósseos no crânio."
+  },
+  {
+    "id": 3,
+    "name": "Stegosauridae",
+    "description": "Herbívoros que possuíam placas dorsais e caudas com espigões."
+  },
+  {
+    "id": 4,
+    "name": "Brachiosauridae",
+    "description": "Saurópodes gigantes com pernas dianteiras mais longas que as traseiras."
+  },
+  {
+    "id": 5,
+    "name": "Dromaeosauridae",
+    "description": "Terópodes ágeis, com garras em forma de foice nos pés, parentes das aves."
+  },
+  {
+    "id": 6,
+    "name": "Spinosauridae",
+    "description": "Predadores gigantes com focinhos longos semelhantes aos de crocodilos."
+  },
+  {
+    "id": 7,
+    "name": "Allosauridae",
+    "description": "Grandes carnívoros bípedes dominantes do Jurássico Superior."
+  },
+  {
+    "id": 8,
+    "name": "Ankylosauridae",
+    "description": "Herbívoros fortemente blindados com clavas ósseas pesadas na cauda."
+  },
+  {
+    "id": 9,
+    "name": "Diplodocidae",
+    "description": "Saurópodes extremamente longos com caudas em formato de chicote."
+  },
+  {
+    "id": 10,
+    "name": "Hadrosauridae",
+    "description": "Conhecidos como dinossauros bico-de-pato, formavam rebanhos imensos."
+  },
+  {
+    "id": 11,
+    "name": "Spinosauridae",
+    "cladeId": 1,
+    "description": "Terópodes com crânios alongados semelhantes aos de crocodilos."
+  },
+  {
+    "id": 12,
+    "name": "Brachiosauridae",
+    "cladeId": 2,
+    "description": "Saurópodes com membros anteriores mais longos que os posteriores."
+  },
+  {
+    "id": 13,
+    "name": "Ceratopsidae",
+    "cladeId": 3,
+    "description": "Dinossauros com chifres e adornos cranianos."
+  },
+  {
+    "id": 14,
+    "name": "Stegosauridae",
+    "cladeId": 4,
+    "description": "Tireóforos conhecidos por placas ósseas nas costas e espigões na cauda."
+  },
+  {
+    "id": 15,
+    "name": "Dromaeosauridae",
+    "cladeId": 1,
+    "description": "Terópodes emplumados com uma garra em forma de foice no segundo dedo do pé."
+  },
+  {
+    "id": 16,
+    "name": "Allosauridae",
+    "cladeId": 1,
+    "description": "Grandes terópodes predadores do Jurássico Superior."
+  },
+  {
+    "id": 17,
+    "name": "Abelisauridae",
+    "cladeId": 1,
+    "description": "Terópodes com focinhos curtos e braços extremamente reduzidos, comuns no hemisfério sul."
+  },
+  {
+    "id": 18,
+    "name": "Carcharodontosauridae",
+    "cladeId": 1,
+    "description": "Terópodes gigantes com dentes serrilhados semelhantes aos de tubarões."
+  },
+  {
+    "id": 19,
+    "name": "Diplodocidae",
+    "cladeId": 2,
+    "description": "Saurópodes extremamente longos, com caudas em forma de chicote e postura mais horizontal."
+  },
+  {
+    "id": 20,
+    "name": "Titanosauria",
+    "cladeId": 2,
+    "description": "O clado dos maiores dinossauros saurópodes que já existiram, muito abundantes no Cretáceo."
+  },
+  {
+    "id": 21,
+    "name": "Hadrosauridae",
+    "cladeId": 4,
+    "description": "Ornitópodes conhecidos como dinossauros 'bico-de-pato', muitos com cristas cranianas complexas."
+  },
+  {
+    "id": 22,
+    "name": "Iguanodontidae",
+    "cladeId": 4,
+    "description": "Ornitópodes robustos com polegares em forma de esporão."
+  },
+  {
+    "id": 23,
+    "name": "Ankylosauridae",
+    "cladeId": 4,
+    "description": "Tireóforos fortemente blindados com uma clava óssea pesada na ponta da cauda."
+  },
+  {
+    "id": 24,
+    "name": "Pachycephalosauridae",
+    "cladeId": 3,
+    "description": "Dinossauros bípedes com crânios espessos em forma de domo."
+  },
+  {
+    "id": 25,
+    "name": "Therizinosauridae",
+    "cladeId": 1,
+    "description": "Terópodes herbívoros ou onívoros com pescoços longos e garras gigantescas nas mãos."
+  }
 ]

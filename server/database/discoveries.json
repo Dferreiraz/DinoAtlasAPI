@@ -68,5 +68,285 @@
     "year": 1922,
     "location": "Alberta, Canadá",
     "description": "Descoberta notável do dinossauro bico-de-pato com a crista tubular."
+  },
+  {
+    "id": 11,
+    "discoveredBy": "Ernst Stromer",
+    "year": 1912,
+    "location": "Oásis de Bahariya, Egito",
+    "description": "Fósseis originais destruídos na Segunda Guerra Mundial."
+  },
+  {
+    "id": 12,
+    "discoveredBy": "Elmer S. Riggs",
+    "year": 1900,
+    "location": "Colorado, EUA",
+    "description": "Descoberto no Grand River Valley, redefinindo o tamanho máximo conhecido na época."
+  },
+  {
+    "id": 13,
+    "discoveredBy": "John Bell Hatcher",
+    "year": 1888,
+    "location": "Wyoming, EUA",
+    "description": "Primeiro crânio completo de Triceratops."
+  },
+  {
+    "id": 14,
+    "discoveredBy": "Othniel Charles Marsh",
+    "year": 1877,
+    "location": "Morrison Formation, Colorado, EUA",
+    "description": "Inicialmente confundido com restos de uma tartaruga gigante aquática."
+  },
+  {
+    "id": 15,
+    "discoveredBy": "Peter Kaisen",
+    "year": 1923,
+    "location": "Deserto de Gobi, Mongólia",
+    "description": "Descoberto durante as expedições do Museu Americano de História Natural."
+  },
+  {
+    "id": 16,
+    "discoveredBy": "José Bonaparte",
+    "year": 1984,
+    "location": "Província de Chubut, Patagônia, Argentina",
+    "description": "Descoberta do esqueleto quase completo com impressões de pele do Carnotaurus."
+  },
+  {
+    "id": 17,
+    "discoveredBy": "Rubén Carolini",
+    "year": 1993,
+    "location": "Neuquén, Patagônia, Argentina",
+    "description": "Descoberta do Giganotosaurus, um terópode que superava o T. rex em tamanho."
+  },
+  {
+    "id": 18,
+    "discoveredBy": "Guillermo Heredia",
+    "year": 1987,
+    "location": "Plaza Huincul, Argentina",
+    "description": "Descoberta das vértebras colossais do Argentinosaurus por um fazendeiro local."
+  },
+  {
+    "id": 19,
+    "discoveredBy": "Gideon Mantell",
+    "year": 1822,
+    "location": "Sussex, Inglaterra",
+    "description": "Descoberta de dentes fossilizados que levaram à nomeação do Iguanodon, o segundo dinossauro formalmente descrito."
+  },
+  {
+    "id": 20,
+    "discoveredBy": "William Buckland",
+    "year": 1824,
+    "location": "Oxfordshire, Inglaterra",
+    "description": "Primeira descrição científica formal de um dinossauro, o Megalosaurus."
+  },
+  {
+    "id": 21,
+    "discoveredBy": "John Ostrom",
+    "year": 1964,
+    "location": "Montana, EUA",
+    "description": "A descoberta do Deinonychus, que iniciou o 'Renascimento dos Dinossauros' provando que eram ativos e de sangue quente."
+  },
+  {
+    "id": 22,
+    "discoveredBy": "William Walker",
+    "year": 1983,
+    "location": "Surrey, Inglaterra",
+    "description": "Descoberta da enorme garra que levou à identificação do predador semi-aquático Baryonyx."
+  },
+  {
+    "id": 23,
+    "discoveredBy": "Guillermo Rougier",
+    "year": 1984,
+    "location": "Formação La Amarga, Argentina",
+    "description": "Descoberta do Amargasaurus, notável por suas impressionantes espinhas neurais ao longo do pescoço."
+  },
+  {
+    "id": 24,
+    "discoveredBy": "Johann Friedrich Engelhardt",
+    "year": 1834,
+    "location": "Heroldsberg, Alemanha",
+    "description": "Primeiros fósseis do Plateosaurus, um dos mais antigos e mais conhecidos sauropodomorfos europeus."
+  },
+  {
+    "id": 25,
+    "discoveredBy": "Edwin Colbert",
+    "year": 1947,
+    "location": "Ghost Ranch, Novo México, EUA",
+    "description": "Descoberta de um 'cemitério' em massa contendo centenas de esqueletos articulados de Coelophysis."
+  },
+  {
+    "id": 26,
+    "discoveredBy": "Christian Erich Hermann von Meyer",
+    "year": 1861,
+    "location": "Solnhofen, Baviera, Alemanha",
+    "description": "Descrição do Archaeopteryx, o icônico fóssil de transição entre dinossauros não-avianos e aves."
+  },
+  {
+    "id": 27,
+    "discoveredBy": "Joseph Oberndorfer",
+    "year": 1859,
+    "location": "Baviera, Alemanha",
+    "description": "Descoberta do pequeno Compsognathus, o menor dinossauro conhecido por mais de um século."
+  },
+  {
+    "id": 28,
+    "discoveredBy": "Zofia Kielan-Jaworowska",
+    "year": 1963,
+    "location": "Deserto de Gobi, Mongólia",
+    "description": "Descoberta do Gallimimus durante as grandes expedições polaco-mongóis."
+  },
+  {
+    "id": 29,
+    "discoveredBy": "George Olsen",
+    "year": 1923,
+    "location": "Deserto de Gobi, Mongólia",
+    "description": "Oviraptor descoberto sobre um ninho, inicialmente confundido com um ladrão de ovos."
+  },
+  {
+    "id": 30,
+    "discoveredBy": "Walter W. Granger",
+    "year": 1922,
+    "location": "Deserto de Gobi, Mongólia",
+    "description": "Descoberta do Protoceratops, o primeiro dinossauro cujo ciclo de vida desde o ovo pôde ser estudado."
+  },
+  {
+    "id": 31,
+    "discoveredBy": "Charles Gilmore",
+    "year": 1931,
+    "location": "Formação Lance, EUA",
+    "description": "Descrição do icônico crânio em forma de domo do Pachycephalosaurus."
+  },
+  {
+    "id": 32,
+    "discoveredBy": "Marion Brandvold e Jack Horner",
+    "year": 1978,
+    "location": "Montana, EUA",
+    "description": "Descoberta de ninhos e filhotes de Maiasaura, comprovando o cuidado parental em dinossauros."
+  },
+  {
+    "id": 33,
+    "discoveredBy": "Lawrence Lambe",
+    "year": 1917,
+    "location": "Alberta, Canadá",
+    "description": "Nomeação do Edmontosaurus baseada em espécimes extraordinariamente bem preservados."
+  },
+  {
+    "id": 34,
+    "discoveredBy": "Barnum Brown",
+    "year": 1912,
+    "location": "Red Deer River, Alberta, Canadá",
+    "description": "Descoberta do esqueleto impressionante de Corythosaurus com impressões de pele intactas."
+  },
+  {
+    "id": 35,
+    "discoveredBy": "Charles M. Sternberg",
+    "year": 1913,
+    "location": "Dinosaur Provincial Park, Canadá",
+    "description": "Descoberta do primeiro crânio de Styracosaurus, notável por seu elaborado escudo de chifres."
+  },
+  {
+    "id": 36,
+    "discoveredBy": "Charles M. Sternberg",
+    "year": 1946,
+    "location": "Alberta, Canadá",
+    "description": "Identificação do Pachyrhinosaurus, um ceratopsídeo com uma enorme protuberância óssea em vez de chifres."
+  },
+  {
+    "id": 37,
+    "discoveredBy": "Lawrence Lambe",
+    "year": 1904,
+    "location": "Alberta, Canadá",
+    "description": "Primeira descrição do Centrosaurus a partir de restos coletados no rio Red Deer."
+  },
+  {
+    "id": 38,
+    "discoveredBy": "Evgeny Maleev",
+    "year": 1948,
+    "location": "Nemegt, Deserto de Gobi, Mongólia",
+    "description": "Descoberta de braços gigantes e garras foice, inicialmente descritos de forma incorreta como restos de uma tartaruga gigante."
+  },
+  {
+    "id": 39,
+    "discoveredBy": "Zofia Kielan-Jaworowska",
+    "year": 1965,
+    "location": "Nemegt, Deserto de Gobi, Mongólia",
+    "description": "Descoberta de misteriosos braços gigantes de 2,4 metros do Deinocheirus."
+  },
+  {
+    "id": 40,
+    "discoveredBy": "Jesse Williams",
+    "year": 1942,
+    "location": "Arizona, EUA",
+    "description": "Descoberta do esqueleto do Dilophosaurus por um navegador navajo; mais tarde descrito por Samuel Welles."
+  },
+  {
+    "id": 41,
+    "discoveredBy": "Marshall P. Felch",
+    "year": 1883,
+    "location": "Colorado, EUA",
+    "description": "Fósseis recuperados do predador Ceratosaurus, marcado por seu notável chifre nasal."
+  },
+  {
+    "id": 42,
+    "discoveredBy": "Charles Depéret",
+    "year": 1896,
+    "location": "Formação Maevarano, Madagascar",
+    "description": "Descoberta do terópode Majungasaurus, um dos abelissaurídeos mais estudados do mundo."
+  },
+  {
+    "id": 43,
+    "discoveredBy": "Charles Depéret e Justin Savornin",
+    "year": 1924,
+    "location": "Saara Argelino, Argélia",
+    "description": "Primeiros vestígios dos imensos predadores com dentes de tubarão, Carcharodontosaurus."
+  },
+  {
+    "id": 44,
+    "discoveredBy": "Arthur Lakes",
+    "year": 1877,
+    "location": "Morrison, Colorado, EUA",
+    "description": "Descoberta do clássico Apatosaurus, que se tornaria pivô na confusão taxonômica com o Brontosaurus."
+  },
+  {
+    "id": 45,
+    "discoveredBy": "Oramel W. Lucas",
+    "year": 1877,
+    "location": "Garden Park, Colorado, EUA",
+    "description": "Descoberta do Camarasaurus, o saurópode mais abundante da Formação Morrison norte-americana."
+  },
+  {
+    "id": 46,
+    "discoveredBy": "William Harlow Reed",
+    "year": 1879,
+    "location": "Como Bluff, Wyoming, EUA",
+    "description": "Descoberta do gigante que O. C. Marsh viria a chamar de Brontosaurus."
+  },
+  {
+    "id": 47,
+    "discoveredBy": "Lawrence Lambe",
+    "year": 1897,
+    "location": "Alberta, Canadá",
+    "description": "Descoberta do Euoplocephalus, incluindo armadura impressionante fundida ao próprio crânio."
+  },
+  {
+    "id": 48,
+    "discoveredBy": "Doug Langdon",
+    "year": 1963,
+    "location": "Queensland, Austrália",
+    "description": "Descoberta acidental do ornitópode Muttaburrasaurus por um fazendeiro australiano."
+  },
+  {
+    "id": 49,
+    "discoveredBy": "William Hammer",
+    "year": 1991,
+    "location": "Mount Kirkpatrick, Antártida",
+    "description": "Descoberta do Cryolophosaurus a 4.000 metros de altitude, provando que dinossauros habitavam o polo sul."
+  },
+  {
+    "id": 50,
+    "discoveredBy": "Xu Xing",
+    "year": 2000,
+    "location": "Liaoning, China",
+    "description": "Descrição do incrível Microraptor, um pequeno dinossauro não-aviano com penas de voo nos quatro membros."
   }
 ]
