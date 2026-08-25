@@ -1,35 +1,51 @@
-const readJson = require('../utils/readJson');
-const { successResponse, errorResponse } = require('../utils/response');
-const { STATUS_CODES } = require('../utils/constants');
+const fs = require('fs');
+const path = require('path');
 
-const DB_PATH = 'server/database/images.json';
+// Caminhos para os arquivos JSON
+const imagesPath = path.join(__dirname, '../database/images.json');
+const dinosPath = path.join(__dirname, '../database/dinosaurs.json');
 
-const getAllImages = async (req, res) => {
-  try {
-    const data = await readJson(DB_PATH);
-    return res.status(STATUS_CODES.OK).json(successResponse(data));
-  } catch (error) {
-    return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
-      errorResponse('Erro ao buscar imagens.', error.message)
-    );
-  }
-};
+// Função auxiliar para ler os arquivos
+const lerDados = (caminho) => JSON.parse(fs.readFileSync(caminho, 'utf-8'));
 
-const getImageById = async (req, res) => {
-  try {
-    const id = parseInt(req.params.id, 10);
-    const data = await readJson(DB_PATH);
-    const item = data.find(d => d.id === id);
-
-    if (!item) {
-      return res.status(STATUS_CODES.NOT_FOUND).json(errorResponse('Imagem não encontrada.'));
+exports.getAllImages = (req, res) => {
+    try {
+        const imagens = lerDados(imagesPath);
+        
+        res.status(200).json({
+            success: true,
+            meta: { total: imagens.length },
+            data: imagens
+        });
+    } catch (erro) {
+        res.status(500).json({ success: false, message: "Erro interno no servidor ao buscar imagens." });
     }
-    return res.status(STATUS_CODES.OK).json(successResponse(item));
-  } catch (error) {
-    return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
-      errorResponse('Erro ao buscar a imagem.', error.message)
-    );
-  }
 };
 
-module.exports = { getAllImages, getImageById };
+exports.getImagesByDinosaur = (req, res) => {
+    try {
+        const dinosaurId = Number(req.params.id);
+        const dinossauros = lerDados(dinosPath);
+        
+        const dinossauroExiste = dinossauros.some(d => d.id === dinosaurId);
+        
+        if (!dinossauroExiste) {
+            return res.status(404).json({
+                success: false,
+                message: "Dinossauro não encontrado."
+            });
+        }
+
+        const imagens = lerDados(imagesPath);
+        const imagensDoDino = imagens.filter(img => img.dinosaurId === dinosaurId);
+
+        res.status(200).json({
+            success: true,
+            meta: { dinosaurId: dinosaurId, total: imagensDoDino.length },
+            data: imagensDoDino
+        });
+
+    } catch (erro) {
+        res.status(500).json({ success: false, message: "Erro interno no servidor ao buscar imagens do dinossauro." });
+    }
+};
