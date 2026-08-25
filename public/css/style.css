@@ -403,18 +403,26 @@
 }
 
 
-/*.dino-card__imagem {
+.dino-card__imagem {
   width: 100%;
-  height: 220px;
+  height: 200px;
   overflow: hidden;
-} */
+  background: var(--cor-fundo-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
  
-
-/* .dino-card__imagem img {
+.dino-card__imagem img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-} */
+  object-fit: contain; /* Exibe a imagem inteira sem cortes */
+  transition: transform 0.3s ease;
+}
+
+.dino-card:hover .dino-card__imagem img {
+  transform: scale(1.05);
+}
 
 
 .dino-card__header,

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <!-- Fundo -->
+  <rect width="400" height="300" fill="#0F172A"/>
+  
+  <!-- Ícone abstrato geométrico -->
+  <g transform="translate(200, 60)">
+    <rect x="-25" y="-25" width="50" height="50" fill="none" stroke="#1E293B" stroke-width="2" rx="4"/>
+    <rect x="-15" y="-15" width="30" height="30" fill="none" stroke="#334155" stroke-width="2" rx="3"/>
+    <rect x="-8" y="-8" width="16" height="16" fill="#334155" rx="2"/>
+  </g>
+  
+  <!-- Texto principal - DINOATLAS API -->
+  <text
+    x="200"
+    y="130"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="20"
+    fill="#CBD5E1"
+    text-anchor="middle"
+    font-weight="700"
+    letter-spacing="1"
+  >
+    DINOATLAS API
+  </text>
+  
+  <!-- Texto secundário - Imagem não disponível -->
+  <text
+    x="200"
+    y="165"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="14"
+    fill="#64748B"
+    text-anchor="middle"
+    font-weight="500"
+  >
+    Imagem não disponível
+  </text>
+  
+  <!-- Linha divisória -->
+  <line
+    x1="100"
+    y1="190"
+    x2="300"
+    y2="190"
+    stroke="#1E293B"
+    stroke-width="1"
+  />
+  
+  <!-- Texto descritivo -->
+  <text
+    x="200"
+    y="220"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="11"
+    fill="#64748B"
+    text-anchor="middle"
+    font-weight="400"
+  >
+    Este espécime ainda não possui
+  </text>
+  
+  <text
+    x="200"
+    y="240"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="11"
+    fill="#64748B"
+    text-anchor="middle"
+    font-weight="400"
+  >
+    uma imagem cadastrada.
+  </text>
+  
+  <!-- Marca d'água discreta -->
+  <text
+    x="200"
+    y="285"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="9"
+    fill="#1E293B"
+    text-anchor="middle"
+    font-weight="600"
+    letter-spacing="1.5"
+  >
+    DINOATLAS
+  </text>
+</svg>

@@ -124,11 +124,8 @@ function normalizarTexto(texto) {
 async function testarAPI() {
     try {
         const res = await fetch(API_URL);
-
         const dados = await res.json();
-
-        console.log("API funcionando:", dados)
-
+        console.log("API funcionando:", dados);
     } catch (erro) {
         console.error("Erro ao testar a API:", erro);
     }
@@ -137,13 +134,9 @@ async function testarAPI() {
 async function carregarDinossauros() {
     try {
         const resposta = await fetch(`${API_URL}/dinosaurs?limit=12`);
-
         const dados = await resposta.json();
-
         console.log("Dinossauros carregados:", dados);
-
         renderizarDinossauros(dados.data);
-
     } catch (erro) {
         console.error("Erro ao carregar dinossauros:", erro);
     }
@@ -166,171 +159,110 @@ function renderizarDinossauros(dinossauros) {
             buscarDetalhesDino(dino.id);
         });
 
+        // Caso o dinossauro não traga imagem, o src aponta direto para o placeholder.
+        // O onerror garante que se o link falhar, a imagem muda para o placeholder automaticamente.
+        const imagemSrc = dino.imagem || './img/dino-placeholder.svg';
+
         card.innerHTML = `
+            <div class="dino-card__imagem">
+                <img 
+                  src="${imagemSrc}"
+                  alt="${dino.name}"
+                  onerror="this.src='./img/dino-placeholder.svg'"
+                >
+            </div>
 
-<!--
-<div class="dino-card__imagem">
-    <img 
-      src="${dino.imagem || './img/dino-placeholder.png'}"
-      alt="${dino.name}"
-    >
-</div>
--->
+            <header class="dino-card__header">
+                <h3>${dino.name}</h3>
+                <p>${dino.scientificName}</p>
+            </header>
 
+            <div class="dino-card__info">
+                <p><strong>📏 Tamanho:</strong> ${dino.length} metros</p>
+                <p><strong>📐 Altura:</strong> ${dino.height} metros</p>
+                <p><strong>⚖️ Peso:</strong> ${dino.weight.toLocaleString()} kg</p>
+                <p><strong>⚡ Velocidade:</strong> ${dino.estimatedSpeed} km/h</p>
+            </div>
 
-<header class="dino-card__header">
-    <h3>${dino.name}</h3>
-    <p>${dino.scientificName}</p>
-</header>
+            <p class="dino-card__description">
+                ${dino.description}
+            </p>
 
-<div class="dino-card__info">
-
-<p>
-<strong>📏 Tamanho:</strong>
-${dino.length} metros
-</p>
-
-<p>
-<strong>📐 Altura:</strong>
-${dino.height} metros
-</p>
-
-<p>
-<strong>⚖️ Peso:</strong>
-${dino.weight.toLocaleString()} kg
-</p>
-
-<p>
-<strong>⚡ Velocidade:</strong>
-${dino.estimatedSpeed} km/h
-</p>
-
-</div>
-
-
-<p class="dino-card__description">
-${dino.description}
-</p>
-
-
-<span class="dino-card__status">
-${dino.status}
-</span>
-
-`;
+            <span class="dino-card__status">
+                ${dino.status}
+            </span>
+        `;
 
         lista.appendChild(card);
     });
 }
 
 async function buscarDetalhesDino(id) {
-
     try {
-
         const resposta = await fetch(`${API_URL}/dinosaurs/${id}`);
-
         const dados = await resposta.json();
-
         abrirModal(dados.data);
-
     } catch (erro) {
-
-        console.error(
-            "Erro ao buscar detalhes:",
-            erro
-        );
-
+        console.error("Erro ao buscar detalhes:", erro);
     }
-
 }
 
 function abrirModal(dino) {
-
     const modal = document.getElementById("modalDino");
     const detalhes = document.getElementById("detalhesDino");
 
+    const imagemSrc = dino.imagem || './img/dino-placeholder.png';
+
     detalhes.innerHTML = `
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img 
+                src="${imagemSrc}" 
+                alt="${dino.name}" 
+                style="max-height: 250px; width: 100%; object-fit: cover; border-radius: 10px;"
+                onerror="this.src='./img/dino-placeholder.png'"
+            >
+        </div>
 
-    <h2>${dino.name}</h2>
+        <h2>${dino.name}</h2>
+        <h3>${dino.scientificName}</h3>
 
-    <h3>${dino.scientificName}</h3>
+        <p><strong>Significado:</strong> ${dino.meaning}</p>
+        <p><strong>Descrição:</strong> ${dino.description}</p>
 
-    <p>
-      <strong>Significado:</strong>
-      ${dino.meaning}
-    </p>
+        <h3>Características</h3>
+        <ul>
+          ${dino.characteristics.map(item => `<li>${item}</li>`).join("")}
+        </ul>
 
-    <p>
-      <strong>Descrição:</strong>
-      ${dino.description}
-    </p>
+        <h3>Curiosidades</h3>
+        <ul>
+          ${dino.curiosities.map(item => `<li>${item}</li>`).join("")}
+        </ul>
 
-
-    <h3>Características</h3>
-
-    <ul>
-      ${dino.characteristics
-            .map(item => `<li>${item}</li>`)
-            .join("")}
-    </ul>
-
-
-    <h3>Curiosidades</h3>
-
-    <ul>
-      ${dino.curiosities
-            .map(item => `<li>${item}</li>`)
-            .join("")}
-    </ul>
-
-
-    <h3>Fontes</h3>
-
-    <ul>
-      ${dino.sources
-            .map(item => `<li>${item}</li>`)
-            .join("")}
-    </ul>
-
-  `;
-
+        <h3>Fontes</h3>
+        <ul>
+          ${dino.sources.map(item => `<li>${item}</li>`).join("")}
+        </ul>
+    `;
 
     modal.classList.add("modal--ativo");
-
 }
 
 function iniciarModal() {
-
     const modal = document.getElementById("modalDino");
     const fechar = document.getElementById("fecharModal");
 
-
     if (!modal || !fechar) return;
 
+    fechar.addEventListener("click", () => {
+        modal.classList.remove("modal--ativo");
+    });
 
-    fechar.addEventListener(
-        "click",
-        () => {
+    modal.addEventListener("click", (evento) => {
+        if (evento.target === modal) {
             modal.classList.remove("modal--ativo");
         }
-    );
-
-
-    modal.addEventListener(
-        "click",
-        (evento) => {
-
-            if (evento.target === modal) {
-
-                modal.classList.remove(
-                    "modal--ativo"
-                );
-
-            }
-
-        }
-    );
-
+    });
 }
 
 async function carregarEstatisticas() {
@@ -340,28 +272,17 @@ async function carregarEstatisticas() {
             continentes,
             descobertas
         ] = await Promise.all([
-            
             fetch(`${API_URL}/dinosaurs?limit=12`).then(res => res.json()),
             fetch(`${API_URL}/continents`).then(res => res.json()),
             fetch(`${API_URL}/discoveries`).then(res => res.json())
         ]);
 
-        document.getElementById("totalDinossauros").textContent =
-            dinossauros.meta.total;
-
-        document.getElementById("totalContinentes").textContent =
-            continentes.data.length;
-
-        document.getElementById("totalDescobertas").textContent =
-            descobertas.data.length;
-
-        document.getElementById("totalEndpoints").textContent =
-            15;
+        document.getElementById("totalDinossauros").textContent = dinossauros.meta.total;
+        document.getElementById("totalContinentes").textContent = continentes.data.length;
+        document.getElementById("totalDescobertas").textContent = descobertas.data.length;
+        document.getElementById("totalEndpoints").textContent = 15;
 
     } catch (erro) {
-        console.error(
-            "Erro ao carregar estatísticas:",
-            erro
-        );
+        console.error("Erro ao carregar estatísticas:", erro);
     }
 }
