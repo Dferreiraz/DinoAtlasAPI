@@ -6,5 +6,397 @@
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/f_auto,q_auto/trex",
     "author": "APK",
     "license": "Creative Commons Attribution 4.0"
+  },
+  {
+    "id": 2,
+    "dinosaurId": 2,
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/triceratops.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/triceratops.jpg",
+    "author": "Nobu Tamura",
+    "license": "Creative Commons Attribution 2.5"
+  },
+  {
+    "id": 3,
+    "dinosaurId": 3,
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/stegosaurus.png",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/stegosaurus.png",
+    "author": "Fred Wierum",
+    "license": "Creative Commons Attribution-Share Alike 4.0"
+  },
+  {
+    "id": 4,
+    "dinosaurId": 4,
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/brachiosaurus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632501/brachiosaurus.jpg",
+    "author": "Dmitry Bogdanov",
+    "license": "Public domain"
+  },
+  {
+    "id": 5,
+    "dinosaurId": 5,
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/velociraptor.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632501/velociraptor.jpg",
+    "author": "Chrisi1964",
+    "license": "Creative Commons Attribution-Share Alike 4.0"
+  },
+  {
+    "id": 6,
+    "dinosaurId": 6,
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/spinosaurus.png",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632501/spinosaurus.png",
+    "author": "Petr Menshikov",
+    "license": "Creative Commons Attribution-Share Alike 4.0"
+  },
+  {
+    "id": 7,
+    "dinosaurId": 7,
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/allosaurus.png",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632501/allosaurus.png",
+    "author": "Ddinodan",
+    "license": "Creative Commons Attribution 4.0"
+  },
+  {
+    "id": 8,
+    "dinosaurId": 8,
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/ankylosaurus.webp",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632503/ankylosaurus.webp",
+    "author": "DataBase Center for Life Science (DBCLS)",
+    "license": "Creative Commons Attribution 4.0"
+  },
+  {
+    "id": 9,
+    "dinosaurId": 9,
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/diplodocus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632501/diplodocus.jpg",
+    "author": "Fred Wierum",
+    "license": "Creative Commons Attribution-Share Alike 4.0"
+  },
+  {
+    "id": 10,
+    "dinosaurId": 10,
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/parasaurolophus.png",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632501/parasaurolophus.png",
+    "author": "Connor Ashbridge",
+    "license": "Creative Commons Attribution-Share Alike 4.0"
+  },
+  {
+    "id": 11,
+    "dinosaurId": 11,
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/carnotaurus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632501/carnotaurus.jpg",
+    "author": "Nobu Tamura",
+    "license": "Creative Commons Attribution 3.0"
+  },
+  {
+    "id": 12,
+    "dinosaurId": 12,
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/giganotosaurus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/giganotosaurus.jpg",
+    "author": "PLTRON",
+    "license": "Creative Commons Attribution-Share Alike 4.0"
+  },
+  {
+    "id": 13,
+    "dinosaurId": 13,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 14,
+    "dinosaurId": 14,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 15,
+    "dinosaurId": 15,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 16,
+    "dinosaurId": 16,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 17,
+    "dinosaurId": 17,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 18,
+    "dinosaurId": 18,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 19,
+    "dinosaurId": 19,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 20,
+    "dinosaurId": 20,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 21,
+    "dinosaurId": 21,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 22,
+    "dinosaurId": 22,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 23,
+    "dinosaurId": 23,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 24,
+    "dinosaurId": 24,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 25,
+    "dinosaurId": 25,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 26,
+    "dinosaurId": 26,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 27,
+    "dinosaurId": 27,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 28,
+    "dinosaurId": 28,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 29,
+    "dinosaurId": 29,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 30,
+    "dinosaurId": 30,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 31,
+    "dinosaurId": 31,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 32,
+    "dinosaurId": 32,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 33,
+    "dinosaurId": 33,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 34,
+    "dinosaurId": 34,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 35,
+    "dinosaurId": 35,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 36,
+    "dinosaurId": 36,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 37,
+    "dinosaurId": 37,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 38,
+    "dinosaurId": 38,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 39,
+    "dinosaurId": 39,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 40,
+    "dinosaurId": 40,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 41,
+    "dinosaurId": 41,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 42,
+    "dinosaurId": 42,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 43,
+    "dinosaurId": 43,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 44,
+    "dinosaurId": 44,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 45,
+    "dinosaurId": 45,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 46,
+    "dinosaurId": 46,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 47,
+    "dinosaurId": 47,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 48,
+    "dinosaurId": 48,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 49,
+    "dinosaurId": 49,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
+  },
+  {
+    "id": 50,
+    "dinosaurId": 50,
+    "thumbnail": "",
+    "image": "",
+    "author": "",
+    "license": ""
   }
 ]
