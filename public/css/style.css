@@ -523,6 +523,7 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
+  z-index: 200;
 }
 
 .modal--ativo {
@@ -532,6 +533,7 @@
 .modal__conteudo {
   background: var(--cor-fundo-card-alt);
   max-width: 700px;
+  width: 100%;
   max-height: 90vh;
   overflow-y: auto;
   padding: 30px;
@@ -548,6 +550,19 @@
   color: var(--cor-texto-fraco);
   border: none;
   font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s ease, color 0.2s ease;
+  z-index: 10;
+}
+
+.modal__fechar:hover {
+  background: var(--cor-fundo-alt);
+  color: var(--cor-texto);
 }
 
 .modal__fechar .icone {
@@ -784,7 +799,7 @@
   height: 1.2rem;
 }
 
-.icone-text{
+.icone-text {
   text-transform: uppercase;
 }
 
@@ -860,6 +875,8 @@
 /* ==========================================================================
    Responsivo
    ========================================================================== */
+
+/* Tablet e telas menores que 900px */
 @media (max-width: 900px) {
   .menu-mobile {
     display: flex;
@@ -953,6 +970,13 @@
     grid-template-columns: 1fr;
   }
 
+  /* Cards de dinossauros: 2 colunas no tablet */
+  .dinossauros__container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: var(--espaco-lg) var(--espaco-md);
+    gap: 16px;
+  }
+
   .endpoint {
     grid-template-columns: auto 1fr;
     row-gap: 0.4rem;
@@ -967,8 +991,188 @@
   .rodape__conteudo {
     flex-direction: column;
   }
+
+  /* Modal no tablet */
+  .modal {
+    padding: 16px;
+    align-items: flex-start;
+  }
+
+  .modal__conteudo {
+    padding: 24px;
+    border-radius: 16px;
+    max-height: 85vh;
+  }
+
+  .modal__fechar {
+    right: 12px;
+    top: 12px;
+    width: 36px;
+    height: 36px;
+  }
 }
 
+/* Celular - telas menores que 600px */
+@media (max-width: 600px) {
+  /* Cards de dinossauros: 1 coluna no celular */
+  .dinossauros__container {
+    grid-template-columns: 1fr;
+    padding: var(--espaco-md) var(--espaco-sm);
+    gap: 16px;
+  }
+
+  .dino-card__imagem {
+    height: 180px;
+  }
+
+  .dino-card__header,
+  .dino-card__info,
+  .dino-card__description,
+  .dino-card__status {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .dino-card__header {
+    margin-top: 16px;
+  }
+
+  .dino-card__header h3 {
+    font-size: 1.1rem;
+  }
+
+  .dino-card__header p {
+    font-size: 0.85rem;
+  }
+
+  .dino-card__info p {
+    font-size: 0.85rem;
+    margin: 6px 0;
+  }
+
+  .dino-card__description {
+    font-size: 0.85rem;
+    margin-top: 12px;
+  }
+
+  .dino-card__status {
+    margin-bottom: 16px;
+    font-size: 0.8rem;
+  }
+
+  /* Modal em tela cheia no celular */
+  .modal {
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .modal__conteudo {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+    padding: 20px 16px;
+    padding-top: 60px;
+  }
+
+  .modal__fechar {
+    position: fixed;
+    right: 12px;
+    top: 12px;
+    width: 44px;
+    height: 44px;
+    background: var(--cor-fundo-alt);
+    border: 1px solid var(--cor-borda);
+    color: var(--cor-texto);
+    z-index: 10;
+  }
+
+  .modal__fechar:hover {
+    background: var(--cor-laranja);
+    color: #1a1208;
+    border-color: var(--cor-laranja);
+  }
+
+  .modal__fechar .icone {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+
+  /* Ajustes de tipografia no modal para celular */
+  .modal__conteudo h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+    padding-right: 40px;
+  }
+
+  .modal__conteudo h3 {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .modal__conteudo p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.6rem;
+  }
+
+  .modal__conteudo ul {
+    padding-left: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .modal__conteudo li {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 0.3rem;
+  }
+
+  .modal__conteudo img {
+    max-height: 200px !important;
+    border-radius: 8px !important;
+  }
+}
+
+/* Celular muito pequeno - telas menores que 400px */
+@media (max-width: 400px) {
+  .dinossauros__container {
+    padding: var(--espaco-sm) 12px;
+  }
+
+  .dino-card__imagem {
+    height: 160px;
+  }
+
+  .dino-card__header h3 {
+    font-size: 1rem;
+  }
+
+  .dino-card__info p {
+    font-size: 0.8rem;
+  }
+
+  .modal__conteudo {
+    padding: 16px 12px;
+    padding-top: 56px;
+  }
+
+  .modal__conteudo h2 {
+    font-size: 1.25rem;
+  }
+
+  .modal__conteudo h3 {
+    font-size: 1rem;
+  }
+
+  .modal__conteudo p,
+  .modal__conteudo li {
+    font-size: 0.85rem;
+  }
+}
+
+/* Ajustes gerais para mobile pequeno */
 @media (max-width: 560px) {
   .hero {
     min-height: auto;
