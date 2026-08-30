@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DinoAtlas API - O Atlas Digital dos Dinossauros</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
 
   <!-- ================================================================
@@ -34,11 +32,7 @@
       <div class="cabecalho__acoes">
         <div class="busca">
           <button class="busca__botao" aria-label="Buscar">
-            <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="11" cy="11" r="8" />
-              <line x1="21" y1="21" x2="16.65" y2="16.65" />
-            </svg>
+            <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           </button>
           <input class="busca__campo" type="text" placeholder="Buscar...">
         </div>
@@ -68,11 +62,10 @@
         Explore milhões de anos com uma <span class="hero__titulo--destaque">Api de dinossauros</span>
       </h1>
       <p class="hero__descricao">
-        Uma API REST gratuita com informações científicas sobre dinossauros, períodos geológicos e descobertas fósseis.
-        Desenvolvida para entusiastas e desenvolvedores.
+        Uma API REST gratuita com informações científicas sobre dinossauros, períodos geológicos e descobertas fósseis. Desenvolvida para entusiastas e desenvolvedores.
       </p>
       <div class="hero__botoes">
-        <a class="botao botao--primario" href="#comecar">Começar</a>
+        <a class="botao botao--primario" href="#comecar" id="comecar">Começar</a>
         <a class="botao botao--secundario" href="#implementacao">Documentação</a>
       </div>
     </div>
@@ -92,34 +85,21 @@
       </div>
       <div class="estatisticas__item">
         <span class="estatisticas__icone">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10" />
-            <line x1="2" y1="12" x2="22" y2="12" />
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-          </svg>
+          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         </span>
         <span class="estatisticas__numero">0</span>
         <span class="estatisticas__legenda">Continentes</span>
       </div>
       <div class="estatisticas__item">
         <span class="estatisticas__icone">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path
-              d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5z" />
-          </svg>
+          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5z"/></svg>
         </span>
         <span class="estatisticas__numero">0</span>
         <span class="estatisticas__legenda">Descobertas</span>
       </div>
       <div class="estatisticas__item">
         <span class="estatisticas__icone">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="16 18 22 12 16 6" />
-            <polyline points="8 6 2 12 8 18" />
-          </svg>
+          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
         </span>
         <span class="estatisticas__numero">0</span>
         <span class="estatisticas__legenda">Endpoints</span>
@@ -135,21 +115,14 @@
     <div class="sobre__cabecalho">
       <h2 class="sobre__titulo">Sobre a API: Simples, rápida e gratuita para todos.</h2>
       <p class="sobre__texto">
-        Construída com foco em performance e precisão científica, a DinoAtlasAPI é uma ferramenta de código aberto que
-        serve dados curados para projetos educacionais, sites informativos e aplicações mobile.
+        Construída com foco em performance e precisão científica, a DinoAtlasAPI é uma ferramenta de código aberto que serve dados curados para projetos educacionais, sites informativos e aplicações mobile.
       </p>
     </div>
 
     <div class="cartoes">
       <div class="cartao">
         <div class="cartao__icone">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2 20h20" />
-            <path d="M5 20V8l7-5 7 5v12" />
-            <line x1="9" y1="20" x2="9" y2="12" />
-            <line x1="15" y1="20" x2="15" y2="12" />
-          </svg>
+          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8l7-5 7 5v12"/><line x1="9" y1="20" x2="9" y2="12"/><line x1="15" y1="20" x2="15" y2="12"/></svg>
         </div>
         <h3 class="cartao__titulo">Rest api</h3>
         <p class="cartao__texto">Endpoints arquitetados seguindo os melhores padrões RESTful da indústria.</p>
@@ -157,27 +130,15 @@
 
       <div class="cartao">
         <div class="cartao__icone">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <ellipse cx="12" cy="5" rx="9" ry="3" />
-            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
-            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
-          </svg>
+          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
         </div>
         <h3 class="cartao__titulo">Json database</h3>
-        <p class="cartao__texto">Resposta em formato JSON estruturado, pronto para consumo imediato em qualquer stack.
-        </p>
+        <p class="cartao__texto">Resposta em formato JSON estruturado, pronto para consumo imediato em qualquer stack.</p>
       </div>
 
       <div class="cartao">
         <div class="cartao__icone">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <line x1="4" y1="9" x2="20" y2="9" />
-            <line x1="4" y1="15" x2="20" y2="15" />
-            <line x1="10" y1="3" x2="8" y2="21" />
-            <line x1="16" y1="3" x2="14" y2="21" />
-          </svg>
+          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></svg>
         </div>
         <h3 class="cartao__titulo">Open source</h3>
         <p class="cartao__texto">Contribua com a base de dados no GitHub. Feito pela comunidade para a comunidade.</p>
@@ -185,11 +146,7 @@
 
       <div class="cartao">
         <div class="cartao__icone">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-            <path d="M7 11V7a5 5 0 0 1 9.9-1" />
-          </svg>
+          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
         </div>
         <h3 class="cartao__titulo">Free access</h3>
         <p class="cartao__texto">Sem chaves de API para requisições públicas. Acesso instantâneo aos dados fósseis.</p>
@@ -367,5 +324,4 @@
 
   <script src="./js/script.js"></script>
 </body>
-
 </html>
