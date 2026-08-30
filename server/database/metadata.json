@@ -1,9 +1,9 @@
 {
   "apiName": "DinoAtlas API",
-  "version": "2.1.0",
+  "version": "2.2.1",
   "description": "Uma API REST pública para dados estruturados sobre dinossauros e informações paleontológicas relacionadas.",
   "status": "Online",
   "author": "Davi Ferreira",
   "github": "https://github.com/Dferreiraz/DinoAPI",
-  "lastUpdate": "2026-08-18"
+  "lastUpdate": "2026-08-30"
 }
