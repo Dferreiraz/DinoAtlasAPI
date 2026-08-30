@@ -98,104 +98,104 @@
   {
     "id": 13,
     "dinosaurId": 13,
-    "thumbnail": "",
-    "image": "",
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/argentinosaurus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860734/argentinosaurus.jpg",
     "author": "Nobu Tamura",
     "license": "Creative Commons Attribution 3.0"
   },
   {
     "id": 14,
     "dinosaurId": 14,
-    "thumbnail": "",
-    "image": "",
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Iguanodon.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860733/Iguanodon.jpg",
     "author": "Nobu Tamura",
     "license": "Creative Commons Attribution-Share Alike 4.0"
   },
   {
     "id": 15,
     "dinosaurId": 15,
-    "thumbnail": "",
-    "image": "",
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Megalosaurus.png",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860733/Megalosaurus.png",
     "author": "LadyofHats Mariana Ruiz Altered by FunkMonk and Steveoc 86",
     "license": "Public domain"
   },
   {
     "id": 16,
     "dinosaurId": 16,
-    "thumbnail": "",
-    "image": "",
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Deinonychus.png",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860733/Deinonychus.png",
     "author": "TotalDino",
     "license": "Creative Commons Zero, Public Domain Dedication"
   },
   {
     "id": 17,
     "dinosaurId": 17,
-    "thumbnail": "",
-    "image": "",
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Baryonyx.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860734/Baryonyx.jpg",
     "author": "Robinson Kunz e Rebecca Slater",
     "license": "Creative Commons Attribution-Share Alike 3.0"
   },
   {
     "id": 18,
     "dinosaurId": 18,
-    "thumbnail": "",
-    "image": "",
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Amargasaurus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860734/Amargasaurus.jpg",
     "author": "ArthurWeasley",
     "license": "Creative Commons Attribution-Share Alike 3.0"
   },
   {
     "id": 19,
     "dinosaurId": 19,
-    "thumbnail": "",
-    "image": "",
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Plateosaurus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860734/Plateosaurus.jpg",
     "author": "Elekes Andor",
     "license": "Creative Commons Attribution-Share Alike 4.0"
   },
   {
     "id": 20,
     "dinosaurId": 20,
-    "thumbnail": "",
-    "image": "",
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Coelophysis.png",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860734/Coelophysis.png",
     "author": "TotalDino",
     "license": "Creative Commons Attribution-Share Alike 4.0"
   },
   {
     "id": 21,
     "dinosaurId": 21,
-    "thumbnail": "",
-    "image": "",
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Archaeopteryx.png",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860733/Archaeopteryx.png",
     "author": "TotalDino",
     "license": "Creative Commons Attribution-Share Alike 4.0"
   },
   {
     "id": 22,
     "dinosaurId": 22,
-    "thumbnail": "",
-    "image": "",
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Compsognathus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860733/Compsognathus.jpg",
     "author": "Nobu Tamura",
     "license": "Creative Commons Attribution 2.5"
   },
   {
     "id": 23,
     "dinosaurId": 23,
-    "thumbnail": "",
-    "image": "",
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Gallimimus.png",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860733/Gallimimus.png",
     "author": "PaleoNeolitic",
     "license": "Creative Commons Attribution 4.0"
   },
   {
     "id": 24,
     "dinosaurId": 24,
-    "thumbnail": "",
-    "image": "",
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Oviraptor.png",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860734/Oviraptor.png",
     "author": "PaleoNeolitic",
     "license": "Creative Commons Attribution 4.0"
   },
   {
     "id": 25,
     "dinosaurId": 25,
-    "thumbnail": "",
-    "image": "",
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Protoceratops.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860734/Protoceratops.jpg",
     "author": "Nobu Tamura",
     "license": "Creative Commons Attribution 2.5"
   },
