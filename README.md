@@ -1,6 +1,6 @@
 
 <h1 align="center">
-  🦖 DinoAtlas API
+  🚧 🦖 DinoAtlas API - Em contrução 🚧
 </h1>
 
 <p align="center">
@@ -13,7 +13,7 @@
   •
   <a href="#-sobre-o-projeto">Sobre</a> •
   <a href="#-deploy">Deploy</a> •
-  <a href="#-como-executar-o-projeto">Como executar</a> •
+ <!-- <a href="#-como-executar-o-projeto">Como executar</a> • -->
   <a href="#-exemplos-de-endpoints">Endpoints</a> •
 <br>
   •
@@ -106,7 +106,7 @@ https://dinoapi-swg8.onrender.com
 
 <!-- ---------------------------------------------------------------------- -->
 
-## 🚀 Como executar o projeto
+ <!-- ## 🚀 Como executar o projeto
 
 ### 1 - Clonar o projeto
 
@@ -144,7 +144,7 @@ A API estará disponível localmente em:
 http://localhost:3000
 ```
 
----
+--- -->
 
 <!-- ---------------------------------------------------------------------- -->
 
