@@ -49,9 +49,9 @@ A DinoAtlas foi criada pensando em:
 
 <!-- ---------------------------------------------------------------------- -->
 
-## 🌍 Deploy
+## 🌍 Deploy - Pausado Temporariamente
 
-A **DinoAtlas API** está disponível publicamente para consumo:
+A **DinoAtlas API** estará disponível publicamente para consumo:
 
 **URL Base:**
 
@@ -59,7 +59,7 @@ A **DinoAtlas API** está disponível publicamente para consumo:
 https://dinoapi-swg8.onrender.com/api
 ```
 
-A API pode ser utilizada por aplicações externas através dos endpoints disponíveis.
+A API poderá ser utilizada por aplicações externas através dos endpoints disponíveis.
 
 ## 🌐 API Online
 
@@ -100,7 +100,6 @@ https://dinoapi-swg8.onrender.com
 * [ ] Adicionar imagens das espécies
 * [ ] Criar relacionamentos mais complexos entre dados
 * [ ] Implementar Rate Limiting
-* [ ] Novos recursos paleontológicos
 
 ---
 
