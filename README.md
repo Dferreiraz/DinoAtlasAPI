@@ -49,7 +49,7 @@ A DinoAtlas foi criada pensando em:
 
 <!-- ---------------------------------------------------------------------- -->
 
-## 🌍 Deploy - Pausado Temporariamente
+## 🌍 Deploy 
 
 A **DinoAtlas API** estará disponível publicamente para consumo:
 
