@@ -57,12 +57,3 @@ const filterData = (data, queryParams) => {
 };
 
 module.exports = filterData;
-
-/*
-EXEMPLO DE USO FUTURO:
-const filterData = require('../utils/filtering');
-
-// Considerando a query: ?dietId=1&lengthMin=5&weightMax=5000
-const filters = { dietId: "1", lengthMin: "5", weightMax: "5000" };
-const filteredDinos = filterData(dinosaurs, filters);
-*/

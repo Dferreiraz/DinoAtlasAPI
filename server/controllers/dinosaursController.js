@@ -33,7 +33,7 @@ const injetarImagens = (dinossauros) => {
             });
         }
 
-        // Se for apenas um único dinossauro objeto
+      
         const imgData = images.find(img => img.dinosaurId === dinossauros.id);
         return {
             ...dinossauros,
@@ -51,22 +51,16 @@ const getAllDinosaurs = async (req, res) => {
   try {
     let data = await readJson(DB_PATH);
     
-    // Extrai propriedades da query
     const { search, sort, order, page, limit, ...filters } = req.query;
 
-    // 1. Aplica filtros exatos e de mínimo/máximo (periodId, dietId, lengthMin, etc.)
     data = filterData(data, filters);
 
-    // 2. Aplica busca textual nos campos desejados
     data = searchData(data, search, ['name', 'scientificName', 'description']);
 
-    // 3. Aplica ordenação (name, length, weight, yearDiscovered)
     data = sortData(data, sort, order);
 
-    // 3.1. Injeta as imagens do Cloudinary nos dados filtrados/ordenados
     data = injetarImagens(data);
 
-    // 4. Aplica paginação
     const paginated = paginate(data, page, limit);
 
     return res.status(STATUS_CODES.OK).json(
@@ -91,7 +85,6 @@ const getDinosaurById = async (req, res) => {
       );
     }
 
-    // Injeta a imagem do Cloudinary no dinossauro único
     dino = injetarImagens(dino);
 
     return res.status(STATUS_CODES.OK).json(successResponse(dino));
@@ -107,7 +100,6 @@ const getDinosaurByName = async (req, res) => {
     const nameParam = req.params.name.toLowerCase().trim();
     const data = await readJson(DB_PATH);
     
-    // Busca ignorando maiúsculas/minúsculas e aceitando partes do nome
     let results = data.filter(d => d.name.toLowerCase().includes(nameParam));
 
     if (results.length === 0) {
@@ -116,10 +108,8 @@ const getDinosaurByName = async (req, res) => {
       );
     }
 
-    // Injeta as imagens nos resultados da busca por nome
     results = injetarImagens(results);
 
-    // Retorna array pois pode haver "Tyrannosaurus" e "Tyrannosaurus rex"
     return res.status(STATUS_CODES.OK).json(successResponse(results));
   } catch (error) {
     return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
@@ -128,8 +118,35 @@ const getDinosaurByName = async (req, res) => {
   }
 };
 
+const getRandomDinosaurs = async (req, res) => {
+  try {
+    const limit = parseInt(req.query.limit, 10) || 1;
+    const data = await readJson(DB_PATH);
+
+    if (limit < 1 || limit > 50) {
+      return res.status(STATUS_CODES.BAD_REQUEST).json(
+        errorResponse("O parâmetro 'limit' deve ser um número entre 1 e 50.")
+      );
+    }
+
+    const shuffled = [...data].sort(() => 0.5 - Math.random());
+    let selected = shuffled.slice(0, limit);
+
+    selected = injetarImagens(selected);
+
+    return res.status(STATUS_CODES.OK).json(
+      successResponse(limit === 1 ? selected[0] : selected, { count: selected.length })
+    );
+  } catch (error) {
+    return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
+      errorResponse('Erro ao buscar dinossauros aleatórios.', error.message)
+    );
+  }
+};
+
 module.exports = {
   getAllDinosaurs,
   getDinosaurById,
-  getDinosaurByName
+  getDinosaurByName,
+  getRandomDinosaurs
 };

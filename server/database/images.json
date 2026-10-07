@@ -2,10 +2,12 @@
   {
     "id": 1,
     "dinosaurId": 1,
-    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/trex",
-    "image": "https://res.cloudinary.com/ckntndjo/image/upload/f_auto,q_auto/trex",
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/trex.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790730807/trex.jpg",
     "author": "APK",
-    "license": "Creative Commons Attribution 4.0"
+    "license": "Creative Commons Attribution 4.0",
+    "modified": true,
+    "modification": "Background removed and replaced white background"
   },
   {
     "id": 2,
@@ -13,7 +15,9 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/triceratops.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/triceratops.jpg",
     "author": "Nobu Tamura",
-    "license": "Creative Commons Attribution 2.5"
+    "license": "Creative Commons Attribution 2.5",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 3,
@@ -21,7 +25,9 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/stegosaurus.png",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/stegosaurus.png",
     "author": "Fred Wierum",
-    "license": "Creative Commons Attribution-Share Alike 4.0"
+    "license": "Creative Commons Attribution-Share Alike 4.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 4,
@@ -29,7 +35,9 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/brachiosaurus.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632501/brachiosaurus.jpg",
     "author": "Dmitry Bogdanov",
-    "license": "Public domain"
+    "license": "Public domain",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 5,
@@ -37,7 +45,9 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/velociraptor.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632501/velociraptor.jpg",
     "author": "Chrisi1964",
-    "license": "Creative Commons Attribution-Share Alike 4.0"
+    "license": "Creative Commons Attribution-Share Alike 4.0",
+    "modified": true,
+    "modification": "Background removed and replaced white background"
   },
   {
     "id": 6,
@@ -45,7 +55,9 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/spinosaurus.png",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632501/spinosaurus.png",
     "author": "Petr Menshikov",
-    "license": "Creative Commons Attribution-Share Alike 4.0"
+    "license": "Creative Commons Attribution-Share Alike 4.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 7,
@@ -53,7 +65,9 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/allosaurus.png",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632501/allosaurus.png",
     "author": "Ddinodan",
-    "license": "Creative Commons Attribution 4.0"
+    "license": "Creative Commons Attribution 4.0",
+    "modified": true,
+    "modification": "White wallpaper added"
   },
   {
     "id": 8,
@@ -61,7 +75,9 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/ankylosaurus.webp",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632503/ankylosaurus.webp",
     "author": "DataBase Center for Life Science (DBCLS)",
-    "license": "Creative Commons Attribution 4.0"
+    "license": "Creative Commons Attribution 4.0",
+    "modified": true,
+    "modification": "White wallpaper added"
   },
   {
     "id": 9,
@@ -69,7 +85,9 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/diplodocus.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632501/diplodocus.jpg",
     "author": "Fred Wierum",
-    "license": "Creative Commons Attribution-Share Alike 4.0"
+    "license": "Creative Commons Attribution-Share Alike 4.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 10,
@@ -77,7 +95,9 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/parasaurolophus.png",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632501/parasaurolophus.png",
     "author": "Connor Ashbridge",
-    "license": "Creative Commons Attribution-Share Alike 4.0"
+    "license": "Creative Commons Attribution-Share Alike 4.0",
+    "modified": true,
+    "modification": "White wallpaper added"
   },
   {
     "id": 11,
@@ -85,7 +105,9 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/carnotaurus.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632501/carnotaurus.jpg",
     "author": "Nobu Tamura",
-    "license": "Creative Commons Attribution 3.0"
+    "license": "Creative Commons Attribution 3.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 12,
@@ -93,7 +115,9 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/giganotosaurus.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/giganotosaurus.jpg",
     "author": "PLTRON",
-    "license": "Creative Commons Attribution-Share Alike 4.0"
+    "license": "Creative Commons Attribution-Share Alike 4.0",
+    "modified": true,
+    "modification": "Background removed and replaced white background"
   },
   {
     "id": 13,
@@ -101,7 +125,9 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/argentinosaurus.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860734/argentinosaurus.jpg",
     "author": "Nobu Tamura",
-    "license": "Creative Commons Attribution 3.0"
+    "license": "Creative Commons Attribution 3.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 14,
@@ -109,7 +135,9 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Iguanodon.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860733/Iguanodon.jpg",
     "author": "Nobu Tamura",
-    "license": "Creative Commons Attribution-Share Alike 4.0"
+    "license": "Creative Commons Attribution-Share Alike 4.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 15,
@@ -117,7 +145,9 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Megalosaurus.png",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860733/Megalosaurus.png",
     "author": "LadyofHats Mariana Ruiz Altered by FunkMonk and Steveoc 86",
-    "license": "Public domain"
+    "license": "Public domain",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 16,
@@ -125,7 +155,9 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Deinonychus.png",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860733/Deinonychus.png",
     "author": "TotalDino",
-    "license": "Creative Commons Zero, Public Domain Dedication"
+    "license": "Creative Commons Zero, Public Domain Dedication",
+    "modified": true,
+    "modification": "White wallpaper added"
   },
   {
     "id": 17,
@@ -133,7 +165,9 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Baryonyx.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860734/Baryonyx.jpg",
     "author": "Robinson Kunz e Rebecca Slater",
-    "license": "Creative Commons Attribution-Share Alike 3.0"
+    "license": "Creative Commons Attribution-Share Alike 3.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 18,
@@ -141,7 +175,9 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Amargasaurus.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860734/Amargasaurus.jpg",
     "author": "ArthurWeasley",
-    "license": "Creative Commons Attribution-Share Alike 3.0"
+    "license": "Creative Commons Attribution-Share Alike 3.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 19,
@@ -149,7 +185,9 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Plateosaurus.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860734/Plateosaurus.jpg",
     "author": "Elekes Andor",
-    "license": "Creative Commons Attribution-Share Alike 4.0"
+    "license": "Creative Commons Attribution-Share Alike 4.0",
+    "modified": true,
+    "modification": "Background removed and replaced white background"
   },
   {
     "id": 20,
@@ -157,7 +195,9 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Coelophysis.png",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860734/Coelophysis.png",
     "author": "TotalDino",
-    "license": "Creative Commons Attribution-Share Alike 4.0"
+    "license": "Creative Commons Attribution-Share Alike 4.0",
+    "modified": true,
+    "modification": "White wallpaper added"
   },
   {
     "id": 21,
@@ -165,7 +205,9 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Archaeopteryx.png",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860733/Archaeopteryx.png",
     "author": "TotalDino",
-    "license": "Creative Commons Attribution-Share Alike 4.0"
+    "license": "Creative Commons Attribution-Share Alike 4.0",
+    "modified": true,
+    "modification": "White wallpaper added"
   },
   {
     "id": 22,
@@ -173,7 +215,9 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Compsognathus.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860733/Compsognathus.jpg",
     "author": "Nobu Tamura",
-    "license": "Creative Commons Attribution 2.5"
+    "license": "Creative Commons Attribution 2.5",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 23,
@@ -181,7 +225,9 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Gallimimus.png",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860733/Gallimimus.png",
     "author": "PaleoNeolitic",
-    "license": "Creative Commons Attribution 4.0"
+    "license": "Creative Commons Attribution 4.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 24,
@@ -189,7 +235,9 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Oviraptor.png",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860734/Oviraptor.png",
     "author": "PaleoNeolitic",
-    "license": "Creative Commons Attribution 4.0"
+    "license": "Creative Commons Attribution 4.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 25,
@@ -197,206 +245,258 @@
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Protoceratops.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787860734/Protoceratops.jpg",
     "author": "Nobu Tamura",
-    "license": "Creative Commons Attribution 2.5"
+    "license": "Creative Commons Attribution 2.5",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 26,
     "dinosaurId": 26,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Pachycephalosaurus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738409/Pachycephalosaurus.jpg",
+    "author": "TotalDino",
+    "license": "Creative Commons Attribution-Share Alike 4.0",
+    "modified": true,
+    "modification": "White wallpaper added"
   },
   {
     "id": 27,
     "dinosaurId": 27,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Maiasaura.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738409/Maiasaura.jpg",
+    "author": "TotalDino",
+    "license": "Creative Commons Attribution 4.0",
+    "modified": true,
+    "modification": "White wallpaper added"
   },
   {
     "id": 28,
     "dinosaurId": 28,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Edmontosaurus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738431/Edmontosaurus.jpg",
+    "author": "Nobu Tamura",
+    "license": "Creative Commons Attribution 2.5",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 29,
     "dinosaurId": 29,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Corythosaurus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738409/Corythosaurus.jpg",
+    "author": "TotalDino",
+    "license": "Creative Commons Attribution 4.0",
+    "modified": true,
+    "modification": "White wallpaper added"
   },
   {
     "id": 30,
     "dinosaurId": 30,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Styracosaurus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738409/Styracosaurus.jpg",
+    "author": "TotalDino",
+    "license": "Creative Commons Zero, Public Domain Dedication",
+    "modified": true,
+    "modification": "White wallpaper added"
   },
   {
     "id": 31,
     "dinosaurId": 31,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Pachyrhinosaurus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738409/Pachyrhinosaurus.jpg",
+    "author": "TotalDino",
+    "license": "Creative Commons Attribution 4.0",
+    "modified": true,
+    "modification": "White wallpaper added"
   },
   {
     "id": 32,
     "dinosaurId": 32,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Centrosaurus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738409/Centrosaurus.jpg",
+    "author": "Nobu Tamura",
+    "license": "Creative Commons Attribution 3.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 33,
     "dinosaurId": 33,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Therizinosaurus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738409/Therizinosaurus.jpg",
+    "author": "TotalDino",
+    "license": "Creative Commons Attribution 4.0",
+    "modified": true,
+    "modification": "White wallpaper added"
   },
   {
     "id": 34,
     "dinosaurId": 34,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Deinocheirus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738409/Deinocheirus.jpg",
+    "author": "TotalDino",
+    "license": "Creative Commons Attribution-Share Alike 4.0",
+    "modified": true,
+    "modification": "White wallpaper added"
   },
   {
     "id": 35,
     "dinosaurId": 35,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Dilophosaurus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738409/Dilophosaurus.jpg",
+    "author": "TotalDino",
+    "license": "Creative Commons Attribution-Share Alike 4.0",
+    "modified": true,
+    "modification": "White wallpaper added"
   },
   {
     "id": 36,
     "dinosaurId": 36,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Ceratosaurus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738409/Ceratosaurus.jpg",
+    "author": "TotalDino",
+    "license": "Creative Commons Attribution 4.0",
+    "modified": true,
+    "modification": "White wallpaper added"
   },
   {
     "id": 37,
     "dinosaurId": 37,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Majungasaurus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738409/Majungasaurus.jpg",
+    "author": "TotalDino",
+    "license": "Creative Commons Attribution-Share Alike 4.0",
+    "modified": true,
+    "modification": "White wallpaper added"
   },
   {
     "id": 38,
     "dinosaurId": 38,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Carcharodontosaurus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738409/Carcharodontosaurus.jpg",
+    "author": "TotalDino",
+    "license": "Creative Commons Attribution-Share Alike 4.0",
+    "modified": true,
+    "modification": "White wallpaper added"
   },
   {
     "id": 39,
     "dinosaurId": 39,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Apatosaurus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738409/Apatosaurus.jpg",
+    "author": "TotalDino",
+    "license": "Creative Commons Zero, Public Domain Dedication",
+    "modified": true,
+    "modification": "White wallpaper added"
   },
   {
     "id": 40,
     "dinosaurId": 40,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Camarasaurus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738409/Camarasaurus.jpg",
+    "author": "TotalDino",
+    "license": "Creative Commons Attribution-Share Alike 4.0",
+    "modified": true,
+    "modification": "White wallpaper added"
   },
   {
     "id": 41,
     "dinosaurId": 41,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Brontosaurus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738409/Brontosaurus.jpg",
+    "author": "TotalDino",
+    "license": "Creative Commons Zero, Public Domain Dedication",
+    "modified": true,
+    "modification": "White wallpaper added"
   },
   {
     "id": 42,
     "dinosaurId": 42,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Euoplocephalus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738409/Euoplocephalus.jpg",
+    "author": "TotalDino",
+    "license": "Creative Commons Attribution 4.0",
+    "modified": true,
+    "modification": "White wallpaper added"
   },
   {
     "id": 43,
     "dinosaurId": 43,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Muttaburrasaurus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738431/Muttaburrasaurus.jpg",
+    "author": "Nobu Tamura",
+    "license": "Creative Commons Attribution-Share Alike 3.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 44,
     "dinosaurId": 44,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Cryolophosaurus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738409/Cryolophosaurus.jpg",
+    "author": "TotalDino",
+    "license": "Creative Commons Attribution 4.0",
+    "modified": true,
+    "modification": "White wallpaper added"
   },
   {
     "id": 45,
     "dinosaurId": 45,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Microraptor.png",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738454/Microraptor.png",
+    "author": "Matt Martyniuk",
+    "license": "Creative Commons Attribution 3.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 46,
     "dinosaurId": 46,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Utahraptor.png",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738459/Utahraptor.png",
+    "author": "Fred Wierum",
+    "license": "Creative Commons Attribution-Share Alike 4.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 47,
     "dinosaurId": 47,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Pentaceratops.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738432/Pentaceratops.jpg",
+    "author": "Nobu Tamura",
+    "license": "Creative Commons Attribution-Share Alike 3.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 48,
     "dinosaurId": 48,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Irritator.png",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738446/Irritator.png",
+    "author": "Sauroarchive",
+    "license": "Creative Commons Attribution 4.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 49,
     "dinosaurId": 49,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Suchomimus.png",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738449/Suchomimus.png",
+    "author": "Sauroarchive",
+    "license": "Creative Commons Attribution-Share Alike 4.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 50,
     "dinosaurId": 50,
-    "thumbnail": "",
-    "image": "",
-    "author": "",
-    "license": ""
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Tsintaosaurus.jpg",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738430/Tsintaosaurus.jpg",
+    "author": "Nobu Tamura",
+    "license": "Creative Commons Attribution-Share Alike 3.0",
+    "modified": false,
+    "modification": ""
   }
 ]
