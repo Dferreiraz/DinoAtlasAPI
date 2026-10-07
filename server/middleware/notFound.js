@@ -4,12 +4,12 @@
  */
 
 const { STATUS_CODES } = require('../utils/constants');
+const { errorResponse } = require('../utils/response');
 
 const notFound = (req, res, next) => {
-  return res.status(STATUS_CODES.NOT_FOUND).json({
-    success: false,
-    message: "Rota não encontrada"
-  });
+  return res.status(STATUS_CODES.NOT_FOUND).json(
+    errorResponse("Rota não encontrada.")
+  );
 };
 
 module.exports = notFound;
