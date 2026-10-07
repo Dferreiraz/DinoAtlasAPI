@@ -4,7 +4,7 @@
 </h1>
 
 <p align="center">
-  <strong>Version 2.2.1</strong>
+  <strong>Version 2.3.0</strong>
 </p>
 
 <!-- ---------------------------------------------------------------------- -->
@@ -92,12 +92,12 @@ https://dinoapi-swg8.onrender.com
 * [x] Documentação da API
 * [x] Front-end integrado
 * [x] Nova identidade e estrutura **DinoAtlas V2.0**
+* [x] Imagens das espécies
 
 ### Próximos passos
 
 * [ ] Integração com o ecossistema DinoDex
 * [ ] Adicionar mais espécies
-* [ ] Adicionar imagens das espécies
 * [ ] Criar relacionamentos mais complexos entre dados
 * [ ] Implementar Rate Limiting
 
