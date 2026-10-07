@@ -13,7 +13,7 @@
   •
   <a href="#-sobre-o-projeto">Sobre</a> •
   <a href="#-deploy">Deploy</a> •
- <!-- <a href="#-como-executar-o-projeto">Como executar</a> • -->
+  <a href="#-como-executar-o-projeto">Como executar</a> • 
   <a href="#-exemplos-de-endpoints">Endpoints</a> •
 <br>
   •
@@ -93,19 +93,19 @@ https://dinoapi-swg8.onrender.com
 * [x] Front-end integrado
 * [x] Nova identidade e estrutura **DinoAtlas V2.0**
 * [x] Imagens das espécies
+* [x] Implementar Rate Limiting
 
 ### Próximos passos
 
 * [ ] Integração com o ecossistema DinoDex
 * [ ] Adicionar mais espécies
 * [ ] Criar relacionamentos mais complexos entre dados
-* [ ] Implementar Rate Limiting
 
 ---
 
 <!-- ---------------------------------------------------------------------- -->
 
- <!-- ## 🚀 Como executar o projeto
+ ## 🚀 Como executar o projeto
 
 ### 1 - Clonar o projeto
 
@@ -143,7 +143,7 @@ A API estará disponível localmente em:
 http://localhost:3000
 ```
 
---- -->
+---
 
 <!-- ---------------------------------------------------------------------- -->
 
