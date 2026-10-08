@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DinoAtlas API - O Atlas Digital dos Dinossauros</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="shortcut icon" href="./src/img/dinoatlasapi_logo.png" type="image/x-icon">
 </head>
 <body>
 
@@ -14,14 +15,14 @@
   <header class="cabecalho" id="inicio">
     <div class="cabecalho__conteudo container">
       <a class="cabecalho__logo" href="#inicio">
-        <img src="./img/dinoatlasapi_logo.png" alt="DinoAtlas API">
+        <img src="./src/img/dinoatlasapi_logo.png" alt="DinoAtlas API">
       </a>
 
       <nav class="navegacao" id="navegacao">
         <ul class="navegacao__lista">
           <li><a class="navegacao__link navegacao__link--ativo" href="#inicio">Home</a></li>
           <li><a class="navegacao__link" href="#endpoints">Endpoints</a></li>
-          <li><a class="navegacao__link" href="#implementacao">Documentação</a></li>
+          <li><a class="navegacao__link" href="./src/page/documentacao.html">Documentação</a></li>
           <li><a class="navegacao__link" href="https://github.com/Dferreiraz/DinoAtlasAPI">GitHub</a></li>
         </ul>
         <div class="navegacao__acoes-mobile">
@@ -51,12 +52,12 @@
        Hero
        ================================================================ -->
   <section class="hero">
-    <img class="hero__imagem" src="./img/hero-skull.png" alt="">
+    <img class="hero__imagem" src="./src/img/hero-skull.png" alt="">
     <div class="hero__sombra"></div>
     <div class="hero__conteudo container">
       <span class="etiqueta">
         <span class="etiqueta__ponto"></span>
-        Api v2.4 is live
+        Api v2.5 is live
       </span>
       <h1 class="hero__titulo">
         Explore milhões de anos com uma <span class="hero__titulo--destaque">Api de dinossauros</span>
@@ -66,7 +67,7 @@
       </p>
       <div class="hero__botoes">
         <a class="botao botao--primario" href="#comecar" id="comecar">Começar</a>
-        <a class="botao botao--secundario" href="#implementacao">Documentação</a>
+        <a class="botao botao--secundario" href="./src/page/documentacao.html">Documentação</a>
       </div>
     </div>
   </section>
@@ -78,7 +79,7 @@
     <div class="estatisticas__grade container">
       <div class="estatisticas__item">
         <span class="estatisticas__icone estatisticas__icone--img">
-          <img src="./img/dinosaur.svg" alt="" class="estatisticas__icone-img">
+          <img src="./src/img/dinosaur.svg" alt="" class="estatisticas__icone-img">
         </span>
         <span class="estatisticas__numero" id="totalDinossauros">0</span>
         <span class="estatisticas__legenda">Dinossauros cadastrados</span>
@@ -181,41 +182,55 @@
        Endpoints
        ================================================================ -->
   <section class="endpoints" id="endpoints">
-    <div class="container">
-      <h2 class="endpoints__titulo">Endpoints populares</h2>
-      <div class="endpoints__lista" id="listaEndpoints">
-        <div class="endpoint">
-          <span class="endpoint__metodo">GET</span>
-          <code class="endpoint__rota">/api/dinosaurs</code>
-          <span class="endpoint__descricao">Lista todos os dinossauros cadastrados</span>
-          <span class="endpoint__status">200 OK</span>
-          <span class="endpoint__seta">›</span>
+      <div class="container">
+        <h2 class="endpoints__titulo">Endpoints populares</h2>
+        <div class="endpoints__lista" id="listaEndpoints">
+          <div class="endpoint" data-busca="dinossauros lista todos">
+            <span class="endpoint__metodo">GET</span>
+            <span class="endpoint__rota">/api/dinosaurs</span>
+            <span class="endpoint__descricao">Lista todos os dinossauros cadastrados</span>
+            <span class="endpoint__status">200 OK</span>
+            <span class="endpoint__seta">›</span>
+          </div>
+          <div class="endpoint" data-busca="dinossauro aleatorio random">
+            <span class="endpoint__metodo">GET</span>
+            <span class="endpoint__rota">/api/dinosaurs/random</span>
+            <span class="endpoint__descricao">Retorna um ou mais dinossauros aleatórios</span>
+            <span class="endpoint__status">200 OK</span>
+            <span class="endpoint__seta">›</span>
+          </div>
+          <div class="endpoint" data-busca="dinossauro id específico">
+            <span class="endpoint__metodo">GET</span>
+            <span class="endpoint__rota">/api/dinosaurs/:id</span>
+            <span class="endpoint__descricao">Retorna detalhes de um dinossauro específico</span>
+            <span class="endpoint__status">200 OK</span>
+            <span class="endpoint__seta">›</span>
+          </div>
+          <div class="endpoint" data-busca="atlas continentes">
+            <span class="endpoint__metodo">GET</span>
+            <span class="endpoint__rota">/api/continents</span>
+            <span class="endpoint__descricao">Lista todos os continentes do Atlas</span>
+            <span class="endpoint__status">200 OK</span>
+            <span class="endpoint__seta">›</span>
+          </div>
+          <div class="endpoint" data-busca="atlas país dinossauros">
+            <span class="endpoint__metodo">GET</span>
+            <span class="endpoint__rota">/api/countries/:id/dinosaurs</span>
+            <span class="endpoint__descricao">Lista todos os dinossauros de um país específico</span>
+            <span class="endpoint__status">200 OK</span>
+            <span class="endpoint__seta">›</span>
+          </div>
+          <div class="endpoint" data-busca="atlas formação geológica">
+            <span class="endpoint__metodo">GET</span>
+            <span class="endpoint__rota">/api/formations/:id/dinosaurs</span>
+            <span class="endpoint__descricao">Lista dinossauros de uma formação geológica</span>
+            <span class="endpoint__status">200 OK</span>
+            <span class="endpoint__seta">›</span>
+          </div>
         </div>
-        <div class="endpoint">
-          <span class="endpoint__metodo">GET</span>
-          <code class="endpoint__rota">/api/dinosaurs/:id</code>
-          <span class="endpoint__descricao">Retorna detalhes de um dinossauro específico</span>
-          <span class="endpoint__status">200 OK</span>
-          <span class="endpoint__seta">›</span>
-        </div>
-        <div class="endpoint">
-          <span class="endpoint__metodo">GET</span>
-          <code class="endpoint__rota">/api/periods</code>
-          <span class="endpoint__descricao">Lista períodos geológicos (Triássico, Jurássico, etc)</span>
-          <span class="endpoint__status">200 OK</span>
-          <span class="endpoint__seta">›</span>
-        </div>
-        <div class="endpoint">
-          <span class="endpoint__metodo">GET</span>
-          <code class="endpoint__rota">/api/families</code>
-          <span class="endpoint__descricao">Lista famílias taxonômicas de dinossauros</span>
-          <span class="endpoint__status">200 OK</span>
-          <span class="endpoint__seta">›</span>
-        </div>
+        <p class="endpoints__vazio" id="endpointsVazio" hidden>Nenhum endpoint encontrado para essa busca.</p>
       </div>
-      <p class="endpoints__vazio" id="endpointsVazio" style="display:none;">Nenhum endpoint encontrado para essa busca.</p>
-    </div>
-  </section>
+    </section>
 
   <!-- ================================================================
        Implementação
@@ -301,13 +316,13 @@
   <footer class="rodape">
     <div class="rodape__conteudo container">
       <div>
-        <img class="rodape__logo" src="./img/dinoatlasapi_logo.png" alt="DinoAtlas API">
+        <img class="rodape__logo" src="./src/img/dinoatlasapi_logo.png" alt="DinoAtlas API">
         <p class="rodape__copyright">© 2026 DinoAtlasAPI Developed by Davi Ferreira. MIT License.</p>
       </div>
       <div class="rodape__colunas">
         <div class="rodape__coluna">
           <span class="rodape__titulo-coluna">Resources</span>
-          <a href="#implementacao">Documentation</a>
+          <a href="./src/page/documentacao.html">Documentation</a>
           <a href="https://github.com/Dferreiraz/DinoAtlasAPI">GitHub</a>
         </div>
         <div class="rodape__coluna">
@@ -322,6 +337,6 @@
     </div>
   </footer>
 
-  <script src="./js/script.js"></script>
+  <script src="./src/js/script.js"></script>
 </body>
 </html>

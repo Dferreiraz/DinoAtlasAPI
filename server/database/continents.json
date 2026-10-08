@@ -2,21 +2,43 @@
   {
     "id": 1,
     "name": "América do Norte",
-    "description": "Continente que abriga vastas formações fossilíferas, como a Formação Hell Creek e Morrison."
+    "code": "NA",
+    "description": "Lar de alguns dos dinossauros mais icônicos, como T. rex e Triceratops, predominando formações do Cretáceo Superior no oeste dos EUA e Canadá."
   },
   {
     "id": 2,
-    "name": "Ásia",
-    "description": "Famoso por descobertas em desertos como Gobi, revelando dinossauros com penas e ninhos fossilizados."
+    "name": "América do Sul",
+    "code": "SA",
+    "description": "Continente de gigantes saurópodes e terópodes abelissaurídeos únicos, com fósseis importantes na Patagônia e no nordeste do Brasil."
   },
   {
     "id": 3,
-    "name": "África",
-    "description": "Continente com descobertas incríveis do Cretáceo e Jurássico, incluindo enormes terópodes."
+    "name": "Europa",
+    "code": "EU",
+    "description": "Local das primeiras descobertas científicas de dinossauros no século XIX, incluindo Megalosaurus e Iguanodon, além de fauna insular única."
   },
   {
     "id": 4,
-    "name": "Europa",
-    "description": "Berço das primeiras descobertas de dinossauros na história moderna da paleontologia."
+    "name": "Ásia",
+    "code": "AS",
+    "description": "Região extremamente rica em fósseis, especialmente no Deserto de Gobi (Mongólia e China), lar de Velociraptor, Protoceratops e dinossauros com penas."
+  },
+  {
+    "id": 5,
+    "name": "África",
+    "code": "AF",
+    "description": "Continentes de predadores massivos como Spinosaurus e Carcharodontosaurus, com formações geológicas que revelam ecossistemas fluviais e costeiros."
+  },
+  {
+    "id": 6,
+    "name": "Oceania",
+    "code": "OC",
+    "description": "Representada principalmente pela Austrália, com dinossauros adaptados a climas polares antigos, como o Muttaburrasaurus."
+  },
+  {
+    "id": 7,
+    "name": "Antártida",
+    "code": "AN",
+    "description": "Embora coberta de gelo hoje, no Cretáceo era verde e habitada por dinossauros como o Cryolophosaurus, provando a distribuição global dos répteis."
   }
 ]

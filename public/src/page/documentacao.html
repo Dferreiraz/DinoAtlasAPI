@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação - DinoAtlas API v2.5</title>
+    <link rel="stylesheet" href="../css/documentacao.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../img/dinoatlasapi_logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <header class="doc-header">
+        <img src="../img/dinoatlasapi_logo.png" alt="DinoAtlas API" class="doc-header__logo">
+        <a href="../../index.html" class="doc-header__voltar">
+            ← Voltar para a Home
+        </a>
+    </header>
+
+    <div class="doc-layout">
+        <!-- Sidebar de Navegação -->
+        <aside class="doc-sidebar">
+            <div class="doc-sidebar__titulo">Início</div>
+            <a href="#introducao" class="doc-sidebar__link doc-sidebar__link--ativo">Introdução</a>
+            <a href="#autenticacao" class="doc-sidebar__link">Autenticação</a>
+
+            <div class="doc-sidebar__titulo">Endpoints Principais</div>
+            <a href="#dinossauros" class="doc-sidebar__link">Dinossauros</a>
+            <a href="#atlas-geografico" class="doc-sidebar__link">Atlas Geográfico</a>
+            <a href="#entidades" class="doc-sidebar__link">Entidades Relacionadas</a>
+
+            <div class="doc-sidebar__titulo">Recursos Avançados</div>
+            <a href="#filtros" class="doc-sidebar__link">Filtros e Busca</a>
+            <a href="#exemplos" class="doc-sidebar__link">Exemplos de Código</a>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="doc-conteudo">
+
+            <section id="introducao" class="doc-secao">
+                <h2>Introdução</h2>
+                <p>Bem-vindo à documentação oficial da <strong>DinoAtlas API</strong>. Esta é uma API RESTful pública e
+                    gratuita dedicada a fornecer dados precisos, estruturados e cientificamente validados sobre
+                    dinossauros e o mundo pré-histórico.</p>
+                <p>Inspirada em projetos open-source de referência, a DinoAtlas API oferece uma base de dados
+                    normalizada, permitindo consultas complexas por período geológico, localização, formação geológica e
+                    características físicas.</p>
+                <p><strong>URL Base:</strong> <code>https://dinoapi-swg8.onrender.com/api</code> (ou <code>/api</code>
+                    em ambiente local).</p>
+            </section>
+
+            <section id="autenticacao" class="doc-secao">
+                <h2>Autenticação</h2>
+                <p>A DinoAtlas API é totalmente aberta. <strong>Nenhuma chave de API (API Key) ou autenticação é
+                        necessária</strong> para realizar requisições. Basta fazer chamadas HTTP GET diretamente aos
+                    endpoints.</p>
+            </section>
+
+            <section id="dinossauros" class="doc-secao">
+                <h2>Dinossauros</h2>
+                <p>O núcleo da API. Retorna dados detalhados sobre as 50+ espécies cadastradas, incluindo injeção
+                    automática de URLs de imagens e metadados.</p>
+
+                <h3>Listar Todos os Dinossauros</h3>
+                <div class="doc-code-block">
+                    <span class="tk-funcao">GET</span> <span class="tk-string">/api/dinosaurs</span>
+                </div>
+                <p>Suporta paginação, busca textual e filtros combinados.</p>
+
+                <h3>Buscar por ID</h3>
+                <div class="doc-code-block">
+                    <span class="tk-funcao">GET</span> <span class="tk-string">/api/dinosaurs/:id</span>
+                </div>
+
+                <h3>Buscar Aleatório</h3>
+                <div class="doc-code-block">
+                    <span class="tk-funcao">GET</span> <span class="tk-string">/api/dinosaurs/random?limit=3</span>
+                </div>
+            </section>
+
+            <section id="atlas-geografico" class="doc-secao">
+                <h2>Atlas Geográfico</h2>
+                <p>Recursos relacionais que permitem navegar pela base de dados através de localizações reais de
+                    descobertas paleontológicas.</p>
+
+                <h3>Listar Continentes</h3>
+                <div class="doc-code-block">
+                    <span class="tk-funcao">GET</span> <span class="tk-string">/api/continents</span>
+                </div>
+
+                <h3>Dinossauros por País</h3>
+                <p>Retorna todos os dinossauros cujos fósseis foram encontrados em um país específico (ex: ID 16 =
+                    Brasil).</p>
+                <div class="doc-code-block">
+                    <span class="tk-funcao">GET</span> <span class="tk-string">/api/countries/:id/dinosaurs</span>
+                </div>
+
+                <h3>Dinossauros por Formação Geológica</h3>
+                <p>Retorna todos os dinossauros associados a uma formação geológica específica (ex: ID 2 = Formação
+                    Morrison).</p>
+                <div class="doc-code-block">
+                    <span class="tk-funcao">GET</span> <span class="tk-string">/api/formations/:id/dinosaurs</span>
+                </div>
+            </section>
+
+            <section id="entidades" class="doc-secao">
+                <h2>Entidades Relacionadas</h2>
+                <p>Estes endpoints retornam listas de categorias que podem ser usadas como filtros na rota principal de
+                    dinossauros.</p>
+                <table class="doc-tabela">
+                    <thead>
+                        <tr>
+                            <th>Recurso</th>
+                            <th>Endpoint</th>
+                            <th>Descrição</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>periods</code></td>
+                            <td><code>/api/periods</code></td>
+                            <td>Períodos geológicos (Triássico, Jurássico, Cretáceo)</td>
+                        </tr>
+                        <tr>
+                            <td><code>diets</code></td>
+                            <td><code>/api/diets</code></td>
+                            <td>Tipos de alimentação (Carnívoro, Herbívoro, Onívoro)</td>
+                        </tr>
+                        <tr>
+                            <td><code>families</code></td>
+                            <td><code>/api/families</code></td>
+                            <td>Famílias taxonômicas (Tyrannosauridae, Hadrosauridae, etc.)</td>
+                        </tr>
+                        <tr>
+                            <td><code>museums</code></td>
+                            <td><code>/api/museums</code></td>
+                            <td>Museus que abrigam os holótipos ou espécimes principais</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="filtros" class="doc-secao">
+                <h2>Filtros e Busca Avançada</h2>
+                <p>A rota <code>/api/dinosaurs</code> aceita parâmetros de Query String para refinar os resultados.
+                    Múltiplos filtros operam com lógica aditiva (AND).</p>
+
+                <table class="doc-tabela">
+                    <thead>
+                        <tr>
+                            <th>Parâmetro</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>search</code></td>
+                            <td>String</td>
+                            <td>Busca textual em nome, nome científico e descrição.</td>
+                        </tr>
+                        <tr>
+                            <td><code>periodId</code></td>
+                            <td>Number</td>
+                            <td>Filtra pelo ID do período geológico.</td>
+                        </tr>
+                        <tr>
+                            <td><code>countryId</code></td>
+                            <td>Number</td>
+                            <td>Filtra pelo ID do país de descoberta.</td>
+                        </tr>
+                        <tr>
+                            <td><code>lengthMin</code></td>
+                            <td>Number</td>
+                            <td>Comprimento mínimo em metros.</td>
+                        </tr>
+                        <tr>
+                            <td><code>weightMax</code></td>
+                            <td>Number</td>
+                            <td>Peso máximo em quilogramas.</td>
+                        </tr>
+                        <tr>
+                            <td><code>sort</code></td>
+                            <td>String</td>
+                            <td>Campo de ordenação: <code>name</code>, <code>length</code>, <code>weight</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code>order</code></td>
+                            <td>String</td>
+                            <td>Direção: <code>asc</code> ou <code>desc</code>.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Exemplo de Filtro Combinado</h3>
+                <p>Buscar carnívoros do Cretáceo com mais de 5 metros, ordenados do mais leve para o mais pesado:</p>
+                <div class="doc-code-block">
+                    <span class="tk-string">/api/dinosaurs?dietId=1&periodId=3&lengthMin=5&sort=weight&order=asc</span>
+                </div>
+            </section>
+
+            <section id="exemplos" class="doc-secao">
+                <h2>Exemplos de Código</h2>
+
+                <h3>JavaScript (Fetch API)</h3>
+                <div class="doc-code-block">
+                    <span class="tk-funcao">fetch</span>(<span
+                        class="tk-string">'/api/dinosaurs?limit=1&countryId=16'</span>)
+                    .<span class="tk-funcao">then</span>(response => response.<span class="tk-funcao">json</span>())
+                    .<span class="tk-funcao">then</span>(data => {
+                    <span class="tk-comentario">// Data contém o array de dinossauros e metadados</span>
+                    console.<span class="tk-funcao">log</span>(data.data[0].name); <span class="tk-comentario">// Ex:
+                        "Irritator"</span>
+                    })
+                    .<span class="tk-funcao">catch</span>(error => console.<span class="tk-funcao">error</span>(<span
+                        class="tk-string">'Erro:'</span>, error));
+                </div>
+
+                <h3>Resposta JSON Esperada</h3>
+                <div class="doc-code-block">
+                    {
+                    <span class="tk-chave">"success"</span>: <span class="tk-funcao">true</span>,
+                    <span class="tk-chave">"data"</span>: [
+                    {
+                    <span class="tk-chave">"id"</span>: <span class="tk-funcao">48</span>,
+                    <span class="tk-chave">"name"</span>: <span class="tk-string">"Irritator"</span>,
+                    <span class="tk-chave">"scientificName"</span>: <span class="tk-string">"Irritator
+                        challengeri"</span>,
+                    <span class="tk-chave">"length"</span>: <span class="tk-funcao">8.0</span>,
+                    <span class="tk-chave">"countryId"</span>: [<span class="tk-funcao">16</span>],
+                    <span class="tk-chave">"imagem"</span>: <span
+                        class="tk-string">"https://res.cloudinary.com/.../irritator.png"</span>
+                    }
+                    ],
+                    <span class="tk-chave">"meta"</span>: {
+                    <span class="tk-chave">"total"</span>: <span class="tk-funcao">1</span>,
+                    <span class="tk-chave">"page"</span>: <span class="tk-funcao">1</span>,
+                    <span class="tk-chave">"limit"</span>: <span class="tk-funcao">1</span>
+                    }
+                    }
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+
+</html>

@@ -19,5 +19,75 @@
     "countryId": 3,
     "city": "Cairo",
     "website": "https://egymonuments.gov.eg"
+  },
+  {
+    "id": 4,
+    "name": "Staatliches Museum für Naturkunde Stuttgart",
+    "countryId": 9,
+    "city": "Stuttgart",
+    "website": "https://www.naturkundemuseum-bw.de"
+  },
+  {
+    "id": 5,
+    "name": "Museum für Naturkunde",
+    "countryId": 9,
+    "city": "Berlim",
+    "website": "https://www.museumfuernaturkunde.berlin"
+  },
+  {
+    "id": 6,
+    "name": "Royal Tyrrell Museum of Palaeontology",
+    "countryId": 5,
+    "city": "Drumheller",
+    "website": "https://www.tyrrellmuseum.com"
+  },
+  {
+    "id": 7,
+    "name": "Paleontological Institute, Russian Academy of Sciences",
+    "countryId": 15,
+    "city": "Moscou",
+    "website": "https://www.paleo.ru"
+  },
+  {
+    "id": 8,
+    "name": "Muséum National d'Histoire Naturelle",
+    "countryId": 16,
+    "city": "Paris",
+    "website": "https://www.mnhn.fr"
+  },
+  {
+    "id": 9,
+    "name": "Queensland Museum",
+    "countryId": 14,
+    "city": "Brisbane",
+    "website": "https://www.qm.qld.gov.au"
+  },
+  {
+    "id": 10,
+    "name": "Museum of Paleontology, University of Michigan",
+    "countryId": 1,
+    "city": "Ann Arbor",
+    "website": "https://ummp.umich.edu"
+  },
+  {
+    "id": 11,
+    "name": "Museu de Paleontologia de Santana do Cariri",
+    "countryId": 16,
+    "city": "Santana do Cariri",
+    "website": "https://www.urca.br/museu-de-paleontologia"
+  },
+  {
+    "id": 12,
+    "name": "Oriental Institute Museum, University of Chicago",
+    "countryId": 1,
+    "city": "Chicago",
+    "website": "https://oi.uchicago.edu/museum"
+  },
+  {
+    "id": 13,
+    "name": "Institute of Vertebrate Paleontology and Paleoanthropology",
+    "countryId": 10,
+    "city": "Pequim",
+    "website": "https://www.ivpp.cas.cn"
   }
 ]

@@ -11,9 +11,13 @@
     "epochId": 1,
     "dietId": 1,
     "habitatId": 1,
-    "formationId": [1],
+    "formationId": [
+      1
+    ],
     "continentId": 1,
-    "countryId": [1],
+    "countryId": [
+      1
+    ],
     "discoveryId": 1,
     "museumId": 1,
     "imageId": 1,
@@ -25,9 +29,18 @@
     "genus": "Tyrannosaurus",
     "status": "Válido",
     "description": "Um dos maiores predadores terrestres de todos os tempos, conhecido pela sua mordida esmagadora e dentes do tamanho de bananas.",
-    "characteristics": ["Visão binocular avançada", "Mandíbula extremamente poderosa", "Pernas robustas e cauda longa para equilíbrio"],
-    "curiosities": ["Sua mordida podia exercer uma força de mais de 35.000 Newtons, capaz de esmagar ossos."],
-    "sources": ["American Museum of Natural History", "Paleobiology Database"]
+    "characteristics": [
+      "Visão binocular avançada",
+      "Mandíbula extremamente poderosa",
+      "Pernas robustas e cauda longa para equilíbrio"
+    ],
+    "curiosities": [
+      "Sua mordida podia exercer uma força de mais de 35.000 Newtons, capaz de esmagar ossos."
+    ],
+    "sources": [
+      "American Museum of Natural History",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 2,
@@ -41,9 +54,13 @@
     "epochId": 1,
     "dietId": 2,
     "habitatId": 1,
-    "formationId": [1],
+    "formationId": [
+      1
+    ],
     "continentId": 1,
-    "countryId": [1],
+    "countryId": [
+      1
+    ],
     "discoveryId": 2,
     "museumId": 1,
     "imageId": 2,
@@ -55,9 +72,18 @@
     "genus": "Triceratops",
     "status": "Válido",
     "description": "Um herbívoro robusto e quadrúpede, famoso pelo grande escudo ósseo e pelos três chifres faciais usados para defesa contra predadores.",
-    "characteristics": ["Três chifres faciais proeminentes", "Escudo ósseo protetor no pescoço", "Bico córneo forte para cortar vegetação dura"],
-    "curiosities": ["O escudo craniano podia atingir quase um terço do comprimento total do corpo do animal."],
-    "sources": ["Smithsonian National Museum", "Paleobiology Database"]
+    "characteristics": [
+      "Três chifres faciais proeminentes",
+      "Escudo ósseo protetor no pescoço",
+      "Bico córneo forte para cortar vegetação dura"
+    ],
+    "curiosities": [
+      "O escudo craniano podia atingir quase um terço do comprimento total do corpo do animal."
+    ],
+    "sources": [
+      "Smithsonian National Museum",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 3,
@@ -71,9 +97,13 @@
     "epochId": 2,
     "dietId": 2,
     "habitatId": 1,
-    "formationId": [2],
+    "formationId": [
+      2
+    ],
     "continentId": 1,
-    "countryId": [1],
+    "countryId": [
+      1
+    ],
     "discoveryId": 3,
     "museumId": 1,
     "imageId": 3,
@@ -85,9 +115,18 @@
     "genus": "Stegosaurus",
     "status": "Válido",
     "description": "Herbívoro distinto pelas placas ósseas verticais ao longo das costas e pelos espigões na cauda usados para defesa.",
-    "characteristics": ["Placas ósseas alternadas nas costas", "Espigões defensivos na cauda (thagomizer)", "Cérebro do tamanho de uma noz"],
-    "curiosities": ["Suas famosas placas dorsais eram muito vascularizadas e provavelmente serviam para termorregulação."],
-    "sources": ["Peabody Museum", "Paleobiology Database"]
+    "characteristics": [
+      "Placas ósseas alternadas nas costas",
+      "Espigões defensivos na cauda (thagomizer)",
+      "Cérebro do tamanho de uma noz"
+    ],
+    "curiosities": [
+      "Suas famosas placas dorsais eram muito vascularizadas e provavelmente serviam para termorregulação."
+    ],
+    "sources": [
+      "Peabody Museum",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 4,
@@ -101,9 +140,13 @@
     "epochId": 2,
     "dietId": 2,
     "habitatId": 1,
-    "formationId": [2],
+    "formationId": [
+      2
+    ],
     "continentId": 1,
-    "countryId": [1],
+    "countryId": [
+      1
+    ],
     "discoveryId": 4,
     "museumId": 1,
     "imageId": 4,
@@ -115,9 +158,18 @@
     "genus": "Brachiosaurus",
     "status": "Válido",
     "description": "Saurópode massivo com membros anteriores mais longos que os posteriores, permitindo-lhe alcançar copas de árvores elevadas.",
-    "characteristics": ["Pernas dianteiras mais longas que as traseiras", "Pescoço extremamente longo voltado para cima", "Narinas elevadas em uma cúpula no crânio"],
-    "curiosities": ["Ao contrário de muitos saurópodes que podiam se erguer nas patas traseiras, a anatomia do Brachiosaurus tornava isso improvável."],
-    "sources": ["Field Museum", "Paleobiology Database"]
+    "characteristics": [
+      "Pernas dianteiras mais longas que as traseiras",
+      "Pescoço extremamente longo voltado para cima",
+      "Narinas elevadas em uma cúpula no crânio"
+    ],
+    "curiosities": [
+      "Ao contrário de muitos saurópodes que podiam se erguer nas patas traseiras, a anatomia do Brachiosaurus tornava isso improvável."
+    ],
+    "sources": [
+      "Field Museum",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 5,
@@ -131,9 +183,14 @@
     "epochId": 1,
     "dietId": 1,
     "habitatId": 2,
-    "formationId": [3],
+    "formationId": [
+      3
+    ],
     "continentId": 4,
-    "countryId": [2, 3],
+    "countryId": [
+      2,
+      3
+    ],
     "discoveryId": 5,
     "museumId": 1,
     "imageId": 5,
@@ -145,9 +202,18 @@
     "genus": "Velociraptor",
     "status": "Válido",
     "description": "Pequeno terópode bípede, ágil e totalmente coberto por penas, famoso pela garra em foice no segundo dedo dos pés.",
-    "characteristics": ["Garra em foice retrátil nos pés", "Corpo coberto por penas", "Cauda rígida para equilibrar curvas rápidas"],
-    "curiosities": ["Eram animais do tamanho de um peru grande, muito distantes do monstro escamoso retratado no cinema."],
-    "sources": ["American Museum of Natural History", "Mongolian Academy of Sciences"]
+    "characteristics": [
+      "Garra em foice retrátil nos pés",
+      "Corpo coberto por penas",
+      "Cauda rígida para equilibrar curvas rápidas"
+    ],
+    "curiosities": [
+      "Eram animais do tamanho de um peru grande, muito distantes do monstro escamoso retratado no cinema."
+    ],
+    "sources": [
+      "American Museum of Natural History",
+      "Mongolian Academy of Sciences"
+    ]
   },
   {
     "id": 6,
@@ -161,9 +227,13 @@
     "epochId": 1,
     "dietId": 1,
     "habitatId": 3,
-    "formationId": [4],
+    "formationId": [
+      4
+    ],
     "continentId": 5,
-    "countryId": [4],
+    "countryId": [
+      4
+    ],
     "discoveryId": 6,
     "museumId": 1,
     "imageId": 6,
@@ -175,9 +245,18 @@
     "genus": "Spinosaurus",
     "status": "Válido",
     "description": "Colossal predador semi-aquático com uma imensa estrutura em formato de vela nas costas e focinho adaptado para capturar peixes.",
-    "characteristics": ["Vela dorsal imensa suportada por espinhas neurais", "Focinho longo e estreito semelhante ao de um crocodilo", "Pernas curtas e adaptadas para natação"],
-    "curiosities": ["É considerado o primeiro dinossauro conhecido com adaptações claras para um estilo de vida semi-aquático."],
-    "sources": ["Natural History Museum, Cairo", "University of Chicago"]
+    "characteristics": [
+      "Vela dorsal imensa suportada por espinhas neurais",
+      "Focinho longo e estreito semelhante ao de um crocodilo",
+      "Pernas curtas e adaptadas para natação"
+    ],
+    "curiosities": [
+      "É considerado o primeiro dinossauro conhecido com adaptações claras para um estilo de vida semi-aquático."
+    ],
+    "sources": [
+      "Natural History Museum, Cairo",
+      "University of Chicago"
+    ]
   },
   {
     "id": 7,
@@ -191,9 +270,13 @@
     "epochId": 2,
     "dietId": 1,
     "habitatId": 1,
-    "formationId": [2],
+    "formationId": [
+      2
+    ],
     "continentId": 1,
-    "countryId": [1],
+    "countryId": [
+      1
+    ],
     "discoveryId": 7,
     "museumId": 1,
     "imageId": 7,
@@ -205,9 +288,18 @@
     "genus": "Allosaurus",
     "status": "Válido",
     "description": "O principal predador de topo do Jurássico na América do Norte, com mandíbulas flexíveis e cristas curtas acima dos olhos.",
-    "characteristics": ["Mandíbula superior altamente flexível", "Pequenas cristas ósseas sobre os olhos", "Mãos musculosas com três dedos equipados com garras"],
-    "curiosities": ["Fósseis de Allosaurus mostram marcas de ferimentos de caça, indicando que enfrentavam presas gigantescas."],
-    "sources": ["Utah Museum of Natural History", "Paleobiology Database"]
+    "characteristics": [
+      "Mandíbula superior altamente flexível",
+      "Pequenas cristas ósseas sobre os olhos",
+      "Mãos musculosas com três dedos equipados com garras"
+    ],
+    "curiosities": [
+      "Fósseis de Allosaurus mostram marcas de ferimentos de caça, indicando que enfrentavam presas gigantescas."
+    ],
+    "sources": [
+      "Utah Museum of Natural History",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 8,
@@ -221,9 +313,13 @@
     "epochId": 1,
     "dietId": 2,
     "habitatId": 1,
-    "formationId": [1],
+    "formationId": [
+      1
+    ],
     "continentId": 1,
-    "countryId": [1],
+    "countryId": [
+      1
+    ],
     "discoveryId": 8,
     "museumId": 1,
     "imageId": 8,
@@ -235,9 +331,18 @@
     "genus": "Ankylosaurus",
     "status": "Válido",
     "description": "Um tanque blindado da natureza, coberto de placas ósseas protetoras (osteodermos) e uma pesada clava na ponta da cauda.",
-    "characteristics": ["Armadura corporal completa de osteodermos", "Clava óssea pesada na extremidade da cauda", "Corpo largo e baixo para estabilidade"],
-    "curiosities": ["A clava da cauda podia ser balançada com força suficiente para quebrar os ossos das pernas de grandes predadores."],
-    "sources": ["American Museum of Natural History", "Paleobiology Database"]
+    "characteristics": [
+      "Armadura corporal completa de osteodermos",
+      "Clava óssea pesada na extremidade da cauda",
+      "Corpo largo e baixo para estabilidade"
+    ],
+    "curiosities": [
+      "A clava da cauda podia ser balançada com força suficiente para quebrar os ossos das pernas de grandes predadores."
+    ],
+    "sources": [
+      "American Museum of Natural History",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 9,
@@ -251,9 +356,13 @@
     "epochId": 2,
     "dietId": 2,
     "habitatId": 1,
-    "formationId": [2],
+    "formationId": [
+      2
+    ],
     "continentId": 1,
-    "countryId": [1],
+    "countryId": [
+      1
+    ],
     "discoveryId": 9,
     "museumId": 1,
     "imageId": 9,
@@ -265,9 +374,18 @@
     "genus": "Diplodocus",
     "status": "Válido",
     "description": "Saurópode incrivelmente longo, caracterizado por um pescoço estendido e uma cauda pontiaguda semelhante a um chicote.",
-    "characteristics": ["Pescoço longo com vértebras especializadas", "Cauda extremamente longa em formato de chicote", "Dentes restritos apenas à parte frontal da boca"],
-    "curiosities": ["A ponta da cauda do Diplodocus podia atingir velocidades supersônicas se estalada como um chicote para afastar predadores."],
-    "sources": ["Carnegie Museum of Natural History", "Paleobiology Database"]
+    "characteristics": [
+      "Pescoço longo com vértebras especializadas",
+      "Cauda extremamente longa em formato de chicote",
+      "Dentes restritos apenas à parte frontal da boca"
+    ],
+    "curiosities": [
+      "A ponta da cauda do Diplodocus podia atingir velocidades supersônicas se estalada como um chicote para afastar predadores."
+    ],
+    "sources": [
+      "Carnegie Museum of Natural History",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 10,
@@ -281,9 +399,14 @@
     "epochId": 1,
     "dietId": 2,
     "habitatId": 1,
-    "formationId": [5],
+    "formationId": [
+      5
+    ],
     "continentId": 1,
-    "countryId": [1, 5],
+    "countryId": [
+      1,
+      5
+    ],
     "discoveryId": 10,
     "museumId": 1,
     "imageId": 10,
@@ -295,9 +418,18 @@
     "genus": "Parasaurolophus",
     "status": "Válido",
     "description": "Famoso dinossauro hadrossaurídeo (bico-de-pato), inconfundível devido à longa crista craniana curva para trás.",
-    "characteristics": ["Tubo craniano que funcionava como câmara de ressonância acústica", "Podia andar nas quatro patas e correr sobre as duas traseiras", "Bico adaptado para triturar folhagem dura"],
-    "curiosities": ["Usando modelos computacionais do crânio, os cientistas conseguiram simular os sons de baixa frequência que este dinossauro produzia."],
-    "sources": ["Royal Ontario Museum", "Paleobiology Database"]
+    "characteristics": [
+      "Tubo craniano que funcionava como câmara de ressonância acústica",
+      "Podia andar nas quatro patas e correr sobre as duas traseiras",
+      "Bico adaptado para triturar folhagem dura"
+    ],
+    "curiosities": [
+      "Usando modelos computacionais do crânio, os cientistas conseguiram simular os sons de baixa frequência que este dinossauro produzia."
+    ],
+    "sources": [
+      "Royal Ontario Museum",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 11,
@@ -311,9 +443,13 @@
     "epochId": 1,
     "dietId": 1,
     "habitatId": 1,
-    "formationId": [6],
+    "formationId": [
+      6
+    ],
     "continentId": 2,
-    "countryId": [6],
+    "countryId": [
+      6
+    ],
     "discoveryId": 11,
     "museumId": 2,
     "imageId": 11,
@@ -325,9 +461,18 @@
     "genus": "Carnotaurus",
     "status": "Válido",
     "description": "Terópode sul-americano muito distinto por possuir dois chifres espessos acima dos olhos e braços extremamente curtos.",
-    "characteristics": ["Chifres frontais únicos entre os carnívoros", "Braços curtíssimos e atrofiados", "Pele com fileiras de pequenas escamas blindadas"],
-    "curiosities": ["Estudos biomecânicos indicam que o Carnotaurus era um dos grandes predadores bípedes mais rápidos do período Cretáceo."],
-    "sources": ["Museo Argentino de Ciencias Naturales", "Paleobiology Database"]
+    "characteristics": [
+      "Chifres frontais únicos entre os carnívoros",
+      "Braços curtíssimos e atrofiados",
+      "Pele com fileiras de pequenas escamas blindadas"
+    ],
+    "curiosities": [
+      "Estudos biomecânicos indicam que o Carnotaurus era um dos grandes predadores bípedes mais rápidos do período Cretáceo."
+    ],
+    "sources": [
+      "Museo Argentino de Ciencias Naturales",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 12,
@@ -341,9 +486,13 @@
     "epochId": 1,
     "dietId": 1,
     "habitatId": 1,
-    "formationId": [7],
+    "formationId": [
+      7
+    ],
     "continentId": 2,
-    "countryId": [6],
+    "countryId": [
+      6
+    ],
     "discoveryId": 12,
     "museumId": 2,
     "imageId": 12,
@@ -355,9 +504,18 @@
     "genus": "Giganotosaurus",
     "status": "Válido",
     "description": "Um dos maiores terópodes carnívoros conhecidos, superando em comprimento espécimes tradicionais de T. rex.",
-    "characteristics": ["Crânio longo com dentes serrilhados adaptados para rasgar carne", "Mandíbula forte, embora com mordida menos esmagadora que a do T. rex", "Pernas longas e robustas"],
-    "curiosities": ["Fósseis encontrados próximos sugerem que eles podiam caçar saurópodes gigantes em bandos coordenados."],
-    "sources": ["Museo Carmen Funes", "Paleobiology Database"]
+    "characteristics": [
+      "Crânio longo com dentes serrilhados adaptados para rasgar carne",
+      "Mandíbula forte, embora com mordida menos esmagadora que a do T. rex",
+      "Pernas longas e robustas"
+    ],
+    "curiosities": [
+      "Fósseis encontrados próximos sugerem que eles podiam caçar saurópodes gigantes em bandos coordenados."
+    ],
+    "sources": [
+      "Museo Carmen Funes",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 13,
@@ -371,9 +529,13 @@
     "epochId": 1,
     "dietId": 2,
     "habitatId": 1,
-    "formationId": [7],
+    "formationId": [
+      7
+    ],
     "continentId": 2,
-    "countryId": [6],
+    "countryId": [
+      6
+    ],
     "discoveryId": 13,
     "museumId": 2,
     "imageId": 13,
@@ -385,9 +547,18 @@
     "genus": "Argentinosaurus",
     "status": "Válido",
     "description": "Tit Saurus colossal, amplamente considerado o maior animal terrestre que já pisou na Terra.",
-    "characteristics": ["Vértebras gigantescas do tamanho de um homem adulto", "Pescoço e cauda massivos em proporção equilibrada", "Patas colossais para suportar o peso extremo"],
-    "curiosities": ["Cada uma de suas vértebras dorsais media mais de 1,5 metro de altura."],
-    "sources": ["Museo Municipal Carmen Funes", "Paleobiology Database"]
+    "characteristics": [
+      "Vértebras gigantescas do tamanho de um homem adulto",
+      "Pescoço e cauda massivos em proporção equilibrada",
+      "Patas colossais para suportar o peso extremo"
+    ],
+    "curiosities": [
+      "Cada uma de suas vértebras dorsais media mais de 1,5 metro de altura."
+    ],
+    "sources": [
+      "Museo Municipal Carmen Funes",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 14,
@@ -401,9 +572,14 @@
     "epochId": 1,
     "dietId": 2,
     "habitatId": 1,
-    "formationId": [8],
+    "formationId": [
+      8
+    ],
     "continentId": 3,
-    "countryId": [7, 8],
+    "countryId": [
+      7,
+      8
+    ],
     "discoveryId": 14,
     "museumId": 3,
     "imageId": 14,
@@ -415,9 +591,18 @@
     "genus": "Iguanodon",
     "status": "Válido",
     "description": "Ornitópode robusto e histórico, famoso pelo esporão cônico no polegar usado para defesa ou forrageamento.",
-    "characteristics": ["Polegar transformado em um espigão pontiagudo", "Capacidade de locomoção bípede e quadrúpede", "Dentes especializados para mastigar plantas duras"],
-    "curiosities": ["Foi o segundo dinossauro a ser formalmente nomeado na história da ciência, em 1825 por Gideon Mantell."],
-    "sources": ["Royal Belgian Institute of Natural Sciences", "Paleobiology Database"]
+    "characteristics": [
+      "Polegar transformado em um espigão pontiagudo",
+      "Capacidade de locomoção bípede e quadrúpede",
+      "Dentes especializados para mastigar plantas duras"
+    ],
+    "curiosities": [
+      "Foi o segundo dinossauro a ser formalmente nomeado na história da ciência, em 1825 por Gideon Mantell."
+    ],
+    "sources": [
+      "Royal Belgian Institute of Natural Sciences",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 15,
@@ -431,9 +616,13 @@
     "epochId": 2,
     "dietId": 1,
     "habitatId": 1,
-    "formationId": [9],
+    "formationId": [
+      9
+    ],
     "continentId": 3,
-    "countryId": [7],
+    "countryId": [
+      7
+    ],
     "discoveryId": 15,
     "museumId": 3,
     "imageId": 15,
@@ -445,9 +634,18 @@
     "genus": "Megalosaurus",
     "status": "Válido",
     "description": "O primeiro dinossauro a ser descrito cientificamente na história, um grande carnívoro do Jurássico britânico.",
-    "characteristics": ["Estrutura corporal robusta típica de grandes terópodes", "Crânio forte com dentes recurvados", "Membros posteriores potentes"],
-    "curiosities": ["Antes de o termo 'dinosauria' ser cunhado em 1842, o Megalosaurus era agrupado vagamente com crocodilos e lagartos gigantes."],
-    "sources": ["Natural History Museum, London", "Paleobiology Database"]
+    "characteristics": [
+      "Estrutura corporal robusta típica de grandes terópodes",
+      "Crânio forte com dentes recurvados",
+      "Membros posteriores potentes"
+    ],
+    "curiosities": [
+      "Antes de o termo 'dinosauria' ser cunhado em 1842, o Megalosaurus era agrupado vagamente com crocodilos e lagartos gigantes."
+    ],
+    "sources": [
+      "Natural History Museum, London",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 16,
@@ -461,9 +659,13 @@
     "epochId": 1,
     "dietId": 1,
     "habitatId": 1,
-    "formationId": [10],
+    "formationId": [
+      10
+    ],
     "continentId": 1,
-    "countryId": [1],
+    "countryId": [
+      1
+    ],
     "discoveryId": 16,
     "museumId": 1,
     "imageId": 16,
@@ -475,9 +677,18 @@
     "genus": "Deinonychus",
     "status": "Válido",
     "description": "Predador ágil que deflagrou o 'Renascimento dos Dinossauros', provando que muitos eram ativos e inteligentes.",
-    "characteristics": ["Grande garra em forma de foice no segundo artelho", "Cauda rígida para equilíbrio dinâmico", "Mãos adaptadas para agarrar presas"],
-    "curiosities": ["A descoberta do Deinonychus por John Ostrom na década de 1960 mudou radicalmente a visão de que dinossauros eram répteis lentos e 'atrapalhados'."],
-    "sources": ["Peabody Museum of Natural History", "Paleobiology Database"]
+    "characteristics": [
+      "Grande garra em forma de foice no segundo artelho",
+      "Cauda rígida para equilíbrio dinâmico",
+      "Mãos adaptadas para agarrar presas"
+    ],
+    "curiosities": [
+      "A descoberta do Deinonychus por John Ostrom na década de 1960 mudou radicalmente a visão de que dinossauros eram répteis lentos e 'atrapalhados'."
+    ],
+    "sources": [
+      "Peabody Museum of Natural History",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 17,
@@ -491,9 +702,13 @@
     "epochId": 1,
     "dietId": 1,
     "habitatId": 3,
-    "formationId": [11],
+    "formationId": [
+      11
+    ],
     "continentId": 3,
-    "countryId": [7],
+    "countryId": [
+      7
+    ],
     "discoveryId": 17,
     "museumId": 3,
     "imageId": 17,
@@ -505,9 +720,18 @@
     "genus": "Baryonyx",
     "status": "Válido",
     "description": "Terópode com focinho crocodyliforme e uma garra colossal no polegar, especializado na pesca em rios e lagos.",
-    "characteristics": ["Focinho alongado com dentes numerosos em formato de cone", "Garra proeminente de 30 cm no primeiro dedo", "Adaptações para vida semi-aquática"],
-    "curiosities": ["Escamas de peixe fossilizadas foram encontradas na região estomacal do espécime holótipo."],
-    "sources": ["Natural History Museum, London", "Paleobiology Database"]
+    "characteristics": [
+      "Focinho alongado com dentes numerosos em formato de cone",
+      "Garra proeminente de 30 cm no primeiro dedo",
+      "Adaptações para vida semi-aquática"
+    ],
+    "curiosities": [
+      "Escamas de peixe fossilizadas foram encontradas na região estomacal do espécime holótipo."
+    ],
+    "sources": [
+      "Natural History Museum, London",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 18,
@@ -521,9 +745,13 @@
     "epochId": 1,
     "dietId": 2,
     "habitatId": 1,
-    "formationId": [12],
+    "formationId": [
+      12
+    ],
     "continentId": 2,
-    "countryId": [6],
+    "countryId": [
+      6
+    ],
     "discoveryId": 18,
     "museumId": 2,
     "imageId": 18,
@@ -535,9 +763,18 @@
     "genus": "Amargasaurus",
     "status": "Válido",
     "description": "Saurópode de porte médio notável por exibir duas fileiras paralelas de longas espinhas ósseas no pescoço.",
-    "characteristics": ["Espinhas neurais extremamente alongadas no pescoço e dorso", "Pescoço mais curto que o de outros saurópodes", "Corpo robusto e quadrúpede"],
-    "curiosities": ["Há debates científicos sobre se essas espinhas suportavam uma vela de pele dupla ou se funcionavam como estacas de defesa expostas."],
-    "sources": ["Museo de La Plata", "Paleobiology Database"]
+    "characteristics": [
+      "Espinhas neurais extremamente alongadas no pescoço e dorso",
+      "Pescoço mais curto que o de outros saurópodes",
+      "Corpo robusto e quadrúpede"
+    ],
+    "curiosities": [
+      "Há debates científicos sobre se essas espinhas suportavam uma vela de pele dupla ou se funcionavam como estacas de defesa expostas."
+    ],
+    "sources": [
+      "Museo de La Plata",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 19,
@@ -551,9 +788,13 @@
     "epochId": 3,
     "dietId": 2,
     "habitatId": 1,
-    "formationId": [13],
+    "formationId": [
+      13
+    ],
     "continentId": 3,
-    "countryId": [9],
+    "countryId": [
+      9
+    ],
     "discoveryId": 19,
     "museumId": 4,
     "imageId": 19,
@@ -565,9 +806,18 @@
     "genus": "Plateosaurus",
     "status": "Válido",
     "description": "Um dos primeiros grandes dinossauros herbívoros do Triássico Superior, ancestral distante dos gigantes saurópodes.",
-    "characteristics": ["Capacidade de alternar entre postura bípede e quadrúpede", "Dentes em formato de folha para mastigação de vegetais", "Mãos com garras fortes"],
-    "curiosities": ["Vários cemitérios fósseis de Plateosaurus na Europa indicam que eles podiam viver em manadas e sofrer mortes em massa por atolamentos em lama."],
-    "sources": ["Staatliches Museum für Naturkunde Stuttgart", "Paleobiology Database"]
+    "characteristics": [
+      "Capacidade de alternar entre postura bípede e quadrúpede",
+      "Dentes em formato de folha para mastigação de vegetais",
+      "Mãos com garras fortes"
+    ],
+    "curiosities": [
+      "Vários cemitérios fósseis de Plateosaurus na Europa indicam que eles podiam viver em manadas e sofrer mortes em massa por atolamentos em lama."
+    ],
+    "sources": [
+      "Staatliches Museum für Naturkunde Stuttgart",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 20,
@@ -581,9 +831,13 @@
     "epochId": 3,
     "dietId": 1,
     "habitatId": 1,
-    "formationId": [14],
+    "formationId": [
+      14
+    ],
     "continentId": 1,
-    "countryId": [1],
+    "countryId": [
+      1
+    ],
     "discoveryId": 20,
     "museumId": 1,
     "imageId": 20,
@@ -595,9 +849,18 @@
     "genus": "Coelophysis",
     "status": "Válido",
     "description": "Pequeno predador ágil e esguio do final do Triássico, caracterizado por ossos ocos e leves.",
-    "characteristics": ["Corpo extremamente leve e esguio", "Crânio longo com dezenas de dentes afiados", "Cauda longa usada como balancim em altas velocidades"],
-    "curiosities": ["No famoso sítio de Ghost Ranch, centenas de esqueletos foram encontrados juntos, sugerindo enchentes repentinas que dizimaram bandos inteiros."],
-    "sources": ["American Museum of Natural History", "Paleobiology Database"]
+    "characteristics": [
+      "Corpo extremamente leve e esguio",
+      "Crânio longo com dezenas de dentes afiados",
+      "Cauda longa usada como balancim em altas velocidades"
+    ],
+    "curiosities": [
+      "No famoso sítio de Ghost Ranch, centenas de esqueletos foram encontrados juntos, sugerindo enchentes repentinas que dizimaram bandos inteiros."
+    ],
+    "sources": [
+      "American Museum of Natural History",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 21,
@@ -611,9 +874,13 @@
     "epochId": 2,
     "dietId": 1,
     "habitatId": 2,
-    "formationId": [15],
+    "formationId": [
+      15
+    ],
     "continentId": 3,
-    "countryId": [9],
+    "countryId": [
+      9
+    ],
     "discoveryId": 21,
     "museumId": 5,
     "imageId": 21,
@@ -625,9 +892,18 @@
     "genus": "Archaeopteryx",
     "status": "Válido",
     "description": "O mais famoso elo de transição fóssil entre dinossauros terópodes e as aves modernas.",
-    "characteristics": ["Presença de penas de voo assimétricas nas asas e cauda", "Dentes pontiagudos na boca e ossos na cauda", "Garras nas asas"],
-    "curiosities": ["Os espécimes foram preservados em calcário de grão fino em Solnhofen, capturando detalhes delicados das impressões de penas."],
-    "sources": ["Museum für Naturkunde, Berlim", "Paleobiology Database"]
+    "characteristics": [
+      "Presença de penas de voo assimétricas nas asas e cauda",
+      "Dentes pontiagudos na boca e ossos na cauda",
+      "Garras nas asas"
+    ],
+    "curiosities": [
+      "Os espécimes foram preservados em calcário de grão fino em Solnhofen, capturando detalhes delicados das impressões de penas."
+    ],
+    "sources": [
+      "Museum für Naturkunde, Berlim",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 22,
@@ -641,9 +917,13 @@
     "epochId": 2,
     "dietId": 1,
     "habitatId": 2,
-    "formationId": [15],
+    "formationId": [
+      15
+    ],
     "continentId": 3,
-    "countryId": [9],
+    "countryId": [
+      9
+    ],
     "discoveryId": 22,
     "museumId": 5,
     "imageId": 22,
@@ -655,9 +935,18 @@
     "genus": "Compsognathus",
     "status": "Válido",
     "description": "Miniatura de terópode que foi considerado o menor dinossauro do mundo por quase cem anos.",
-    "characteristics": ["Pernas longas e delgadas para alta velocidade", "Crânio estreito e leve", "Cauda muito longa proporcionalmente"],
-    "curiosities": ["Restos de pequenos lagartos encontrados dentro da cavidade estomacal de um espécime comprovaram sua dieta carnívora ágil."],
-    "sources": ["Bayerische Staatssammlung für Paläontologie", "Paleobiology Database"]
+    "characteristics": [
+      "Pernas longas e delgadas para alta velocidade",
+      "Crânio estreito e leve",
+      "Cauda muito longa proporcionalmente"
+    ],
+    "curiosities": [
+      "Restos de pequenos lagartos encontrados dentro da cavidade estomacal de um espécime comprovaram sua dieta carnívora ágil."
+    ],
+    "sources": [
+      "Bayerische Staatssammlung für Paläontologie",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 23,
@@ -671,9 +960,13 @@
     "epochId": 1,
     "dietId": 3,
     "habitatId": 1,
-    "formationId": [16],
+    "formationId": [
+      16
+    ],
     "continentId": 4,
-    "countryId": [3],
+    "countryId": [
+      3
+    ],
     "discoveryId": 23,
     "museumId": 1,
     "imageId": 23,
@@ -685,9 +978,18 @@
     "genus": "Gallimimus",
     "status": "Válido",
     "description": "Ornitomimídeo elegante, lembrando uma avestruz gigante, adaptado para correr velozmente pelas planícies.",
-    "characteristics": ["Pernas extremamente longas e cursoriais", "Pescoço esguio com cabeça pequena e bico sem dentes", "Olhos grandes posicionados lateralmente"],
-    "curiosities": ["Sua morfologia indica que era onívoro, alimentando-se de pequenos animais, ovos e matéria vegetal."],
-    "sources": ["Institute of Geology, Ulaanbaatar", "Paleobiology Database"]
+    "characteristics": [
+      "Pernas extremamente longas e cursoriais",
+      "Pescoço esguio com cabeça pequena e bico sem dentes",
+      "Olhos grandes posicionados lateralmente"
+    ],
+    "curiosities": [
+      "Sua morfologia indica que era onívoro, alimentando-se de pequenos animais, ovos e matéria vegetal."
+    ],
+    "sources": [
+      "Institute of Geology, Ulaanbaatar",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 24,
@@ -701,9 +1003,13 @@
     "epochId": 1,
     "dietId": 3,
     "habitatId": 2,
-    "formationId": [16],
+    "formationId": [
+      16
+    ],
     "continentId": 4,
-    "countryId": [3],
+    "countryId": [
+      3
+    ],
     "discoveryId": 24,
     "museumId": 1,
     "imageId": 24,
@@ -715,9 +1021,18 @@
     "genus": "Oviraptor",
     "status": "Válido",
     "description": "Terópode emplumado com crista craniana e bico robusto sem dentes, famoso pelo equívoco histórico sobre seu nome.",
-    "characteristics": ["Bico córneo profundo e sem dentes", "Crista craniana proeminente", "Mãos fortes com garras curvadas"],
-    "curiosities": ["O nome original foi dado porque achavam que ele roubava ovos, mas descobertas posteriores provaram que o fóssil estava, na verdade, chocando os seus próprios ovos."],
-    "sources": ["American Museum of Natural History", "Paleobiology Database"]
+    "characteristics": [
+      "Bico córneo profundo e sem dentes",
+      "Crista craniana proeminente",
+      "Mãos fortes com garras curvadas"
+    ],
+    "curiosities": [
+      "O nome original foi dado porque achavam que ele roubava ovos, mas descobertas posteriores provaram que o fóssil estava, na verdade, chocando os seus próprios ovos."
+    ],
+    "sources": [
+      "American Museum of Natural History",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 25,
@@ -731,9 +1046,13 @@
     "epochId": 1,
     "dietId": 2,
     "habitatId": 2,
-    "formationId": [17],
+    "formationId": [
+      17
+    ],
     "continentId": 4,
-    "countryId": [3],
+    "countryId": [
+      3
+    ],
     "discoveryId": 25,
     "museumId": 1,
     "imageId": 25,
@@ -745,9 +1064,18 @@
     "genus": "Protoceratops",
     "status": "Válido",
     "description": "Pequeno ceratopsiano asiático que não possuía chifres desenvolvidos, mas exibia um escudo ósseo distinto no pescoço.",
-    "characteristics": ["Escudo craniano proporcionalmente grande", "Bico forte em formato de gancho", "Corpo robusto e quadrúpede"],
-    "curiosities": ["Seus ninhos repletos de ovos fósseis ajudaram a desvendar o ciclo de crescimento dos dinossauros ceratopsianos."],
-    "sources": ["American Museum of Natural History", "Paleobiology Database"]
+    "characteristics": [
+      "Escudo craniano proporcionalmente grande",
+      "Bico forte em formato de gancho",
+      "Corpo robusto e quadrúpede"
+    ],
+    "curiosities": [
+      "Seus ninhos repletos de ovos fósseis ajudaram a desvendar o ciclo de crescimento dos dinossauros ceratopsianos."
+    ],
+    "sources": [
+      "American Museum of Natural History",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 26,
@@ -761,9 +1089,13 @@
     "epochId": 1,
     "dietId": 2,
     "habitatId": 1,
-    "formationId": [1],
+    "formationId": [
+      1
+    ],
     "continentId": 1,
-    "countryId": [1],
+    "countryId": [
+      1
+    ],
     "discoveryId": 26,
     "museumId": 1,
     "imageId": 26,
@@ -775,9 +1107,18 @@
     "genus": "Pachycephalosaurus",
     "status": "Válido",
     "description": "Dinossauro bípede notável pelo domo ósseo maciço no topo do crânio, com até 25 cm de espessura.",
-    "characteristics": ["Domo craniano ósseo extremamente espesso", "Pequenos espinhos ao redor da borda do crânio", "Corpo robusto e cauda rígida"],
-    "curiosities": ["O domo era tão resistente que provavelmente absorvia impactos em disputas territoriais de batidas de cabeça lateral ou frontal."],
-    "sources": ["National Museum of Natural History, Smithsonian", "Paleobiology Database"]
+    "characteristics": [
+      "Domo craniano ósseo extremamente espesso",
+      "Pequenos espinhos ao redor da borda do crânio",
+      "Corpo robusto e cauda rígida"
+    ],
+    "curiosities": [
+      "O domo era tão resistente que provavelmente absorvia impactos em disputas territoriais de batidas de cabeça lateral ou frontal."
+    ],
+    "sources": [
+      "National Museum of Natural History, Smithsonian",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 27,
@@ -791,9 +1132,13 @@
     "epochId": 1,
     "dietId": 2,
     "habitatId": 1,
-    "formationId": [1],
+    "formationId": [
+      1
+    ],
     "continentId": 1,
-    "countryId": [1],
+    "countryId": [
+      1
+    ],
     "discoveryId": 27,
     "museumId": 1,
     "imageId": 27,
@@ -805,9 +1150,18 @@
     "genus": "Maiasaura",
     "status": "Válido",
     "description": "Hadrossaurídeo que revolucionou a paleontologia ao fornecer provas definitivas de cuidado parental e ninhos em colônia.",
-    "characteristics": ["Focinho largo com bico para pastagem", "Estrutura óssea nasal baixa", "Hábitos de nidificação comunitária"],
-    "curiosities": ["O exame dos ossos de filhotes fósseis mostrou que eles nasciam com pernas incapazes de andar muito, provando que os pais traziam comida para o ninho."],
-    "sources": ["Museum of the Rockies", "Paleobiology Database"]
+    "characteristics": [
+      "Focinho largo com bico para pastagem",
+      "Estrutura óssea nasal baixa",
+      "Hábitos de nidificação comunitária"
+    ],
+    "curiosities": [
+      "O exame dos ossos de filhotes fósseis mostrou que eles nasciam com pernas incapazes de andar muito, provando que os pais traziam comida para o ninho."
+    ],
+    "sources": [
+      "Museum of the Rockies",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 28,
@@ -821,9 +1175,14 @@
     "epochId": 1,
     "dietId": 2,
     "habitatId": 1,
-    "formationId": [18],
+    "formationId": [
+      18
+    ],
     "continentId": 1,
-    "countryId": [1, 5],
+    "countryId": [
+      1,
+      5
+    ],
     "discoveryId": 28,
     "museumId": 6,
     "imageId": 28,
@@ -835,9 +1194,18 @@
     "genus": "Edmontosaurus",
     "status": "Válido",
     "description": "Um dos maiores hadrossaurídeos do Cretáceo Superior, vivendo em imensos rebanhos pelas planícies norte-americanas.",
-    "characteristics": ["Focinho longo e plano com milhares de dentes mastigadores", "Capacidade de locomoção em duas ou quatro patas", "Musculatura caudal forte"],
-    "curiosities": ["Espécimes excepcionalmente bem preservados (múmias de dinossauros) revelaram impressões detalhadas de pele escamosa sem placas blindadas."],
-    "sources": ["Canadian Museum of Nature", "Paleobiology Database"]
+    "characteristics": [
+      "Focinho longo e plano com milhares de dentes mastigadores",
+      "Capacidade de locomoção em duas ou quatro patas",
+      "Musculatura caudal forte"
+    ],
+    "curiosities": [
+      "Espécimes excepcionalmente bem preservados (múmias de dinossauros) revelaram impressões detalhadas de pele escamosa sem placas blindadas."
+    ],
+    "sources": [
+      "Canadian Museum of Nature",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 29,
@@ -851,9 +1219,13 @@
     "epochId": 1,
     "dietId": 2,
     "habitatId": 3,
-    "formationId": [18],
+    "formationId": [
+      18
+    ],
     "continentId": 1,
-    "countryId": [5],
+    "countryId": [
+      5
+    ],
     "discoveryId": 29,
     "museumId": 6,
     "imageId": 29,
@@ -865,9 +1237,18 @@
     "genus": "Corythosaurus",
     "status": "Válido",
     "description": "Hadrossaurídeo caracterizado por uma crista óssea alta e oca no topo da cabeça, lembrando o capacete de um soldado corinto.",
-    "characteristics": ["Crista oca em formato de disco semicircular", "Passagens nasais internas complexas", "Membros anteriores robustos"],
-    "curiosities": ["A crista funcionava como câmara de ressonância para amplificar chamados de alerta dentro da manada."],
-    "sources": ["Royal Ontario Museum", "Paleobiology Database"]
+    "characteristics": [
+      "Crista oca em formato de disco semicircular",
+      "Passagens nasais internas complexas",
+      "Membros anteriores robustos"
+    ],
+    "curiosities": [
+      "A crista funcionava como câmara de ressonância para amplificar chamados de alerta dentro da manada."
+    ],
+    "sources": [
+      "Royal Ontario Museum",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 30,
@@ -881,9 +1262,13 @@
     "epochId": 1,
     "dietId": 2,
     "habitatId": 1,
-    "formationId": [18],
+    "formationId": [
+      18
+    ],
     "continentId": 1,
-    "countryId": [5],
+    "countryId": [
+      5
+    ],
     "discoveryId": 30,
     "museumId": 6,
     "imageId": 30,
@@ -895,9 +1280,18 @@
     "genus": "Styracosaurus",
     "status": "Válido",
     "description": "Ceratopsídeo notável pelo vistoso escudo craniano ornado com longos espigões voltados para trás.",
-    "characteristics": ["Chifre nasal longo e imponente", "Coroa de espinhos longos radiais no escudo", "Corpo troncudo e quadrúpede"],
-    "curiosities": ["A disposição dos espigões variava de acordo com a idade e o indivíduo, servindo possivelmente para reconhecimento de espécies."],
-    "sources": ["American Museum of Natural History", "Paleobiology Database"]
+    "characteristics": [
+      "Chifre nasal longo e imponente",
+      "Coroa de espinhos longos radiais no escudo",
+      "Corpo troncudo e quadrúpede"
+    ],
+    "curiosities": [
+      "A disposição dos espigões variava de acordo com a idade e o indivíduo, servindo possivelmente para reconhecimento de espécies."
+    ],
+    "sources": [
+      "American Museum of Natural History",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 31,
@@ -911,9 +1305,13 @@
     "epochId": 1,
     "dietId": 2,
     "habitatId": 1,
-    "formationId": [18],
+    "formationId": [
+      18
+    ],
     "continentId": 1,
-    "countryId": [5],
+    "countryId": [
+      5
+    ],
     "discoveryId": 31,
     "museumId": 6,
     "imageId": 31,
@@ -925,9 +1323,18 @@
     "genus": "Pachyrhinosaurus",
     "status": "Válido",
     "description": "Ceratopsídeo que substituiu o chifre nasal tradicional por uma maciça bossa óssea achatada.",
-    "characteristics": ["Bossas ósseas espessas no focinho e acima dos olhos", "Escudo craniano com pequenos chifres decorativos", "Estrutura corporal maciça"],
-    "curiosities": ["Acredita-se que essa almofada óssea era usada para choques diretos entre rivais ou suporte para um corno córneo bulboso."],
-    "sources": ["Royal Tyrrell Museum", "Paleobiology Database"]
+    "characteristics": [
+      "Bossas ósseas espessas no focinho e acima dos olhos",
+      "Escudo craniano com pequenos chifres decorativos",
+      "Estrutura corporal maciça"
+    ],
+    "curiosities": [
+      "Acredita-se que essa almofada óssea era usada para choques diretos entre rivais ou suporte para um corno córneo bulboso."
+    ],
+    "sources": [
+      "Royal Tyrrell Museum",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 32,
@@ -941,9 +1348,13 @@
     "epochId": 1,
     "dietId": 2,
     "habitatId": 1,
-    "formationId": [18],
+    "formationId": [
+      18
+    ],
     "continentId": 1,
-    "countryId": [5],
+    "countryId": [
+      5
+    ],
     "discoveryId": 32,
     "museumId": 6,
     "imageId": 32,
@@ -955,9 +1366,18 @@
     "genus": "Centrosaurus",
     "status": "Válido",
     "description": "Ceratopsídeo caracterizado por um único chifre nasal recurvado e ganchos ornamentais na borda do escudo.",
-    "characteristics": ["Chifre nasal apontando para frente ou curvado para baixo", "Ganchos em forma de gancho saindo do topo do escudo", "Escudo curto"],
-    "curiosities": ["Grandes leitos de ossos fósseis de Centrosaurus revelam que milhares deles pereceram juntos em tempestades tropicais antigas."],
-    "sources": ["Geological Survey of Canada", "Paleobiology Database"]
+    "characteristics": [
+      "Chifre nasal apontando para frente ou curvado para baixo",
+      "Ganchos em forma de gancho saindo do topo do escudo",
+      "Escudo curto"
+    ],
+    "curiosities": [
+      "Grandes leitos de ossos fósseis de Centrosaurus revelam que milhares deles pereceram juntos em tempestades tropicais antigas."
+    ],
+    "sources": [
+      "Geological Survey of Canada",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 33,
@@ -971,9 +1391,14 @@
     "epochId": 1,
     "dietId": 2,
     "habitatId": 2,
-    "formationId": [19],
+    "formationId": [
+      19
+    ],
     "continentId": 4,
-    "countryId": [3, 10],
+    "countryId": [
+      3,
+      10
+    ],
     "discoveryId": 33,
     "museumId": 7,
     "imageId": 33,
@@ -985,9 +1410,18 @@
     "genus": "Therizinosaurus",
     "status": "Válido",
     "description": "Bizarro terópode herbívoro com pescoço longo, barriga volumosa e garras manuais de até um metro de comprimento.",
-    "characteristics": ["Garras retas e afiladas de até 1 metro nas mãos", "Pescoço longo e cabeça pequena", "Quadril largo adaptado para digestão de plantas"],
-    "curiosities": ["Apesar de pertencer ao grupo dos terópodes (predadores), o Therizinosaurus era totalmente herbívoro e usava suas garras para puxar galhos de árvores."],
-    "sources": ["Paleontological Institute, Moscow", "Paleobiology Database"]
+    "characteristics": [
+      "Garras retas e afiladas de até 1 metro nas mãos",
+      "Pescoço longo e cabeça pequena",
+      "Quadril largo adaptado para digestão de plantas"
+    ],
+    "curiosities": [
+      "Apesar de pertencer ao grupo dos terópodes (predadores), o Therizinosaurus era totalmente herbívoro e usava suas garras para puxar galhos de árvores."
+    ],
+    "sources": [
+      "Paleontological Institute, Moscow",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 34,
@@ -1001,9 +1435,13 @@
     "epochId": 1,
     "dietId": 3,
     "habitatId": 3,
-    "formationId": [19],
+    "formationId": [
+      19
+    ],
     "continentId": 4,
-    "countryId": [3],
+    "countryId": [
+      3
+    ],
     "discoveryId": 34,
     "museumId": 7,
     "imageId": 34,
@@ -1015,9 +1453,18 @@
     "genus": "Deinocheirus",
     "status": "Válido",
     "description": "Enorme ornitomimossauro corpulento com uma corcunda nas costas, bico de pato e braços gigantescos.",
-    "characteristics": ["Braços de 2,4 metros com garras rombas", "Corcunda dorsal espinhosa", "Bico largo adaptado para forrageio aquático"],
-    "curiosities": ["Por décadas, o Deinocheirus foi um dos maiores enigmas da paleontologia, conhecido apenas por seus braços gigantes até espécimes completos serem achados."],
-    "sources": ["Korea Institute of Geoscience", "Paleobiology Database"]
+    "characteristics": [
+      "Braços de 2,4 metros com garras rombas",
+      "Corcunda dorsal espinhosa",
+      "Bico largo adaptado para forrageio aquático"
+    ],
+    "curiosities": [
+      "Por décadas, o Deinocheirus foi um dos maiores enigmas da paleontologia, conhecido apenas por seus braços gigantes até espécimes completos serem achados."
+    ],
+    "sources": [
+      "Korea Institute of Geoscience",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 35,
@@ -1031,9 +1478,13 @@
     "epochId": 3,
     "dietId": 1,
     "habitatId": 1,
-    "formationId": [20],
+    "formationId": [
+      20
+    ],
     "continentId": 1,
-    "countryId": [1],
+    "countryId": [
+      1
+    ],
     "discoveryId": 35,
     "museumId": 1,
     "imageId": 35,
@@ -1045,9 +1496,18 @@
     "genus": "Dilophosaurus",
     "status": "Válido",
     "description": "Predador ágil do início do Jurássico, ostentando duas cristas ósseas paralelas e delicadas no topo do crânio.",
-    "characteristics": ["Duas cristas finas em formato de lâmina no crânio", "Mandíbula superior com uma entalhe frágil", "Dentes anteriores adaptados para prender presas"],
-    "curiosities": ["A famosa habilidade de cuspir veneno e exibir um colar de pele retrátil mostrada no cinema é totalmente fictícia."],
-    "sources": ["Museum of Paleontology, University of California", "Paleobiology Database"]
+    "characteristics": [
+      "Duas cristas finas em formato de lâmina no crânio",
+      "Mandíbula superior com uma entalhe frágil",
+      "Dentes anteriores adaptados para prender presas"
+    ],
+    "curiosities": [
+      "A famosa habilidade de cuspir veneno e exibir um colar de pele retrátil mostrada no cinema é totalmente fictícia."
+    ],
+    "sources": [
+      "Museum of Paleontology, University of California",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 36,
@@ -1061,9 +1521,13 @@
     "epochId": 2,
     "dietId": 1,
     "habitatId": 1,
-    "formationId": [2],
+    "formationId": [
+      2
+    ],
     "continentId": 1,
-    "countryId": [1],
+    "countryId": [
+      1
+    ],
     "discoveryId": 36,
     "museumId": 1,
     "imageId": 36,
@@ -1075,9 +1539,18 @@
     "genus": "Ceratosaurus",
     "status": "Válido",
     "description": "Distinto terópode jurássico com um chifre nasal proeminente e pequenas placas ósseas ao longo da espinha dorsal.",
-    "characteristics": ["Chifre nasal ósseo proeminente no focinho", "Dentes superiores longos e protuberantes", "Osteodermos dorsais protetores"],
-    "curiosities": ["Possuía dentes tão compridos que ficavam visíveis mesmo quando a boca estava completamente fechada."],
-    "sources": ["Smithsonian National Museum", "Paleobiology Database"]
+    "characteristics": [
+      "Chifre nasal ósseo proeminente no focinho",
+      "Dentes superiores longos e protuberantes",
+      "Osteodermos dorsais protetores"
+    ],
+    "curiosities": [
+      "Possuía dentes tão compridos que ficavam visíveis mesmo quando a boca estava completamente fechada."
+    ],
+    "sources": [
+      "Smithsonian National Museum",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 37,
@@ -1091,9 +1564,13 @@
     "epochId": 1,
     "dietId": 1,
     "habitatId": 1,
-    "formationId": [21],
+    "formationId": [
+      21
+    ],
     "continentId": 5,
-    "countryId": [11],
+    "countryId": [
+      11
+    ],
     "discoveryId": 37,
     "museumId": 8,
     "imageId": 37,
@@ -1105,9 +1582,18 @@
     "genus": "Majungasaurus",
     "status": "Válido",
     "description": "Predador de topo em Madagascar, caracterizado por um crânio curto, abaulado e marcas de canibalismo em seus fósseis.",
-    "characteristics": ["Crânio curto com protuberância frontal em forma de chifre arredondado", "Braços extremamente curtos", "Dentes com bordas serrilhadas robustas"],
-    "curiosities": ["Marcas de dentes encontradas em ossos de outros Majungasaurus comprovaram cientificamente que eles praticavam canibalismo."],
-    "sources": ["Université de Antananarivo", "State University of New York"]
+    "characteristics": [
+      "Crânio curto com protuberância frontal em forma de chifre arredondado",
+      "Braços extremamente curtos",
+      "Dentes com bordas serrilhadas robustas"
+    ],
+    "curiosities": [
+      "Marcas de dentes encontradas em ossos de outros Majungasaurus comprovaram cientificamente que eles praticavam canibalismo."
+    ],
+    "sources": [
+      "Université de Antananarivo",
+      "State University of New York"
+    ]
   },
   {
     "id": 38,
@@ -1121,9 +1607,14 @@
     "epochId": 1,
     "dietId": 1,
     "habitatId": 3,
-    "formationId": [4],
+    "formationId": [
+      4
+    ],
     "continentId": 5,
-    "countryId": [12, 13],
+    "countryId": [
+      12,
+      13
+    ],
     "discoveryId": 38,
     "museumId": 8,
     "imageId": 38,
@@ -1135,9 +1626,18 @@
     "genus": "Carcharodontosaurus",
     "status": "Válido",
     "description": "Colossal predador africano cujos dentes serrilhados lembravam perfeitamente os de tubarões brancos modernos.",
-    "characteristics": ["Crânio maciço com mais de 1,5 metro de comprimento", "Dentes achatados e altamente serrilhados para fatiar carne", "Pernas fortes e musculosas"],
-    "curiosities": ["Compartilhava o mesmo ecossistema fluvial no norte da África com o Spinosaurus e outros grandes crocodilomorfos."],
-    "sources": ["Muséum National d'Histoire Naturelle", "Paleobiology Database"]
+    "characteristics": [
+      "Crânio maciço com mais de 1,5 metro de comprimento",
+      "Dentes achatados e altamente serrilhados para fatiar carne",
+      "Pernas fortes e musculosas"
+    ],
+    "curiosities": [
+      "Compartilhava o mesmo ecossistema fluvial no norte da África com o Spinosaurus e outros grandes crocodilomorfos."
+    ],
+    "sources": [
+      "Muséum National d'Histoire Naturelle",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 39,
@@ -1151,9 +1651,13 @@
     "epochId": 2,
     "dietId": 2,
     "habitatId": 1,
-    "formationId": [2],
+    "formationId": [
+      2
+    ],
     "continentId": 1,
-    "countryId": [1],
+    "countryId": [
+      1
+    ],
     "discoveryId": 39,
     "museumId": 1,
     "imageId": 39,
@@ -1165,9 +1669,18 @@
     "genus": "Apatosaurus",
     "status": "Válido",
     "description": "Saurópode robusto e pesado da Formação Morrison, historicamente confundido com o Brontosaurus.",
-    "characteristics": ["Pescoço largo e cauda em formato de chicote", "Ossos das pernas mais robustos que os de outros diplodocídeos", "Crânio pequeno com dentes em forma de lápis"],
-    "curiosities": ["O nome 'Enganador' foi dado porque suas vértebras iniciais pareciam muito com as de mosassauros marinhos."],
-    "sources": ["Peabody Museum of Natural History", "Paleobiology Database"]
+    "characteristics": [
+      "Pescoço largo e cauda em formato de chicote",
+      "Ossos das pernas mais robustos que os de outros diplodocídeos",
+      "Crânio pequeno com dentes em forma de lápis"
+    ],
+    "curiosities": [
+      "O nome 'Enganador' foi dado porque suas vértebras iniciais pareciam muito com as de mosassauros marinhos."
+    ],
+    "sources": [
+      "Peabody Museum of Natural History",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 40,
@@ -1181,9 +1694,13 @@
     "epochId": 2,
     "dietId": 2,
     "habitatId": 1,
-    "formationId": [2],
+    "formationId": [
+      2
+    ],
     "continentId": 1,
-    "countryId": [1],
+    "countryId": [
+      1
+    ],
     "discoveryId": 40,
     "museumId": 1,
     "imageId": 40,
@@ -1195,9 +1712,18 @@
     "genus": "Camarasaurus",
     "status": "Válido",
     "description": "Saurópode comum no Jurássico norte-americano, apresentando um crânio alto, curto e dentes robustos em colher.",
-    "characteristics": ["Crânio abobadado com grandes cavidades pneumáticas", "Dentes fortes em formato de colher", "Pescoço e cauda moderadamente longos"],
-    "curiosities": ["Seus dentes mais fortes sugerem que ele conseguia mastigar vegetação mais dura do que outros saurópodes contemporâneos."],
-    "sources": ["Carnegie Museum", "Paleobiology Database"]
+    "characteristics": [
+      "Crânio abobadado com grandes cavidades pneumáticas",
+      "Dentes fortes em formato de colher",
+      "Pescoço e cauda moderadamente longos"
+    ],
+    "curiosities": [
+      "Seus dentes mais fortes sugerem que ele conseguia mastigar vegetação mais dura do que outros saurópodes contemporâneos."
+    ],
+    "sources": [
+      "Carnegie Museum",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 41,
@@ -1211,9 +1737,13 @@
     "epochId": 2,
     "dietId": 2,
     "habitatId": 1,
-    "formationId": [2],
+    "formationId": [
+      2
+    ],
     "continentId": 1,
-    "countryId": [1],
+    "countryId": [
+      1
+    ],
     "discoveryId": 41,
     "museumId": 1,
     "imageId": 41,
@@ -1225,9 +1755,18 @@
     "genus": "Brontosaurus",
     "status": "Válido",
     "description": "O icônico dinossauro gigante que foi considerado inválido por décadas, mas recentemente revalidado como gênero distinto.",
-    "characteristics": ["Pescoço pesado e musculoso", "Cauda longa em formato de chicote", "Corpo maciço adaptado para pastagem alta"],
-    "curiosities": ["Estudos anatômicos detalhados publicados em 2015 comprovaram diferenças suficientes em relação ao Apatosaurus para restaurar o nome Brontosaurus."],
-    "sources": ["American Museum of Natural History", "New Mexico Museum of Natural History"]
+    "characteristics": [
+      "Pescoço pesado e musculoso",
+      "Cauda longa em formato de chicote",
+      "Corpo maciço adaptado para pastagem alta"
+    ],
+    "curiosities": [
+      "Estudos anatômicos detalhados publicados em 2015 comprovaram diferenças suficientes em relação ao Apatosaurus para restaurar o nome Brontosaurus."
+    ],
+    "sources": [
+      "American Museum of Natural History",
+      "New Mexico Museum of Natural History"
+    ]
   },
   {
     "id": 42,
@@ -1241,9 +1780,13 @@
     "epochId": 1,
     "dietId": 2,
     "habitatId": 1,
-    "formationId": [18],
+    "formationId": [
+      18
+    ],
     "continentId": 1,
-    "countryId": [5],
+    "countryId": [
+      5
+    ],
     "discoveryId": 42,
     "museumId": 6,
     "imageId": 42,
@@ -1255,9 +1798,18 @@
     "genus": "Euoplocephalus",
     "status": "Válido",
     "description": "Tireóforo fortemente couraçado, cujas pálpebras eram protegidas por placas ósseas articuladas.",
-    "characteristics": ["Armadura completa com bandas ósseas transversais", "Pálpebras blindadas de osso", "Clava caudal defensiva"],
-    "curiosities": ["Sua blindagem era tão densa que cobria até a parte superior do crânio de forma contínua."],
-    "sources": ["Canadian Museum of Nature", "Paleobiology Database"]
+    "characteristics": [
+      "Armadura completa com bandas ósseas transversais",
+      "Pálpebras blindadas de osso",
+      "Clava caudal defensiva"
+    ],
+    "curiosities": [
+      "Sua blindagem era tão densa que cobria até a parte superior do crânio de forma contínua."
+    ],
+    "sources": [
+      "Canadian Museum of Nature",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 43,
@@ -1271,9 +1823,13 @@
     "epochId": 1,
     "dietId": 2,
     "habitatId": 1,
-    "formationId": [22],
+    "formationId": [
+      22
+    ],
     "continentId": 6,
-    "countryId": [14],
+    "countryId": [
+      14
+    ],
     "discoveryId": 43,
     "museumId": 9,
     "imageId": 43,
@@ -1285,9 +1841,18 @@
     "genus": "Muttaburrasaurus",
     "status": "Válido",
     "description": "Ornitópode australiano dotado de um focinho abaulado e oco, com dentes especializados para cisalhar vegetação.",
-    "characteristics": ["Focinho inflado e oco na região nasal", "Dentes que podiam se afiar por autodesgaste", "Estrutura robusta"],
-    "curiosities": ["A câmara oca no focinho poderia servir para resfriamento de ar ou emissão de sons de baixa frequência."],
-    "sources": ["Queensland Museum", "Paleobiology Database"]
+    "characteristics": [
+      "Focinho inflado e oco na região nasal",
+      "Dentes que podiam se afiar por autodesgaste",
+      "Estrutura robusta"
+    ],
+    "curiosities": [
+      "A câmara oca no focinho poderia servir para resfriamento de ar ou emissão de sons de baixa frequência."
+    ],
+    "sources": [
+      "Queensland Museum",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 44,
@@ -1301,9 +1866,13 @@
     "epochId": 3,
     "dietId": 1,
     "habitatId": 1,
-    "formationId": [23],
+    "formationId": [
+      23
+    ],
     "continentId": 7,
-    "countryId": [15],
+    "countryId": [
+      15
+    ],
     "discoveryId": 44,
     "museumId": 10,
     "imageId": 44,
@@ -1315,9 +1884,18 @@
     "genus": "Cryolophosaurus",
     "status": "Válido",
     "description": "Predador jurássico descoberto na Antártida, famoso por sua crista óssea transversal em formato de leque.",
-    "characteristics": ["Crista transversal proeminente no topo do crânio", "Mandíbula robusta para o porte", "Adaptações a ambientes polares antigos"],
-    "curiosities": ["Conhecido popularmente como 'Elvisaurus' devido ao formato da crista lembrar o topete do cantor Elvis Presley."],
-    "sources": ["Field Museum of Natural History", "Polar Dinosaur Project"]
+    "characteristics": [
+      "Crista transversal proeminente no topo do crânio",
+      "Mandíbula robusta para o porte",
+      "Adaptações a ambientes polares antigos"
+    ],
+    "curiosities": [
+      "Conhecido popularmente como 'Elvisaurus' devido ao formato da crista lembrar o topete do cantor Elvis Presley."
+    ],
+    "sources": [
+      "Field Museum of Natural History",
+      "Polar Dinosaur Project"
+    ]
   },
   {
     "id": 45,
@@ -1331,9 +1909,13 @@
     "epochId": 1,
     "dietId": 1,
     "habitatId": 2,
-    "formationId": [24],
+    "formationId": [
+      24
+    ],
     "continentId": 4,
-    "countryId": [10],
+    "countryId": [
+      10
+    ],
     "discoveryId": 45,
     "museumId": 7,
     "imageId": 45,
@@ -1345,9 +1927,18 @@
     "genus": "Microraptor",
     "status": "Válido",
     "description": "Pequeno dromeossaurídeo com penas de voo assimétricas desenvolvidas tanto nos braços quanto nas pernas.",
-    "characteristics": ["Quatro asas emplumadas funcionais", "Cauda longa com penacho em leque na ponta", "Dentes com serrilhas especializadas"],
-    "curiosities": ["Estudos de melanossomos preservados revelaram que sua plumagem era preta com fortes reflexos iridescentes azulados."],
-    "sources": ["Institute of Vertebrate Paleontology and Paleoanthropology, Beijing", "Nature Magazine"]
+    "characteristics": [
+      "Quatro asas emplumadas funcionais",
+      "Cauda longa com penacho em leque na ponta",
+      "Dentes com serrilhas especializadas"
+    ],
+    "curiosities": [
+      "Estudos de melanossomos preservados revelaram que sua plumagem era preta com fortes reflexos iridescentes azulados."
+    ],
+    "sources": [
+      "Institute of Vertebrate Paleontology and Paleoanthropology, Beijing",
+      "Nature Magazine"
+    ]
   },
   {
     "id": 46,
@@ -1361,9 +1952,13 @@
     "epochId": 1,
     "dietId": 1,
     "habitatId": 1,
-    "formationId": [10],
+    "formationId": [
+      10
+    ],
     "continentId": 1,
-    "countryId": [1],
+    "countryId": [
+      1
+    ],
     "discoveryId": 46,
     "museumId": 1,
     "imageId": 46,
@@ -1375,9 +1970,18 @@
     "genus": "Utahraptor",
     "status": "Válido",
     "description": "O maior membro conhecido da família Dromaeosauridae, muito maior que seu parente famoso Velociraptor.",
-    "characteristics": ["Garra em foice de até 24 cm no segundo dedo", "Corpo robusto e musculoso", "Provavelmente coberto por penas"],
-    "curiosities": ["Foi descoberto em 1991 e é o maior dromaeossaurídeo conhecido, pesando cerca de 500 kg."],
-    "sources": ["Brigham Young University", "Paleobiology Database"]
+    "characteristics": [
+      "Garra em foice de até 24 cm no segundo dedo",
+      "Corpo robusto e musculoso",
+      "Provavelmente coberto por penas"
+    ],
+    "curiosities": [
+      "Foi descoberto em 1991 e é o maior dromaeossaurídeo conhecido, pesando cerca de 500 kg."
+    ],
+    "sources": [
+      "Brigham Young University",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 47,
@@ -1391,9 +1995,13 @@
     "epochId": 1,
     "dietId": 2,
     "habitatId": 1,
-    "formationId": [2],
+    "formationId": [
+      2
+    ],
     "continentId": 1,
-    "countryId": [1],
+    "countryId": [
+      1
+    ],
     "discoveryId": 47,
     "museumId": 1,
     "imageId": 47,
@@ -1405,9 +2013,18 @@
     "genus": "Pentaceratops",
     "status": "Válido",
     "description": "Ceratopsídeo impressionante com um dos maiores escudos cranianos conhecidos e chifres longos e curvados.",
-    "characteristics": ["Escudo craniano enorme com mais de 2 metros", "Cinco chifres (dois acima dos olhos, um no nariz, dois nas laterais do escudo)", "Bico córneo potente"],
-    "curiosities": ["Possuía um dos maiores crânios de qualquer animal terrestre, chegando a 2,5 metros de comprimento."],
-    "sources": ["University of New Mexico", "Paleobiology Database"]
+    "characteristics": [
+      "Escudo craniano enorme com mais de 2 metros",
+      "Cinco chifres (dois acima dos olhos, um no nariz, dois nas laterais do escudo)",
+      "Bico córneo potente"
+    ],
+    "curiosities": [
+      "Possuía um dos maiores crânios de qualquer animal terrestre, chegando a 2,5 metros de comprimento."
+    ],
+    "sources": [
+      "University of New Mexico",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 48,
@@ -1421,9 +2038,13 @@
     "epochId": 1,
     "dietId": 1,
     "habitatId": 3,
-    "formationId": [25],
+    "formationId": [
+      25
+    ],
     "continentId": 2,
-    "countryId": [16],
+    "countryId": [
+      16
+    ],
     "discoveryId": 48,
     "museumId": 11,
     "imageId": 48,
@@ -1435,9 +2056,18 @@
     "genus": "Irritator",
     "status": "Válido",
     "description": "Espinosaurídeo brasileiro com focinho longo e estreito, adaptado para capturar peixes em rios do Cretáceo.",
-    "characteristics": ["Focinho longo e delicado semelhante ao de um crocodilo", "Dentes cônicos e retos", "Crista sagital fina no topo do crânio"],
-    "curiosities": ["O nome 'Irritator' foi dado porque os paleontólogos ficaram irritados ao descobrir que o fóssil havia sido adulterado por colecionadores."],
-    "sources": ["Museu de Paleontologia de Santana do Cariri", "Paleobiology Database"]
+    "characteristics": [
+      "Focinho longo e delicado semelhante ao de um crocodilo",
+      "Dentes cônicos e retos",
+      "Crista sagital fina no topo do crânio"
+    ],
+    "curiosities": [
+      "O nome 'Irritator' foi dado porque os paleontólogos ficaram irritados ao descobrir que o fóssil havia sido adulterado por colecionadores."
+    ],
+    "sources": [
+      "Museu de Paleontologia de Santana do Cariri",
+      "Paleobiology Database"
+    ]
   },
   {
     "id": 49,
@@ -1451,9 +2081,13 @@
     "epochId": 1,
     "dietId": 1,
     "habitatId": 3,
-    "formationId": [26],
+    "formationId": [
+      26
+    ],
     "continentId": 5,
-    "countryId": [17],
+    "countryId": [
+      17
+    ],
     "discoveryId": 49,
     "museumId": 12,
     "imageId": 49,
@@ -1465,9 +2099,18 @@
     "genus": "Suchomimus",
     "status": "Válido",
     "description": "Grande espinosaurídeo africano com focino de crocodilo e uma pequena vela dorsal, especializado em pesca.",
-    "characteristics": ["Focinho longo e estreito com mais de 100 dentes", "Vela dorsal baixa nas costas", "Braços poderosos com garras curvadas de 20 cm"],
-    "curiosities": ["Foi descrito em 1998 por Paul Sereno e sua equipe. O nome refere-se à semelhança de seu focinho com o de um crocodilo."],
-    "sources": ["University of Chicago", "National Geographic Society"]
+    "characteristics": [
+      "Focinho longo e estreito com mais de 100 dentes",
+      "Vela dorsal baixa nas costas",
+      "Braços poderosos com garras curvadas de 20 cm"
+    ],
+    "curiosities": [
+      "Foi descrito em 1998 por Paul Sereno e sua equipe. O nome refere-se à semelhança de seu focinho com o de um crocodilo."
+    ],
+    "sources": [
+      "University of Chicago",
+      "National Geographic Society"
+    ]
   },
   {
     "id": 50,
@@ -1481,9 +2124,13 @@
     "epochId": 1,
     "dietId": 2,
     "habitatId": 1,
-    "formationId": [27],
+    "formationId": [
+      27
+    ],
     "continentId": 4,
-    "countryId": [10],
+    "countryId": [
+      10
+    ],
     "discoveryId": 50,
     "museumId": 13,
     "imageId": 50,
@@ -1495,8 +2142,2168 @@
     "genus": "Tsintaosaurus",
     "status": "Válido",
     "description": "Hadrossaurídeo asiático famoso por sua crista nasal em forma de espinho ou unicórnio.",
-    "characteristics": ["Crista nasal longa e fina projetada para frente", "Bico largo adaptado para pastagem", "Capacidade de locomoção bípede e quadrúpede"],
-    "curiosities": ["Sua crista única em forma de espinho levou a especulações sobre sua função, que poderia ser para exibição social ou produção de sons."],
-    "sources": ["Institute of Vertebrate Paleontology, Beijing", "Paleobiology Database"]
+    "characteristics": [
+      "Crista nasal longa e fina projetada para frente",
+      "Bico largo adaptado para pastagem",
+      "Capacidade de locomoção bípede e quadrúpede"
+    ],
+    "curiosities": [
+      "Sua crista única em forma de espinho levou a especulações sobre sua função, que poderia ser para exibição social ou produção de sons."
+    ],
+    "sources": [
+      "Institute of Vertebrate Paleontology, Beijing",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Acrocanthosaurus",
+    "scientificName": "Acrocanthosaurus atokensis",
+    "meaning": "Lagarto de Alta Espinha",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 18,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 1,
+    "habitatId": 1,
+    "formationId": [
+      1
+    ],
+    "continentId": 1,
+    "countryId": [
+      1
+    ],
+    "discoveryId": 51,
+    "museumId": 1,
+    "imageId": 51,
+    "length": 11.5,
+    "height": 3.5,
+    "weight": 6000,
+    "estimatedSpeed": 25,
+    "species": "A. atokensis",
+    "genus": "Acrocanthosaurus",
+    "status": "Válido",
+    "description": "Grande terópode do Cretáceo Inferior, conhecido por uma proeminente crista neural ao longo do pescoço, costas e cauda.",
+    "characteristics": [
+      "Crista neural alta e proeminente",
+      "Braços relativamente longos para um carnívoro",
+      "Mandíbula robusta com dentes serrilhados"
+    ],
+    "curiosities": [
+      "É o maior predador terrestre conhecido do Cretáceo Inferior da América do Norte."
+    ],
+    "sources": [
+      "North Carolina Museum of Natural Sciences",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Albertosaurus",
+    "scientificName": "Albertosaurus sarcophagus",
+    "meaning": "Lagarto de Alberta",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 1,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 1,
+    "habitatId": 1,
+    "formationId": [
+      18
+    ],
+    "continentId": 1,
+    "countryId": [
+      5
+    ],
+    "discoveryId": 52,
+    "museumId": 6,
+    "imageId": 52,
+    "length": 9.0,
+    "height": 3.0,
+    "weight": 2500,
+    "estimatedSpeed": 35,
+    "species": "A. sarcophagus",
+    "genus": "Albertosaurus",
+    "status": "Válido",
+    "description": "Tiranossaurídeo ágil e predador de topo no Cretáceo Superior do Canadá, ancestral próximo do T. rex.",
+    "characteristics": [
+      "Crânio grande com dentes em forma de banana",
+      "Braços com apenas dois dedos funcionais",
+      "Estrutura corporal mais leve que a do T. rex"
+    ],
+    "curiosities": [
+      "Fósseis de um leito de ossos sugerem que podiam viver e caçar em bandos."
+    ],
+    "sources": [
+      "Royal Tyrrell Museum",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Antarctopelta",
+    "scientificName": "Antarctopelta oliveroi",
+    "meaning": "Escudo da Antártida",
+    "classificationId": 3,
+    "cladeId": 4,
+    "familyId": 23,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      23
+    ],
+    "continentId": 7,
+    "countryId": [
+      15
+    ],
+    "discoveryId": 53,
+    "museumId": 2,
+    "imageId": 53,
+    "length": 4.0,
+    "height": 1.5,
+    "weight": 500,
+    "estimatedSpeed": 10,
+    "species": "A. oliveroi",
+    "genus": "Antarctopelta",
+    "status": "Válido",
+    "description": "Primeiro dinossauro descoberto na Antártida, um anquilossauro de porte médio com armadura protetora.",
+    "characteristics": [
+      "Armadura dorsal com osteodermos",
+      "Cauda rígida e possivelmente com clava",
+      "Membros robustos e curtos"
+    ],
+    "curiosities": [
+      "Seus fósseis foram encontrados na Ilha James Ross, provando a presença de dinossauros blindados no polo sul."
+    ],
+    "sources": [
+      "Museo de La Plata",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Bambiraptor",
+    "scientificName": "Bambiraptor feinbergi",
+    "meaning": "Ladrão Bambi",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 15,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 1,
+    "habitatId": 1,
+    "formationId": [
+      2
+    ],
+    "continentId": 1,
+    "countryId": [
+      1
+    ],
+    "discoveryId": 54,
+    "museumId": 1,
+    "imageId": 54,
+    "length": 1.0,
+    "height": 0.4,
+    "weight": 5,
+    "estimatedSpeed": 45,
+    "species": "B. feinbergi",
+    "genus": "Bambiraptor",
+    "status": "Válido",
+    "description": "Pequeno dromeossaurídeo extremamente ágil, com proporções corporais que lembram aves modernas.",
+    "characteristics": [
+      "Braços longos e articulados",
+      "Cauda rígida para equilíbrio em alta velocidade",
+      "Provavelmente coberto por penas"
+    ],
+    "curiosities": [
+      "Recebeu esse nome porque o fóssil foi descoberto por um adolescente de 14 anos em um parque nacional."
+    ],
+    "sources": [
+      "University of Kansas",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Beipiaosaurus",
+    "scientificName": "Beipiaosaurus inexpectus",
+    "meaning": "Lagarto de Beipiao",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 25,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 2,
+    "habitatId": 2,
+    "formationId": [
+      24
+    ],
+    "continentId": 4,
+    "countryId": [
+      3
+    ],
+    "discoveryId": 55,
+    "museumId": 13,
+    "imageId": 55,
+    "length": 2.2,
+    "height": 0.8,
+    "weight": 20,
+    "estimatedSpeed": 25,
+    "species": "B. inexpectus",
+    "genus": "Beipiaosaurus",
+    "status": "Válido",
+    "description": "Terizinossauro primitivo e emplumado, fornecendo evidências cruciais sobre a evolução das penas em dinossauros não-avianos.",
+    "characteristics": [
+      "Coberto por penas filamentosas longas",
+      "Mãos com três garras longas",
+      "Bico sem dentes"
+    ],
+    "curiosities": [
+      "Foi o primeiro terizinossauro descoberto com evidência direta de plumagem."
+    ],
+    "sources": [
+      "Institute of Vertebrate Paleontology, Beijing",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 56,
+    "name": "Buitreraptor",
+    "scientificName": "Buitreraptor gonzalezorum",
+    "meaning": "Ladrão de Buitrera",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 15,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 1,
+    "habitatId": 1,
+    "formationId": [
+      6
+    ],
+    "continentId": 2,
+    "countryId": [
+      6
+    ],
+    "discoveryId": 56,
+    "museumId": 2,
+    "imageId": 56,
+    "length": 1.5,
+    "height": 0.5,
+    "weight": 3,
+    "estimatedSpeed": 40,
+    "species": "B. gonzalezorum",
+    "genus": "Buitreraptor",
+    "status": "Válido",
+    "description": "Dromeossaurídeo sul-americano de focinho longo e estreito, adaptado para caçar pequenas presas.",
+    "characteristics": [
+      "Focinho longo com dentes não serrilhados",
+      "Braços longos e mãos com garras",
+      "Cauda longa e rígida"
+    ],
+    "curiosities": [
+      "Sua morfologia sugere que caçava pequenos mamíferos e lagartos em tocas, de forma semelhante a algumas aves de rapina modernas."
+    ],
+    "sources": [
+      "Museo Argentino de Ciencias Naturales",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 57,
+    "name": "Camptosaurus",
+    "scientificName": "Camptosaurus dispar",
+    "meaning": "Lagarto Flexível",
+    "classificationId": 3,
+    "cladeId": 4,
+    "familyId": 22,
+    "periodId": 2,
+    "epochId": 2,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      2
+    ],
+    "continentId": 1,
+    "countryId": [
+      1
+    ],
+    "discoveryId": 57,
+    "museumId": 1,
+    "imageId": 57,
+    "length": 6.0,
+    "height": 2.0,
+    "weight": 1000,
+    "estimatedSpeed": 20,
+    "species": "C. dispar",
+    "genus": "Camptosaurus",
+    "status": "Válido",
+    "description": "Ornitópode do Jurássico Superior, ancestral dos hadrossauros, capaz de alternar entre postura bípede e quadrúpede.",
+    "characteristics": [
+      "Bico córneo sem dentes na frente",
+      "Polegar com esporão cônico",
+      "Mãos com quatro dedos funcionais"
+    ],
+    "curiosities": [
+      "Foi uma das presas favoritas do Allosaurus, conforme evidenciado por marcas de mordida em fósseis."
+    ],
+    "sources": [
+      "Carnegie Museum",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Chasmosaurus",
+    "scientificName": "Chasmosaurus belli",
+    "meaning": "Lagarto Aberto",
+    "classificationId": 2,
+    "cladeId": 3,
+    "familyId": 13,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      18
+    ],
+    "continentId": 1,
+    "countryId": [
+      5
+    ],
+    "discoveryId": 58,
+    "museumId": 6,
+    "imageId": 58,
+    "length": 5.0,
+    "height": 2.0,
+    "weight": 2000,
+    "estimatedSpeed": 15,
+    "species": "C. belli",
+    "genus": "Chasmosaurus",
+    "status": "Válido",
+    "description": "Ceratopsídeo com um escudo craniano longo e triangular, adornado com pequenos chifres na borda.",
+    "characteristics": [
+      "Escudo craniano longo com grandes aberturas",
+      "Três chifres faciais (dois longos sobre os olhos, um curto no nariz)",
+      "Bico em forma de papagaio"
+    ],
+    "curiosities": [
+      "O nome 'Chasmosaurus' significa 'lagarto aberto', referindo-se às grandes aberturas (fenestras) em seu escudo."
+    ],
+    "sources": [
+      "Royal Ontario Museum",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Coelurus",
+    "scientificName": "Coelurus fragilis",
+    "meaning": "Cauda Oca",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 15,
+    "periodId": 2,
+    "epochId": 2,
+    "dietId": 1,
+    "habitatId": 1,
+    "formationId": [
+      2
+    ],
+    "continentId": 1,
+    "countryId": [
+      1
+    ],
+    "discoveryId": 59,
+    "museumId": 1,
+    "imageId": 59,
+    "length": 2.4,
+    "height": 0.7,
+    "weight": 20,
+    "estimatedSpeed": 40,
+    "species": "C. fragilis",
+    "genus": "Coelurus",
+    "status": "Válido",
+    "description": "Pequeno e ágil terópode do Jurássico Superior, com vértebras ocas e pescoço longo.",
+    "characteristics": [
+      "Vértebras cervicais alongadas",
+      "Mãos longas com dedos delgados",
+      "Cauda longa e flexível"
+    ],
+    "curiosities": [
+      "Frequentemente confundido no passado com o Ornitholestes e o Tanycolagreus devido à fragmentação dos fósseis."
+    ],
+    "sources": [
+      "Peabody Museum of Natural History",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 60,
+    "name": "Dacentrurus",
+    "scientificName": "Dacentrurus armatus",
+    "meaning": "Cauda com Pontas",
+    "classificationId": 3,
+    "cladeId": 4,
+    "familyId": 14,
+    "periodId": 2,
+    "epochId": 2,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      8
+    ],
+    "continentId": 3,
+    "countryId": [
+      7
+    ],
+    "discoveryId": 60,
+    "museumId": 3,
+    "imageId": 60,
+    "length": 7.0,
+    "height": 2.5,
+    "weight": 2000,
+    "estimatedSpeed": 12,
+    "species": "D. armatus",
+    "genus": "Dacentrurus",
+    "status": "Válido",
+    "description": "Estegossauro europeu robusto, com placas e espigões distribuídos ao longo de todo o corpo e cauda.",
+    "characteristics": [
+      "Espigões longos na metade posterior da cauda",
+      "Placas ósseas menores e mais numerosas que as do Stegosaurus",
+      "Membros anteriores robustos"
+    ],
+    "curiosities": [
+      "Foi o primeiro estegossauro a ser descrito cientificamente, originalmente nomeado como Omosaurus."
+    ],
+    "sources": [
+      "Natural History Museum, London",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 61,
+    "name": "Daspletosaurus",
+    "scientificName": "Daspletosaurus torosus",
+    "meaning": "Lagarto Assustador",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 1,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 1,
+    "habitatId": 1,
+    "formationId": [
+      5
+    ],
+    "continentId": 1,
+    "countryId": [
+      5
+    ],
+    "discoveryId": 61,
+    "museumId": 6,
+    "imageId": 61,
+    "length": 9.0,
+    "height": 3.0,
+    "weight": 3000,
+    "estimatedSpeed": 25,
+    "species": "D. torosus",
+    "genus": "Daspletosaurus",
+    "status": "Válido",
+    "description": "Tiranossaurídeo robusto e poderoso, com crânio profundo e dentes maciços, ancestral do T. rex.",
+    "characteristics": [
+      "Crânio profundo e pesado",
+      "Textura rugosa na superfície do crânio",
+      "Braços pequenos com dois dedos"
+    ],
+    "curiosities": [
+      "Fósseis mostram evidências de que sofriam de doenças como tricomoníase, semelhante ao T. rex."
+    ],
+    "sources": [
+      "Royal Tyrrell Museum",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 62,
+    "name": "Dromaeosaurus",
+    "scientificName": "Dromaeosaurus albertensis",
+    "meaning": "Lagarto Corredor",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 15,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 1,
+    "habitatId": 1,
+    "formationId": [
+      5
+    ],
+    "continentId": 1,
+    "countryId": [
+      5
+    ],
+    "discoveryId": 62,
+    "museumId": 6,
+    "imageId": 62,
+    "length": 2.0,
+    "height": 0.6,
+    "weight": 15,
+    "estimatedSpeed": 40,
+    "species": "D. albertensis",
+    "genus": "Dromaeosaurus",
+    "status": "Válido",
+    "description": "Dromeossaurídeo robusto com crânio curto e profundo, e uma garra em foice no segundo dedo do pé.",
+    "characteristics": [
+      "Crânio curto e robusto",
+      "Garra em foice retrátil no pé",
+      "Cauda rígida com tendões ossificados"
+    ],
+    "curiosities": [
+      "Apesar do nome 'lagarto corredor', estudos biomecânicos sugerem que era mais um lutador forte do que um velocista."
+    ],
+    "sources": [
+      "Canadian Museum of Nature",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Dreadnoughtus",
+    "scientificName": "Dreadnoughtus schrani",
+    "meaning": "Que não teme nada",
+    "classificationId": 2,
+    "cladeId": 2,
+    "familyId": 20,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      7
+    ],
+    "continentId": 2,
+    "countryId": [
+      6
+    ],
+    "discoveryId": 63,
+    "museumId": 2,
+    "imageId": 63,
+    "length": 26.0,
+    "height": 10.0,
+    "weight": 50000,
+    "estimatedSpeed": 8,
+    "species": "D. schrani",
+    "genus": "Dreadnoughtus",
+    "status": "Válido",
+    "description": "Titanossauro gigante e incrivelmente bem preservado, cujo esqueleto completo permitiu estimativas precisas de sua massa.",
+    "characteristics": [
+      "Ossos dos membros extremamente robustos",
+      "Vértebras caudais com espinhas neurais altas",
+      "Pescoço muito longo"
+    ],
+    "curiosities": [
+      "O nome 'Dreadnought' (encouraçado) foi escolhido porque seu tamanho gigantesco o tornava imune a ataques de predadores."
+    ],
+    "sources": [
+      "Museo Padre Molina",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Dryosaurus",
+    "scientificName": "Dryosaurus altus",
+    "meaning": "Lagarto de Carvalho",
+    "classificationId": 3,
+    "cladeId": 4,
+    "familyId": 22,
+    "periodId": 2,
+    "epochId": 2,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      2
+    ],
+    "continentId": 1,
+    "countryId": [
+      1
+    ],
+    "discoveryId": 64,
+    "museumId": 1,
+    "imageId": 64,
+    "length": 4.0,
+    "height": 1.5,
+    "weight": 100,
+    "estimatedSpeed": 35,
+    "species": "D. altus",
+    "genus": "Dryosaurus",
+    "status": "Válido",
+    "description": "Pequeno ornitópode bípede e veloz do Jurássico Superior, com patas traseiras alongadas para corrida.",
+    "characteristics": [
+      "Pernas traseiras longas e delgadas",
+      "Bico sem dentes na frente da mandíbula",
+      "Cauda longa e rígida para equilíbrio"
+    ],
+    "curiosities": [
+      "Era uma presa comum para predadores como o Allosaurus, dependendo de sua velocidade para sobreviver."
+    ],
+    "sources": [
+      "Carnegie Museum",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 65,
+    "name": "Edmontonia",
+    "scientificName": "Edmontonia rugosidens",
+    "meaning": "De Edmonton",
+    "classificationId": 3,
+    "cladeId": 4,
+    "familyId": 23,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      18
+    ],
+    "continentId": 1,
+    "countryId": [
+      5
+    ],
+    "discoveryId": 65,
+    "museumId": 6,
+    "imageId": 65,
+    "length": 6.5,
+    "height": 2.0,
+    "weight": 3000,
+    "estimatedSpeed": 10,
+    "species": "E. rugosidens",
+    "genus": "Edmontonia",
+    "status": "Válido",
+    "description": "Nodossauro blindado sem clava na cauda, protegido por pesadas placas ósseas e espigões nos ombros.",
+    "characteristics": [
+      "Armadura dorsal com osteodermos fundidos",
+      "Espigões longos e pontiagudos nos ombros",
+      "Crânio baixo e alongado"
+    ],
+    "curiosities": [
+      "Diferente do Ankylosaurus, o Edmontonia não possuía uma clava óssea na ponta da cauda para defesa."
+    ],
+    "sources": [
+      "Royal Tyrrell Museum",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Einiosaurus",
+    "scientificName": "Einiosaurus procurvicornis",
+    "meaning": "Lagarto Bisão",
+    "classificationId": 2,
+    "cladeId": 3,
+    "familyId": 13,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      18
+    ],
+    "continentId": 1,
+    "countryId": [
+      5
+    ],
+    "discoveryId": 66,
+    "museumId": 1,
+    "imageId": 66,
+    "length": 4.5,
+    "height": 1.8,
+    "weight": 1500,
+    "estimatedSpeed": 20,
+    "species": "E. procurvicornis",
+    "genus": "Einiosaurus",
+    "status": "Válido",
+    "description": "Ceratopsídeo distinto por seu chifre nasal que se curvava fortemente para baixo, lembrando o chifre de um bisão.",
+    "characteristics": [
+      "Chifre nasal curto e curvado para baixo",
+      "Escudo craniano com dois grandes espigões na borda superior",
+      "Corpo robusto e quadrúpede"
+    ],
+    "curiosities": [
+      "O nome 'Einiosaurus' vem de uma palavra da tribo Blackfoot que significa 'lagarto bisão', devido à forma de seu chifre."
+    ],
+    "sources": [
+      "Museum of the Rockies",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 67,
+    "name": "Eoraptor",
+    "scientificName": "Eoraptor lunensis",
+    "meaning": "Ladrão da Aurora",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 16,
+    "periodId": 1,
+    "epochId": 3,
+    "dietId": 3,
+    "habitatId": 1,
+    "formationId": [
+      6
+    ],
+    "continentId": 2,
+    "countryId": [
+      6
+    ],
+    "discoveryId": 67,
+    "museumId": 2,
+    "imageId": 67,
+    "length": 1.0,
+    "height": 0.3,
+    "weight": 10,
+    "estimatedSpeed": 30,
+    "species": "E. lunensis",
+    "genus": "Eoraptor",
+    "status": "Válido",
+    "description": "Um dos dinossauros mais antigos e primitivos conhecidos, do final do Triássico, com características mistas de carnívoros e herbívoros.",
+    "characteristics": [
+      "Dentes anteriores em forma de folha e posteriores serrilhados",
+      "Mãos com cinco dedos, alguns com garras longas",
+      "Estrutura corporal leve e bípede"
+    ],
+    "curiosities": [
+      "Sua descoberta na Formação Ischigualasto ajudou a confirmar que a Argentina é um dos berços da evolução dos dinossauros."
+    ],
+    "sources": [
+      "Museo de Ciencias Naturales, San Juan",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Eustreptospondylus",
+    "scientificName": "Eustreptospondylus oxoniensis",
+    "meaning": "Vértebra Bem Curvada",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 16,
+    "periodId": 2,
+    "epochId": 2,
+    "dietId": 1,
+    "habitatId": 3,
+    "environmentId": 3,
+    "formationId": [
+      8
+    ],
+    "continentId": 3,
+    "countryId": [
+      7
+    ],
+    "discoveryId": 68,
+    "museumId": 3,
+    "imageId": 68,
+    "length": 6.0,
+    "height": 2.0,
+    "weight": 500,
+    "estimatedSpeed": 30,
+    "species": "E. oxoniensis",
+    "genus": "Eustreptospondylus",
+    "status": "Válido",
+    "description": "Tetanuro primitivo do Jurássico Médio da Inglaterra, adaptado a ambientes costeiros.",
+    "characteristics": [
+      "Crânio longo com dentes serrilhados",
+      "Membros anteriores moderadamente longos",
+      "Vértebras com estruturas de fortalecimento"
+    ],
+    "curiosities": [
+      "Seu único espécime conhecido foi encontrado em depósitos marinhos, sugerindo que o corpo pode ter sido carregado para o mar após a morte."
+    ],
+    "sources": [
+      "Natural History Museum, London",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Gargoyleosaurus",
+    "scientificName": "Gargoyleosaurus parkpinorum",
+    "meaning": "Lagarto Gárgula",
+    "classificationId": 3,
+    "cladeId": 4,
+    "familyId": 23,
+    "periodId": 2,
+    "epochId": 2,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      2
+    ],
+    "continentId": 1,
+    "countryId": [
+      1
+    ],
+    "discoveryId": 69,
+    "museumId": 1,
+    "imageId": 69,
+    "length": 3.0,
+    "height": 1.0,
+    "weight": 100,
+    "estimatedSpeed": 15,
+    "species": "G. parkpinorum",
+    "genus": "Gargoyleosaurus",
+    "status": "Válido",
+    "description": "Pequeno anquilossauro do Jurássico Superior, com um crânio distinto e armadura corporal bem desenvolvida.",
+    "characteristics": [
+      "Crânio com textura rugosa e cristas",
+      "Armadura dorsal com osteodermos pequenos e numerosos",
+      "Cauda com possível clava primitiva"
+    ],
+    "curiosities": [
+      "O nome 'Gargoyleosaurus' foi escolhido devido à aparência de gárgula de seu crânio fossilizado."
+    ],
+    "sources": [
+      "University of Wyoming",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Gastonia",
+    "scientificName": "Gastonia burgei",
+    "meaning": "De Gaston",
+    "classificationId": 3,
+    "cladeId": 4,
+    "familyId": 23,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      1
+    ],
+    "continentId": 1,
+    "countryId": [
+      1
+    ],
+    "discoveryId": 70,
+    "museumId": 1,
+    "imageId": 70,
+    "length": 6.0,
+    "height": 1.5,
+    "weight": 2000,
+    "estimatedSpeed": 12,
+    "species": "G. burgei",
+    "genus": "Gastonia",
+    "status": "Válido",
+    "description": "Nodossauro do Cretáceo Inferior com uma das armaduras mais complexas e pesadas entre os anquilossauros.",
+    "characteristics": [
+      "Espigões longos e curvados nos ombros e quadris",
+      "Armadura dorsal fundida em bandas",
+      "Cauda com clava óssea"
+    ],
+    "curiosities": [
+      "Seus fósseis são frequentemente encontrados em leitos de ossos, sugerindo que viviam em grupos para se proteger de predadores como o Utahraptor."
+    ],
+    "sources": [
+      "Brigham Young University",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 71,
+    "name": "Gigantoraptor",
+    "scientificName": "Gigantoraptor erlianensis",
+    "meaning": "Ladrão Gigante",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 25,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 3,
+    "habitatId": 1,
+    "formationId": [
+      16
+    ],
+    "continentId": 4,
+    "countryId": [
+      3
+    ],
+    "discoveryId": 71,
+    "museumId": 13,
+    "imageId": 71,
+    "length": 8.0,
+    "height": 3.5,
+    "weight": 1400,
+    "estimatedSpeed": 25,
+    "species": "G. erlianensis",
+    "genus": "Gigantoraptor",
+    "status": "Válido",
+    "description": "Oviraptorossauro gigantesco, desproporcionalmente grande para sua família, com bico sem dentes e longos membros.",
+    "characteristics": [
+      "Membros posteriores longos e delgados",
+      "Braços longos com garras curvadas",
+      "Bico córneo sem dentes"
+    ],
+    "curiosities": [
+      "Apesar de pertencer a um grupo de dinossauros geralmente pequenos, o Gigantoraptor atingia o tamanho de um tiranossauro."
+    ],
+    "sources": [
+      "Institute of Vertebrate Paleontology, Beijing",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 72,
+    "name": "Gorgosaurus",
+    "scientificName": "Gorgosaurus libratus",
+    "meaning": "Lagarto Terrível",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 1,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 1,
+    "habitatId": 1,
+    "formationId": [
+      5
+    ],
+    "continentId": 1,
+    "countryId": [
+      5
+    ],
+    "discoveryId": 72,
+    "museumId": 6,
+    "imageId": 72,
+    "length": 8.0,
+    "height": 2.8,
+    "weight": 2500,
+    "estimatedSpeed": 30,
+    "species": "G. libratus",
+    "genus": "Gorgosaurus",
+    "status": "Válido",
+    "description": "Tiranossaurídeo ágil e de constituição mais leve que o T. rex, predominante no Cretáceo Superior do Canadá.",
+    "characteristics": [
+      "Crânio longo e estreito",
+      "Membros posteriores longos para corrida",
+      "Braços pequenos com dois dedos"
+    ],
+    "curiosities": [
+      "Jovens Gorgosaurus tinham pernas proporcionalmente mais longas que os adultos, sugerindo que eram corredores ainda mais rápidos."
+    ],
+    "sources": [
+      "Royal Tyrrell Museum",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 73,
+    "name": "Herrerasaurus",
+    "scientificName": "Herrerasaurus ischigualastensis",
+    "meaning": "Lagarto de Herrera",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 16,
+    "periodId": 1,
+    "epochId": 3,
+    "dietId": 1,
+    "habitatId": 1,
+    "formationId": [
+      6
+    ],
+    "continentId": 2,
+    "countryId": [
+      6
+    ],
+    "discoveryId": 73,
+    "museumId": 2,
+    "imageId": 73,
+    "length": 4.5,
+    "height": 1.5,
+    "weight": 350,
+    "estimatedSpeed": 35,
+    "species": "H. ischigualastensis",
+    "genus": "Herrerasaurus",
+    "status": "Válido",
+    "description": "Um dos dinossauros mais antigos conhecidos, um predador ágil do Triássico Superior com características primitivas.",
+    "characteristics": [
+      "Mandíbula articulada de forma primitiva",
+      "Mãos com cinco dedos, três com garras longas",
+      "Bacia com mistura de características de saurisquios e ornitisquios"
+    ],
+    "curiosities": [
+      "Foi descoberto por um fazendeiro local, Victorino Herrera, antes de ser formalmente estudado por paleontólogos."
+    ],
+    "sources": [
+      "Museo de Ciencias Naturales, San Juan",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 74,
+    "name": "Hypsilophodon",
+    "scientificName": "Hypsilophodon foxii",
+    "meaning": "Dente de Crista Alta",
+    "classificationId": 3,
+    "cladeId": 4,
+    "familyId": 22,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      8
+    ],
+    "continentId": 3,
+    "countryId": [
+      7
+    ],
+    "discoveryId": 74,
+    "museumId": 3,
+    "imageId": 74,
+    "length": 2.0,
+    "height": 0.8,
+    "weight": 20,
+    "estimatedSpeed": 40,
+    "species": "H. foxii",
+    "genus": "Hypsilophodon",
+    "status": "Válido",
+    "description": "Pequeno ornitópode bípede e veloz do Cretáceo Inferior da Europa, com dentes complexos para mastigação.",
+    "characteristics": [
+      "Dentes com múltiplas cúspides para moer plantas",
+      "Pernas traseiras longas e delgadas",
+      "Cauda longa e rígida com tendões ossificados"
+    ],
+    "curiosities": [
+      "Durante décadas, foi incorretamente reconstruído escalando árvores como um esquilo, uma teoria hoje totalmente refutada."
+    ],
+    "sources": [
+      "Natural History Museum, London",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 75,
+    "name": "Incisivosaurus",
+    "scientificName": "Incisivosaurus gauthieri",
+    "meaning": "Lagarto Incisivo",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 25,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 2,
+    "habitatId": 2,
+    "formationId": [
+      24
+    ],
+    "continentId": 4,
+    "countryId": [
+      3
+    ],
+    "discoveryId": 75,
+    "museumId": 13,
+    "imageId": 75,
+    "length": 1.0,
+    "height": 0.4,
+    "weight": 5,
+    "estimatedSpeed": 20,
+    "species": "I. gauthieri",
+    "genus": "Incisivosaurus",
+    "status": "Válido",
+    "description": "Pequeno terizinossauro primitivo com dentes anteriores em forma de incisivos, adaptados para roer vegetação.",
+    "characteristics": [
+      "Dentes frontais grandes e semelhantes a roedores",
+      "Crânio curto e alto",
+      "Mãos com três garras longas"
+    ],
+    "curiosities": [
+      "É o único dinossauro não-aviano conhecido com adaptações dentárias claras para roer, semelhante a castores ou coelhos."
+    ],
+    "sources": [
+      "Institute of Vertebrate Paleontology, Beijing",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 76,
+    "name": "Kosmoceratops",
+    "scientificName": "Kosmoceratops richardsoni",
+    "meaning": "Rosto com Chifres Ornamentados",
+    "classificationId": 2,
+    "cladeId": 3,
+    "familyId": 13,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      1
+    ],
+    "continentId": 1,
+    "countryId": [
+      1
+    ],
+    "discoveryId": 76,
+    "museumId": 1,
+    "imageId": 76,
+    "length": 4.5,
+    "height": 1.8,
+    "weight": 2000,
+    "estimatedSpeed": 15,
+    "species": "K. richardsoni",
+    "genus": "Kosmoceratops",
+    "status": "Válido",
+    "description": "Ceratopsídeo com o crânio mais ornamentado de todos os dinossauros conhecidos, com 15 chifres distintos.",
+    "characteristics": [
+      "Quinze chifres no crânio (um no nariz, dois sobre os olhos, dez na borda do escudo, dois nas bochechas)",
+      "Escudo craniano curto e largo",
+      "Bico córneo sem dentes"
+    ],
+    "curiosities": [
+      "Acredita-se que essa ornamentação exagerada servia principalmente para exibição e reconhecimento de espécies, não para defesa."
+    ],
+    "sources": [
+      "Natural History Museum of Utah",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 77,
+    "name": "Lambeosaurus",
+    "scientificName": "Lambeosaurus lambei",
+    "meaning": "Lagarto de Lambe",
+    "classificationId": 3,
+    "cladeId": 4,
+    "familyId": 21,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      5
+    ],
+    "continentId": 1,
+    "countryId": [
+      5
+    ],
+    "discoveryId": 77,
+    "museumId": 6,
+    "imageId": 77,
+    "length": 9.0,
+    "height": 3.0,
+    "weight": 3000,
+    "estimatedSpeed": 20,
+    "species": "L. lambei",
+    "genus": "Lambeosaurus",
+    "status": "Válido",
+    "description": "Hadrossaurídeo com uma crista craniana oca em forma de machado, usada para ressonância vocal.",
+    "characteristics": [
+      "Crista oca em forma de machado voltada para frente",
+      "Bico largo sem dentes na frente",
+      "Mãos com quatro dedos, sendo o quinto ausente"
+    ],
+    "curiosities": [
+      "A forma e o tamanho da crista variavam entre machos, fêmeas e jovens, sugerindo dimorfismo sexual."
+    ],
+    "sources": [
+      "Canadian Museum of Nature",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 78,
+    "name": "Leaellynasaura",
+    "scientificName": "Leaellynasaura amicagraphica",
+    "meaning": "Lagarto de Leaellyn",
+    "classificationId": 3,
+    "cladeId": 4,
+    "familyId": 22,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      22
+    ],
+    "continentId": 6,
+    "countryId": [
+      14
+    ],
+    "discoveryId": 78,
+    "museumId": 9,
+    "imageId": 78,
+    "length": 1.0,
+    "height": 0.4,
+    "weight": 10,
+    "estimatedSpeed": 30,
+    "species": "L. amicagraphica",
+    "genus": "Leaellynasaura",
+    "status": "Válido",
+    "description": "Pequeno ornitópode que viveu no Círculo Polar Antártico durante o Cretáceo, adaptado a longos períodos de escuridão.",
+    "characteristics": [
+      "Olhos grandes adaptados à baixa luminosidade",
+      "Cauda longa que compunha mais da metade do comprimento do corpo",
+      "Estrutura corporal leve e bípede"
+    ],
+    "curiosities": [
+      "Recebeu esse nome em homenagem a Leaellyn, a filha dos paleontólogos que o descreveram, que tinha a mesma idade da descoberta."
+    ],
+    "sources": [
+      "Museum Victoria",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 79,
+    "name": "Lufengosaurus",
+    "scientificName": "Lufengosaurus huenei",
+    "meaning": "Lagarto de Lufeng",
+    "classificationId": 2,
+    "cladeId": 2,
+    "familyId": 19,
+    "periodId": 1,
+    "epochId": 3,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      3
+    ],
+    "continentId": 4,
+    "countryId": [
+      3
+    ],
+    "discoveryId": 79,
+    "museumId": 13,
+    "imageId": 79,
+    "length": 6.0,
+    "height": 2.0,
+    "weight": 1000,
+    "estimatedSpeed": 20,
+    "species": "L. huenei",
+    "genus": "Lufengosaurus",
+    "status": "Válido",
+    "description": "Prosaurópode robusto do Jurássico Inferior da China, um dos dinossauros mais completos encontrados no país.",
+    "characteristics": [
+      "Pescoço longo e cauda longa",
+      "Mãos com um polegar dotado de garra grande e curva",
+      "Dentes em formato de folha para vegetação"
+    ],
+    "curiosities": [
+      "Foi o primeiro dinossauro descrito por um paleontólogo chinês (Yang Zhongjian) na China, em 1941."
+    ],
+    "sources": [
+      "Institute of Vertebrate Paleontology, Beijing",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 80,
+    "name": "Lythronax",
+    "scientificName": "Lythronax argestes",
+    "meaning": "Rei de Sangue",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 1,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 1,
+    "habitatId": 1,
+    "formationId": [
+      1
+    ],
+    "continentId": 1,
+    "countryId": [
+      1
+    ],
+    "discoveryId": 80,
+    "museumId": 1,
+    "imageId": 80,
+    "length": 8.0,
+    "height": 2.8,
+    "weight": 2500,
+    "estimatedSpeed": 30,
+    "species": "L. argestes",
+    "genus": "Lythronax",
+    "status": "Válido",
+    "description": "Um dos tiranossaurídeos mais antigos conhecidos, com crânio largo e olhos voltados para frente para visão binocular.",
+    "characteristics": [
+      "Crânio curto e profundo",
+      "Órbitas oculares voltadas para frente",
+      "Membros posteriores robustos"
+    ],
+    "curiosities": [
+      "O nome 'Rei de Sangue' reflete sua posição como predador de topo em seu ecossistema insular no que é hoje Utah."
+    ],
+    "sources": [
+      "Natural History Museum of Utah",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 81,
+    "name": "Megaraptor",
+    "scientificName": "Megaraptor namunhuaiquii",
+    "meaning": "Ladrão Gigante",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 15,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 1,
+    "habitatId": 1,
+    "formationId": [
+      7
+    ],
+    "continentId": 2,
+    "countryId": [
+      6
+    ],
+    "discoveryId": 81,
+    "museumId": 2,
+    "imageId": 81,
+    "length": 8.0,
+    "height": 2.5,
+    "weight": 1000,
+    "estimatedSpeed": 35,
+    "species": "M. namunhuaiquii",
+    "genus": "Megaraptor",
+    "status": "Válido",
+    "description": "Terópode enigmático com braços longos e uma garra em foice gigante no primeiro dedo da mão, não no pé.",
+    "characteristics": [
+      "Braços longos e robustos com garras de 35 cm",
+      "Cauda com vértebras altamente pneumatizadas",
+      "Estrutura corporal ágil e leve"
+    ],
+    "curiosities": [
+      "Inicialmente classificado como dromeossaurídeo, estudos recentes sugerem que pode ser um tiranossauróide basal ou neovenatorídeo."
+    ],
+    "sources": [
+      "Museo Municipal de Nueva Pompeya",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 82,
+    "name": "Monolophosaurus",
+    "scientificName": "Monolophosaurus jiangi",
+    "meaning": "Lagarto de Crista Única",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 16,
+    "periodId": 2,
+    "epochId": 2,
+    "dietId": 1,
+    "habitatId": 1,
+    "formationId": [
+      3
+    ],
+    "continentId": 4,
+    "countryId": [
+      3
+    ],
+    "discoveryId": 82,
+    "museumId": 13,
+    "imageId": 82,
+    "length": 5.5,
+    "height": 1.8,
+    "weight": 400,
+    "estimatedSpeed": 30,
+    "species": "M. jiangi",
+    "genus": "Monolophosaurus",
+    "status": "Válido",
+    "description": "Tetanuro do Jurássico Médio da China, caracterizado por uma crista óssea única e proeminente no topo do crânio.",
+    "characteristics": [
+      "Crista sagital única e oca no crânio",
+      "Mandíbula com dentes serrilhados",
+      "Braços de comprimento moderado com três dedos"
+    ],
+    "curiosities": [
+      "A crista pode ter servido para exibição visual ou ressonância vocal, mas era muito frágil para combate físico."
+    ],
+    "sources": [
+      "Institute of Vertebrate Paleontology, Beijing",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 83,
+    "name": "Nanotyrannus",
+    "scientificName": "Nanotyrannus lancensis",
+    "meaning": "Tirano Anão",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 1,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 1,
+    "habitatId": 1,
+    "formationId": [
+      1
+    ],
+    "continentId": 1,
+    "countryId": [
+      1
+    ],
+    "discoveryId": 83,
+    "museumId": 1,
+    "imageId": 83,
+    "length": 6.0,
+    "height": 2.0,
+    "weight": 500,
+    "estimatedSpeed": 40,
+    "species": "N. lancensis",
+    "genus": "Nanotyrannus",
+    "status": "Debated",
+    "description": "Pequeno tiranossaurídeo com dentes mais numerosos que o T. rex, possivelmente um gênero distinto ou um jovem T. rex.",
+    "characteristics": [
+      "Crânio mais estreito que o do T. rex",
+      "Dentes mais numerosos e delgados",
+      "Membros posteriores longos e adaptados para corrida"
+    ],
+    "curiosities": [
+      "O debate científico continua: muitos paleontólogos acreditam que o 'Nanotyrannus' é apenas um exemplar juvenil de Tyrannosaurus rex."
+    ],
+    "sources": [
+      "Carnegie Museum",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 84,
+    "name": "Nigersaurus",
+    "scientificName": "Nigersaurus taqueti",
+    "meaning": "Lagarto do Níger",
+    "classificationId": 2,
+    "cladeId": 2,
+    "familyId": 19,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      26
+    ],
+    "continentId": 5,
+    "countryId": [
+      17
+    ],
+    "discoveryId": 84,
+    "museumId": 1,
+    "imageId": 84,
+    "length": 9.0,
+    "height": 2.5,
+    "weight": 4000,
+    "estimatedSpeed": 15,
+    "species": "N. taqueti",
+    "genus": "Nigersaurus",
+    "status": "Válido",
+    "description": "Saurópode com um crânio largo e bico em forma de vácuo, contendo mais de 500 dentes substituíveis.",
+    "characteristics": [
+      "Bico largo voltado para o chão",
+      "Mais de 500 dentes ativos e substituíveis",
+      "Vértebras extremamente pneumatizadas (ocas)"
+    ],
+    "curiosities": [
+      "Seu crânio era tão delicado que os paleontólogos tiveram que usar tomografias computadorizadas para reconstruí-lo digitalmente."
+    ],
+    "sources": [
+      "National Geographic Society",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 85,
+    "name": "Nothronychus",
+    "scientificName": "Nothronychus mckinleyi",
+    "meaning": "Garra Preguiçosa",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 25,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      1
+    ],
+    "continentId": 1,
+    "countryId": [
+      1
+    ],
+    "discoveryId": 85,
+    "museumId": 1,
+    "imageId": 85,
+    "length": 4.5,
+    "height": 2.0,
+    "weight": 1000,
+    "estimatedSpeed": 15,
+    "species": "N. mckinleyi",
+    "genus": "Nothronychus",
+    "status": "Válido",
+    "description": "Terizinossauro encontrado na América do Norte, confirmando que este grupo de herbívoros com garras migrou da Ásia.",
+    "characteristics": [
+      "Garras longas e curvadas nas mãos",
+      "Bacia larga para acomodar um grande trato digestivo",
+      "Pescoço longo e cabeça pequena"
+    ],
+    "curiosities": [
+      "Sua descoberta no Arizona foi crucial para entender a migração de terizinossauros da Ásia para a América do Norte."
+    ],
+    "sources": [
+      "Museum of Northern Arizona",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 86,
+    "name": "Omeisaurus",
+    "scientificName": "Omeisaurus junghsiensis",
+    "meaning": "Lagarto de Omei",
+    "classificationId": 2,
+    "cladeId": 2,
+    "familyId": 12,
+    "periodId": 2,
+    "epochId": 2,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      3
+    ],
+    "continentId": 4,
+    "countryId": [
+      3
+    ],
+    "discoveryId": 86,
+    "museumId": 13,
+    "imageId": 86,
+    "length": 20.0,
+    "height": 6.0,
+    "weight": 15000,
+    "estimatedSpeed": 12,
+    "species": "O. junghsiensis",
+    "genus": "Omeisaurus",
+    "status": "Válido",
+    "description": "Saurópode do Jurássico Médio da China, com pescoço longo e uma pequena protuberância óssea no topo do crânio.",
+    "characteristics": [
+      "Pescoço longo com vértebras cervicais alongadas",
+      "Narinas elevadas em uma pequena protuberância",
+      "Membros anteriores mais curtos que os posteriores"
+    ],
+    "curiosities": [
+      "Fósseis de Omeisaurus são frequentemente encontrados em grupos, sugerindo comportamento de manada."
+    ],
+    "sources": [
+      "Zigong Dinosaur Museum",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 87,
+    "name": "Ouranosaurus",
+    "scientificName": "Ouranosaurus nigeriensis",
+    "meaning": "Lagarto Corajoso",
+    "classificationId": 3,
+    "cladeId": 4,
+    "familyId": 21,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 2,
+    "habitatId": 3,
+    "formationId": [
+      26
+    ],
+    "continentId": 5,
+    "countryId": [
+      17
+    ],
+    "discoveryId": 87,
+    "museumId": 1,
+    "imageId": 87,
+    "length": 7.0,
+    "height": 3.0,
+    "weight": 2200,
+    "estimatedSpeed": 20,
+    "species": "O. nigeriensis",
+    "genus": "Ouranosaurus",
+    "status": "Válido",
+    "description": "Iguanodonte africano com uma alta vela dorsal suportada por espinhas neurais alongadas, semelhante ao Spinosaurus.",
+    "characteristics": [
+      "Vela dorsal alta suportada por espinhas neurais",
+      "Bico sem dentes na frente e baterias de dentes atrás",
+      "Esporão cônico no polegar"
+    ],
+    "curiosities": [
+      "A função da vela é debatida: poderia ser para termorregulação, armazenamento de gordura ou exibição visual."
+    ],
+    "sources": [
+      "Muséum National d'Histoire Naturelle",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 88,
+    "name": "Panphagia",
+    "scientificName": "Panphagia protos",
+    "meaning": "Que come de tudo",
+    "classificationId": 2,
+    "cladeId": 2,
+    "familyId": 19,
+    "periodId": 1,
+    "epochId": 3,
+    "dietId": 3,
+    "habitatId": 1,
+    "formationId": [
+      6
+    ],
+    "continentId": 2,
+    "countryId": [
+      6
+    ],
+    "discoveryId": 88,
+    "museumId": 2,
+    "imageId": 88,
+    "length": 1.3,
+    "height": 0.4,
+    "weight": 15,
+    "estimatedSpeed": 25,
+    "species": "P. protos",
+    "genus": "Panphagia",
+    "status": "Válido",
+    "description": "Um dos sauropodomorfos mais antigos e primitivos, com dentes que sugerem uma dieta onívora de transição.",
+    "characteristics": [
+      "Dentes com mistura de características de carnívoros e herbívoros",
+      "Estrutura corporal leve e bípede",
+      "Mãos com garras longas"
+    ],
+    "curiosities": [
+      "Seu nome, 'que come de tudo', reflete a hipótese de que era um onívoro, representando um estágio intermediário na evolução dos herbívoros gigantes."
+    ],
+    "sources": [
+      "Museo de Ciencias Naturales, San Juan",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 89,
+    "name": "Patagotitan",
+    "scientificName": "Patagotitan mayorum",
+    "meaning": "Titã da Patagônia",
+    "classificationId": 2,
+    "cladeId": 2,
+    "familyId": 20,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      7
+    ],
+    "continentId": 2,
+    "countryId": [
+      6
+    ],
+    "discoveryId": 89,
+    "museumId": 2,
+    "imageId": 89,
+    "length": 37.0,
+    "height": 15.0,
+    "weight": 70000,
+    "estimatedSpeed": 7,
+    "species": "P. mayorum",
+    "genus": "Patagotitan",
+    "status": "Válido",
+    "description": "Um dos maiores animais terrestres já descobertos, um titanossauro colossal do Cretáceo Superior da Argentina.",
+    "characteristics": [
+      "Vértebras dorsais maciças e alongadas",
+      "Membros colossais em forma de pilar",
+      "Pescoço extremamente longo"
+    ],
+    "curiosities": [
+      "Seu fêmur media mais de 2,4 metros de comprimento, e o coração de um animal desse tamanho precisaria ser do tamanho de um carro para bombear sangue."
+    ],
+    "sources": [
+      "Museo Paleontológico Egidio Feruglio",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 90,
+    "name": "Pinacosaurus",
+    "scientificName": "Pinacosaurus grangeri",
+    "meaning": "Lagarto de Tábua",
+    "classificationId": 3,
+    "cladeId": 4,
+    "familyId": 23,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      3
+    ],
+    "continentId": 4,
+    "countryId": [
+      2
+    ],
+    "discoveryId": 90,
+    "museumId": 1,
+    "imageId": 90,
+    "length": 5.0,
+    "height": 1.5,
+    "weight": 1500,
+    "estimatedSpeed": 12,
+    "species": "P. grangeri",
+    "genus": "Pinacosaurus",
+    "status": "Válido",
+    "description": "Anquilossauro asiático bem blindado, com aberturas nasais adicionais e uma clava caudal robusta.",
+    "characteristics": [
+      "Armadura dorsal com osteodermos pequenos e numerosos",
+      "Aberturas nasais acessórias no crânio",
+      "Clava óssea na ponta da cauda"
+    ],
+    "curiosities": [
+      "Fósseis de jovens Pinacosaurus foram encontrados juntos, sugerindo que viviam em grupos familiares para proteção."
+    ],
+    "sources": [
+      "American Museum of Natural History",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 91,
+    "name": "Psittacosaurus",
+    "scientificName": "Psittacosaurus mongoliensis",
+    "meaning": "Lagarto Papagaio",
+    "classificationId": 2,
+    "cladeId": 3,
+    "familyId": 13,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      3
+    ],
+    "continentId": 4,
+    "countryId": [
+      2
+    ],
+    "discoveryId": 91,
+    "museumId": 1,
+    "imageId": 91,
+    "length": 2.0,
+    "height": 0.6,
+    "weight": 20,
+    "estimatedSpeed": 25,
+    "species": "P. mongoliensis",
+    "genus": "Psittacosaurus",
+    "status": "Válido",
+    "description": "Ceratopsiano primitivo e bípede, com um bico córneo proeminente semelhante ao de um papagaio e possivelmente cerdas na cauda.",
+    "characteristics": [
+      "Bico córneo alto e curvado",
+      "Sem chifres ou escudo craniano desenvolvido",
+      "Cauda com estruturas semelhantes a cerdas"
+    ],
+    "curiosities": [
+      "É um dos dinossauros mais bem representados no registro fóssil, com centenas de espécimes encontrados, incluindo alguns com pigmentação preservada."
+    ],
+    "sources": [
+      "American Museum of Natural History",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 92,
+    "name": "Rahonavis",
+    "scientificName": "Rahonavis ostromi",
+    "meaning": "Pássaro Ameaçador da Nuvem",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 15,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 1,
+    "habitatId": 2,
+    "formationId": [
+      21
+    ],
+    "continentId": 5,
+    "countryId": [
+      11
+    ],
+    "discoveryId": 92,
+    "museumId": 8,
+    "imageId": 92,
+    "length": 0.7,
+    "height": 0.3,
+    "weight": 2,
+    "estimatedSpeed": 30,
+    "species": "R. ostromi",
+    "genus": "Rahonavis",
+    "status": "Válido",
+    "description": "Pequeno paraviano de Madagascar com asas e penas de voo, mas com garras em foice nos pés como um dromeossaurídeo.",
+    "characteristics": [
+      "Asas com penas de voo assimétricas",
+      "Garra em foice no segundo dedo do pé",
+      "Vértebras caudais rígidas"
+    ],
+    "curiosities": [
+      "Sua classificação é debatida: pode ser uma ave primitiva ou um dromeossaurídeo não-aviano com capacidade de voo planado."
+    ],
+    "sources": [
+      "Université de Antananarivo",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 93,
+    "name": "Rugops",
+    "scientificName": "Rugops primus",
+    "meaning": "Rosto Rugoso",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 17,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 1,
+    "habitatId": 1,
+    "formationId": [
+      26
+    ],
+    "continentId": 5,
+    "countryId": [
+      17
+    ],
+    "discoveryId": 93,
+    "museumId": 1,
+    "imageId": 93,
+    "length": 6.0,
+    "height": 2.0,
+    "weight": 800,
+    "estimatedSpeed": 25,
+    "species": "R. primus",
+    "genus": "Rugops",
+    "status": "Válido",
+    "description": "Abelissaurídeo africano com crânio curto e textura rugosa, possivelmente um necrófago especializado.",
+    "characteristics": [
+      "Crânio curto com superfície óssea rugosa e vascularizada",
+      "Braços vestigiais extremamente curtos",
+      "Dentes curvados para trás"
+    ],
+    "curiosities": [
+      "A textura rugosa do crânio sugere que ele poderia ter suportado uma cobertura de queratina ou pele solta, semelhante a alguns abutres modernos."
+    ],
+    "sources": [
+      "Université de Montpellier",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 94,
+    "name": "Saltasaurus",
+    "scientificName": "Saltasaurus loricatus",
+    "meaning": "Lagarto de Salta",
+    "classificationId": 2,
+    "cladeId": 2,
+    "familyId": 20,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      6
+    ],
+    "continentId": 2,
+    "countryId": [
+      6
+    ],
+    "discoveryId": 94,
+    "museumId": 2,
+    "imageId": 94,
+    "length": 12.0,
+    "height": 4.0,
+    "weight": 7000,
+    "estimatedSpeed": 15,
+    "species": "S. loricatus",
+    "genus": "Saltasaurus",
+    "status": "Válido",
+    "description": "Titanossauro de porte médio, notável por ser o primeiro saurópode confirmado com armadura dérmica (osteodermos).",
+    "characteristics": [
+      "Osteodermos embutidos na pele das costas",
+      "Vértebras caudais com espinhas neurais baixas",
+      "Pescoço moderadamente longo"
+    ],
+    "curiosities": [
+      "A descoberta de sua armadura mudou a visão de que todos os saurópodes eram 'pele nua', mostrando que alguns tinham proteção ativa."
+    ],
+    "sources": [
+      "Museo de Ciencias Naturales, Salta",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 95,
+    "name": "Saurophaganax",
+    "scientificName": "Saurophaganax maximus",
+    "meaning": "Senhor dos Devoradores de Lagartos",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 16,
+    "periodId": 2,
+    "epochId": 2,
+    "dietId": 1,
+    "habitatId": 1,
+    "formationId": [
+      2
+    ],
+    "continentId": 1,
+    "countryId": [
+      1
+    ],
+    "discoveryId": 95,
+    "museumId": 1,
+    "imageId": 95,
+    "length": 10.5,
+    "height": 3.5,
+    "weight": 3000,
+    "estimatedSpeed": 30,
+    "species": "S. maximus",
+    "genus": "Saurophaganax",
+    "status": "Válido",
+    "description": "Grande alossaurídeo do Jurássico Superior, possivelmente o maior predador de seu ecossistema, rivalizando com o Allosaurus.",
+    "characteristics": [
+      "Crânio grande e robusto",
+      "Vértebras com espinhas neurais altas",
+      "Membros anteriores com três garras afiadas"
+    ],
+    "curiosities": [
+      "É o dinossauro oficial do estado de Oklahoma, EUA, e seu nome reflete seu papel como superpredador."
+    ],
+    "sources": [
+      "Sam Noble Oklahoma Museum",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 96,
+    "name": "Scelidosaurus",
+    "scientificName": "Scelidosaurus harrisonii",
+    "meaning": "Lagarto de Membro",
+    "classificationId": 3,
+    "cladeId": 4,
+    "familyId": 23,
+    "periodId": 2,
+    "epochId": 2,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      8
+    ],
+    "continentId": 3,
+    "countryId": [
+      7
+    ],
+    "discoveryId": 96,
+    "museumId": 3,
+    "imageId": 96,
+    "length": 4.0,
+    "height": 1.2,
+    "weight": 300,
+    "estimatedSpeed": 15,
+    "species": "S. harrisonii",
+    "genus": "Scelidosaurus",
+    "status": "Válido",
+    "description": "Um dos primeiros e mais primitivos tireóforos blindados, ancestral dos estegossauros e anquilossauros.",
+    "characteristics": [
+      "Armadura corporal com osteodermos pequenos e pontiagudos",
+      "Membros anteriores mais curtos que os posteriores",
+      "Cauda longa e flexível"
+    ],
+    "curiosities": [
+      "Foi descrito por Richard Owen em 1859 e é um dos dinossauros mais completos do Jurássico Inferior."
+    ],
+    "sources": [
+      "Natural History Museum, London",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 97,
+    "name": "Shantungosaurus",
+    "scientificName": "Shantungosaurus giganteus",
+    "meaning": "Lagarto de Shandong",
+    "classificationId": 3,
+    "cladeId": 4,
+    "familyId": 21,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      27
+    ],
+    "continentId": 4,
+    "countryId": [
+      3
+    ],
+    "discoveryId": 97,
+    "museumId": 13,
+    "imageId": 97,
+    "length": 15.0,
+    "height": 5.0,
+    "weight": 16000,
+    "estimatedSpeed": 15,
+    "species": "S. giganteus",
+    "genus": "Shantungosaurus",
+    "status": "Válido",
+    "description": "O maior hadrossaurídeo conhecido, um gigante herbívoro que vivia em grandes manadas no Cretáceo Superior da China.",
+    "characteristics": [
+      "Crânio longo e sem crista",
+      "Bateria de centenas de dentes para mastigação",
+      "Membros posteriores robustos e longos"
+    ],
+    "curiosities": [
+      "Fósseis de mais de 100 indivíduos foram encontrados juntos, indicando um comportamento de manada altamente social."
+    ],
+    "sources": [
+      "Shandong Tianyu Museum of Nature",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 98,
+    "name": "Staurikosaurus",
+    "scientificName": "Staurikosaurus pricei",
+    "meaning": "Lagarto do Cruzeiro do Sul",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 16,
+    "periodId": 1,
+    "epochId": 3,
+    "dietId": 1,
+    "habitatId": 1,
+    "formationId": [
+      25
+    ],
+    "continentId": 2,
+    "countryId": [
+      16
+    ],
+    "discoveryId": 98,
+    "museumId": 11,
+    "imageId": 98,
+    "length": 2.2,
+    "height": 0.8,
+    "weight": 30,
+    "estimatedSpeed": 35,
+    "species": "S. pricei",
+    "genus": "Staurikosaurus",
+    "status": "Válido",
+    "description": "Um dos dinossauros mais antigos do mundo, um pequeno predador ágil do Triássico Superior do Brasil.",
+    "characteristics": [
+      "Estrutura corporal leve e bípede",
+      "Mandíbula com articulação primitiva",
+      "Cauda longa representando mais da metade do comprimento total"
+    ],
+    "curiosities": [
+      "Seu nome homenageia a constelação do Cruzeiro do Sul, visível no hemisfério sul onde foi descoberto."
+    ],
+    "sources": [
+      "Museu de Paleontologia de Santana do Cariri",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 99,
+    "name": "Tarbosaurus",
+    "scientificName": "Tarbosaurus bataar",
+    "meaning": "Lagarto Alarmante",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 1,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 1,
+    "habitatId": 1,
+    "formationId": [
+      16
+    ],
+    "continentId": 4,
+    "countryId": [
+      2
+    ],
+    "discoveryId": 99,
+    "museumId": 1,
+    "imageId": 99,
+    "length": 10.0,
+    "height": 3.5,
+    "weight": 4000,
+    "estimatedSpeed": 25,
+    "species": "T. bataar",
+    "genus": "Tarbosaurus",
+    "status": "Válido",
+    "description": "O maior predador da Ásia no Cretáceo Superior, um tiranossaurídeo muito próximo do T. rex, mas com crânio mais estreito.",
+    "characteristics": [
+      "Crânio longo e estreito",
+      "Mecanismo de travamento na mandíbula inferior",
+      "Braços vestigiais com dois dedos"
+    ],
+    "curiosities": [
+      "Centenas de espécimes foram encontrados no Deserto de Gobi, permitindo estudos detalhados sobre seu crescimento e comportamento."
+    ],
+    "sources": [
+      "Institute of Paleontology, Mongolia",
+      "Paleobiology Database"
+    ]
+  },
+  {
+    "id": 100,
+    "name": "Tenontosaurus",
+    "scientificName": "Tenontosaurus tilletti",
+    "meaning": "Lagarto de Tendão",
+    "classificationId": 3,
+    "cladeId": 4,
+    "familyId": 22,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 2,
+    "habitatId": 1,
+    "formationId": [
+      10
+    ],
+    "continentId": 1,
+    "countryId": [
+      1
+    ],
+    "discoveryId": 100,
+    "museumId": 1,
+    "imageId": 100,
+    "length": 7.0,
+    "height": 2.5,
+    "weight": 1000,
+    "estimatedSpeed": 20,
+    "species": "T. tilletti",
+    "genus": "Tenontosaurus",
+    "status": "Válido",
+    "description": "Ornitópode de porte médio com uma cauda longa e rígida reforçada por tendões ossificados.",
+    "characteristics": [
+      "Cauda longa e rígida com tendões ossificados",
+      "Membros anteriores robustos com garras",
+      "Bico córneo sem dentes na frente"
+    ],
+    "curiosities": [
+      "Fósseis de Tenontosaurus são frequentemente encontrados junto com fósseis de Deinonychus, sugerindo que este último o caçava ativamente."
+    ],
+    "sources": [
+      "American Museum of Natural History",
+      "Paleobiology Database"
+    ]
   }
 ]
