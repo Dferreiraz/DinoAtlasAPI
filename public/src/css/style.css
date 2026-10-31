@@ -1,0 +1,11 @@
+@import url("global.css"); 
+
+/* ==========================================================================
+   Documentação - Sidebar Ativa (Scroll Spy)
+   ========================================================================== */
+.doc-nav-link--ativo {
+  background-color: rgba(232, 130, 58, 0.12) !important;
+  color: var(--cor-laranja-claro) !important;
+  border-left-color: var(--cor-laranja) !important;
+  font-weight: 500;
+}

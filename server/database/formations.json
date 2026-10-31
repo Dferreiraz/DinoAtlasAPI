@@ -3,30 +3,112 @@
     "id": 1,
     "name": "Formação Hell Creek",
     "countryId": 1,
-    "description": "Uma das formações mais estudadas do mundo, abrangendo Montana, Wyoming e as Dakotas nos EUA."
+    "periodId": 3,
+    "description": "Uma das formações mais famosas do Cretáceo Superior, preservando o ecossistema final dos dinossauros não-avianos na América do Norte."
   },
   {
     "id": 2,
     "name": "Formação Morrison",
     "countryId": 1,
-    "description": "Extensa sequência de rochas sedimentares do Jurássico Superior no oeste dos EUA."
+    "periodId": 2,
+    "description": "Formação do Jurássico Superior nos EUA, rica em saurópodes gigantes e predadores como Allosaurus."
   },
   {
     "id": 3,
-    "name": "Formação Djadochta",
+    "name": "Formação Djadokhta",
     "countryId": 2,
-    "description": "Localizada no Deserto de Gobi, famosa por preservar fósseis incrivelmente detalhados."
+    "periodId": 3,
+    "description": "Formação do Cretáceo Superior na Mongólia, famosa por preservar dinossauros em dunas de areia, incluindo Velociraptor."
   },
   {
     "id": 4,
     "name": "Formação Bahariya",
-    "countryId": 3,
-    "description": "Oásis no Egito contendo importantes descobertas de grandes terópodes."
+    "countryId": 4,
+    "periodId": 3,
+    "description": "Formação no Egito que prescreveu o ecossistema do Spinosaurus, incluindo rios gigantes e manguezais."
   },
   {
     "id": 5,
     "name": "Formação Dinosaur Park",
     "countryId": 5,
-    "description": "Localizada em Alberta, Canadá, abriga uma das maiores concentrações de fósseis de dinossauros."
+    "periodId": 3,
+    "description": "Formação canadense rica em hadrossauros e ceratopsídeos, com excelente preservação de tecidos moles."
+  },
+  {
+    "id": 6,
+    "name": "Formação Anacleto",
+    "countryId": 6,
+    "periodId": 3,
+    "description": "Formação argentina do Cretáceo Superior, lar do Carnotaurus e outros abelissaurídeos."
+  },
+  {
+    "id": 9,
+    "name": "Formação Taynton Limestone",
+    "countryId": 7,
+    "periodId": 2,
+    "description": "Formação jurássica na Inglaterra onde o Megalosaurus foi descoberto, marcando o início da paleontologia."
+  },
+  {
+    "id": 10,
+    "name": "Formação Cloverly",
+    "countryId": 1,
+    "periodId": 3,
+    "description": "Formação do Cretáceo Inferior em Montana e Wyoming, lar do Deinonychus e Tenontosaurus."
+  },
+  {
+    "id": 11,
+    "name": "Formação Wessex",
+    "countryId": 7,
+    "periodId": 3,
+    "description": "Formação na Ilha de Wight, Inglaterra, famosa por Baryonyx e outros dinossauros do Cretáceo Inferior."
+  },
+  {
+    "id": 13,
+    "name": "Formação Knollenmergel",
+    "countryId": 9,
+    "periodId": 1,
+    "description": "Formação do Triássico Superior na Alemanha, contendo numerosos espécimes de Plateosaurus."
+  },
+  {
+    "id": 17,
+    "name": "Formação Bayan Mandahu",
+    "countryId": 3,
+    "periodId": 3,
+    "description": "Formação na Mongólia Interior (China), equivalente à Djadokhta, rica em Protoceratops."
+  },
+  {
+    "id": 18,
+    "name": "Formação Horseshoe Canyon",
+    "countryId": 5,
+    "periodId": 3,
+    "description": "Formação canadense do Cretáceo Superior, preservando Edmontosaurus e Pachyrhinosaurus."
+  },
+  {
+    "id": 20,
+    "name": "Formação Kayenta",
+    "countryId": 1,
+    "periodId": 2,
+    "description": "Formação do Jurássico Inferior no Arizona, lar do Dilophosaurus e Megapnosaurus."
+  },
+  {
+    "id": 21,
+    "name": "Formação Maevarano",
+    "countryId": 11,
+    "periodId": 3,
+    "description": "Formação em Madagascar que preserva o Majungasaurus e um ecossistema único de isolados."
+  },
+  {
+    "id": 25,
+    "name": "Formação Romualdo",
+    "countryId": 16,
+    "periodId": 3,
+    "description": "Formação na Bacia do Araripe, Brasil, famosa por preservar Irritator e pterossauros com tecidos moles."
+  },
+  {
+    "id": 26,
+    "name": "Formação Elrhaz",
+    "countryId": 17,
+    "periodId": 3,
+    "description": "Formação no Níger, parte do Grupo Tegama, lar do Suchomimus e Nigersaurus."
   }
 ]

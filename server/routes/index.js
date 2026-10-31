@@ -1,5 +1,6 @@
 const router = require("express").Router();
 
+// Imports das Rotas
 const apiRoutes = require("./apiRoutes");
 const dinosaursRoutes = require("./dinosaursRoutes");
 const periodsRoutes = require("./periodsRoutes");

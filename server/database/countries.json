@@ -1,7 +1,121 @@
 [
-  { "id": 1, "name": "Estados Unidos", "continentId": 1 },
-  { "id": 2, "name": "Mongólia", "continentId": 2 },
-  { "id": 3, "name": "Egito", "continentId": 3 },
-  { "id": 4, "name": "Inglaterra", "continentId": 4 },
-  { "id": 5, "name": "Canadá", "continentId": 1 }
+  {
+    "id": 1,
+    "name": "Estados Unidos",
+    "continentId": 1,
+    "code": "US",
+    "description": "Principal local de descobertas no oeste americano, incluindo Montana, Wyoming e Utah."
+  },
+  {
+    "id": 2,
+    "name": "Mongólia",
+    "continentId": 4,
+    "code": "MN",
+    "description": "Famosa pelo Deserto de Gobi e expedições que revelaram dinossauros com penas e ninhos fossilizados."
+  },
+  {
+    "id": 3,
+    "name": "China",
+    "continentId": 4,
+    "code": "CN",
+    "description": "Região de Liaoning e outras províncias, crucial para o estudo de dinossauros emplumados e hadrossauros."
+  },
+  {
+    "id": 4,
+    "name": "Egito",
+    "continentId": 5,
+    "code": "EG",
+    "description": "Local da descoberta do Spinosaurus no Oásis de Bahariya, embora muitos fósseis tenham sido perdidos na WWII."
+  },
+  {
+    "id": 5,
+    "name": "Canadá",
+    "continentId": 1,
+    "code": "CA",
+    "description": "Alberta e Saskatchewan possuem algumas das maiores concentrações de fósseis do Cretáceo no mundo."
+  },
+  {
+    "id": 6,
+    "name": "Argentina",
+    "continentId": 2,
+    "code": "AR",
+    "description": "Patagônia argentina é o berço dos maiores dinossauros já descobertos, como Argentinosaurus e Giganotosaurus."
+  },
+  {
+    "id": 7,
+    "name": "Reino Unido",
+    "continentId": 3,
+    "code": "UK",
+    "description": "Berço da paleontologia moderna, com descobertas históricas no sul da Inglaterra."
+  },
+  {
+    "id": 8,
+    "name": "Bélgica",
+    "continentId": 3,
+    "code": "BE",
+    "description": "Local de descobertas importantes de Iguanodon em minas de carvão no século XIX."
+  },
+  {
+    "id": 9,
+    "name": "Alemanha",
+    "continentId": 3,
+    "code": "DE",
+    "description": "Famosa pelos depósitos de Solnhofen (Archaeopteryx) e formações do Triássico com Plateosaurus."
+  },
+  {
+    "id": 10,
+    "name": "Rússia",
+    "continentId": 4,
+    "code": "RU",
+    "description": "Regiões asiáticas da Rússia compartilham fauna similar à da Mongólia e China."
+  },
+  {
+    "id": 11,
+    "name": "Madagascar",
+    "continentId": 5,
+    "code": "MG",
+    "description": "Ilha que preservou uma fauna única de abelissaurídeos e titanossauros no Cretáceo."
+  },
+  {
+    "id": 12,
+    "name": "Marrocos",
+    "continentId": 5,
+    "code": "MA",
+    "description": "Importante fonte de fósseis do Cretáceo Superior, incluindo Carcharodontosaurus."
+  },
+  {
+    "id": 13,
+    "name": "Argélia",
+    "continentId": 5,
+    "code": "DZ",
+    "description": "Local das primeiras descobertas de Carcharodontosaurus no Saara."
+  },
+  {
+    "id": 14,
+    "name": "Austrália",
+    "continentId": 6,
+    "code": "AU",
+    "description": "Continentes isolado com fauna única, como Muttaburrasaurus e Austrosaurus."
+  },
+  {
+    "id": 15,
+    "name": "Antártida",
+    "continentId": 7,
+    "code": "AQ",
+    "description": "Descobertas na Ilha James Ross e Monte Kirkpatrick revelaram dinossauros polares."
+  },
+  {
+    "id": 16,
+    "name": "Brasil",
+    "continentId": 2,
+    "code": "BR",
+    "description": "Nordeste brasileiro (Bacia do Araripe) é famoso por fósseis de Irritator e pterossauros."
+  },
+  {
+    "id": 17,
+    "name": "Níger",
+    "continentId": 5,
+    "code": "NE",
+    "description": "Deserto do Saara no Níger revelou Suchomimus e Nigersaurus nas expedições de Paul Sereno."
+  }
 ]

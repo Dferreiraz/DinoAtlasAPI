@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-2.4.0-blue" alt="Version 2.4.0">
+  <img src="https://img.shields.io/badge/Version-2.5.0-blue" alt="Version 2.5.0">
   <img src="https://img.shields.io/badge/Node.js-18%2B-green" alt="Node.js">
   <img src="https://img.shields.io/badge/Express-4.x-black" alt="Express">
   <img src="https://img.shields.io/badge/Status-Em%20desenvolvimento-orange" alt="Status">
