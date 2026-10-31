@@ -1,7 +1,8 @@
-/* ==========================================================================
-   global.css — tokens globais do projeto DinoAtlasAPI
-   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap');
 
+/* ==========================================================================
+global.css — tokens globais do projeto DinoAtlasAPI
+========================================================================== */
 :root {
   /* Cores — fundo */
   --cor-fundo: #14100c;
@@ -9,35 +10,35 @@
   --cor-fundo-card: #1f1a14;
   --cor-fundo-card-alt: #2a231c;
   --cor-borda: #33291d;
-
+  
   /* Cores — texto */
   --cor-texto: #ede8de;
   --cor-texto-suave: #a89e8f;
   --cor-texto-fraco: #6f665a;
-
+  
   /* Cores — marca */
   --cor-laranja: #e8823a;
   --cor-laranja-claro: #f3a468;
   --cor-laranja-escuro: #b8611f;
   --cor-verde: #6fae6a;
-
+  
   /* Tipografia */
   --fonte-titulo: "Fraunces", "Georgia", serif;
   --fonte-corpo: "Inter", "Segoe UI", Arial, sans-serif;
   --fonte-mono: "JetBrains Mono", "Fira Code", monospace;
-
+  
   /* Espaçamentos */
   --espaco-xs: 0.5rem;
   --espaco-sm: 1rem;
   --espaco-md: 1.75rem;
   --espaco-lg: 3rem;
   --espaco-xl: 6rem;
-
+  
   /* Layout */
   --largura-max: 1180px;
   --raio: 10px;
   --raio-sm: 6px;
-
+  
   /* Sombra */
   --sombra-card: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
