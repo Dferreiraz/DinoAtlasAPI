@@ -502,52 +502,52 @@
   {
     "id": 51,
     "dinosaurId": 51,
-    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/acrocanthosaurus.jpg",
-    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/acrocanthosaurus.jpg",
-    "author": "TotalDino",
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/acrocanthosaurus.png",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/acrocanthosaurus.png",
+    "author": "Petr Menshikov",
     "license": "Creative Commons Attribution-Share Alike 4.0",
-    "modified": true,
-    "modification": "White wallpaper added"
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 52,
     "dinosaurId": 52,
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/albertosaurus.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/albertosaurus.jpg",
-    "author": "TotalDino",
-    "license": "Creative Commons Attribution 4.0",
-    "modified": true,
-    "modification": "White wallpaper added"
+    "author": "Nobu Tamura",
+    "license": "Creative Commons Attribution-Share Alike 4.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 53,
     "dinosaurId": 53,
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/antarctopelta.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/antarctopelta.jpg",
-    "author": "TotalDino",
-    "license": "Creative Commons Zero, Public Domain Dedication",
+    "author": "Rjcastillo",
+    "license": "Creative Commons Attribution-Share Alike 4.0",
     "modified": true,
-    "modification": "White wallpaper added"
+    "modification": "remove the background and the other Antarctopeltas, leaving only 1 and change the background to white."
   },
   {
     "id": 54,
     "dinosaurId": 54,
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/bambiraptor.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/bambiraptor.jpg",
-    "author": "TotalDino",
+    "author": "PaleoEquii",
     "license": "Creative Commons Attribution-Share Alike 4.0",
-    "modified": true,
-    "modification": "White wallpaper added"
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 55,
     "dinosaurId": 55,
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/beipiaosaurus.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/beipiaosaurus.jpg",
-    "author": "TotalDino",
+    "author": "PaleoNeolitic",
     "license": "Creative Commons Attribution 4.0",
-    "modified": true,
-    "modification": "White wallpaper added"
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 56,
@@ -564,30 +564,30 @@
     "dinosaurId": 57,
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/camptosaurus.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/camptosaurus.jpg",
-    "author": "TotalDino",
-    "license": "Creative Commons Attribution 4.0",
-    "modified": true,
-    "modification": "White wallpaper added"
+    "author": "FunkMonk",
+    "license": "Creative Commons Attribution-Share Alike 3.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 58,
     "dinosaurId": 58,
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/chasmosaurus.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/chasmosaurus.jpg",
-    "author": "TotalDino",
-    "license": "Creative Commons Attribution-Share Alike 4.0",
-    "modified": true,
-    "modification": "White wallpaper added"
+    "author": "Nobu Tamura",
+    "license": "Creative Commons Attribution 3.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 59,
     "dinosaurId": 59,
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/coelurus.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/coelurus.jpg",
-    "author": "TotalDino",
-    "license": "Creative Commons Attribution 4.0",
-    "modified": true,
-    "modification": "White wallpaper added"
+    "author": "Nobu Tamura",
+    "license": "Creative Commons Attribution 3.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 60,
@@ -604,18 +604,18 @@
     "dinosaurId": 61,
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/daspletosaurus.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/daspletosaurus.jpg",
-    "author": "TotalDino",
-    "license": "Creative Commons Attribution-Share Alike 4.0",
-    "modified": true,
-    "modification": "White wallpaper added"
+    "author": "Steveoc 86 at English Wikipedia",
+    "license": "Creative Commons Attribution-Share Alike 2.5",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 62,
     "dinosaurId": 62,
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/dromaeosaurus.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/dromaeosaurus.jpg",
-    "author": "TotalDino",
-    "license": "Creative Commons Attribution 4.0",
+    "author": "Nobu Tamura",
+    "license": "Creative Commons Attribution 2.5",
     "modified": true,
     "modification": "White wallpaper added"
   },
@@ -624,48 +624,48 @@
     "dinosaurId": 63,
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/dreadnoughtus.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/dreadnoughtus.jpg",
-    "author": "TotalDino",
+    "author": "Nobu Tamura",
     "license": "Creative Commons Attribution-Share Alike 4.0",
-    "modified": true,
-    "modification": "White wallpaper added"
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 64,
     "dinosaurId": 64,
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/dryosaurus.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/dryosaurus.jpg",
-    "author": "TotalDino",
-    "license": "Creative Commons Attribution 4.0",
-    "modified": true,
-    "modification": "White wallpaper added"
+    "author": "Nobu Tamura",
+    "license": "Creative Commons Attribution-Share Alike 4.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 65,
     "dinosaurId": 65,
-    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/edmontonia.jpg",
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/edmontonia.png",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/edmontonia.jpg",
-    "author": "TotalDino",
-    "license": "Creative Commons Zero, Public Domain Dedication",
-    "modified": true,
-    "modification": "White wallpaper added"
+    "author": "Mariana Ruiz",
+    "license": "Public Domain",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 66,
     "dinosaurId": 66,
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/einiosaurus.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/einiosaurus.jpg",
-    "author": "TotalDino",
-    "license": "Creative Commons Attribution-Share Alike 4.0",
-    "modified": true,
-    "modification": "White wallpaper added"
+    "author": "Nobu Tamura",
+    "license": "Creative Commons Attribution 3.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 67,
     "dinosaurId": 67,
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/eoraptor.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/eoraptor.jpg",
-    "author": "TotalDino",
-    "license": "Creative Commons Attribution 4.0",
+    "author": "Kathleen A. Ritterbush",
+    "license": "Creative Commons Attribution-Share Alike 4.0",
     "modified": true,
     "modification": "White wallpaper added"
   },
@@ -674,78 +674,78 @@
     "dinosaurId": 68,
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/eustreptospondylus.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/eustreptospondylus.jpg",
-    "author": "TotalDino",
-    "license": "Creative Commons Attribution-Share Alike 4.0",
-    "modified": true,
-    "modification": "White wallpaper added"
+    "author": "ДиБгд at Russian Wikipedia Hands fixed by FunkMonk.",
+    "license": "Creative Commons Attribution-Share Alike 3.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 69,
     "dinosaurId": 69,
     "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/gargoyleosaurus.jpg",
     "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/gargoyleosaurus.jpg",
-    "author": "TotalDino",
+    "author": "Jonagold2000",
     "license": "Creative Commons Attribution 4.0",
     "modified": true,
-    "modification": "White wallpaper added"
+    "modification": "Background removed and replaced white background"
   },
   {
     "id": 70,
     "dinosaurId": 70,
-    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/gastonia.jpg",
-    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/gastonia.jpg",
-    "author": "TotalDino",
-    "license": "Creative Commons Zero, Public Domain Dedication",
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/gastonia.png",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/gastonia.png",
+    "author": "Mariana Ruiz",
+    "license": "Public Domain",
     "modified": true,
     "modification": "White wallpaper added"
   },
   {
     "id": 71,
     "dinosaurId": 71,
-    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/gigantoraptor.jpg",
-    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/gigantoraptor.jpg",
-    "author": "TotalDino",
-    "license": "Creative Commons Attribution-Share Alike 4.0",
-    "modified": true,
-    "modification": "White wallpaper added"
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/gigantoraptor.png",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/gigantoraptor.png",
+    "author": "PaleoNeolitic",
+    "license": "Creative Commons Attribution 4.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 72,
     "dinosaurId": 72,
-    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/gorgosaurus.jpg",
-    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/gorgosaurus.jpg",
-    "author": "TotalDino",
-    "license": "Creative Commons Attribution 4.0",
-    "modified": true,
-    "modification": "White wallpaper added"
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/gorgosaurus.png",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/gorgosaurus.png",
+    "author": "Levi Bernardo",
+    "license": "Creative Commons Attribution-Share Alike 3.0",
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 73,
     "dinosaurId": 73,
-    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/herrerasaurus.jpg",
-    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/herrerasaurus.jpg",
-    "author": "TotalDino",
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/herrerasaurus.png",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/herrerasaurus.png",
+    "author": "PaleoNeolitic",
     "license": "Creative Commons Attribution-Share Alike 4.0",
-    "modified": true,
-    "modification": "White wallpaper added"
+    "modified": false,
+    "modification": ""
   },
   {
     "id": 74,
     "dinosaurId": 74,
-    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/hypsilophodon.jpg",
-    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/hypsilophodon.jpg",
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/hypsilophodon.png",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/hypsilophodon.png",
     "author": "TotalDino",
-    "license": "Creative Commons Attribution 4.0",
+    "license": "Creative Commons Attribution-Share Alike 4.0",
     "modified": true,
     "modification": "White wallpaper added"
   },
   {
     "id": 75,
     "dinosaurId": 75,
-    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/incisivosaurus.jpg",
-    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/incisivosaurus.jpg",
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/incisivosaurus.png",
+    "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1787632502/incisivosaurus.png",
     "author": "TotalDino",
-    "license": "Creative Commons Zero, Public Domain Dedication",
+    "license": "Creative Commons Attribution 4.0",
     "modified": true,
     "modification": "White wallpaper added"
   },

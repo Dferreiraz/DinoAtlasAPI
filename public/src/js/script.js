@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   carregarDinossauros();
   iniciarModal();
   carregarEstatisticas();
+  iniciarScrollSpyDocumentacao(); // <-- Chamada da nova função
 });
 
 /* ==========================================================================
@@ -240,8 +241,44 @@ async function carregarEstatisticas() {
     document.getElementById("totalDinossauros").textContent = dinossauros.meta?.total || 50;
     document.getElementById("totalContinentes").textContent = continentes.data?.length || 7;
     document.getElementById("totalDescobertas").textContent = descobertas.data?.length || 50;
-    document.getElementById("totalEndpoints").textContent = 18; // Atualizado para v2.5
+    document.getElementById("totalEndpoints").textContent = 18;
   } catch (erro) {
     console.error("Erro ao carregar estatísticas:", erro);
   }
+}
+
+/* ==========================================================================
+   Scroll Spy para Sidebar da Documentação
+   ========================================================================== */
+function iniciarScrollSpyDocumentacao() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.doc-nav-link');
+
+  // Segurança: Se não houver seções ou links (ex: está na index.html), interrompe a execução
+  if (sections.length === 0 || navLinks.length === 0) return;
+
+  function updateActiveLink() {
+    let currentSectionId = '';
+    // Offset de 150px para ativar o link um pouco antes do título chegar no topo
+    const scrollPosition = window.scrollY + 150; 
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        currentSectionId = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('doc-nav-link--ativo');
+      if (link.getAttribute('href') === `#${currentSectionId}`) {
+        link.classList.add('doc-nav-link--ativo');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveLink, { passive: true });
+  updateActiveLink(); 
 }
