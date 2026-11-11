@@ -1,6 +1,4 @@
-<h1 align="center">
-  🦖 DinoAtlas API
-</h1>
+# 🦖 DinoAtlas API
 
 <p align="center">
   <strong>Uma API REST para dados paleontológicos</strong><br>
@@ -16,19 +14,16 @@
 </p>
 
 <p align="center">
-  •
-  <a href="#-sobre-o-projeto">Sobre</a> •
+  • <a href="#-sobre-o-projeto">Sobre</a> •
   <a href="#-api-online">API Online</a> •
-  <a href="#-como-executar-o-projeto">Como executar</a> • 
+  <a href="#-como-executar-o-projeto">Como executar</a> •
   <a href="#-exemplos-de-endpoints">Endpoints</a> •
-<br>
-  •
-  <a href="#-pré-requisitos">Pré-requisitos</a> •
+  <br>
+  • <a href="#-pré-requisitos">Pré-requisitos</a> •
   <a href="#-tecnologias">Tecnologias</a> •
   <a href="#-estrutura-do-projeto">Estrutura</a> •
   <a href="#-como-contribuir">Contribuir</a> •
-  <a href="#-autor">Autor</a> 
-  •
+  <a href="#-autor">Autor</a> •
 </p>
 
 ---
@@ -43,19 +38,19 @@ O projeto foi desenvolvido utilizando **Node.js** e **Express**, seguindo uma ar
 
 Atualmente, os dados são armazenados em arquivos **JSON**, permitindo uma estrutura simples, organizada e de fácil manutenção.
 
-A base de dados conta atualmente com **100 dinossauros cadastrados, todos com imagens associadas** — quantidade já incluída na release publicada **2.4.5**.
+A base de dados conta atualmente com **100 dinossauros cadastrados, todos com imagens associadas**.
 
 ### 🎯 Objetivos do projeto
 
 A DinoAtlas foi criada com os seguintes objetivos:
 
-* Fornecer dados paleontológicos estruturados para aplicações externas;
-* Praticar desenvolvimento Back-End e arquitetura de APIs REST;
-* Trabalhar com filtros, paginação e ordenação de dados;
-* Desenvolver uma estrutura modular e escalável;
-* Criar um projeto source-available para portfólio;
-* Servir futuramente como base para outros projetos do ecossistema DinoAtlas;
-* Continuar expandindo a base de dados paleontológica.
+- Fornecer dados paleontológicos estruturados para aplicações externas;
+- Praticar desenvolvimento Back-End e arquitetura de APIs REST;
+- Trabalhar com filtros, paginação e ordenação de dados;
+- Desenvolver uma estrutura modular e escalável;
+- Criar um projeto source-available para portfólio;
+- Servir futuramente como base para outros projetos do ecossistema DinoAtlas;
+- Continuar expandindo a base de dados paleontológica.
 
 ---
 
@@ -63,36 +58,36 @@ A DinoAtlas foi criada com os seguintes objetivos:
 
 ### API
 
-* [x] API REST utilizando Node.js e Express
-* [x] Estrutura modular com Controllers, Routes e Middleware
-* [x] Base de dados utilizando arquivos JSON
-* [x] Consulta de dinossauros
-* [x] Busca por ID
-* [x] Busca por nome
-* [x] Busca por nome sem diferenciação entre maiúsculas e minúsculas
-* [x] Filtros por características
-* [x] Filtros por período
-* [x] Filtros por dieta
-* [x] Filtros por clado
-* [x] Paginação de resultados
-* [x] Ordenação de resultados
-* [x] Respostas padronizadas em JSON
-* [x] Tratamento global de erros
-* [x] Tratamento de rotas inexistentes (404)
-* [x] Documentação da API
-* [x] Rate Limiting
-* [x] Front-end integrado
+- [x] API REST utilizando Node.js e Express
+- [x] Estrutura modular com Controllers, Routes e Middleware
+- [x] Base de dados utilizando arquivos JSON
+- [x] Consulta de dinossauros
+- [x] Busca por ID
+- [x] Busca por nome
+- [x] Busca por nome sem diferenciação entre maiúsculas e minúsculas
+- [x] Filtros por características
+- [x] Filtros por período
+- [x] Filtros por dieta
+- [x] Filtros por clado
+- [x] Paginação de resultados
+- [x] Ordenação de resultados
+- [x] Respostas padronizadas em JSON
+- [x] Tratamento global de erros
+- [x] Tratamento de rotas inexistentes (404)
+- [x] Documentação da API
+- [x] Rate Limiting
+- [x] Front-end integrado
 
 ### Imagens
 
-* [x] Sistema de imagens
-* [x] Imagem principal das espécies
-* [x] Thumbnails
-* [x] Créditos das imagens
-* [x] Informações de licença
-* [x] Endpoint específico para imagens
-* [x] Associação de imagens aos dinossauros
-* [x] 100 dinossauros com imagens cadastradas
+- [x] Sistema de imagens
+- [x] Imagem principal das espécies
+- [x] Thumbnails
+- [x] Créditos das imagens
+- [x] Informações de licença
+- [x] Endpoint específico para imagens
+- [x] Associação de imagens aos dinossauros
+- [x] 100 dinossauros com imagens cadastradas
 
 ---
 
@@ -100,9 +95,7 @@ A DinoAtlas foi criada com os seguintes objetivos:
 
 A DinoAtlas API está disponível para consulta online.
 
-> **Versão em produção:** a instância pública abaixo corresponde à versão
-> **2.5.0**, disponibilizada sob a **MIT License**. A última release com tag no
-> GitHub é a **2.4.5**; a versão **2.5.0** ainda **não possui tag Git**.
+A release **2.5.0** está publicada no GitHub e identificada pela tag `2.5.0`.
 
 **URL Base:**
 
@@ -118,6 +111,8 @@ https://dinoapi-swg8.onrender.com
 
 A documentação apresenta os endpoints disponíveis, parâmetros, filtros e informações relacionadas aos recursos da API.
 
+Para consultar o código-fonte e o histórico de versões, acesse a [release 2.5.0 no GitHub](https://github.com/Dferreiraz/DinoAtlasAPI/releases/tag/2.5.0).
+
 ---
 
 ## 🗺️ Roadmap
@@ -126,63 +121,66 @@ O desenvolvimento da DinoAtlas é dividido em versões, permitindo que a API evo
 
 ### ✅ V2.0 — DinoAtlas
 
-* Nova identidade do projeto
-* Nova organização da API
-* Reestruturação da arquitetura
-* Expansão da base de dados
+- Nova identidade do projeto
+- Nova organização da API
+- Reestruturação da arquitetura
+- Expansão da base de dados
 
 ### ✅ V2.1 — API Estruturada
 
-* Melhorias nos endpoints
-* Filtros
-* Paginação
-* Ordenação
-* Tratamento de erros
-* Melhor organização dos dados
+- Melhorias nos endpoints
+- Filtros
+- Paginação
+- Ordenação
+- Tratamento de erros
+- Melhor organização dos dados
 
 ### ✅ V2.2 — Sistema de Imagens
 
-* Sistema de imagens
-* Imagem principal
-* Thumbnails
-* Créditos
-* Licenças
-* Relacionamento entre dinossauros e imagens
+- Sistema de imagens
+- Imagem principal
+- Thumbnails
+- Créditos
+- Licenças
+- Relacionamento entre dinossauros e imagens
 
 ### ✅ V2.3 — Expansão da API
 
-* Melhorias nos recursos existentes
-* Expansão dos endpoints
-* Melhorias na estrutura dos dados
-* Evolução da documentação
+- Melhorias nos recursos existentes
+- Expansão dos endpoints
+- Melhorias na estrutura dos dados
+- Evolução da documentação
 
 ### ✅ V2.4 — Base Expandida
 
-* 100 dinossauros cadastrados (release 2.4.5)
-* Imagens para todas as espécies cadastradas
-* Sistema de Rate Limiting
-* Melhorias gerais na API
-* Evolução da documentação
+- 100 dinossauros cadastrados
+- Imagens para todas as espécies cadastradas
+- Sistema de Rate Limiting
+- Melhorias gerais na API
+- Evolução da documentação
 
-### ✅ V2.5 — Consolidação (disponibilizada, sem tag)
+### ✅ V2.5 — Consolidação
 
-* Reorganização interna da arquitetura
-* Validação mais rigorosa de IDs, paginação, filtros, busca e ordenação
-* Melhorias de segurança e de Content Security Policy (CSP)
-* Rate limiting com identificação por `CF-Connecting-IP`
-* Health check em `/health` e documentação em `/docs`
-* Mudanças de contrato detalhadas no [CHANGELOG](CHANGELOG.md)
+**Release 2.5.0 publicada e tagueada no GitHub.**
+
+- Reorganização interna da arquitetura
+- Validação mais rigorosa de IDs, paginação, filtros, busca e ordenação
+- Melhorias de segurança e de Content Security Policy (CSP)
+- Rate limiting com identificação por `CF-Connecting-IP`
+- Health check em `/health` e documentação em `/docs`
+- Mudanças de contrato detalhadas no [CHANGELOG](CHANGELOG.md)
+- Migração da licença do projeto para PolyForm Noncommercial 1.0.0
 
 ### 🔜 Próximas versões
 
 Os próximos passos planejados incluem:
 
-* [ ] Adicionar mais espécies
-* [ ] Integração com o ecossistema DinoDex
-* [ ] Criar relacionamentos mais complexos entre os dados
-* [ ] Expandir informações paleontológicas
-* [ ] Melhorar os recursos de busca e consulta
-* [ ] Evoluir a estrutura da API para suportar uma base de dados cada vez maior
+- [ ] Adicionar mais espécies
+- [ ] Integração com o ecossistema DinoDex
+- [ ] Criar relacionamentos mais complexos entre os dados
+- [ ] Expandir informações paleontológicas
+- [ ] Melhorar os recursos de busca e consulta
+- [ ] Evoluir a estrutura da API para suportar uma base de dados cada vez maior
 
 ---
 
@@ -300,9 +298,9 @@ https://dinoapi-swg8.onrender.com
 
 Antes de começar, você precisará ter instalado em sua máquina:
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/)
-* [Visual Studio Code](https://code.visualstudio.com/)
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 ---
 
@@ -312,20 +310,20 @@ As seguintes tecnologias e ferramentas foram utilizadas no desenvolvimento do pr
 
 ### Back-End
 
-* **Node.js**
-* **Express**
-* **JavaScript**
-* **CommonJS**
-* **JSON Database**
-* **REST API**
+- **Node.js**
+- **Express**
+- **JavaScript**
+- **CommonJS**
+- **JSON Database**
+- **REST API**
 
 ### Ferramentas
 
-* **Git**
-* **GitHub**
-* **Visual Studio Code**
-* **NPM**
-* **Nodemon**
+- **Git**
+- **GitHub**
+- **Visual Studio Code**
+- **NPM**
+- **Nodemon**
 
 ---
 
@@ -386,6 +384,8 @@ git push origin minha-feature
 
 Depois, abra um **Pull Request** para o repositório principal.
 
+Antes de contribuir, consulte a licença e as condições de uso descritas neste README, no arquivo [LICENSE](./LICENSE) e em [docs/licensing.md](./docs/licensing.md).
+
 ---
 
 ## 🦸 Autor
@@ -404,75 +404,12 @@ Desenvolvido por **Davi Ferreira**.
 
 ## 📄 Licença
 
-As versões futuras da DinoAtlas API são distribuídas sob a
-**PolyForm Noncommercial License 1.0.0** — um modelo **source-available não
-comercial**. O projeto **não** é classificado como Open Source segundo a
-definição da OSI.
+A DinoAtlas API é distribuída sob a **PolyForm Noncommercial License 1.0.0**, uma licença source-available para uso não comercial.
 
-O texto oficial integral está em [LICENSE](./LICENSE). Os avisos de copyright,
-a linha `Required Notice:` e os avisos de terceiros estão em
-[NOTICE](./NOTICE). A política completa, com o escopo por componente e a
-transição de licença, está em [docs/licensing.md](./docs/licensing.md).
+O uso comercial depende de autorização expressa e por escrito do titular.
 
-### Resumo
+- [LICENSE](./LICENSE) — Texto integral da licença.
+- [NOTICE](./NOTICE) — Avisos de copyright e atribuição.
+- [docs/licensing.md](./docs/licensing.md) — Política de licenciamento, permissões e escopo por componente.
 
-| Atividade | Situação |
-| --- | --- |
-| Estudar o código e usar para aprendizado | Permitido |
-| Modificar, criar forks e versões derivadas | Permitido |
-| Redistribuir gratuitamente, inclusive modificações | Permitido |
-| Usar em organizações não comerciais (ensino, pesquisa pública, governo etc.) | Permitido |
-| Vender cópias, cobrar pelo acesso à API ou revender versões modificadas | Requer autorização comercial |
-| Comercializar a API como serviço ou incorporá-la a produtos comerciais | Requer autorização comercial |
-
-A PolyForm Noncommercial 1.0.0 permite qualquer finalidade **não comercial**.
-Usos comerciais não estão licenciados por esses termos e dependem de
-autorização expressa do titular.
-
-### Transição da licença MIT
-
-As distribuições anteriores, incluindo a versão **2.5.0** — já disponibilizada,
-mas ainda sem tag Git — e o histórico de commits até ela, permanecem
-licenciadas sob a **MIT License**. O commit
-`a9cde675870cff57632ee5af4b0c09081c53f625` (`a9cde67`) representa o estado
-funcional da 2.5.0, com a correção de privacidade do logger, e permanece sob
-MIT. A MIT é irrevogável para cópias já distribuídas sob ela: quem obteve o
-projeto sob MIT continua podendo usar aquela cópia nos termos da MIT.
-
-A PolyForm Noncommercial 1.0.0 aplica-se apenas a partir do commit futuro que
-efetivar a migração, substituindo o arquivo `LICENSE`, e às versões dele
-derivadas. A troca não revoga nem altera retroativamente as permissões já
-concedidas, e o histórico de licenciamento é preservado no Git.
-
-A futura tag Git `2.5.0` apontará para esse commit de migração, já sob PolyForm
-Noncommercial 1.0.0 — e **não** para `a9cde67`. A tag ainda **não existe** e
-não deve ser criada antes da efetivação da migração. Ela identifica o snapshot
-do repositório sob PolyForm; as cópias da 2.5.0 anteriormente disponibilizadas
-sob MIT continuam sujeitas às permissões da MIT.
-
-### Uso comercial
-
-Para uso comercial — incluindo venda, hospedagem paga, prestação de serviços ou
-incorporação a produtos comerciais — é necessário obter uma autorização
-comercial separada e por escrito do titular. Contato:
-[Dferreiraz](https://github.com/Dferreiraz).
-
-### Créditos e projetos derivados
-
-Projetos derivados devem manter a referência ao projeto original, conforme a
-seção *Notices* da licença e a linha `Required Notice:` em
-[NOTICE](./NOTICE):
-
-`Original project: DinoAtlas API — https://github.com/Dferreiraz/DinoAtlasAPI`
-
-### Dados e imagens de terceiros
-
-Fatos e informações paleontológicas não são relicenciados. As imagens
-paleontológicas são hospedadas externamente e permanecem sob as licenças
-Creative Commons ou de domínio público registradas em
-`server/database/images.json`. As dependências JavaScript mantêm suas próprias
-licenças. Os assets locais em `public/src/img/` têm origem/licença não
-confirmadas e estão **excluídos do escopo da PolyForm** até validação — veja
-[NOTICE](./NOTICE) e [docs/licensing.md](./docs/licensing.md).
-
-> Esta documentação é técnica e não substitui aconselhamento jurídico.
+O projeto não é classificado como Open Source segundo a definição da OSI.
