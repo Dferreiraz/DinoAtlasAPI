@@ -8,20 +8,22 @@
  * @param {Array} data - Array a ser ordenado.
  * @param {String} sortField - Nome da propriedade usada para ordenar (ex: 'name').
  * @param {String} order - Direção ('asc' ou 'desc').
- * @returns {Array} Novo array ordenado.
+ * @returns {Array} Array ordenado; quando `sortField` é omitido ou inválido,
+ *   retorna o próprio array de entrada sem criar uma cópia.
  */
 const sortData = (data, sortField, order = 'asc') => {
-  if (!sortField) return data;
+  if (!sortField || typeof sortField !== 'string') return data;
 
-  const isDesc = order.toLowerCase() === 'desc';
+  const normalizedOrder = typeof order === 'string' ? order.toLowerCase() : 'asc';
+  const isDesc = normalizedOrder === 'desc';
 
   return [...data].sort((a, b) => {
     const valA = a[sortField];
     const valB = b[sortField];
 
-    // Trata valores indefinidos jogando para o final
-    if (valA === undefined) return 1;
-    if (valB === undefined) return -1;
+    // Trata valores indefinidos/nulos jogando para o final
+    if (valA === undefined || valA === null) return 1;
+    if (valB === undefined || valB === null) return -1;
 
     // Comparação para Strings (ordem alfabética correta)
     if (typeof valA === 'string' && typeof valB === 'string') {
@@ -32,18 +34,9 @@ const sortData = (data, sortField, order = 'asc') => {
     // Comparação para Números
     if (valA < valB) return isDesc ? 1 : -1;
     if (valA > valB) return isDesc ? -1 : 1;
-    
+
     return 0;
   });
 };
 
 module.exports = sortData;
-
-/*
-EXEMPLO DE USO FUTURO:
-const sortData = require('../utils/sorting');
-
-const dinos = [{ name: "T-rex", weight: 8000 }, { name: "Velociraptor", weight: 15 }];
-// Ordenar por peso decrescente: ?sort=weight&order=desc
-const sorted = sortData(dinos, 'weight', 'desc'); 
-*/

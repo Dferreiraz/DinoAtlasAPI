@@ -1,33 +1,33 @@
-const readJson = require('../utils/readJson');
+const jsonRepository = require('../repositories/jsonRepository');
 const { successResponse, errorResponse } = require('../utils/response');
 const { STATUS_CODES } = require('../utils/constants');
-
-const DB_PATH = 'server/database/classifications.json';
+const { logError } = require('../utils/errors');
 
 const getAllClassifications = async (req, res) => {
   try {
-    const data = await readJson(DB_PATH);
+    const data = await jsonRepository.getDatabase('classifications.json');
     return res.status(STATUS_CODES.OK).json(successResponse(data));
   } catch (error) {
+    logError('classifications:list', error, req);
     return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
-      errorResponse('Erro ao buscar classificações.', error.message)
+      errorResponse('Erro ao buscar classificações.')
     );
   }
 };
 
 const getClassificationById = async (req, res) => {
   try {
-    const id = parseInt(req.params.id, 10);
-    const data = await readJson(DB_PATH);
-    const item = data.find(d => d.id === id);
+    const id = req.validatedId !== undefined ? req.validatedId : Number(req.params.id);
+    const item = await jsonRepository.getDatabaseById('classifications.json', id);
 
     if (!item) {
       return res.status(STATUS_CODES.NOT_FOUND).json(errorResponse('Classificação não encontrada.'));
     }
     return res.status(STATUS_CODES.OK).json(successResponse(item));
   } catch (error) {
+    logError('classifications:by-id', error, req);
     return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
-      errorResponse('Erro ao buscar a classificação.', error.message)
+      errorResponse('Erro ao buscar a classificação.')
     );
   }
 };

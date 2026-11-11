@@ -551,6 +551,28 @@ Modal
   height: 1.2rem;
 }
 
+.modal__imagem {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.modal__imagem img {
+  max-height: 250px;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.modal__subtitulo {
+  color: var(--cor-texto-suave);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.body--sem-scroll {
+  overflow: hidden;
+}
+
 /* ==========================================================================
 Endpoints
 ========================================================================== */

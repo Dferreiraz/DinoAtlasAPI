@@ -1,28 +1,34 @@
-const readJson = require('../utils/readJson');
+const jsonRepository = require('../repositories/jsonRepository');
 const { successResponse, errorResponse } = require('../utils/response');
 const { STATUS_CODES } = require('../utils/constants');
-
-const DB_PATH = 'server/database/epochs.json';
+const { logError } = require('../utils/errors');
 
 const getAllEpochs = async (req, res) => {
   try {
-    const data = await readJson(DB_PATH);
+    const data = await jsonRepository.getDatabase('epochs.json');
     return res.status(STATUS_CODES.OK).json(successResponse(data));
   } catch (error) {
-    return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(errorResponse('Erro ao buscar épocas.', error.message));
+    logError('epochs:list', error, req);
+    return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
+      errorResponse('Erro ao buscar épocas.')
+    );
   }
 };
 
 const getEpochById = async (req, res) => {
   try {
-    const id = parseInt(req.params.id, 10);
-    const data = await readJson(DB_PATH);
-    const item = data.find(d => d.id === id);
+    const id = req.validatedId !== undefined ? req.validatedId : Number(req.params.id);
+    const item = await jsonRepository.getDatabaseById('epochs.json', id);
 
-    if (!item) return res.status(STATUS_CODES.NOT_FOUND).json(errorResponse('Época não encontrada.'));
+    if (!item) {
+      return res.status(STATUS_CODES.NOT_FOUND).json(errorResponse('Época não encontrada.'));
+    }
     return res.status(STATUS_CODES.OK).json(successResponse(item));
   } catch (error) {
-    return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(errorResponse('Erro ao buscar a época.', error.message));
+    logError('epochs:by-id', error, req);
+    return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
+      errorResponse('Erro ao buscar a época.')
+    );
   }
 };
 

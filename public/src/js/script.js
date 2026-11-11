@@ -1,13 +1,14 @@
 const API_URL = "/api";
+const PLACEHOLDER_IMAGE = "/src/img/dino-placeholder.svg";
+const ALLOWED_IMAGE_PROTOCOLS = new Set(["http:", "https:"]);
 
 document.addEventListener("DOMContentLoaded", () => {
   iniciarMenuMobile();
   iniciarBusca();
-  testarAPI();
+  carregarResumoApi();
   carregarDinossauros();
   iniciarModal();
-  carregarEstatisticas();
-  iniciarScrollSpyDocumentacao(); // <-- Chamada da nova função
+  iniciarScrollSpyDocumentacao();
 });
 
 /* ==========================================================================
@@ -23,14 +24,14 @@ function iniciarMenuMobile() {
     navegacao.classList.add("navegacao--aberta");
     sobreposicao.classList.add("sobreposicao-menu--visivel");
     botaoMenu.setAttribute("aria-expanded", "true");
-    document.body.style.overflow = "hidden";
+    document.body.classList.add("body--sem-scroll");
   };
 
   const fecharMenu = () => {
     navegacao.classList.remove("navegacao--aberta");
     sobreposicao.classList.remove("sobreposicao-menu--visivel");
     botaoMenu.setAttribute("aria-expanded", "false");
-    document.body.style.overflow = "";
+    document.body.classList.remove("body--sem-scroll");
   };
 
   const alternarMenu = () => {
@@ -90,7 +91,7 @@ function iniciarBusca() {
 
   if (!listaEndpoints) return;
   const itens = Array.from(listaEndpoints.querySelectorAll(".endpoint"));
-  
+
   campoBusca.addEventListener("input", () => {
     const termo = normalizarTexto(campoBusca.value.trim());
     let visiveis = 0;
@@ -110,20 +111,60 @@ function normalizarTexto(texto) {
   return texto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
-async function testarAPI() {
+/* ==========================================================================
+   Resumo da API (estatísticas sem valores fixos de fallback)
+   ========================================================================== */
+async function carregarResumoApi() {
   try {
-    const res = await fetch(API_URL);
-    const dados = await res.json();
-    console.log("API funcionando:", dados);
+    const [infoResposta, estatisticasResposta] = await Promise.all([
+      fetch(API_URL),
+      fetch(`${API_URL}/statistics`)
+    ]);
+
+    if (!infoResposta.ok || !estatisticasResposta.ok) {
+      throw new Error(`HTTP ${infoResposta.status}/${estatisticasResposta.status}`);
+    }
+
+    const info = await infoResposta.json();
+    const estatisticas = await estatisticasResposta.json();
+    const infoData = info && info.data ? info.data : {};
+    const dados = estatisticas && estatisticas.data ? estatisticas.data : {};
+
+    definirEstatistica("totalDinossauros", dados.totalDinosaurs ?? infoData.totalDinosaurs);
+    definirEstatistica("totalContinentes", dados.totalContinents);
+    definirEstatistica("totalDescobertas", dados.totalDiscoveries);
+    definirEstatistica("totalEndpoints", infoData.totalEndpoints);
+
+    console.log("API funcionando:", infoData);
   } catch (erro) {
-    console.error("Erro ao testar a API:", erro);
+    ["totalDinossauros", "totalContinentes", "totalDescobertas", "totalEndpoints"]
+      .forEach((id) => definirEstatistica(id, null));
+    console.error("Erro ao carregar o resumo da API:", erro);
   }
 }
 
+function definirEstatistica(id, valor) {
+  const elemento = document.getElementById(id);
+  if (!elemento) return;
+
+  elemento.textContent = typeof valor === "number" && Number.isFinite(valor)
+    ? String(valor)
+    : "—";
+}
+
+/* ==========================================================================
+   Dinossauros
+   ========================================================================== */
 async function carregarDinossauros() {
   try {
     const resposta = await fetch(`${API_URL}/dinosaurs?limit=12`);
+    if (!resposta.ok) throw new Error(`HTTP ${resposta.status}`);
+
     const dados = await resposta.json();
+    if (!dados || !Array.isArray(dados.data)) {
+      throw new Error("Resposta inválida ao listar dinossauros.");
+    }
+
     renderizarDinossauros(dados.data);
   } catch (erro) {
     console.error("Erro ao carregar dinossauros:", erro);
@@ -134,42 +175,59 @@ function renderizarDinossauros(dinossauros) {
   const lista = document.getElementById("listaDinossauros");
   if (!lista) return;
 
-  lista.innerHTML = "";
+  lista.replaceChildren();
+
   dinossauros.forEach((dino) => {
     const card = document.createElement("article");
     card.classList.add("dino-card");
-    card.dataset.id = dino.id;
-    card.addEventListener("click", () => {
-      buscarDetalhesDino(dino.id);
+    card.dataset.id = String(dino.id);
+    card.tabIndex = 0;
+    card.setAttribute("role", "button");
+    card.addEventListener("click", () => buscarDetalhesDino(dino.id));
+    card.addEventListener("keydown", (evento) => {
+      if (evento.key === "Enter" || evento.key === " ") {
+        evento.preventDefault();
+        buscarDetalhesDino(dino.id);
+      }
     });
 
-    const imagemSrc = dino.imagem || './img/dino-placeholder.svg';
-    
-    card.innerHTML = `
-      <div class="dino-card__imagem">
-        <img src="${imagemSrc}" alt="${dino.name}" onerror="this.src='./img/dino-placeholder.svg'">
-      </div>
-      <header class="dino-card__header">
-        <h3>${dino.name}</h3>
-        <p>${dino.scientificName}</p>
-      </header>
-      <div class="dino-card__info">
-        <p><strong>Tamanho:</strong> ${dino.length} metros</p>
-        <p><strong>Altura:</strong> ${dino.height} metros</p>
-        <p><strong>Peso:</strong> ${dino.weight.toLocaleString()} kg</p>
-        <p><strong>Velocidade:</strong> ${dino.estimatedSpeed} km/h</p>
-      </div>
-      <p class="dino-card__description">${dino.description}</p>
-      <span class="dino-card__status">${dino.status}</span>
-    `;
+    const imagemContainer = document.createElement("div");
+    imagemContainer.classList.add("dino-card__imagem");
+    imagemContainer.appendChild(criarImagem(dino.imagem, dino.name));
+
+    const cabecalho = document.createElement("header");
+    cabecalho.classList.add("dino-card__header");
+    cabecalho.appendChild(criarTexto("h3", dino.name));
+    cabecalho.appendChild(criarTexto("p", dino.scientificName));
+
+    const info = document.createElement("div");
+    info.classList.add("dino-card__info");
+    info.appendChild(criarInfo("Tamanho", formatarNumero(dino.length), "metros"));
+    info.appendChild(criarInfo("Altura", formatarNumero(dino.height), "metros"));
+    info.appendChild(criarInfo("Peso", formatarNumero(dino.weight), "kg"));
+    info.appendChild(criarInfo("Velocidade", formatarNumero(dino.estimatedSpeed), "km/h"));
+
+    const descricao = criarTexto("p", dino.description);
+    descricao.classList.add("dino-card__description");
+
+    const status = criarTexto("span", dino.status);
+    status.classList.add("dino-card__status");
+
+    card.append(imagemContainer, cabecalho, info, descricao, status);
     lista.appendChild(card);
   });
 }
 
 async function buscarDetalhesDino(id) {
   try {
-    const resposta = await fetch(`${API_URL}/dinosaurs/${id}`);
+    const resposta = await fetch(`${API_URL}/dinosaurs/${encodeURIComponent(id)}`);
+    if (!resposta.ok) throw new Error(`HTTP ${resposta.status}`);
+
     const dados = await resposta.json();
+    if (!dados || !dados.data || typeof dados.data !== "object") {
+      throw new Error("Resposta inválida ao buscar detalhes do dinossauro.");
+    }
+
     abrirModal(dados.data);
   } catch (erro) {
     console.error("Erro ao buscar detalhes:", erro);
@@ -179,43 +237,50 @@ async function buscarDetalhesDino(id) {
 function abrirModal(dino) {
   const modal = document.getElementById("modalDino");
   const detalhes = document.getElementById("detalhesDino");
-  const imagemSrc = dino.imagem || './img/dino-placeholder.png';
+  if (!modal || !detalhes) return;
 
-  const periodo = dino.periodName || (dino.periodId ? `Período ID: ${dino.periodId}` : 'Desconhecido');
-  const continente = dino.continentName || (dino.continentId ? `Continente ID: ${dino.continentId}` : 'Desconhecido');
-  const pais = dino.countryName || (dino.countryId ? `País ID: ${Array.isArray(dino.countryId) ? dino.countryId.join(', ') : dino.countryId}` : 'Desconhecido');
-  const formacao = dino.formationName || (dino.formationId ? `Formação ID: ${Array.isArray(dino.formationId) ? dino.formationId.join(', ') : dino.formationId}` : 'Desconhecido');
+  detalhes.replaceChildren();
 
-  detalhes.innerHTML = `
-    <div style="text-align: center; margin-bottom: 24px;">
-      <img src="${imagemSrc}" alt="${dino.name}" style="max-height: 250px; width: 100%; object-fit: contain; border-radius: 10px;" onerror="this.src='./img/dino-placeholder.png'">
-    </div>
-    <h2>${dino.name}</h2>
-    <h3 style="color: var(--cor-texto-suave); font-weight: 400; margin-bottom: 20px;">${dino.scientificName}</h3>
-    
-    <div class="modal__grid-info">
-      <div class="modal__info-item"><strong>Comprimento:</strong> ${dino.length} m</div>
-      <div class="modal__info-item"><strong>Altura:</strong> ${dino.height} m</div>
-      <div class="modal__info-item"><strong>Peso:</strong> ${dino.weight.toLocaleString()} kg</div>
-      <div class="modal__info-item"><strong>Velocidade:</strong> ${dino.estimatedSpeed} km/h</div>
-      <div class="modal__info-item"><strong>Período:</strong> ${periodo}</div>
-      <div class="modal__info-item"><strong>Continente:</strong> ${continente}</div>
-      <div class="modal__info-item"><strong>País:</strong> ${pais}</div>
-      <div class="modal__info-item"><strong>Formação:</strong> ${formacao}</div>
-    </div>
+  const imagemContainer = document.createElement("div");
+  imagemContainer.classList.add("modal__imagem");
+  imagemContainer.appendChild(criarImagem(dino.imagem, dino.name));
+  detalhes.appendChild(imagemContainer);
 
-    <h3>Descrição</h3>
-    <p>${dino.description}</p>
+  detalhes.appendChild(criarTexto("h2", dino.name));
 
-    <h3>Características</h3>
-    <ul>${dino.characteristics.map(item => `<li>${item}</li>`).join("")}</ul>
+  const subtitulo = criarTexto("h3", dino.scientificName);
+  subtitulo.classList.add("modal__subtitulo");
+  detalhes.appendChild(subtitulo);
 
-    <h3>Curiosidades</h3>
-    <ul>${dino.curiosities.map(item => `<li>${item}</li>`).join("")}</ul>
+  const periodo = dino.periodName || (dino.periodId ? `Período ID: ${dino.periodId}` : "Desconhecido");
+  const continente = dino.continentName || (dino.continentId ? `Continente ID: ${dino.continentId}` : "Desconhecido");
+  const pais = dino.countryName || (dino.countryId ? `País ID: ${formatarIds(dino.countryId)}` : "Desconhecido");
+  const formacao = dino.formationName || (dino.formationId ? `Formação ID: ${formatarIds(dino.formationId)}` : "Desconhecido");
 
-    <h3>Fontes</h3>
-    <ul>${dino.sources.map(item => `<li>${item}</li>`).join("")}</ul>
-  `;
+  const grid = document.createElement("div");
+  grid.classList.add("modal__grid-info");
+  grid.appendChild(criarInfoModal("Comprimento", `${formatarNumero(dino.length)} m`));
+  grid.appendChild(criarInfoModal("Altura", `${formatarNumero(dino.height)} m`));
+  grid.appendChild(criarInfoModal("Peso", `${formatarNumero(dino.weight)} kg`));
+  grid.appendChild(criarInfoModal("Velocidade", `${formatarNumero(dino.estimatedSpeed)} km/h`));
+  grid.appendChild(criarInfoModal("Período", periodo));
+  grid.appendChild(criarInfoModal("Continente", continente));
+  grid.appendChild(criarInfoModal("País", pais));
+  grid.appendChild(criarInfoModal("Formação", formacao));
+  detalhes.appendChild(grid);
+
+  detalhes.appendChild(criarTexto("h3", "Descrição"));
+  detalhes.appendChild(criarTexto("p", dino.description));
+
+  detalhes.appendChild(criarTexto("h3", "Características"));
+  detalhes.appendChild(criarLista(dino.characteristics));
+
+  detalhes.appendChild(criarTexto("h3", "Curiosidades"));
+  detalhes.appendChild(criarLista(dino.curiosities));
+
+  detalhes.appendChild(criarTexto("h3", "Fontes"));
+  detalhes.appendChild(criarLista(dino.sources));
+
   modal.classList.add("modal--ativo");
 }
 
@@ -230,21 +295,87 @@ function iniciarModal() {
   });
 }
 
-async function carregarEstatisticas() {
-  try {
-    const [dinossauros, continentes, descobertas] = await Promise.all([
-      fetch(`${API_URL}/dinosaurs?limit=1`).then(res => res.json()),
-      fetch(`${API_URL}/continents`).then(res => res.json()),
-      fetch(`${API_URL}/discoveries`).then(res => res.json())
-    ]);
-    
-    document.getElementById("totalDinossauros").textContent = dinossauros.meta?.total || 50;
-    document.getElementById("totalContinentes").textContent = continentes.data?.length || 7;
-    document.getElementById("totalDescobertas").textContent = descobertas.data?.length || 50;
-    document.getElementById("totalEndpoints").textContent = 18;
-  } catch (erro) {
-    console.error("Erro ao carregar estatísticas:", erro);
+/* ==========================================================================
+   Helpers de DOM seguro
+   ========================================================================== */
+function criarTexto(tag, texto) {
+  const elemento = document.createElement(tag);
+  elemento.textContent = texto === undefined || texto === null ? "" : String(texto);
+  return elemento;
+}
+
+function criarInfo(rotulo, valor, unidade) {
+  const paragrafo = document.createElement("p");
+  const strong = document.createElement("strong");
+  strong.textContent = `${rotulo}:`;
+  paragrafo.appendChild(strong);
+  paragrafo.appendChild(document.createTextNode(` ${valor} ${unidade}`));
+  return paragrafo;
+}
+
+function criarInfoModal(rotulo, valor) {
+  const item = document.createElement("div");
+  item.classList.add("modal__info-item");
+  const strong = document.createElement("strong");
+  strong.textContent = `${rotulo}:`;
+  item.appendChild(strong);
+  item.appendChild(document.createTextNode(` ${valor}`));
+  return item;
+}
+
+function criarLista(itens) {
+  const lista = document.createElement("ul");
+  if (!Array.isArray(itens)) return lista;
+
+  itens.forEach((item) => {
+    const li = document.createElement("li");
+    li.textContent = String(item);
+    lista.appendChild(li);
+  });
+
+  return lista;
+}
+
+function criarImagem(origem, textoAlternativo) {
+  const imagem = document.createElement("img");
+  const fallbackUrl = new URL(PLACEHOLDER_IMAGE, window.location.href).href;
+
+  imagem.src = resolverImagem(origem);
+  imagem.alt = typeof textoAlternativo === "string" && textoAlternativo.trim()
+    ? textoAlternativo
+    : "Dinossauro";
+  imagem.loading = "lazy";
+
+  imagem.addEventListener("error", () => {
+    if (imagem.src !== fallbackUrl) {
+      imagem.src = fallbackUrl;
+    }
+  }, { once: true });
+
+  return imagem;
+}
+
+function resolverImagem(valor) {
+  if (typeof valor !== "string" || valor.trim() === "") {
+    return PLACEHOLDER_IMAGE;
   }
+
+  try {
+    const url = new URL(valor, window.location.href);
+    return ALLOWED_IMAGE_PROTOCOLS.has(url.protocol) ? url.href : PLACEHOLDER_IMAGE;
+  } catch (erro) {
+    return PLACEHOLDER_IMAGE;
+  }
+}
+
+function formatarNumero(valor) {
+  return typeof valor === "number" && Number.isFinite(valor)
+    ? valor.toLocaleString("pt-BR")
+    : "—";
+}
+
+function formatarIds(valor) {
+  return Array.isArray(valor) ? valor.join(", ") : String(valor);
 }
 
 /* ==========================================================================
@@ -260,12 +391,12 @@ function iniciarScrollSpyDocumentacao() {
   function updateActiveLink() {
     let currentSectionId = '';
     // Offset de 150px para ativar o link um pouco antes do título chegar no topo
-    const scrollPosition = window.scrollY + 150; 
+    const scrollPosition = window.scrollY + 150;
 
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.offsetHeight;
-      
+
       if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
         currentSectionId = section.getAttribute('id');
       }
@@ -280,5 +411,5 @@ function iniciarScrollSpyDocumentacao() {
   }
 
   window.addEventListener('scroll', updateActiveLink, { passive: true });
-  updateActiveLink(); 
+  updateActiveLink();
 }

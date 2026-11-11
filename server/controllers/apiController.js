@@ -1,21 +1,29 @@
-const readJson = require('../utils/readJson');
+const jsonRepository = require('../repositories/jsonRepository');
 const { successResponse, errorResponse } = require('../utils/response');
 const { STATUS_CODES } = require('../utils/constants');
+const { logError } = require('../utils/errors');
+const version = require('../utils/version');
 
-const DB_PATH = 'server/database/dinosaurs.json';
+const DINOSAURS_FILE = 'dinosaurs.json';
 
 const getApiInfo = async (req, res) => {
   try {
-    const metadata = await readJson('server/database/metadata.json');
-    const dinosaurs = await readJson('server/database/dinosaurs.json');
-    
+    const [metadata, dinosaurs] = await Promise.all([
+      jsonRepository.getDatabase('metadata.json'),
+      jsonRepository.getDatabase(DINOSAURS_FILE)
+    ]);
+
+    const endpointCount = req.app && req.app.locals
+      ? req.app.locals.publicEndpointCount
+      : undefined;
+
     const apiInfo = {
       name: metadata.apiName,
-      version: metadata.version,
+      version,
       description: metadata.description,
-      status: "Online",
+      status: metadata.status || 'Online',
       totalDinosaurs: dinosaurs.length,
-      totalEndpoints: 15, // Quantidade mapeada nesta etapa
+      totalEndpoints: Number.isInteger(endpointCount) ? endpointCount : 0,
       author: metadata.author,
       github: metadata.github,
       lastUpdate: metadata.lastUpdate
@@ -23,8 +31,9 @@ const getApiInfo = async (req, res) => {
 
     return res.status(STATUS_CODES.OK).json(successResponse(apiInfo));
   } catch (error) {
+    logError('api-info', error, req);
     return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
-      errorResponse('Erro ao recuperar informações da API', error.message)
+      errorResponse('Erro ao recuperar informações da API')
     );
   }
 };
@@ -32,45 +41,64 @@ const getApiInfo = async (req, res) => {
 const getStatus = (req, res) => {
   return res.status(STATUS_CODES.OK).json(
     successResponse({
-      status: "online",
-      version: "2.3.0",
+      status: 'online',
+      version,
       timestamp: new Date().toISOString(),
       uptime: process.uptime()
     })
   );
 };
 
+const countDistinct = (values) => new Set(
+  values.filter((value) => value !== undefined && value !== null)
+).size;
+
 const getStatistics = async (req, res) => {
   try {
-    const dinosaurs = await readJson(DB_PATH);
-    
-    // Calcula as contagens baseadas em Sets (valores únicos)
-    const totalDinosaurs = dinosaurs.length;
-    const totalFamilies = new Set(dinosaurs.map(d => d.familyId)).size;
-    const totalPeriods = new Set(dinosaurs.map(d => d.periodId)).size;
-    const totalContinents = new Set(dinosaurs.map(d => d.continentId)).size;
-    
-    // Arrays aninhados precisam de tratamento para count único
-    const allCountries = [];
-    dinosaurs.forEach(d => {
-      if (Array.isArray(d.countryId)) {
-        allCountries.push(...d.countryId);
-      }
+    const [
+      dinosaurs,
+      families,
+      periods,
+      continents,
+      countries,
+      discoveries
+    ] = await Promise.all([
+      jsonRepository.getDatabase(DINOSAURS_FILE),
+      jsonRepository.getDatabase('families.json'),
+      jsonRepository.getDatabase('periods.json'),
+      jsonRepository.getDatabase('continents.json'),
+      jsonRepository.getDatabase('countries.json'),
+      jsonRepository.getDatabase('discoveries.json')
+    ]);
+
+    const countryIds = dinosaurs.flatMap((dinosaur) => {
+      if (Array.isArray(dinosaur.countryId)) return dinosaur.countryId;
+      return [dinosaur.countryId];
     });
-    const totalCountries = new Set(allCountries).size;
 
     return res.status(STATUS_CODES.OK).json(
       successResponse({
-        totalDinosaurs,
-        totalFamilies,
-        totalPeriods,
-        totalContinents,
-        totalCountries
+        // Totais de registros existentes nas tabelas de referência.
+        totalDinosaurs: dinosaurs.length,
+        totalFamilies: families.length,
+        totalPeriods: periods.length,
+        totalContinents: continents.length,
+        totalCountries: countries.length,
+        totalDiscoveries: discoveries.length,
+
+        // Valores distintos efetivamente referenciados pelos dinossauros.
+        usage: {
+          families: countDistinct(dinosaurs.map((dinosaur) => dinosaur.familyId)),
+          periods: countDistinct(dinosaurs.map((dinosaur) => dinosaur.periodId)),
+          continents: countDistinct(dinosaurs.map((dinosaur) => dinosaur.continentId)),
+          countries: countDistinct(countryIds)
+        }
       })
     );
   } catch (error) {
+    logError('api-statistics', error, req);
     return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
-      errorResponse('Erro ao buscar estatísticas da API.', error.message)
+      errorResponse('Erro ao buscar estatísticas da API.')
     );
   }
 };

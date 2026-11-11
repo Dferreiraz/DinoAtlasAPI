@@ -1,10 +1,12 @@
 /**
  * readJson.js
  * Módulo responsável pela leitura assíncrona de arquivos JSON.
+ * Erros são tipados e mantêm a causa original para investigação nos logs.
  */
 
 const fs = require('fs').promises;
 const path = require('path');
+const { AppError } = require('./errors');
 
 /**
  * Lê e faz o parse de um arquivo JSON.
@@ -12,36 +14,33 @@ const path = require('path');
  * @returns {Promise<Array|Object>}
  */
 const readJson = async (filePath) => {
+  const absolutePath = path.resolve(filePath);
+
+  let fileContent;
   try {
-    const absolutePath = path.resolve(filePath);
-    const fileContent = await fs.readFile(absolutePath, 'utf-8');
+    fileContent = await fs.readFile(absolutePath, 'utf-8');
+  } catch (error) {
+    if (error.code === 'ENOENT') {
+      throw new AppError(`Arquivo não encontrado: ${absolutePath}`, {
+        code: 'FILE_NOT_FOUND',
+        cause: error
+      });
+    }
+
+    throw new AppError(`Falha ao ler o arquivo: ${absolutePath}`, {
+      code: 'FILE_READ_FAILED',
+      cause: error
+    });
+  }
+
+  try {
     return JSON.parse(fileContent);
   } catch (error) {
-    // Trata erro caso o arquivo não exista
-    if (error.code === 'ENOENT') {
-      throw new Error(`Arquivo não encontrado no caminho: ${filePath}`);
-    }
-    // Trata erro de parse de JSON inválido
-    if (error instanceof SyntaxError) {
-      throw new Error(`Falha ao decodificar o arquivo JSON: ${filePath}`);
-    }
-    
-    throw new Error(`Erro inesperado ao ler o arquivo: ${error.message}`);
+    throw new AppError(`JSON inválido no arquivo: ${absolutePath}`, {
+      code: 'INVALID_JSON',
+      cause: error
+    });
   }
 };
 
 module.exports = readJson;
-
-/*
-EXEMPLO DE USO FUTURO:
-const readJson = require('../utils/readJson');
-
-async function getDinosaurs() {
-  try {
-    const data = await readJson('./database/dinosaurs.json');
-    console.log(data);
-  } catch (error) {
-    console.error(error.message);
-  }
-}
-*/

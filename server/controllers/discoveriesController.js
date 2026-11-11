@@ -1,25 +1,24 @@
-const readJson = require('../utils/readJson');
+const jsonRepository = require('../repositories/jsonRepository');
 const { successResponse, errorResponse } = require('../utils/response');
 const { STATUS_CODES } = require('../utils/constants');
-
-const DB_PATH = '../database/discoveries.json';
+const { logError } = require('../utils/errors');
 
 const getAllDiscoveries = async (req, res) => {
   try {
-    const data = await readJson(DB_PATH);
+    const data = await jsonRepository.getDatabase('discoveries.json');
     return res.status(STATUS_CODES.OK).json(successResponse(data));
   } catch (error) {
+    logError('discoveries:list', error, req);
     return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
-      errorResponse('Erro ao buscar descobertas', error.message)
+      errorResponse('Erro ao buscar descobertas')
     );
   }
 };
 
 const getDiscoveryById = async (req, res) => {
   try {
-    const id = parseInt(req.params.id, 10);
-    const data = await readJson(DB_PATH);
-    const discovery = data.find(d => d.id === id);
+    const id = req.validatedId !== undefined ? req.validatedId : Number(req.params.id);
+    const discovery = await jsonRepository.getDatabaseById('discoveries.json', id);
 
     if (!discovery) {
       return res.status(STATUS_CODES.NOT_FOUND).json(errorResponse('Descoberta não encontrada.'));
@@ -27,8 +26,9 @@ const getDiscoveryById = async (req, res) => {
 
     return res.status(STATUS_CODES.OK).json(successResponse(discovery));
   } catch (error) {
+    logError('discoveries:by-id', error, req);
     return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
-      errorResponse('Erro ao buscar a descoberta.', error.message)
+      errorResponse('Erro ao buscar a descoberta.')
     );
   }
 };

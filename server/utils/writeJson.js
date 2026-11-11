@@ -5,6 +5,8 @@
 
 const fs = require('fs').promises;
 const path = require('path');
+const { AppError } = require('./errors');
+const { invalidate } = require('../repositories/jsonRepository');
 
 /**
  * Escreve dados em um arquivo JSON.
@@ -13,25 +15,19 @@ const path = require('path');
  * @returns {Promise<void>}
  */
 const writeJson = async (filePath, data) => {
+  const absolutePath = path.resolve(filePath);
+
   try {
-    const absolutePath = path.resolve(filePath);
     const jsonString = JSON.stringify(data, null, 2); // 2 espaços de indentação
-    
     await fs.writeFile(absolutePath, jsonString, 'utf-8');
+    // Mantém o cache do repositório consistente com o arquivo recém-gravado.
+    invalidate(absolutePath);
   } catch (error) {
-    throw new Error(`Erro ao escrever no arquivo ${filePath}: ${error.message}`);
+    throw new AppError(`Falha ao escrever o arquivo: ${absolutePath}`, {
+      code: 'FILE_WRITE_FAILED',
+      cause: error
+    });
   }
 };
 
 module.exports = writeJson;
-
-/*
-EXEMPLO DE USO FUTURO:
-const writeJson = require('../utils/writeJson');
-
-async function addDinosaur(newDino) {
-  const data = await readJson('./database/dinosaurs.json');
-  data.push(newDino);
-  await writeJson('./database/dinosaurs.json', data);
-}
-*/

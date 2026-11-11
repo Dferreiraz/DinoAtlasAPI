@@ -785,7 +785,7 @@
     "cladeId": 2,
     "familyId": 19,
     "periodId": 1,
-    "epochId": 3,
+    "epochId": 4,
     "dietId": 2,
     "habitatId": 1,
     "formationId": [
@@ -828,7 +828,7 @@
     "cladeId": 1,
     "familyId": 16,
     "periodId": 1,
-    "epochId": 3,
+    "epochId": 4,
     "dietId": 1,
     "habitatId": 1,
     "formationId": [
@@ -1475,7 +1475,7 @@
     "cladeId": 1,
     "familyId": 16,
     "periodId": 2,
-    "epochId": 3,
+    "epochId": 5,
     "dietId": 1,
     "habitatId": 1,
     "formationId": [
@@ -1863,7 +1863,7 @@
     "cladeId": 1,
     "familyId": 16,
     "periodId": 2,
-    "epochId": 3,
+    "epochId": 5,
     "dietId": 1,
     "habitatId": 1,
     "formationId": [
@@ -2852,7 +2852,7 @@
     "cladeId": 1,
     "familyId": 16,
     "periodId": 1,
-    "epochId": 3,
+    "epochId": 4,
     "dietId": 3,
     "habitatId": 1,
     "formationId": [
@@ -3111,7 +3111,7 @@
     "cladeId": 1,
     "familyId": 16,
     "periodId": 1,
-    "epochId": 3,
+    "epochId": 4,
     "dietId": 1,
     "habitatId": 1,
     "formationId": [
@@ -3368,8 +3368,8 @@
     "classificationId": 2,
     "cladeId": 2,
     "familyId": 19,
-    "periodId": 1,
-    "epochId": 3,
+    "periodId": 2,
+    "epochId": 5,
     "dietId": 2,
     "habitatId": 1,
     "formationId": [
@@ -3756,7 +3756,7 @@
     "cladeId": 2,
     "familyId": 19,
     "periodId": 1,
-    "epochId": 3,
+    "epochId": 4,
     "dietId": 3,
     "habitatId": 1,
     "formationId": [
@@ -4186,7 +4186,7 @@
     "cladeId": 1,
     "familyId": 16,
     "periodId": 1,
-    "epochId": 3,
+    "epochId": 4,
     "dietId": 1,
     "habitatId": 1,
     "formationId": [

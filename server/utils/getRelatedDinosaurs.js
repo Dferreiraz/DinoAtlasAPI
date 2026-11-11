@@ -1,4 +1,4 @@
-const readJson = require('./readJson');
+const jsonRepository = require('../repositories/jsonRepository');
 
 /**
  * Busca dinossauros que possuem um determinado ID em um campo específico.
@@ -10,7 +10,7 @@ const readJson = require('./readJson');
  * @returns {Promise<Array>} - Lista de dinossauros correspondentes
  */
 const getRelatedDinosaurs = async (dbPath, fieldName, targetId) => {
-  const dinosaurs = await readJson(dbPath);
+  const dinosaurs = await jsonRepository.getJson(dbPath);
   
   return dinosaurs.filter(dino => {
     const fieldValue = dino[fieldName];

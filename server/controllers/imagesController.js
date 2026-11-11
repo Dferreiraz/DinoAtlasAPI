@@ -1,51 +1,50 @@
-const fs = require('fs');
-const path = require('path');
+const jsonRepository = require('../repositories/jsonRepository');
+const { successResponse, errorResponse } = require('../utils/response');
+const { STATUS_CODES } = require('../utils/constants');
+const { logError } = require('../utils/errors');
 
-// Caminhos para os arquivos JSON
-const imagesPath = path.join(__dirname, '../database/images.json');
-const dinosPath = path.join(__dirname, '../database/dinosaurs.json');
+const IMAGES_FILE = 'images.json';
+const DINOSAURS_FILE = 'dinosaurs.json';
 
-// Função auxiliar para ler os arquivos
-const lerDados = (caminho) => JSON.parse(fs.readFileSync(caminho, 'utf-8'));
+exports.getAllImages = async (req, res) => {
+  try {
+    const imagens = await jsonRepository.getDatabase(IMAGES_FILE);
 
-exports.getAllImages = (req, res) => {
-    try {
-        const imagens = lerDados(imagesPath);
-        
-        res.status(200).json({
-            success: true,
-            meta: { total: imagens.length },
-            data: imagens
-        });
-    } catch (erro) {
-        res.status(500).json({ success: false, message: "Erro interno no servidor ao buscar imagens." });
-    }
+    return res.status(STATUS_CODES.OK).json(
+      successResponse(imagens, { total: imagens.length })
+    );
+  } catch (error) {
+    logError('images:list', error, req);
+    return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
+      errorResponse('Erro interno no servidor ao buscar imagens.')
+    );
+  }
 };
 
-exports.getImagesByDinosaur = (req, res) => {
-    try {
-        const dinosaurId = Number(req.params.id);
-        const dinossauros = lerDados(dinosPath);
-        
-        const dinossauroExiste = dinossauros.some(d => d.id === dinosaurId);
-        
-        if (!dinossauroExiste) {
-            return res.status(404).json({
-                success: false,
-                message: "Dinossauro não encontrado."
-            });
-        }
+exports.getImagesByDinosaur = async (req, res) => {
+  try {
+    const dinosaurId = req.validatedId !== undefined ? req.validatedId : Number(req.params.id);
+    const dinossauro = await jsonRepository.getDatabaseById(DINOSAURS_FILE, dinosaurId);
 
-        const imagens = lerDados(imagesPath);
-        const imagensDoDino = imagens.filter(img => img.dinosaurId === dinosaurId);
-
-        res.status(200).json({
-            success: true,
-            meta: { dinosaurId: dinosaurId, total: imagensDoDino.length },
-            data: imagensDoDino
-        });
-
-    } catch (erro) {
-        res.status(500).json({ success: false, message: "Erro interno no servidor ao buscar imagens do dinossauro." });
+    if (!dinossauro) {
+      return res.status(STATUS_CODES.NOT_FOUND).json(
+        errorResponse('Dinossauro não encontrado.')
+      );
     }
+
+    const index = await jsonRepository.getDatabaseGroupedIndex(
+      IMAGES_FILE,
+      'dinosaurId'
+    );
+    const imagensDoDino = index.get(dinosaurId) || [];
+
+    return res.status(STATUS_CODES.OK).json(
+      successResponse(imagensDoDino, { dinosaurId, total: imagensDoDino.length })
+    );
+  } catch (error) {
+    logError('images:by-dinosaur', error, req);
+    return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
+      errorResponse('Erro interno no servidor ao buscar imagens do dinossauro.')
+    );
+  }
 };
