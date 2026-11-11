@@ -2,11 +2,7 @@
 
 Todas as mudanças relevantes deste projeto são registradas neste arquivo.
 
-## [2.5.0] — Planejada (não publicada)
-
-> **Status:** esta versão ainda **não foi publicada**. As anotações abaixo
-> preparam a próxima release da linha 2.x. A última release publicada no GitHub
-> é a `2.4.5`.
+## [2.5.0]
 
 ### Resumo
 
