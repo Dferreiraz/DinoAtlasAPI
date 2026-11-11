@@ -1,83 +1,54 @@
-const readJson = require('../utils/readJson');
+const jsonRepository = require('../repositories/jsonRepository');
 const { successResponse, errorResponse } = require('../utils/response');
 const { STATUS_CODES } = require('../utils/constants');
+const { logError } = require('../utils/errors');
 
 // Utils
 const filterData = require('../utils/filtering');
 const searchData = require('../utils/searching');
 const sortData = require('../utils/sorting');
 const paginate = require('../utils/pagination');
-const path = require('path');
-const fs = require('fs');
+const { parseStrictInteger } = require('../utils/validation');
+const { attachImages } = require('../utils/dinosaurImages');
+const { selectRandomItems } = require('../utils/randomSelection');
 
-const DB_PATH = 'server/database/dinosaurs.json';
-const IMAGES_PATH = path.join(__dirname, '../database/images.json');
-
-// Função auxiliar para injetar os dados de imagem correspondentes
-const injetarImagens = (dinossauros) => {
-    try {
-        if (!fs.existsSync(IMAGES_PATH)) return dinossauros;
-        const images = JSON.parse(fs.readFileSync(IMAGES_PATH, 'utf8'));
-
-        // Se for um array de dinossauros
-        if (Array.isArray(dinossauros)) {
-            return dinossauros.map(dino => {
-                const imgData = images.find(img => img.dinosaurId === dino.id);
-                return {
-                    ...dino,
-                    imagem: imgData ? imgData.image : null,
-                    thumbnail: imgData ? imgData.thumbnail : null,
-                    imageAuthor: imgData ? imgData.author : null,
-                    imageLicense: imgData ? imgData.license : null
-                };
-            });
-        }
-
-      
-        const imgData = images.find(img => img.dinosaurId === dinossauros.id);
-        return {
-            ...dinossauros,
-            imagem: imgData ? imgData.image : null,
-            thumbnail: imgData ? imgData.thumbnail : null,
-            imageAuthor: imgData ? imgData.author : null,
-            imageLicense: imgData ? imgData.license : null
-        };
-    } catch (e) {
-        return dinossauros;
-    }
-};
+const DINOSAURS_FILE = 'dinosaurs.json';
 
 const getAllDinosaurs = async (req, res) => {
   try {
-    let data = await readJson(DB_PATH);
-    
+    let data = await jsonRepository.getDatabase(DINOSAURS_FILE);
+
     const { search, sort, order, page, limit, ...filters } = req.query;
 
     data = filterData(data, filters);
 
-    data = searchData(data, search, ['name', 'scientificName', 'description']);
+    const normalizedSearch = req.validatedSearch !== undefined
+      ? req.validatedSearch
+      : search;
+    data = searchData(data, normalizedSearch, ['name', 'scientificName', 'description']);
 
     data = sortData(data, sort, order);
 
-    data = injetarImagens(data);
-
+    // Pagina antes de enriquecer com imagens: apenas os itens retornados
+    // precisam da associação, reduzindo o trabalho por requisição.
     const paginated = paginate(data, page, limit);
+    const enriched = await attachImages(paginated.data);
 
     return res.status(STATUS_CODES.OK).json(
-      successResponse(paginated.data, paginated.meta)
+      successResponse(enriched, paginated.meta)
     );
   } catch (error) {
+    logError('dinosaurs:list', error, req);
     return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
-      errorResponse('Erro ao buscar dinossauros', error.message)
+      errorResponse('Erro ao buscar dinossauros')
     );
   }
 };
 
 const getDinosaurById = async (req, res) => {
   try {
-    const id = parseInt(req.params.id, 10);
-    const data = await readJson(DB_PATH);
-    let dino = data.find(d => d.id === id);
+    const id = req.validatedId !== undefined ? req.validatedId : Number(req.params.id);
+    let dino = await jsonRepository.getDatabaseById(DINOSAURS_FILE, id);
 
     if (!dino) {
       return res.status(STATUS_CODES.NOT_FOUND).json(
@@ -85,21 +56,23 @@ const getDinosaurById = async (req, res) => {
       );
     }
 
-    dino = injetarImagens(dino);
+    dino = await attachImages(dino);
 
     return res.status(STATUS_CODES.OK).json(successResponse(dino));
   } catch (error) {
+    logError('dinosaurs:by-id', error, req);
     return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
-      errorResponse('Erro ao buscar o dinossauro.', error.message)
+      errorResponse('Erro ao buscar o dinossauro.')
     );
   }
 };
 
 const getDinosaurByName = async (req, res) => {
   try {
-    const nameParam = req.params.name.toLowerCase().trim();
-    const data = await readJson(DB_PATH);
-    
+    const rawName = req.validatedName !== undefined ? req.validatedName : req.params.name;
+    const nameParam = rawName.toLowerCase().trim();
+    const data = await jsonRepository.getDatabase(DINOSAURS_FILE);
+
     let results = data.filter(d => d.name.toLowerCase().includes(nameParam));
 
     if (results.length === 0) {
@@ -108,38 +81,44 @@ const getDinosaurByName = async (req, res) => {
       );
     }
 
-    results = injetarImagens(results);
+    results = await attachImages(results);
 
     return res.status(STATUS_CODES.OK).json(successResponse(results));
   } catch (error) {
+    logError('dinosaurs:by-name', error, req);
     return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
-      errorResponse('Erro ao buscar o dinossauro pelo nome.', error.message)
+      errorResponse('Erro ao buscar o dinossauro pelo nome.')
     );
   }
 };
 
 const getRandomDinosaurs = async (req, res) => {
   try {
-    const limit = parseInt(req.query.limit, 10) || 1;
-    const data = await readJson(DB_PATH);
+    const requestedLimit = req.query.limit;
+    const validatedLimit = req.validatedRandomLimit !== undefined
+      ? req.validatedRandomLimit
+      : parseStrictInteger(requestedLimit, { min: 1, max: 50 });
+    const limit = validatedLimit === null || validatedLimit === undefined ? 1 : validatedLimit;
 
-    if (limit < 1 || limit > 50) {
+    if (requestedLimit !== undefined && validatedLimit === null) {
       return res.status(STATUS_CODES.BAD_REQUEST).json(
-        errorResponse("O parâmetro 'limit' deve ser um número entre 1 e 50.")
+        errorResponse("O parâmetro 'limit' deve ser um número inteiro entre 1 e 50.")
       );
     }
 
-    const shuffled = [...data].sort(() => 0.5 - Math.random());
-    let selected = shuffled.slice(0, limit);
+    const data = await jsonRepository.getDatabase(DINOSAURS_FILE);
 
-    selected = injetarImagens(selected);
+    let selected = selectRandomItems(data, limit);
+
+    selected = await attachImages(selected);
 
     return res.status(STATUS_CODES.OK).json(
       successResponse(limit === 1 ? selected[0] : selected, { count: selected.length })
     );
   } catch (error) {
+    logError('dinosaurs:random', error, req);
     return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
-      errorResponse('Erro ao buscar dinossauros aleatórios.', error.message)
+      errorResponse('Erro ao buscar dinossauros aleatórios.')
     );
   }
 };

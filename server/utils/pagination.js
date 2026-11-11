@@ -4,20 +4,26 @@
  */
 
 const { PAGINATION } = require('./constants');
+const { parseStrictInteger } = require('./validation');
 
 /**
  * Pagina um array de dados.
+ * Os parâmetros já chegam validados do middleware; esta função mantém um
+ * fallback seguro para uso direto (sem confiar em parseInt parcial).
+ *
  * @param {Array} data - Array completo de dados.
  * @param {Number|String} page - Página desejada.
  * @param {Number|String} limit - Itens por página.
  * @returns {Object} Objeto contendo os metadados e os dados paginados.
  */
 const paginate = (data, page, limit) => {
-  // Conversão e validação
-  const currentPage = Math.max(1, parseInt(page, 10) || PAGINATION.DEFAULT_PAGE);
-  let currentLimit = Math.max(1, parseInt(limit, 10) || PAGINATION.DEFAULT_LIMIT);
-  
-  // Impede sobrecarga do servidor limitando o máximo retornado
+  const parsedPage = parseStrictInteger(page, { min: 1 });
+  const currentPage = parsedPage === null ? PAGINATION.DEFAULT_PAGE : parsedPage;
+
+  const parsedLimit = parseStrictInteger(limit, { min: 1 });
+  let currentLimit = parsedLimit === null ? PAGINATION.DEFAULT_LIMIT : parsedLimit;
+
+  // Impede sobrecarga do servidor limitando o máximo retornado em uso direto
   if (currentLimit > PAGINATION.MAX_LIMIT) {
     currentLimit = PAGINATION.MAX_LIMIT;
   }
@@ -41,18 +47,3 @@ const paginate = (data, page, limit) => {
 };
 
 module.exports = paginate;
-
-/*
-EXEMPLO DE USO FUTURO:
-const paginate = require('../utils/pagination');
-
-const dinosaurs = await readJson('./database/dinosaurs.json');
-// Considerando query: ?page=2&limit=5
-const result = paginate(dinosaurs, req.query.page, req.query.limit);
-
-res.json({
-  success: true,
-  ...result.meta, // Espalha paginação no root ou usa como meta
-  data: result.data
-});
-*/

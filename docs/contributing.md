@@ -16,10 +16,15 @@ A DinoAtlasAPI é um projeto colaborativo e todas as contribuições são bem-vi
 * Mantenha o código limpo, comentado onde necessário e execute os testes antes de realizar o commit.
 
 ## Como Adicionar Novos Dinossauros
-1. Navegue até a pasta `data/` e abra o arquivo `dinosaurs.json`.
+1. Navegue até `server/database/` e abra o arquivo `dinosaurs.json`.
 2. Adicione o novo objeto JSON seguindo estritamente a estrutura existente, sem pular chaves obrigatórias.
 3. Verifique se os campos de categoria (período, dieta) coincidem com os dados cadastrados nos outros arquivos JSON.
 4. Teste localmente garantindo que o novo dinossauro é retornado no endpoint `/api/dinosaurs`.
+5. Execute a suíte completa (`npm test`), incluindo os testes de integridade dos dados (`npm run test:data`).
+
+> O conteúdo dos JSONs é cacheado em memória por processo. Após editar um
+> arquivo diretamente no disco, reinicie o servidor para que a alteração seja
+> servida.
 
 ## Reportando Problemas (Issues)
 Se você encontrou um erro na API, dados inconsistentes ou links quebrados:

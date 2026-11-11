@@ -1,0 +1,4 @@
+# Alguns arquivos do repositório usam CRLF (ambiente Windows). Tratar o CR
+# no fim da linha como terminador evita falsos positivos de "trailing
+# whitespace" em `git diff --check`, sem renomear ou normalizar os arquivos.
+* whitespace=cr-at-eol

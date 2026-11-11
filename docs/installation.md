@@ -4,15 +4,15 @@ Siga os passos abaixo para rodar a DinoAtlasAPI no seu ambiente local.
 
 ## Pré-requisitos
 Antes de começar, certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
-* **Node.js** (versão 18.x ou superior recomendada)
+* **Node.js** (versão 18.18.0 ou superior, conforme `engines.node` do `package.json`)
 * **npm** (gerenciador de pacotes padrão do Node)
 
 ## Como Instalar Dependências
 Clone o repositório oficial e instale os pacotes necessários:
 
 ```bash
-git clone [https://github.com/Dferreiraz/DinoAtlasAPI.git](https://github.com/Dferreiraz/DinoAtlasAPI.git)
-cd dinoatlasapi
+git clone https://github.com/Dferreiraz/DinoAtlasAPI.git
+cd DinoAtlasAPI
 npm install
 ```
 

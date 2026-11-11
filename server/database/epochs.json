@@ -16,5 +16,17 @@
     "name": "Cretáceo Inferior",
     "periodId": 3,
     "description": "Marcado pela diversificação da flora, com o aparecimento das primeiras angiospermas."
+  },
+  {
+    "id": 4,
+    "name": "Triássico Superior",
+    "periodId": 1,
+    "description": "Época final do Triássico, quando surgiram os primeiros dinossauros e diversos grupos de arcossauros."
+  },
+  {
+    "id": 5,
+    "name": "Jurássico Inferior",
+    "periodId": 2,
+    "description": "Primeira época do Jurássico, marcada pela diversificação inicial dos dinossauros após o evento de extinção do fim do Triássico."
   }
 ]

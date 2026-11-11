@@ -1,37 +1,28 @@
-const fs = require('fs');
-const path = require('path');
+const jsonRepository = require('../repositories/jsonRepository');
 const { successResponse, errorResponse } = require('../utils/response');
 const { STATUS_CODES } = require('../utils/constants');
+const { databasePath } = require('../utils/paths');
+const { logError } = require('../utils/errors');
+const getRelatedDinosaurs = require('../utils/getRelatedDinosaurs');
 
-const DB_PATH = path.join(__dirname, '../database/continents.json');
-const DINOS_PATH = path.join(__dirname, '../database/dinosaurs.json');
+const DINOS_PATH = databasePath('dinosaurs.json');
 
 const getAllContinents = async (req, res) => {
   try {
-    if (!fs.existsSync(DB_PATH)) {
-      return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
-        errorResponse('Arquivo de continentes não encontrado.')
-      );
-    }
-    const data = JSON.parse(fs.readFileSync(DB_PATH, 'utf8'));
+    const data = await jsonRepository.getDatabase('continents.json');
     return res.status(STATUS_CODES.OK).json(successResponse(data));
   } catch (error) {
+    logError('continents:list', error, req);
     return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
-      errorResponse('Erro ao buscar continentes', error.message)
+      errorResponse('Erro ao buscar continentes')
     );
   }
 };
 
 const getContinentById = async (req, res) => {
   try {
-    if (!fs.existsSync(DB_PATH)) {
-      return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
-        errorResponse('Arquivo de continentes não encontrado.')
-      );
-    }
-    const id = parseInt(req.params.id, 10);
-    const data = JSON.parse(fs.readFileSync(DB_PATH, 'utf8'));
-    const continent = data.find(c => c.id === id);
+    const id = req.validatedId !== undefined ? req.validatedId : Number(req.params.id);
+    const continent = await jsonRepository.getDatabaseById('continents.json', id);
 
     if (!continent) {
       return res.status(STATUS_CODES.NOT_FOUND).json(errorResponse('Continente não encontrado.'));
@@ -39,40 +30,34 @@ const getContinentById = async (req, res) => {
 
     return res.status(STATUS_CODES.OK).json(successResponse(continent));
   } catch (error) {
+    logError('continents:by-id', error, req);
     return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
-      errorResponse('Erro ao buscar o continente.', error.message)
+      errorResponse('Erro ao buscar o continente.')
     );
   }
 };
 
 const getDinosaursByContinent = async (req, res) => {
   try {
-    if (!fs.existsSync(DB_PATH) || !fs.existsSync(DINOS_PATH)) {
-      return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
-        errorResponse('Arquivos de dados não encontrados.')
-      );
-    }
-    
-    const id = parseInt(req.params.id, 10);
-    const continents = JSON.parse(fs.readFileSync(DB_PATH, 'utf8'));
-    const continent = continents.find(c => c.id === id);
-    
+    const id = req.validatedId !== undefined ? req.validatedId : Number(req.params.id);
+    const continent = await jsonRepository.getDatabaseById('continents.json', id);
+
     if (!continent) {
       return res.status(STATUS_CODES.NOT_FOUND).json(errorResponse('Continente não encontrado.'));
     }
 
-    const dinosaurs = JSON.parse(fs.readFileSync(DINOS_PATH, 'utf8'));
-    const relatedDinosaurs = dinosaurs.filter(dino => dino.continentId === id);
+    const relatedDinosaurs = await getRelatedDinosaurs(DINOS_PATH, 'continentId', id);
 
     return res.status(STATUS_CODES.OK).json(
-      successResponse(relatedDinosaurs, { 
+      successResponse(relatedDinosaurs, {
         message: `Dinossauros encontrados no continente: ${continent.name}`,
-        count: relatedDinosaurs.length 
+        count: relatedDinosaurs.length
       })
     );
   } catch (error) {
+    logError('continents:dinosaurs', error, req);
     return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json(
-      errorResponse('Erro ao buscar dinossauros por continente.', error.message)
+      errorResponse('Erro ao buscar dinossauros por continente.')
     );
   }
 };

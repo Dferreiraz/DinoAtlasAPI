@@ -3,12 +3,14 @@
  * Realiza buscas textuais em campos específicos de um objeto.
  */
 
+const { PAGINATION } = require('./constants');
+
 /**
  * Busca texto em múltiplos campos de um array de objetos.
  * @param {Array} data - Array de dados.
  * @param {String} searchTerm - O texto a ser procurado (ex: "rex").
  * @param {Array<String>} fieldsToSearch - Os campos onde a busca deve ser feita.
- * @returns {Array} Dados que contém o termo de busca em pelo menos um dos campos.
+ * @returns {Array} Dados que contêm o termo de busca em pelo menos um dos campos.
  */
 const searchData = (data, searchTerm, fieldsToSearch = []) => {
   if (!searchTerm || typeof searchTerm !== 'string' || fieldsToSearch.length === 0) {
@@ -16,6 +18,11 @@ const searchData = (data, searchTerm, fieldsToSearch = []) => {
   }
 
   const term = searchTerm.toLowerCase().trim();
+
+  // Busca vazia após normalização significa ausência de filtro
+  if (term.length === 0 || term.length > PAGINATION.MAX_SEARCH_LENGTH) {
+    return data;
+  }
 
   return data.filter(item => {
     // Percorre os campos desejados e verifica se o termo está incluso neles
@@ -30,14 +37,3 @@ const searchData = (data, searchTerm, fieldsToSearch = []) => {
 };
 
 module.exports = searchData;
-
-/*
-EXEMPLO DE USO FUTURO:
-const searchData = require('../utils/searching');
-
-// Considerando a query: ?search=lagarto
-const searchTerm = req.query.search;
-const fieldsToSearch = ['name', 'scientificName', 'meaning', 'description'];
-
-const foundDinos = searchData(dinosaurs, searchTerm, fieldsToSearch);
-*/

@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-2.5.0-blue" alt="Version 2.5.0">
+  <img src="https://img.shields.io/badge/Version-2.4.5-blue" alt="Version 2.4.5">
   <img src="https://img.shields.io/badge/Node.js-18%2B-green" alt="Node.js">
   <img src="https://img.shields.io/badge/Express-4.x-black" alt="Express">
   <img src="https://img.shields.io/badge/Status-Em%20desenvolvimento-orange" alt="Status">
@@ -18,7 +18,7 @@
 <p align="center">
   •
   <a href="#-sobre-o-projeto">Sobre</a> •
-  <a href="#-deploy">Deploy</a> •
+  <a href="#-api-online">API Online</a> •
   <a href="#-como-executar-o-projeto">Como executar</a> • 
   <a href="#-exemplos-de-endpoints">Endpoints</a> •
 <br>
@@ -43,7 +43,7 @@ O projeto foi desenvolvido utilizando **Node.js** e **Express**, seguindo uma ar
 
 Atualmente, os dados são armazenados em arquivos **JSON**, permitindo uma estrutura simples, organizada e de fácil manutenção.
 
-A V2.4.0 conta atualmente com **50 dinossauros cadastrados, todos com imagens associadas**.
+A base de dados conta atualmente com **100 dinossauros cadastrados, todos com imagens associadas** — quantidade já incluída na release publicada **2.4.5**.
 
 ### 🎯 Objetivos do projeto
 
@@ -92,13 +92,18 @@ A DinoAtlas foi criada com os seguintes objetivos:
 * [x] Informações de licença
 * [x] Endpoint específico para imagens
 * [x] Associação de imagens aos dinossauros
-* [x] 50 dinossauros com imagens cadastradas
+* [x] 100 dinossauros com imagens cadastradas
 
 ---
 
 ## 🌐 API Online
 
 A DinoAtlas API está disponível para consulta online.
+
+> **Versão em produção:** a instância pública abaixo corresponde à versão
+> **publicada** da API. A última release publicada é a **2.4.5**; a versão
+> **2.5.0** está preparada no repositório, mas ainda **não foi publicada** e
+> não está disponível nessa URL.
 
 **URL Base:**
 
@@ -154,11 +159,20 @@ O desenvolvimento da DinoAtlas é dividido em versões, permitindo que a API evo
 
 ### ✅ V2.4 — Base Expandida
 
-* 50 dinossauros cadastrados
+* 100 dinossauros cadastrados (release 2.4.5)
 * Imagens para todas as espécies cadastradas
 * Sistema de Rate Limiting
 * Melhorias gerais na API
 * Evolução da documentação
+
+### 🔜 V2.5 — Consolidação (planejada, não publicada)
+
+* Reorganização interna da arquitetura
+* Validação mais rigorosa de IDs, paginação, filtros, busca e ordenação
+* Melhorias de segurança e de Content Security Policy (CSP)
+* Rate limiting com identificação por `CF-Connecting-IP`
+* Health check em `/health` e documentação em `/docs`
+* Mudanças de contrato detalhadas no [CHANGELOG](CHANGELOG.md)
 
 ### 🔜 Próximas versões
 
@@ -221,6 +235,18 @@ http://localhost:3000
 
 ```http
 GET /api
+```
+
+### Health check operacional
+
+```http
+GET /health
+```
+
+### Estatísticas da base
+
+```http
+GET /api/statistics
 ```
 
 ### Listar dinossauros
@@ -317,13 +343,16 @@ DinoAtlas API
 │   ├── controllers/       # Lógica de processamento e respostas
 │   ├── database/          # Arquivos JSON com dados paleontológicos
 │   ├── middleware/        # Middlewares, erros e rotas não encontradas
+│   ├── repositories/      # Cache e acesso centralizado aos arquivos JSON
 │   ├── routes/            # Definição dos endpoints
 │   ├── utils/             # Funções auxiliares
-│   └── app.js             # Configuração da aplicação Express
+│   ├── app.js             # Instância padrão da aplicação
+│   └── createApp.js       # Fábrica da aplicação Express
 │
+├── tests/                 # Testes unitários, de integração e de dados
 ├── package.json
 ├── README.md
-└── server.js              # Ponto de entrada da aplicação
+└── server.js              # Ponto de entrada e encerramento gracioso
 ```
 
 ---

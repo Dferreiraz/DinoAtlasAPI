@@ -3,232 +3,2933 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Documentação - DinoAtlas API</title>
+  <meta name="description" content="Referência técnica da DinoAtlas API: endpoints GET, parâmetros, paginação, filtros, ordenação, schemas, códigos HTTP e exemplos de integração.">
+  <title>Documentação — DinoAtlas API</title>
   <link rel="stylesheet" href="../css/documentacao.css">
   <link rel="shortcut icon" href="../img/dinoatlasapi_logo.png" type="image/x-icon">
 </head>
 <body>
 
+  <a class="doc-pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="doc-topbar">
+    <div class="doc-topbar__inner">
+      <a class="doc-topbar__marca" href="../../index.html">
+        <img src="../img/dinoatlasapi_logo.png" alt="DinoAtlas API">
+        <span class="doc-topbar__nome">DinoAtlas <span class="doc-topbar__tag">API</span></span>
+      </a>
+
+      <nav class="doc-topbar__nav" aria-label="Navegação principal">
+        <a class="doc-topbar__link" href="../../index.html">Home</a>
+        <a class="doc-topbar__link doc-topbar__link--atual" href="/docs" aria-current="page">Documentação</a>
+        <a class="doc-topbar__link" href="https://github.com/Dferreiraz/DinoAtlasAPI" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+
+      <button class="doc-menu" id="docMenuBotao" type="button" aria-expanded="false" aria-controls="docSidebar">
+        <span class="doc-menu__barras" aria-hidden="true"></span>
+        <span>Menu</span>
+      </button>
+    </div>
+  </header>
+
   <div class="doc-layout">
-    <!-- Sidebar -->
-    <aside class="doc-sidebar">
-      <div class="doc-sidebar__header">
-        <a href="../../index.html" class="doc-sidebar__voltar">← Voltar para a Home</a>
-      </div>
-      
-      <div class="doc-sidebar__grupo">
-        <h3 class="doc-sidebar__titulo">Início</h3>
-        <a href="#introducao" class="doc-sidebar__link doc-sidebar__link--ativo">Introdução</a>
-        <a href="#autenticacao" class="doc-sidebar__link">Autenticação</a>
-      </div>
-      
-      <div class="doc-sidebar__grupo">
-        <h3 class="doc-sidebar__titulo">Endpoints Principais</h3>
-        <a href="#dinossauros" class="doc-sidebar__link">Dinossauros</a>
-        <a href="#atlas-geografico" class="doc-sidebar__link">Atlas Geográfico</a>
-        <a href="#entidades" class="doc-sidebar__link">Entidades Relacionadas</a>
-      </div>
-      
-      <div class="doc-sidebar__grupo">
-        <h3 class="doc-sidebar__titulo">Recursos Avançados</h3>
-        <a href="#filtros" class="doc-sidebar__link">Filtros e Busca</a>
-        <a href="#exemplos" class="doc-sidebar__link">Exemplos de Código</a>
-      </div>
+
+    <aside class="doc-sidebar" id="docSidebar" aria-label="Índice da documentação">
+      <a class="doc-sidebar__home" href="../../index.html">
+        <span class="doc-sidebar__home-icone" aria-hidden="true">←</span>
+        <span>Voltar para a Home</span>
+      </a>
+
+      <div class="doc-sidebar__separador"></div>
+
+      <nav class="doc-indice" aria-label="Seções da documentação">
+        <div class="doc-indice__grupo">
+          <h2 class="doc-indice__titulo">Começando</h2>
+          <ul class="doc-indice__lista">
+            <li><a class="doc-indice__link doc-indice__link--ativo" href="#introducao" aria-current="location">Introdução</a></li>
+            <li><a class="doc-indice__link" href="#visao-geral">Visão geral</a></li>
+            <li><a class="doc-indice__link" href="#primeiros-passos">Primeiros passos</a></li>
+            <li><a class="doc-indice__link" href="#url-base">URL base</a></li>
+            <li><a class="doc-indice__link" href="#formato-respostas">Formato das respostas</a></li>
+            <li><a class="doc-indice__link" href="#acesso-publico">Acesso público</a></li>
+            <li><a class="doc-indice__link" href="#rate-limiting">Rate limiting</a></li>
+          </ul>
+        </div>
+
+        <div class="doc-indice__grupo">
+          <h2 class="doc-indice__titulo">Recursos</h2>
+          <ul class="doc-indice__lista">
+            <li><a class="doc-indice__link" href="#recursos-endpoints">Recursos e endpoints</a></li>
+            <li><a class="doc-indice__link" href="#paginacao">Paginação</a></li>
+            <li><a class="doc-indice__link" href="#filtros">Filtros</a></li>
+            <li><a class="doc-indice__link" href="#ordenacao">Ordenação</a></li>
+          </ul>
+        </div>
+
+        <div class="doc-indice__grupo">
+          <h2 class="doc-indice__titulo">Referência</h2>
+          <ul class="doc-indice__lista">
+            <li><a class="doc-indice__link" href="#schemas">Schemas</a></li>
+            <li><a class="doc-indice__link" href="#codigos-http">Códigos HTTP</a></li>
+            <li><a class="doc-indice__link" href="#erros">Tratamento de erros</a></li>
+          </ul>
+        </div>
+
+        <div class="doc-indice__grupo">
+          <h2 class="doc-indice__titulo">Prática</h2>
+          <ul class="doc-indice__lista">
+            <li><a class="doc-indice__link" href="#exemplos">Exemplos de integração</a></li>
+          </ul>
+        </div>
+      </nav>
     </aside>
 
-    <!-- Conteúdo Principal -->
-    <main class="doc-conteudo">
-      
+    <div class="doc-backdrop" id="docBackdrop" aria-hidden="true"></div>
+
+    <main class="doc-conteudo" id="conteudo">
+
+      <div class="doc-hero">
+        <span class="doc-hero__rotulo">Referência técnica · 36 endpoints GET</span>
+        <h1>Documentação da DinoAtlas API</h1>
+        <p>Tudo o que você precisa para consultar dinossauros, períodos geológicos, formações, países, museus e demais dados paleontológicos da DinoAtlas. A API é pública, somente leitura e não exige autenticação.</p>
+      </div>
+
       <section id="introducao" class="doc-secao">
+        <span class="doc-secao__rotulo">01 · Começando</span>
         <h2>Introdução</h2>
-        <p>Bem-vindo à documentação oficial da <strong>DinoAtlas API</strong>. Esta é uma API RESTful pública e gratuita dedicada a fornecer dados precisos, estruturados e cientificamente validados sobre dinossauros e o mundo pré-histórico.</p>
-        <p>Inspirada em projetos open-source de referência, a DinoAtlas API oferece uma base de dados normalizada, permitindo consultas complexas por período geológico, localização, formação geológica e características físicas.</p>
-        <p>URL Base: <code>https://dinoapi-swg8.onrender.com/api</code> (ou <code>/api</code> em ambiente local).</p>
+        <p>A <strong>DinoAtlas API</strong> é uma API REST pública e gratuita que entrega dados estruturados sobre dinossauros e o contexto paleontológico associado: períodos, épocas, formações geológicas, continentes, países, habitats, dietas, famílias, clados, classificações, descobertas e museus.</p>
+        <p>A base atual contém <strong>100 dinossauros</strong> e mantém os registros relacionados normalizados por identificadores. Todos os endpoints públicos são <code>GET</code>, respondem em JSON e podem ser consumidos sem chave de API.</p>
+
+        <div class="doc-grade">
+          <div class="doc-card">
+            <span class="doc-card__valor">100</span>
+            <span class="doc-card__rotulo">dinossauros cadastrados</span>
+          </div>
+          <div class="doc-card">
+            <span class="doc-card__valor">36</span>
+            <span class="doc-card__rotulo">endpoints GET públicos</span>
+          </div>
+          <div class="doc-card">
+            <span class="doc-card__valor">15</span>
+            <span class="doc-card__rotulo">grupos de recursos</span>
+          </div>
+          <div class="doc-card">
+            <span class="doc-card__valor">100</span>
+            <span class="doc-card__rotulo">requisições por 15 min</span>
+          </div>
+        </div>
+
+        <div class="doc-nota doc-nota--info">
+          <strong>Versão em execução.</strong> O campo <code>version</code> de <code>GET /api</code> reflete a instância consultada. Neste repositório o código prepara a versão <strong>2.5.0</strong>, que ainda não foi publicada; a última release pública é a <strong>2.4.5</strong>. Sempre confirme a versão na resposta de <code>GET /api</code>.
+        </div>
+
+        <p>Comece por <a href="#primeiros-passos">Primeiros passos</a> para fazer a primeira requisição ou consulte diretamente o <a href="#recursos-endpoints">inventário de recursos</a>.</p>
       </section>
 
-      <section id="autenticacao" class="doc-secao">
-        <h2>Autenticação</h2>
-        <p>A DinoAtlas API é totalmente aberta. Nenhuma chave de API (API Key) ou autenticação é necessária para realizar requisições. Basta fazer chamadas HTTP GET diretamente aos endpoints.</p>
+      <section id="visao-geral" class="doc-secao">
+        <span class="doc-secao__rotulo">02 · Começando</span>
+        <h2>Visão geral da API</h2>
+        <p>Os recursos são agrupados por assunto. Apenas o recurso de dinossauros aceita paginação, busca, filtros e ordenação; os demais catálogos retornam a coleção completa. Formações, continentes e países também expõem uma rota para listar os dinossauros relacionados.</p>
+
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead>
+              <tr>
+                <th>Recurso</th>
+                <th>Endpoints</th>
+                <th>Descrição</th>
+                <th>Recursos avançados</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><a href="#rec-api">Metadados</a></td><td>3</td><td>Informações da instância e estatísticas gerais.</td><td>—</td></tr>
+              <tr><td><a href="#rec-dinosaurs">Dinossauros</a></td><td>5</td><td>Núcleo da API, com dados morfológicos e imagens.</td><td>Paginação, busca, filtros, ordenação</td></tr>
+              <tr><td><a href="#rec-images">Imagens</a></td><td>1</td><td>Catálogo completo de imagens e créditos.</td><td>—</td></tr>
+              <tr><td><a href="#rec-periods">Períodos</a></td><td>2</td><td>Triássico, Jurássico e Cretáceo.</td><td>—</td></tr>
+              <tr><td><a href="#rec-epochs">Épocas</a></td><td>2</td><td>Subdivisões dos períodos geológicos.</td><td>—</td></tr>
+              <tr><td><a href="#rec-formations">Formações</a></td><td>3</td><td>Formações geológicas e seus dinossauros.</td><td>Rota relacional</td></tr>
+              <tr><td><a href="#rec-continents">Continentes</a></td><td>3</td><td>Continentes e dinossauros encontrados neles.</td><td>Rota relacional</td></tr>
+              <tr><td><a href="#rec-countries">Países</a></td><td>3</td><td>Países de descoberta e seus dinossauros.</td><td>Rota relacional</td></tr>
+              <tr><td><a href="#rec-habitats">Habitats</a></td><td>2</td><td>Ambientes onde os dinossauros viviam.</td><td>—</td></tr>
+              <tr><td><a href="#rec-diets">Dietas</a></td><td>2</td><td>Carnívoro, herbívoro e onívoro.</td><td>—</td></tr>
+              <tr><td><a href="#rec-families">Famílias</a></td><td>2</td><td>Famílias taxonômicas.</td><td>—</td></tr>
+              <tr><td><a href="#rec-clades">Clados</a></td><td>2</td><td>Agrupamentos evolutivos.</td><td>—</td></tr>
+              <tr><td><a href="#rec-classifications">Classificações</a></td><td>2</td><td>Grandes grupos taxonômicos.</td><td>—</td></tr>
+              <tr><td><a href="#rec-discoveries">Descobertas</a></td><td>2</td><td>Autor, ano, local e contexto da descoberta.</td><td>—</td></tr>
+              <tr><td><a href="#rec-museums">Museus</a></td><td>2</td><td>Instituições que abrigam os espécimes.</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="doc-nota">
+          <strong>Somente leitura.</strong> Não existem rotas públicas para <code>POST</code>, <code>PUT</code>, <code>PATCH</code> ou <code>DELETE</code>. Como esses métodos não estão mapeados, eles recebem <strong>404</strong> com a mensagem <code>"Rota não encontrada."</code> — e não 405.
+        </div>
+
+        <p>Uma requisição típica percorre quatro etapas:</p>
+        <div class="doc-fluxo">
+          <div class="doc-fluxo__etapa">
+            <strong>1. Requisição</strong>
+            <span>Você envia um <code>GET</code> para a URL base com o caminho do recurso.</span>
+          </div>
+          <div class="doc-fluxo__etapa">
+            <strong>2. Validação</strong>
+            <span>IDs, paginação, busca, filtros e ordenação são validados antes da consulta.</span>
+          </div>
+          <div class="doc-fluxo__etapa">
+            <strong>3. Resposta</strong>
+            <span>Os dados voltam em <code>data</code>, com <code>meta</code> quando aplicável.</span>
+          </div>
+          <div class="doc-fluxo__etapa">
+            <strong>4. Erro</strong>
+            <span>Falhas retornam <code>success: false</code> e uma <code>message</code> pública.</span>
+          </div>
+        </div>
       </section>
 
-      <section id="dinossauros" class="doc-secao">
-        <h2>Dinossauros</h2>
-        <p>O núcleo da API. Retorna dados detalhados sobre as 100+ espécies cadastradas, incluindo injeção automática de URLs de imagens e metadados.</p>
-        
-        <h3>Listar Todos os Dinossauros</h3>
-        <div class="doc-code-block">
-          <span class="tk-funcao">GET</span> <span class="tk-string">/api/dinosaurs</span>
-        </div>
-        <p>Suporta paginação, busca textual e filtros combinados.</p>
+      <section id="primeiros-passos" class="doc-secao">
+        <span class="doc-secao__rotulo">03 · Começando</span>
+        <h2>Primeiros passos</h2>
+        <p>Não é necessário instalar SDK, gerar token ou configurar cabeçalhos de autenticação. Basta escolher a URL base e fazer uma requisição <code>GET</code>.</p>
 
-        <h3>Buscar por ID</h3>
-        <div class="doc-code-block">
-          <span class="tk-funcao">GET</span> <span class="tk-string">/api/dinosaurs/:id</span>
+        <ol class="doc-lista doc-lista--numerada">
+          <li><strong>Escolha a URL base:</strong> <code>https://dinoapi-swg8.onrender.com/api</code> em produção ou <code>http://localhost:3000/api</code> no ambiente local.</li>
+          <li><strong>Confirme que a API está no ar:</strong> consulte <code>GET /api</code> e verifique <code>success: true</code>.</li>
+          <li><strong>Faça a primeira consulta de dados:</strong> peça um dinossauro com <code>GET /api/dinosaurs?limit=1</code>.</li>
+          <li><strong>Leia o envelope:</strong> os registros ficam em <code>data</code>; a paginação fica em <code>meta</code>.</li>
+        </ol>
+
+        <h3>Requisição com cURL</h3>
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">cURL</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code>curl "https://dinoapi-swg8.onrender.com/api/dinosaurs?limit=1"</code></pre>
         </div>
 
-        <h3>Buscar Aleatório</h3>
-        <div class="doc-code-block">
-          <span class="tk-funcao">GET</span> <span class="tk-string">/api/dinosaurs/random?limit=3</span>
+        <h3>Requisição com JavaScript</h3>
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">JavaScript · Fetch</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code>const resposta = await fetch(
+  "https://dinoapi-swg8.onrender.com/api/dinosaurs?limit=1"
+);
+const corpo = await resposta.json();
+
+if (!resposta.ok || !corpo.success) {
+  throw new Error(corpo.message || `HTTP ${resposta.status}`);
+}
+
+console.log(corpo.data[0].name);
+console.log(corpo.meta);</code></pre>
+        </div>
+
+        <h3>Resposta de identificação da API</h3>
+        <p>Exemplo de <code>GET /api</code> na instância deste repositório:</p>
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">JSON · 200 OK</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code>{
+  "success": true,
+  "data": {
+    "name": "DinoAtlas API",
+    "version": "2.5.0",
+    "description": "Uma API REST pública para dados estruturados sobre dinossauros e informações paleontológicas relacionadas.",
+    "status": "Online",
+    "totalDinosaurs": 100,
+    "totalEndpoints": 36,
+    "author": "Davi Ferreira",
+    "github": "https://github.com/Dferreiraz/DinoAtlasAPI",
+    "lastUpdate": "2026-08-30"
+  }
+}</code></pre>
+        </div>
+
+        <div class="doc-nota doc-nota--ok">
+          <strong>Pronto para continuar.</strong> Se a resposta acima chegou com <code>200</code>, sua integração já consegue acessar todos os endpoints descritos nesta página.
         </div>
       </section>
 
-      <section id="atlas-geografico" class="doc-secao">
-        <h2>Atlas Geográfico</h2>
-        <p>Recursos relacionais que permitem navegar pela base de dados através de localizações reais de descobertas paleontológicas.</p>
+      <section id="url-base" class="doc-secao">
+        <span class="doc-secao__rotulo">04 · Começando</span>
+        <h2>URL base</h2>
+        <p>Todas as rotas de dados são relativas à URL base e começam com <code>/api</code>.</p>
 
-        <h3>Listar Continentes</h3>
-        <div class="doc-code-block">
-          <span class="tk-funcao">GET</span> <span class="tk-string">/api/continents</span>
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead>
+              <tr>
+                <th>Ambiente</th>
+                <th>URL base</th>
+                <th>Exemplo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Produção</td>
+                <td><code>https://dinoapi-swg8.onrender.com/api</code></td>
+                <td><code>https://dinoapi-swg8.onrender.com/api/dinosaurs</code></td>
+              </tr>
+              <tr>
+                <td>Local</td>
+                <td><code>http://localhost:3000/api</code></td>
+                <td><code>http://localhost:3000/api/dinosaurs</code></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
-        <h3>Dinossauros por País</h3>
-        <p>Retorna todos os dinossauros cujos fósseis foram encontrados em um país específico (ex: ID 16 = Brasil).</p>
-        <div class="doc-code-block">
-          <span class="tk-funcao">GET</span> <span class="tk-string">/api/countries/:id/dinosaurs</span>
+        <p>Além de <code>/api</code>, o servidor expõe rotas auxiliares que não fazem parte do contrato de dados:</p>
+
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead>
+              <tr>
+                <th>Caminho</th>
+                <th>Conteúdo</th>
+                <th>Rate limit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>/</code></td><td>Página inicial do projeto.</td><td>Não</td></tr>
+              <tr><td><code>/docs</code></td><td>Esta documentação.</td><td>Não</td></tr>
+              <tr><td><code>/docs/</code></td><td>A mesma documentação, com barra final.</td><td>Não</td></tr>
+              <tr><td><code>/src/page/documentacao.html</code></td><td>URL original da documentação, preservada por compatibilidade.</td><td>Não</td></tr>
+              <tr><td><code>/health</code></td><td>Verificação operacional com status, versão e uptime.</td><td>Não</td></tr>
+            </tbody>
+          </table>
         </div>
 
-        <h3>Dinossauros por Formação Geológica</h3>
-        <p>Retorna todos os dinossauros associados a uma formação geológica específica (ex: ID 2 = Formação Morrison).</p>
-        <div class="doc-code-block">
-          <span class="tk-funcao">GET</span> <span class="tk-string">/api/formations/:id/dinosaurs</span>
+        <div class="doc-nota doc-nota--info">
+          <strong>Prefira <code>/docs</code>.</strong> É a URL limpa e estável da documentação. A página usa caminhos relativos, por isso funciona tanto em <code>/docs</code> quanto no endereço original <code>/src/page/documentacao.html</code>.
+        </div>
+
+        <h3>Montagem da URL</h3>
+        <p>O padrão é <code>URL_BASE + CAMINHO + QUERY_STRING</code>:</p>
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">Estrutura</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code>https://dinoapi-swg8.onrender.com/api/dinosaurs?page=1&amp;limit=10&amp;sort=name&amp;order=asc</code></pre>
         </div>
       </section>
 
-      <section id="entidades" class="doc-secao">
-        <h2>Entidades Relacionadas</h2>
-        <p>Estes endpoints retornam listas de categorias que podem ser usadas como filtros na rota principal de dinossauros.</p>
-        
-        <table class="doc-tabela">
-          <thead>
-            <tr>
-              <th>Recurso</th>
-              <th>Endpoint</th>
-              <th>Descrição</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>periods</code></td>
-              <td><code>/api/periods</code></td>
-              <td>Períodos geológicos (Triássico, Jurássico, Cretáceo)</td>
-            </tr>
-            <tr>
-              <td><code>diets</code></td>
-              <td><code>/api/diets</code></td>
-              <td>Tipos de alimentação (Carnívoro, Herbívoro, Onívoro)</td>
-            </tr>
-            <tr>
-              <td><code>families</code></td>
-              <td><code>/api/families</code></td>
-              <td>Famílias taxonômicas (Tyrannosauridae, Hadrosauridae, etc.)</td>
-            </tr>
-            <tr>
-              <td><code>museums</code></td>
-              <td><code>/api/museums</code></td>
-              <td>Museus que abrigam os holótipos ou espécimes principais</td>
-            </tr>
-          </tbody>
-        </table>
+      <section id="formato-respostas" class="doc-secao">
+        <span class="doc-secao__rotulo">05 · Começando</span>
+        <h2>Formato das respostas</h2>
+        <p>Toda resposta é JSON com <code>Content-Type: application/json; charset=utf-8</code>. O envelope é uniforme: sucesso traz <code>success: true</code> e <code>data</code>; erro traz <code>success: false</code> e <code>message</code>.</p>
+
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead>
+              <tr>
+                <th>Campo</th>
+                <th>Tipo</th>
+                <th>Quando aparece</th>
+                <th>Descrição</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>success</code></td><td>boolean</td><td>Sempre</td><td>Indica se a requisição foi concluída com êxito.</td></tr>
+              <tr><td><code>data</code></td><td>objeto ou array</td><td>Sucesso</td><td>Registro único ou coleção de registros.</td></tr>
+              <tr><td><code>meta</code></td><td>objeto</td><td>Quando aplicável</td><td>Paginação, contagem, mensagem contextual ou ID relacionado.</td></tr>
+              <tr><td><code>message</code></td><td>string</td><td>Erro</td><td>Mensagem pública e segura, em português.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Sucesso com coleção e paginação</h3>
+        <p>Exemplo reduzido do envelope: a lista real traz até <code>limit</code> itens.</p>
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">JSON · lista paginada</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code>{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "name": "Tyrannosaurus Rex"
+    }
+  ],
+  "meta": {
+    "page": 1,
+    "limit": 10,
+    "total": 100,
+    "totalPages": 10
+  }
+}</code></pre>
+        </div>
+
+        <h3>Sucesso com registro único</h3>
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">JSON · item por ID</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code>{
+  "success": true,
+  "data": {
+    "id": 1,
+    "name": "Tyrannosaurus Rex",
+    "scientificName": "Tyrannosaurus rex"
+  }
+}</code></pre>
+        </div>
+
+        <h3>Metadados possíveis</h3>
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead>
+              <tr>
+                <th>Formato de <code>meta</code></th>
+                <th>Onde aparece</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>{ page, limit, total, totalPages }</code></td><td>Listagem de dinossauros.</td></tr>
+              <tr><td><code>{ count }</code></td><td>Dinossauros aleatórios.</td></tr>
+              <tr><td><code>{ total }</code></td><td>Catálogo de imagens.</td></tr>
+              <tr><td><code>{ dinosaurId, total }</code></td><td>Imagens de um dinossauro.</td></tr>
+              <tr><td><code>{ message, count }</code></td><td>Dinossauros por continente, país ou formação.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Erro</h3>
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">JSON · erro</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code>{
+  "success": false,
+  "message": "Dinossauro não encontrado."
+}</code></pre>
+        </div>
+
+        <div class="doc-nota">
+          <strong>Sem detalhes internos.</strong> Respostas de erro não incluem stack trace, caminhos de arquivo ou detalhes de implementação. Use o cabeçalho <code>X-Request-Id</code> para correlacionar uma falha com os logs do servidor.
+        </div>
+      </section>
+
+      <section id="acesso-publico" class="doc-secao">
+        <span class="doc-secao__rotulo">06 · Começando</span>
+        <h2>Acesso público e ausência de autenticação obrigatória</h2>
+        <p>A DinoAtlas API é <strong>aberta</strong>. Nenhum endpoint exige chave de API, token, cookie ou cabeçalho <code>Authorization</code>. Basta enviar um <code>GET</code> para a URL base.</p>
+
+        <h3>Características do acesso</h3>
+        <ul class="doc-lista">
+          <li><strong>Somente leitura:</strong> apenas métodos <code>GET</code> estão implementados.</li>
+          <li><strong>CORS liberado:</strong> a resposta inclui <code>Access-Control-Allow-Origin: *</code> e permite os métodos <code>GET</code> e <code>OPTIONS</code>.</li>
+          <li><strong>Sem credenciais:</strong> a API não usa cookies de sessão nem exige <code>credentials: "include"</code>.</li>
+          <li><strong>HTTPS em produção:</strong> use sempre a URL HTTPS para evitar bloqueios de conteúdo misto no navegador.</li>
+          <li><strong>Dados públicos:</strong> não envie informações pessoais ou sensíveis para a API.</li>
+        </ul>
+
+        <h3>Cabeçalhos</h3>
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead>
+              <tr>
+                <th>Cabeçalho</th>
+                <th>Obrigatório</th>
+                <th>Observação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>Accept: application/json</code></td><td>Não</td><td>Recomendado para deixar explícito o formato esperado.</td></tr>
+              <tr><td><code>Content-Type</code></td><td>Não</td><td>Não há corpo de requisição nos endpoints públicos.</td></tr>
+              <tr><td><code>Authorization</code></td><td>Não</td><td>Não é necessário e não altera a resposta.</td></tr>
+              <tr><td><code>CF-Connecting-IP</code></td><td>Não</td><td>Usado internamente pelo rate limiting quando a API está atrás de Cloudflare/Render. O cliente não deve defini-lo.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="doc-nota doc-nota--info">
+          <strong>Identificação para rate limiting.</strong> Em produção, a API identifica o cliente pelo cabeçalho encaminhado pela infraestrutura (<code>CF-Connecting-IP</code>). Em execução local, usa o IP da conexão. Você não precisa configurar nada para isso.
+        </div>
+
+        <h3>Exemplo de requisição mínima</h3>
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">cURL</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code>curl -H "Accept: application/json" https://dinoapi-swg8.onrender.com/api/dinosaurs/1</code></pre>
+        </div>
+      </section>
+
+      <section id="rate-limiting" class="doc-secao">
+        <span class="doc-secao__rotulo">07 · Começando</span>
+        <h2>Rate limiting</h2>
+        <p>As rotas sob <code>/api</code> são protegidas por um limitador por cliente. A configuração padrão permite <strong>100 requisições a cada 15 minutos</strong>. Ao ultrapassar o limite, a API responde <strong>429</strong> até a janela ser reaberta.</p>
+
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Valor padrão</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Escopo</td><td>Rotas sob <code>/api</code></td></tr>
+              <tr><td>Limite</td><td>100 requisições</td></tr>
+              <tr><td>Janela</td><td>15 minutos (900 segundos)</td></tr>
+              <tr><td>Identificação</td><td>IP do cliente encaminhado pela infraestrutura</td></tr>
+              <tr><td>Fora do limite</td><td><code>/</code>, <code>/docs</code>, <code>/health</code> e arquivos estáticos</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Cabeçalhos da resposta</h3>
+        <p>Cada resposta de <code>/api</code> informa o estado do limitador:</p>
+
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead>
+              <tr>
+                <th>Cabeçalho</th>
+                <th>Significado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>RateLimit-Policy</code></td><td>Política aplicada, no formato <code>100;w=900</code>.</td></tr>
+              <tr><td><code>RateLimit-Limit</code></td><td>Total de requisições permitidas na janela.</td></tr>
+              <tr><td><code>RateLimit-Remaining</code></td><td>Requisições restantes antes do bloqueio.</td></tr>
+              <tr><td><code>RateLimit-Reset</code></td><td>Segundos restantes até a janela ser reaberta.</td></tr>
+              <tr><td><code>Retry-After</code></td><td>Presente na resposta 429; indica quantos segundos aguardar.</td></tr>
+              <tr><td><code>X-Request-Id</code></td><td>Identificador único da requisição, útil em suporte e logs.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Resposta ao exceder o limite</h3>
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">JSON · 429 Too Many Requests</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code>{
+  "success": false,
+  "message": "Muitas requisições originadas deste IP. Por favor, tente novamente após 15 minutos."
+}</code></pre>
+        </div>
+
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">Headers · exemplo de bloqueio</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code>HTTP/1.1 429 Too Many Requests
+RateLimit-Policy: 100;w=900
+RateLimit-Limit: 100
+RateLimit-Remaining: 0
+RateLimit-Reset: 912
+Retry-After: 912
+Content-Type: application/json; charset=utf-8
+X-Request-Id: 2f6c1a9e-4a3f-4f0e-9c55-0b7f1d2e8a11</code></pre>
+        </div>
+
+        <h3>Boas práticas</h3>
+        <ul class="doc-lista">
+          <li>Reaproveite respostas e evite repetir a mesma consulta em sequência.</li>
+          <li>Use paginação e filtros para reduzir o número de chamadas.</li>
+          <li>Ao receber 429, aguarde o valor de <code>Retry-After</code> antes de tentar novamente.</li>
+          <li>Implemente backoff exponencial em rotinas automáticas.</li>
+          <li>Não use o cabeçalho <code>CF-Connecting-IP</code> para contornar o limite; ele é controlado pela infraestrutura.</li>
+        </ul>
+      </section>
+
+      <section id="recursos-endpoints" class="doc-secao">
+        <span class="doc-secao__rotulo">08 · Recursos</span>
+        <h2>Recursos e endpoints</h2>
+        <p>A API expõe <strong>36 rotas GET</strong> sob <code>/api</code>, organizadas em 15 grupos de recursos. Todos os métodos documentados são <code>GET</code>; a API não oferece criação, atualização ou remoção públicas.</p>
+        <nav class="doc-chips" aria-label="Atalhos para os recursos">
+          <a class="doc-chip" href="#rec-api">Metadados</a>
+          <a class="doc-chip" href="#rec-dinosaurs">Dinossauros</a>
+          <a class="doc-chip" href="#rec-images">Imagens</a>
+          <a class="doc-chip" href="#rec-periods">Períodos</a>
+          <a class="doc-chip" href="#rec-epochs">Épocas</a>
+          <a class="doc-chip" href="#rec-formations">Formações</a>
+          <a class="doc-chip" href="#rec-continents">Continentes</a>
+          <a class="doc-chip" href="#rec-countries">Países</a>
+          <a class="doc-chip" href="#rec-habitats">Habitats</a>
+          <a class="doc-chip" href="#rec-diets">Dietas</a>
+          <a class="doc-chip" href="#rec-families">Famílias</a>
+          <a class="doc-chip" href="#rec-clades">Clados</a>
+          <a class="doc-chip" href="#rec-classifications">Classificações</a>
+          <a class="doc-chip" href="#rec-discoveries">Descobertas</a>
+          <a class="doc-chip" href="#rec-museums">Museus</a>
+        </nav>
+
+        <article class="doc-recurso" id="rec-api">
+          <header class="doc-recurso__cabecalho">
+            <h3>Metadados da API</h3>
+            <span class="doc-recurso__contagem">3 endpoints</span>
+          </header>
+          <p>Rotas de identificação e estatísticas. Não aceitam parâmetros e não são paginadas.</p>
+
+          <h4>Endpoints</h4>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api</code>
+            <span class="doc-endpoint__desc">Nome, versão, descrição, status, totais, autor e link do repositório.</span>
+          </div>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/status</code>
+            <span class="doc-endpoint__desc">Status operacional, versão, timestamp e uptime em segundos.</span>
+          </div>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/statistics</code>
+            <span class="doc-endpoint__desc">Totais de registros e quantos valores distintos os dinossauros realmente utilizam.</span>
+          </div>
+
+          <h4>Exemplos de resposta</h4>
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · GET /api</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": {
+    "name": "DinoAtlas API",
+    "version": "2.5.0",
+    "description": "Uma API REST pública para dados estruturados sobre dinossauros e informações paleontológicas relacionadas.",
+    "status": "Online",
+    "totalDinosaurs": 100,
+    "totalEndpoints": 36,
+    "author": "Davi Ferreira",
+    "github": "https://github.com/Dferreiraz/DinoAtlasAPI",
+    "lastUpdate": "2026-08-30"
+  }
+}</code></pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · GET /api/status</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": {
+    "status": "online",
+    "version": "2.5.0",
+    "timestamp": "2026-11-10T21:00:00.000Z",
+    "uptime": 1234.56
+  }
+}</code></pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · GET /api/statistics</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": {
+    "totalDinosaurs": 100,
+    "totalFamilies": 25,
+    "totalPeriods": 3,
+    "totalContinents": 7,
+    "totalCountries": 17,
+    "totalDiscoveries": 100,
+    "usage": {
+      "families": 16,
+      "periods": 3,
+      "continents": 7,
+      "countries": 17
+    }
+  }
+}</code></pre>
+          </div>
+
+          <div class="doc-nota doc-nota--info">
+            <code>timestamp</code> e <code>uptime</code> variam a cada chamada. <code>usage</code> conta valores distintos efetivamente referenciados pelos dinossauros, por isso pode ser menor que o total do catálogo — como <code>families</code> (16 usadas de 25 cadastradas).
+          </div>
+
+          <h4>Consumo</h4>
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">cURL e JavaScript</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code># cURL
+curl https://dinoapi-swg8.onrender.com/api
+curl https://dinoapi-swg8.onrender.com/api/statistics
+
+// JavaScript (Fetch)
+const resposta = await fetch("https://dinoapi-swg8.onrender.com/api/statistics");
+const corpo = await resposta.json();
+console.log(corpo.data.totalDinosaurs);</code></pre>
+          </div>
+
+          <h4>Códigos HTTP</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Código</th><th>Situação</th></tr></thead>
+              <tbody>
+                <tr><td><code>200</code></td><td>Metadados ou estatísticas retornados.</td></tr>
+                <tr><td><code>429</code></td><td>Limite de requisições excedido.</td></tr>
+                <tr><td><code>500</code></td><td>Falha interna ao ler os dados.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="doc-recurso" id="rec-dinosaurs">
+          <header class="doc-recurso__cabecalho">
+            <h3>Dinossauros</h3>
+            <span class="doc-recurso__contagem">5 endpoints</span>
+          </header>
+          <p>Recurso central da API. Retorna os 100 registros de dinossauros, com dados morfológicos, taxonômicos, geográficos e textos complementares. As rotas de listagem, busca e ID único acrescentam quatro campos de imagem ao registro.</p>
+
+          <h4>Endpoints</h4>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/dinosaurs</code>
+            <span class="doc-endpoint__desc">Lista paginada com busca, filtros e ordenação.</span>
+          </div>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/dinosaurs/:id</code>
+            <span class="doc-endpoint__desc">Retorna um dinossauro pelo ID, com campos de imagem.</span>
+          </div>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/dinosaurs/random</code>
+            <span class="doc-endpoint__desc">Sorteia um ou mais dinossauros; aceita <code>limit</code> de 1 a 50.</span>
+          </div>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/dinosaurs/name/:name</code>
+            <span class="doc-endpoint__desc">Busca por trecho do campo <code>name</code>, sem diferenciar maiúsculas.</span>
+          </div>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/dinosaurs/:id/images</code>
+            <span class="doc-endpoint__desc">Lista as imagens associadas ao dinossauro.</span>
+          </div>
+
+          <h4>Parâmetros de rota</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Parâmetro</th><th>Tipo</th><th>Regra</th><th>Erro</th></tr></thead>
+              <tbody>
+                <tr><td><code>:id</code></td><td>inteiro</td><td>Inteiro positivo. Zeros à esquerda são aceitos (<code>01</code> = <code>1</code>).</td><td><code>400</code> se inválido; <code>404</code> se não existir.</td></tr>
+                <tr><td><code>:name</code></td><td>texto</td><td>Trecho do nome, até 100 caracteres, comparado sem diferenciar maiúsculas.</td><td><code>400</code> se exceder 100 caracteres; <code>404</code> se não houver correspondência.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Query parameters da listagem</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Parâmetro</th><th>Tipo</th><th>Padrão</th><th>Comportamento</th></tr></thead>
+              <tbody>
+                <tr><td><code>page</code></td><td>inteiro ≥ 1</td><td><code>1</code></td><td>Página desejada.</td></tr>
+                <tr><td><code>limit</code></td><td>inteiro 1–100</td><td><code>10</code></td><td>Itens por página.</td></tr>
+                <tr><td><code>search</code></td><td>texto ≤ 100</td><td>—</td><td>Busca em <code>name</code>, <code>scientificName</code> e <code>description</code>.</td></tr>
+                <tr><td><code>sort</code></td><td>enum</td><td>—</td><td>Um dos 22 campos listados em <a href="#ordenacao">Ordenação</a>.</td></tr>
+                <tr><td><code>order</code></td><td><code>asc</code> ou <code>desc</code></td><td><code>asc</code></td><td>Só tem efeito quando <code>sort</code> é informado.</td></tr>
+                <tr><td>Filtros relacionais</td><td>inteiro ≥ 1</td><td>—</td><td><code>periodId</code>, <code>epochId</code>, <code>dietId</code>, <code>continentId</code>, <code>countryId</code>, <code>formationId</code>, <code>familyId</code>, <code>cladeId</code>, <code>habitatId</code>, <code>classificationId</code>, <code>museumId</code>.</td></tr>
+                <tr><td>Filtros numéricos</td><td>número ≥ 0</td><td>—</td><td><code>lengthMin</code>, <code>lengthMax</code>, <code>weightMin</code>, <code>weightMax</code>, <code>heightMin</code>, <code>heightMax</code>, <code>estimatedSpeedMin</code>, <code>estimatedSpeedMax</code>.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="doc-nota">
+            <strong>Combinação de filtros.</strong> Filtros relacionais, filtros numéricos e <code>search</code> são aplicados em conjunto com lógica <strong>AND</strong>. Consulte <a href="#filtros">Filtros</a> para os valores aceitos e exemplos.
+          </div>
+
+          <h4>Campos de imagem acrescentados</h4>
+          <p>As rotas de listagem, de ID único e de busca por nome retornam, além dos campos do schema, os quatro campos abaixo. Se não houver imagem, os quatro vêm como <code>null</code>.</p>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Campo</th><th>Tipo</th><th>Origem</th></tr></thead>
+              <tbody>
+                <tr><td><code>imagem</code></td><td>string ou null</td><td>Campo <code>image</code> da imagem associada.</td></tr>
+                <tr><td><code>thumbnail</code></td><td>string ou null</td><td>Miniatura da imagem associada.</td></tr>
+                <tr><td><code>imageAuthor</code></td><td>string ou null</td><td>Autor da imagem.</td></tr>
+                <tr><td><code>imageLicense</code></td><td>string ou null</td><td>Licença da imagem.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Exemplos de requisição e resposta</h4>
+          <h4>1. Listar dinossauros</h4>
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">cURL</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>curl "https://dinoapi-swg8.onrender.com/api/dinosaurs?limit=1&amp;sort=id&amp;order=asc"</code></pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · 200 OK (trecho)</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "name": "Tyrannosaurus Rex",
+      "scientificName": "Tyrannosaurus rex",
+      "meaning": "Lagarto Tirano",
+      "classificationId": 1,
+      "cladeId": 1,
+      "familyId": 1,
+      "periodId": 3,
+      "epochId": 1,
+      "dietId": 1,
+      "habitatId": 1,
+      "formationId": [1],
+      "continentId": 1,
+      "countryId": [1],
+      "discoveryId": 1,
+      "museumId": 1,
+      "imageId": 1,
+      "length": 12.3,
+      "height": 4,
+      "weight": 8400,
+      "estimatedSpeed": 27,
+      "species": "T. rex",
+      "genus": "Tyrannosaurus",
+      "status": "Válido",
+      "imagem": "https://res.cloudinary.com/ckntndjo/image/upload/v1790730807/trex.jpg",
+      "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/trex.jpg",
+      "imageAuthor": "APK",
+      "imageLicense": "Creative Commons Attribution 4.0"
+    }
+  ],
+  "meta": {
+    "page": 1,
+    "limit": 1,
+    "total": 100,
+    "totalPages": 100
+  }
+}</code></pre>
+          </div>
+          <p>Os campos <code>description</code>, <code>characteristics</code>, <code>curiosities</code> e <code>sources</code> foram omitidos neste trecho; eles fazem parte do registro completo.</p>
+
+          <h4>2. Buscar por ID</h4>
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">cURL</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>curl "https://dinoapi-swg8.onrender.com/api/dinosaurs/48"</code></pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · 200 OK (trecho)</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": {
+    "id": 48,
+    "name": "Irritator",
+    "scientificName": "Irritator challengeri",
+    "meaning": "Irritante",
+    "classificationId": 1,
+    "cladeId": 1,
+    "familyId": 11,
+    "periodId": 3,
+    "epochId": 1,
+    "dietId": 1,
+    "habitatId": 3,
+    "formationId": [25],
+    "continentId": 2,
+    "countryId": [16],
+    "discoveryId": 48,
+    "museumId": 11,
+    "imageId": 48,
+    "length": 8,
+    "height": 2.5,
+    "weight": 1000,
+    "estimatedSpeed": 28,
+    "species": "I. challengeri",
+    "genus": "Irritator",
+    "status": "Válido",
+    "imagem": "https://res.cloudinary.com/ckntndjo/image/upload/v1790738446/Irritator.png",
+    "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/Irritator.png",
+    "imageAuthor": "Sauroarchive",
+    "imageLicense": "Creative Commons Attribution 4.0"
+  }
+}</code></pre>
+          </div>
+
+          <h4>3. Sortear dinossauros</h4>
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">cURL</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>curl "https://dinoapi-swg8.onrender.com/api/dinosaurs/random?limit=2"</code></pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · 200 OK (valores variam)</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": [
+    { "id": 91, "name": "Psittacosaurus" },
+    { "id": 48, "name": "Irritator" }
+  ],
+  "meta": {
+    "count": 2
+  }
+}</code></pre>
+          </div>
+
+          <div class="doc-nota">
+            <strong>Formato condicional.</strong> Com <code>limit=1</code> — o padrão — <code>data</code> é um <strong>objeto</strong>. Com <code>limit</code> maior que 1, <code>data</code> é um <strong>array</strong>. O limite máximo é <strong>50</strong>.
+          </div>
+
+          <h4>4. Buscar pelo nome</h4>
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">cURL</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>curl "https://dinoapi-swg8.onrender.com/api/dinosaurs/name/rex"</code></pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · 200 OK (trecho)</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "name": "Tyrannosaurus Rex",
+      "scientificName": "Tyrannosaurus rex"
+    }
+  ]
+}</code></pre>
+          </div>
+          <p>A busca por nome considera apenas o campo <code>name</code> e retorna todos os registros cujo nome contenha o trecho informado. Não há paginação nem metadados nessa rota.</p>
+
+          <h4>5. Buscar imagens do dinossauro</h4>
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">cURL</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>curl "https://dinoapi-swg8.onrender.com/api/dinosaurs/1/images"</code></pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · 200 OK</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "dinosaurId": 1,
+      "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/trex.jpg",
+      "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790730807/trex.jpg",
+      "author": "APK",
+      "license": "Creative Commons Attribution 4.0",
+      "modified": true,
+      "modification": "Background removed and replaced white background"
+    }
+  ],
+  "meta": {
+    "dinosaurId": 1,
+    "total": 1
+  }
+}</code></pre>
+          </div>
+
+          <h4>Consumo com JavaScript</h4>
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JavaScript · Fetch</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>const BASE = "https://dinoapi-swg8.onrender.com/api";
+
+async function listarDinossauros(parametros = {}) {
+  const url = new URL(`${BASE}/dinosaurs`);
+  Object.entries(parametros).forEach(([chave, valor]) => {
+    url.searchParams.set(chave, String(valor));
+  });
+
+  const resposta = await fetch(url);
+  const corpo = await resposta.json();
+
+  if (!resposta.ok || !corpo.success) {
+    throw new Error(corpo.message || `HTTP ${resposta.status}`);
+  }
+
+  return corpo;
+}
+
+const lista = await listarDinossauros({
+  dietId: 1,
+  periodId: 3,
+  lengthMin: 10,
+  sort: "weight",
+  order: "desc",
+  limit: 5
+});
+
+console.log(lista.meta.total);
+console.log(lista.data.map((dino) => dino.name));</code></pre>
+          </div>
+
+          <h4>Códigos HTTP</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Código</th><th>Situação</th></tr></thead>
+              <tbody>
+                <tr><td><code>200</code></td><td>Lista, registro, sorteio, busca por nome ou imagens retornados. Página fora do intervalo também retorna 200 com <code>data: []</code>.</td></tr>
+                <tr><td><code>400</code></td><td>ID, <code>page</code>, <code>limit</code>, <code>limit</code> do random, <code>sort</code>, <code>order</code>, <code>search</code>, filtro ou <code>name</code> inválido.</td></tr>
+                <tr><td><code>404</code></td><td>Dinossauro inexistente ou nenhum nome correspondente.</td></tr>
+                <tr><td><code>429</code></td><td>Limite de requisições excedido.</td></tr>
+                <tr><td><code>500</code></td><td>Falha interna ao consultar os dados.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="doc-nota doc-nota--info">
+            <strong>Rotas relacionais não injetam imagem.</strong> As listas de dinossauros por continente, país ou formação retornam o registro bruto, sem os campos <code>imagem</code>, <code>thumbnail</code>, <code>imageAuthor</code> e <code>imageLicense</code>. Para obter a imagem, consulte o dinossauro por ID ou use <code>/api/dinosaurs/:id/images</code>.
+          </div>
+        </article>
+
+        <article class="doc-recurso" id="rec-images">
+          <header class="doc-recurso__cabecalho">
+            <h3>Imagens</h3>
+            <span class="doc-recurso__contagem">1 endpoint</span>
+          </header>
+          <p>Catálogo completo de imagens, com miniatura, URL original, autoria, licença e indicação de modificação. As imagens são associadas aos dinossauros pelo campo <code>dinosaurId</code>.</p>
+
+          <h4>Endpoint</h4>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/images</code>
+            <span class="doc-endpoint__desc">Lista todas as imagens. Não aceita paginação nem filtros.</span>
+          </div>
+
+          <div class="doc-nota">
+            <strong>Não existe <code>/api/images/:id</code>.</strong> Para obter as imagens de um dinossauro, use <code>GET /api/dinosaurs/:id/images</code>. Para obter a imagem principal junto com o registro, consulte o dinossauro por ID.
+          </div>
+
+          <h4>Campos</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Campo</th><th>Tipo</th><th>Descrição</th></tr></thead>
+              <tbody>
+                <tr><td><code>id</code></td><td>inteiro</td><td>ID da imagem.</td></tr>
+                <tr><td><code>dinosaurId</code></td><td>inteiro</td><td>ID do dinossauro associado.</td></tr>
+                <tr><td><code>thumbnail</code></td><td>string</td><td>URL da miniatura.</td></tr>
+                <tr><td><code>image</code></td><td>string</td><td>URL da imagem original.</td></tr>
+                <tr><td><code>author</code></td><td>string</td><td>Autor ou crédito da imagem.</td></tr>
+                <tr><td><code>license</code></td><td>string</td><td>Licença de uso.</td></tr>
+                <tr><td><code>modified</code></td><td>boolean</td><td>Indica se a imagem foi modificada.</td></tr>
+                <tr><td><code>modification</code></td><td>string</td><td>Descrição da modificação; vazia quando não há.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Exemplo</h4>
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">cURL e JavaScript</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code># cURL
+curl https://dinoapi-swg8.onrender.com/api/images
+
+// JavaScript (Fetch)
+const resposta = await fetch("https://dinoapi-swg8.onrender.com/api/images");
+const corpo = await resposta.json();
+console.log(corpo.meta.total);</code></pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · 200 OK (primeiro item)</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "dinosaurId": 1,
+      "thumbnail": "https://res.cloudinary.com/ckntndjo/image/upload/c_fill,w_400,h_300,f_auto,q_auto/trex.jpg",
+      "image": "https://res.cloudinary.com/ckntndjo/image/upload/v1790730807/trex.jpg",
+      "author": "APK",
+      "license": "Creative Commons Attribution 4.0",
+      "modified": true,
+      "modification": "Background removed and replaced white background"
+    }
+  ],
+  "meta": {
+    "total": 100
+  }
+}</code></pre>
+          </div>
+          <p><code>data</code> contém as 100 imagens; apenas a primeira foi exibida acima.</p>
+
+          <h4>Códigos HTTP</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Código</th><th>Situação</th></tr></thead>
+              <tbody>
+                <tr><td><code>200</code></td><td>Catálogo retornado.</td></tr>
+                <tr><td><code>429</code></td><td>Limite de requisições excedido.</td></tr>
+                <tr><td><code>500</code></td><td>Falha interna ao ler as imagens.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="doc-recurso" id="rec-periods">
+          <header class="doc-recurso__cabecalho">
+            <h3>Períodos geológicos</h3>
+            <span class="doc-recurso__contagem">2 endpoints</span>
+          </header>
+          <p>Os três períodos da Era Mesozoica. Cada registro traz o intervalo em milhões de anos e uma descrição.</p>
+
+          <h4>Endpoints</h4>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/periods</code>
+            <span class="doc-endpoint__desc">Lista os 3 períodos cadastrados.</span>
+          </div>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/periods/:id</code>
+            <span class="doc-endpoint__desc">Retorna um período pelo ID.</span>
+          </div>
+
+          <h4>Campos</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Campo</th><th>Tipo</th><th>Descrição</th></tr></thead>
+              <tbody>
+                <tr><td><code>id</code></td><td>inteiro</td><td>Identificador do período.</td></tr>
+                <tr><td><code>name</code></td><td>string</td><td>Nome do período.</td></tr>
+                <tr><td><code>startMillionYears</code></td><td>número</td><td>Início em milhões de anos atrás.</td></tr>
+                <tr><td><code>endMillionYears</code></td><td>número</td><td>Fim em milhões de anos atrás.</td></tr>
+                <tr><td><code>description</code></td><td>string</td><td>Contexto geológico e paleontológico.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Exemplo</h4>
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">cURL e JavaScript</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code># cURL
+curl https://dinoapi-swg8.onrender.com/api/periods
+curl https://dinoapi-swg8.onrender.com/api/periods/1
+
+// JavaScript (Fetch)
+const resposta = await fetch("https://dinoapi-swg8.onrender.com/api/periods/1");
+const corpo = await resposta.json();
+console.log(corpo.data.name);</code></pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · GET /api/periods/1</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": {
+    "id": 1,
+    "name": "Triássico",
+    "startMillionYears": 251.9,
+    "endMillionYears": 201.3,
+    "description": "O período inicial da Era Mesozoica, marcado pelo surgimento dos primeiros dinossauros após a extinção do Permiano."
+  }
+}</code></pre>
+          </div>
+          <p>A listagem retorna <code>data</code> como array, sem <code>meta</code>.</p>
+
+          <h4>Códigos HTTP</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Código</th><th>Situação</th></tr></thead>
+              <tbody>
+                <tr><td><code>200</code></td><td>Lista ou período retornado.</td></tr>
+                <tr><td><code>400</code></td><td>ID sintaticamente inválido.</td></tr>
+                <tr><td><code>404</code></td><td><code>Período não encontrado.</code></td></tr>
+                <tr><td><code>429</code></td><td>Limite de requisições excedido.</td></tr>
+                <tr><td><code>500</code></td><td>Falha interna ao ler os dados.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="doc-recurso" id="rec-epochs">
+          <header class="doc-recurso__cabecalho">
+            <h3>Épocas</h3>
+            <span class="doc-recurso__contagem">2 endpoints</span>
+          </header>
+          <p>Subdivisões dos períodos geológicos. Cada época referencia o período ao qual pertence por meio de <code>periodId</code>.</p>
+
+          <h4>Endpoints</h4>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/epochs</code>
+            <span class="doc-endpoint__desc">Lista as 5 épocas cadastradas.</span>
+          </div>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/epochs/:id</code>
+            <span class="doc-endpoint__desc">Retorna uma época pelo ID.</span>
+          </div>
+
+          <h4>Campos</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Campo</th><th>Tipo</th><th>Descrição</th></tr></thead>
+              <tbody>
+                <tr><td><code>id</code></td><td>inteiro</td><td>Identificador da época.</td></tr>
+                <tr><td><code>name</code></td><td>string</td><td>Nome da época.</td></tr>
+                <tr><td><code>periodId</code></td><td>inteiro</td><td>Referência a <code>periods.id</code>.</td></tr>
+                <tr><td><code>description</code></td><td>string</td><td>Contexto da época.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Exemplo</h4>
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">cURL e JavaScript</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code># cURL
+curl https://dinoapi-swg8.onrender.com/api/epochs
+curl https://dinoapi-swg8.onrender.com/api/epochs/1
+
+// JavaScript (Fetch)
+const resposta = await fetch("https://dinoapi-swg8.onrender.com/api/epochs");
+const corpo = await resposta.json();
+console.log(corpo.data.map((epoca) => epoca.name));</code></pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · GET /api/epochs/1</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": {
+    "id": 1,
+    "name": "Cretáceo Superior",
+    "periodId": 3,
+    "description": "Época final dos dinossauros, apresentando os predadores terrestres mais massivos."
+  }
+}</code></pre>
+          </div>
+
+          <h4>Códigos HTTP</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Código</th><th>Situação</th></tr></thead>
+              <tbody>
+                <tr><td><code>200</code></td><td>Lista ou época retornada.</td></tr>
+                <tr><td><code>400</code></td><td>ID sintaticamente inválido.</td></tr>
+                <tr><td><code>404</code></td><td><code>Época não encontrada.</code></td></tr>
+                <tr><td><code>429</code></td><td>Limite de requisições excedido.</td></tr>
+                <tr><td><code>500</code></td><td>Falha interna ao ler os dados.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="doc-recurso" id="rec-formations">
+          <header class="doc-recurso__cabecalho">
+            <h3>Formações geológicas</h3>
+            <span class="doc-recurso__contagem">3 endpoints</span>
+          </header>
+          <p>Formações onde os fósseis foram encontrados. Cada formação referencia um país e um período, além de expor uma rota com os dinossauros associados.</p>
+
+          <h4>Endpoints</h4>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/formations</code>
+            <span class="doc-endpoint__desc">Lista as 16 formações cadastradas.</span>
+          </div>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/formations/:id</code>
+            <span class="doc-endpoint__desc">Retorna uma formação pelo ID.</span>
+          </div>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/formations/:id/dinosaurs</code>
+            <span class="doc-endpoint__desc">Lista os dinossauros encontrados na formação.</span>
+          </div>
+
+          <h4>Campos</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Campo</th><th>Tipo</th><th>Descrição</th></tr></thead>
+              <tbody>
+                <tr><td><code>id</code></td><td>inteiro</td><td>Identificador da formação. Os IDs não são contíguos.</td></tr>
+                <tr><td><code>name</code></td><td>string</td><td>Nome da formação.</td></tr>
+                <tr><td><code>countryId</code></td><td>inteiro</td><td>Referência a <code>countries.id</code>.</td></tr>
+                <tr><td><code>periodId</code></td><td>inteiro</td><td>Referência a <code>periods.id</code>.</td></tr>
+                <tr><td><code>description</code></td><td>string</td><td>Contexto geológico e paleontológico.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Exemplos</h4>
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">cURL e JavaScript</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code># cURL
+curl https://dinoapi-swg8.onrender.com/api/formations
+curl https://dinoapi-swg8.onrender.com/api/formations/2
+curl https://dinoapi-swg8.onrender.com/api/formations/2/dinosaurs
+
+// JavaScript (Fetch)
+const resposta = await fetch(
+  "https://dinoapi-swg8.onrender.com/api/formations/2/dinosaurs"
+);
+const corpo = await resposta.json();
+console.log(corpo.meta.count, corpo.data);</code></pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · GET /api/formations/2</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": {
+    "id": 2,
+    "name": "Formação Morrison",
+    "countryId": 1,
+    "periodId": 2,
+    "description": "Formação do Jurássico Superior nos EUA, rica em saurópodes gigantes e predadores como Allosaurus."
+  }
+}</code></pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · GET /api/formations/2/dinosaurs (trecho)</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": [
+    {
+      "id": 3,
+      "name": "Stegosaurus",
+      "formationId": [2],
+      "countryId": [1]
+    },
+    {
+      "id": 4,
+      "name": "Brachiosaurus",
+      "formationId": [2],
+      "countryId": [1]
+    }
+  ],
+  "meta": {
+    "message": "Dinossauros encontrados na formação: Formação Morrison",
+    "count": 15
+  }
+}</code></pre>
+          </div>
+          <p>A lista contém 15 registros; apenas os dois primeiros foram exibidos. A rota relacional retorna registros crus de dinossauros, sem os campos de imagem.</p>
+
+          <h4>Códigos HTTP</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Código</th><th>Situação</th></tr></thead>
+              <tbody>
+                <tr><td><code>200</code></td><td>Lista, formação ou dinossauros relacionados retornados.</td></tr>
+                <tr><td><code>400</code></td><td>ID sintaticamente inválido.</td></tr>
+                <tr><td><code>404</code></td><td><code>Formação geológica não encontrada.</code></td></tr>
+                <tr><td><code>429</code></td><td>Limite de requisições excedido.</td></tr>
+                <tr><td><code>500</code></td><td>Falha interna ao ler os dados.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="doc-recurso" id="rec-continents">
+          <header class="doc-recurso__cabecalho">
+            <h3>Continentes</h3>
+            <span class="doc-recurso__contagem">3 endpoints</span>
+          </header>
+          <p>Os sete continentes considerados pela base, com código e descrição. A rota relacional lista os dinossauros cujo campo <code>continentId</code> corresponde ao continente.</p>
+
+          <h4>Endpoints</h4>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/continents</code>
+            <span class="doc-endpoint__desc">Lista os 7 continentes.</span>
+          </div>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/continents/:id</code>
+            <span class="doc-endpoint__desc">Retorna um continente pelo ID.</span>
+          </div>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/continents/:id/dinosaurs</code>
+            <span class="doc-endpoint__desc">Lista os dinossauros do continente.</span>
+          </div>
+
+          <h4>Campos</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Campo</th><th>Tipo</th><th>Descrição</th></tr></thead>
+              <tbody>
+                <tr><td><code>id</code></td><td>inteiro</td><td>Identificador do continente.</td></tr>
+                <tr><td><code>name</code></td><td>string</td><td>Nome do continente.</td></tr>
+                <tr><td><code>code</code></td><td>string</td><td>Código curto, como <code>NA</code> ou <code>SA</code>.</td></tr>
+                <tr><td><code>description</code></td><td>string</td><td>Contexto paleontológico.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Exemplos</h4>
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">cURL e JavaScript</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code># cURL
+curl https://dinoapi-swg8.onrender.com/api/continents
+curl https://dinoapi-swg8.onrender.com/api/continents/1
+curl https://dinoapi-swg8.onrender.com/api/continents/1/dinosaurs
+
+// JavaScript (Fetch)
+const resposta = await fetch(
+  "https://dinoapi-swg8.onrender.com/api/continents/1"
+);
+const corpo = await resposta.json();
+console.log(corpo.data.name);</code></pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · GET /api/continents/1</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": {
+    "id": 1,
+    "name": "América do Norte",
+    "code": "NA",
+    "description": "Lar de alguns dos dinossauros mais icônicos, como T. rex e Triceratops, predominando formações do Cretáceo Superior no oeste dos EUA e Canadá."
+  }
+}</code></pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · GET /api/continents/1/dinosaurs (metadados)</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "name": "Tyrannosaurus Rex",
+      "continentId": 1
+    }
+  ],
+  "meta": {
+    "message": "Dinossauros encontrados no continente: América do Norte",
+    "count": 46
+  }
+}</code></pre>
+          </div>
+          <p>A lista contém 46 registros; apenas o primeiro foi exibido. A rota relacional retorna os registros crus de dinossauros, sem os campos de imagem.</p>
+
+          <h4>Códigos HTTP</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Código</th><th>Situação</th></tr></thead>
+              <tbody>
+                <tr><td><code>200</code></td><td>Lista, continente ou dinossauros relacionados retornados.</td></tr>
+                <tr><td><code>400</code></td><td>ID sintaticamente inválido.</td></tr>
+                <tr><td><code>404</code></td><td><code>Continente não encontrado.</code></td></tr>
+                <tr><td><code>429</code></td><td>Limite de requisições excedido.</td></tr>
+                <tr><td><code>500</code></td><td>Falha interna ao ler os dados.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="doc-recurso" id="rec-countries">
+          <header class="doc-recurso__cabecalho">
+            <h3>Países</h3>
+            <span class="doc-recurso__contagem">3 endpoints</span>
+          </header>
+          <p>Países onde fósseis foram descobertos. Cada país pertence a um continente e pode ser consultado para listar os dinossauros associados.</p>
+
+          <h4>Endpoints</h4>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/countries</code>
+            <span class="doc-endpoint__desc">Lista os 17 países cadastrados.</span>
+          </div>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/countries/:id</code>
+            <span class="doc-endpoint__desc">Retorna um país pelo ID.</span>
+          </div>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/countries/:id/dinosaurs</code>
+            <span class="doc-endpoint__desc">Lista os dinossauros encontrados no país.</span>
+          </div>
+
+          <h4>Campos</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Campo</th><th>Tipo</th><th>Descrição</th></tr></thead>
+              <tbody>
+                <tr><td><code>id</code></td><td>inteiro</td><td>Identificador do país.</td></tr>
+                <tr><td><code>name</code></td><td>string</td><td>Nome do país.</td></tr>
+                <tr><td><code>continentId</code></td><td>inteiro</td><td>Referência a <code>continents.id</code>.</td></tr>
+                <tr><td><code>code</code></td><td>string</td><td>Código de duas letras, como <code>BR</code>.</td></tr>
+                <tr><td><code>description</code></td><td>string</td><td>Contexto das descobertas no país.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Exemplos</h4>
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">cURL e JavaScript</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code># cURL
+curl https://dinoapi-swg8.onrender.com/api/countries
+curl https://dinoapi-swg8.onrender.com/api/countries/16
+curl https://dinoapi-swg8.onrender.com/api/countries/16/dinosaurs
+
+// JavaScript (Fetch)
+const resposta = await fetch(
+  "https://dinoapi-swg8.onrender.com/api/countries/16/dinosaurs"
+);
+const corpo = await resposta.json();
+console.log(corpo.meta.count, corpo.data);</code></pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · GET /api/countries/16</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": {
+    "id": 16,
+    "name": "Brasil",
+    "continentId": 2,
+    "code": "BR",
+    "description": "Nordeste brasileiro (Bacia do Araripe) é famoso por fósseis de Irritator e pterossauros."
+  }
+}</code></pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · GET /api/countries/16/dinosaurs (trecho)</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": [
+    {
+      "id": 48,
+      "name": "Irritator",
+      "countryId": [16]
+    },
+    {
+      "id": 98,
+      "name": "Staurikosaurus",
+      "countryId": [16]
+    }
+  ],
+  "meta": {
+    "message": "Dinossauros encontrados no país: Brasil",
+    "count": 2
+  }
+}</code></pre>
+          </div>
+
+          <h4>Códigos HTTP</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Código</th><th>Situação</th></tr></thead>
+              <tbody>
+                <tr><td><code>200</code></td><td>Lista, país ou dinossauros relacionados retornados.</td></tr>
+                <tr><td><code>400</code></td><td>ID sintaticamente inválido.</td></tr>
+                <tr><td><code>404</code></td><td><code>País não encontrado.</code></td></tr>
+                <tr><td><code>429</code></td><td>Limite de requisições excedido.</td></tr>
+                <tr><td><code>500</code></td><td>Falha interna ao ler os dados.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="doc-recurso" id="rec-habitats">
+          <header class="doc-recurso__cabecalho">
+            <h3>Habitats</h3>
+            <span class="doc-recurso__contagem">2 endpoints</span>
+          </header>
+          <p>Ambientes em que os dinossauros viviam, usados como filtro por <code>habitatId</code>.</p>
+
+          <h4>Endpoints</h4>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/habitats</code>
+            <span class="doc-endpoint__desc">Lista os 4 habitats cadastrados.</span>
+          </div>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/habitats/:id</code>
+            <span class="doc-endpoint__desc">Retorna um habitat pelo ID.</span>
+          </div>
+
+          <h4>Campos</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Campo</th><th>Tipo</th><th>Descrição</th></tr></thead>
+              <tbody>
+                <tr><td><code>id</code></td><td>inteiro</td><td>Identificador do habitat.</td></tr>
+                <tr><td><code>name</code></td><td>string</td><td>Nome do ambiente.</td></tr>
+                <tr><td><code>description</code></td><td>string</td><td>Características do ambiente.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Exemplo</h4>
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">cURL e JavaScript</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code># cURL
+curl https://dinoapi-swg8.onrender.com/api/habitats
+curl https://dinoapi-swg8.onrender.com/api/habitats/3
+
+// JavaScript (Fetch)
+const resposta = await fetch("https://dinoapi-swg8.onrender.com/api/habitats");
+const corpo = await resposta.json();
+console.log(corpo.data.map((habitat) => habitat.name));</code></pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · GET /api/habitats/3</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": {
+    "id": 3,
+    "name": "Desertos e Dunas",
+    "description": "Ambientes áridos com tempestades de areia constantes."
+  }
+}</code></pre>
+          </div>
+
+          <h4>Códigos HTTP</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Código</th><th>Situação</th></tr></thead>
+              <tbody>
+                <tr><td><code>200</code></td><td>Lista ou habitat retornado.</td></tr>
+                <tr><td><code>400</code></td><td>ID sintaticamente inválido.</td></tr>
+                <tr><td><code>404</code></td><td><code>Habitat não encontrado.</code></td></tr>
+                <tr><td><code>429</code></td><td>Limite de requisições excedido.</td></tr>
+                <tr><td><code>500</code></td><td>Falha interna ao ler os dados.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="doc-recurso" id="rec-diets">
+          <header class="doc-recurso__cabecalho">
+            <h3>Dietas</h3>
+            <span class="doc-recurso__contagem">2 endpoints</span>
+          </header>
+          <p>Categorias alimentares usadas no campo <code>dietId</code> dos dinossauros.</p>
+
+          <h4>Endpoints</h4>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/diets</code>
+            <span class="doc-endpoint__desc">Lista as 3 dietas cadastradas.</span>
+          </div>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/diets/:id</code>
+            <span class="doc-endpoint__desc">Retorna uma dieta pelo ID.</span>
+          </div>
+
+          <h4>Campos</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Campo</th><th>Tipo</th><th>Descrição</th></tr></thead>
+              <tbody>
+                <tr><td><code>id</code></td><td>inteiro</td><td>Identificador da dieta.</td></tr>
+                <tr><td><code>name</code></td><td>string</td><td>Nome da dieta.</td></tr>
+                <tr><td><code>description</code></td><td>string</td><td>Descrição alimentar.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Exemplo</h4>
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">cURL e JavaScript</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code># cURL
+curl https://dinoapi-swg8.onrender.com/api/diets
+curl https://dinoapi-swg8.onrender.com/api/diets/1
+
+// JavaScript (Fetch)
+const resposta = await fetch("https://dinoapi-swg8.onrender.com/api/diets/1");
+const corpo = await resposta.json();
+console.log(corpo.data.name);</code></pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · GET /api/diets/1</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": {
+    "id": 1,
+    "name": "Carnívoro",
+    "description": "Alimentação baseada no consumo de outros animais."
+  }
+}</code></pre>
+          </div>
+
+          <h4>Códigos HTTP</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Código</th><th>Situação</th></tr></thead>
+              <tbody>
+                <tr><td><code>200</code></td><td>Lista ou dieta retornada.</td></tr>
+                <tr><td><code>400</code></td><td>ID sintaticamente inválido.</td></tr>
+                <tr><td><code>404</code></td><td><code>Dieta não encontrada.</code></td></tr>
+                <tr><td><code>429</code></td><td>Limite de requisições excedido.</td></tr>
+                <tr><td><code>500</code></td><td>Falha interna ao ler os dados.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="doc-recurso" id="rec-families">
+          <header class="doc-recurso__cabecalho">
+            <h3>Famílias</h3>
+            <span class="doc-recurso__contagem">2 endpoints</span>
+          </header>
+          <p>Famílias taxonômicas usadas em <code>familyId</code>. O catálogo possui 25 famílias, das quais 16 são efetivamente referenciadas pelos dinossauros.</p>
+
+          <h4>Endpoints</h4>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/families</code>
+            <span class="doc-endpoint__desc">Lista as 25 famílias cadastradas.</span>
+          </div>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/families/:id</code>
+            <span class="doc-endpoint__desc">Retorna uma família pelo ID.</span>
+          </div>
+
+          <h4>Campos</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Campo</th><th>Tipo</th><th>Descrição</th></tr></thead>
+              <tbody>
+                <tr><td><code>id</code></td><td>inteiro</td><td>Identificador da família.</td></tr>
+                <tr><td><code>name</code></td><td>string</td><td>Nome da família taxonômica.</td></tr>
+                <tr><td><code>description</code></td><td>string</td><td>Contexto evolutivo e características.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Exemplo</h4>
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">cURL e JavaScript</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code># cURL
+curl https://dinoapi-swg8.onrender.com/api/families
+curl https://dinoapi-swg8.onrender.com/api/families/1
+
+// JavaScript (Fetch)
+const resposta = await fetch("https://dinoapi-swg8.onrender.com/api/families/1");
+const corpo = await resposta.json();
+console.log(corpo.data.name);</code></pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · GET /api/families/1</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": {
+    "id": 1,
+    "name": "Tyrannosauridae",
+    "description": "Predadores bípedes dominantes no Cretáceo Superior da América do Norte e Ásia."
+  }
+}</code></pre>
+          </div>
+
+          <h4>Códigos HTTP</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Código</th><th>Situação</th></tr></thead>
+              <tbody>
+                <tr><td><code>200</code></td><td>Lista ou família retornada.</td></tr>
+                <tr><td><code>400</code></td><td>ID sintaticamente inválido.</td></tr>
+                <tr><td><code>404</code></td><td><code>Família não encontrada.</code></td></tr>
+                <tr><td><code>429</code></td><td>Limite de requisições excedido.</td></tr>
+                <tr><td><code>500</code></td><td>Falha interna ao ler os dados.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="doc-recurso" id="rec-clades">
+          <header class="doc-recurso__cabecalho">
+            <h3>Clados</h3>
+            <span class="doc-recurso__contagem">2 endpoints</span>
+          </header>
+          <p>Agrupamentos evolutivos usados em <code>cladeId</code>. O catálogo possui 5 clados.</p>
+
+          <h4>Endpoints</h4>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/clades</code>
+            <span class="doc-endpoint__desc">Lista os 5 clados cadastrados.</span>
+          </div>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/clades/:id</code>
+            <span class="doc-endpoint__desc">Retorna um clado pelo ID.</span>
+          </div>
+
+          <h4>Campos</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Campo</th><th>Tipo</th><th>Descrição</th></tr></thead>
+              <tbody>
+                <tr><td><code>id</code></td><td>inteiro</td><td>Identificador do clado.</td></tr>
+                <tr><td><code>name</code></td><td>string</td><td>Nome do clado.</td></tr>
+                <tr><td><code>description</code></td><td>string</td><td>Contexto evolutivo.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Exemplo</h4>
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">cURL e JavaScript</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code># cURL
+curl https://dinoapi-swg8.onrender.com/api/clades
+curl https://dinoapi-swg8.onrender.com/api/clades/1
+
+// JavaScript (Fetch)
+const resposta = await fetch("https://dinoapi-swg8.onrender.com/api/clades/1");
+const corpo = await resposta.json();
+console.log(corpo.data.name);</code></pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · GET /api/clades/1</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": {
+    "id": 1,
+    "name": "Coelurosauria",
+    "description": "Terópodes mais próximos das aves do que dos carnossauros."
+  }
+}</code></pre>
+          </div>
+
+          <h4>Códigos HTTP</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Código</th><th>Situação</th></tr></thead>
+              <tbody>
+                <tr><td><code>200</code></td><td>Lista ou clado retornado.</td></tr>
+                <tr><td><code>400</code></td><td>ID sintaticamente inválido.</td></tr>
+                <tr><td><code>404</code></td><td><code>Clado não encontrado.</code></td></tr>
+                <tr><td><code>429</code></td><td>Limite de requisições excedido.</td></tr>
+                <tr><td><code>500</code></td><td>Falha interna ao ler os dados.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="doc-recurso" id="rec-classifications">
+          <header class="doc-recurso__cabecalho">
+            <h3>Classificações</h3>
+            <span class="doc-recurso__contagem">2 endpoints</span>
+          </header>
+          <p>Grandes grupos taxonômicos usados em <code>classificationId</code>. O catálogo possui 3 classificações.</p>
+
+          <h4>Endpoints</h4>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/classifications</code>
+            <span class="doc-endpoint__desc">Lista as 3 classificações cadastradas.</span>
+          </div>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/classifications/:id</code>
+            <span class="doc-endpoint__desc">Retorna uma classificação pelo ID.</span>
+          </div>
+
+          <h4>Campos</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Campo</th><th>Tipo</th><th>Descrição</th></tr></thead>
+              <tbody>
+                <tr><td><code>id</code></td><td>inteiro</td><td>Identificador da classificação.</td></tr>
+                <tr><td><code>name</code></td><td>string</td><td>Nome do grupo taxonômico.</td></tr>
+                <tr><td><code>description</code></td><td>string</td><td>Contexto do grupo.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Exemplo</h4>
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">cURL e JavaScript</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code># cURL
+curl https://dinoapi-swg8.onrender.com/api/classifications
+curl https://dinoapi-swg8.onrender.com/api/classifications/1
+
+// JavaScript (Fetch)
+const resposta = await fetch(
+  "https://dinoapi-swg8.onrender.com/api/classifications/1"
+);
+const corpo = await resposta.json();
+console.log(corpo.data.name);</code></pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · GET /api/classifications/1</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": {
+    "id": 1,
+    "name": "Theropoda",
+    "description": "Dinossauros bípedes, a maioria carnívoros. É a subordem que deu origem às aves."
+  }
+}</code></pre>
+          </div>
+
+          <h4>Códigos HTTP</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Código</th><th>Situação</th></tr></thead>
+              <tbody>
+                <tr><td><code>200</code></td><td>Lista ou classificação retornada.</td></tr>
+                <tr><td><code>400</code></td><td>ID sintaticamente inválido.</td></tr>
+                <tr><td><code>404</code></td><td><code>Classificação não encontrada.</code></td></tr>
+                <tr><td><code>429</code></td><td>Limite de requisições excedido.</td></tr>
+                <tr><td><code>500</code></td><td>Falha interna ao ler os dados.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="doc-recurso" id="rec-discoveries">
+          <header class="doc-recurso__cabecalho">
+            <h3>Descobertas</h3>
+            <span class="doc-recurso__contagem">2 endpoints</span>
+          </header>
+          <p>Registros históricos das descobertas: quem encontrou, em que ano, em que local e em qual museu o material está associado.</p>
+
+          <h4>Endpoints</h4>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/discoveries</code>
+            <span class="doc-endpoint__desc">Lista as 100 descobertas cadastradas.</span>
+          </div>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/discoveries/:id</code>
+            <span class="doc-endpoint__desc">Retorna uma descoberta pelo ID.</span>
+          </div>
+
+          <h4>Campos</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Campo</th><th>Tipo</th><th>Descrição</th></tr></thead>
+              <tbody>
+                <tr><td><code>id</code></td><td>inteiro</td><td>Identificador da descoberta.</td></tr>
+                <tr><td><code>dinosaurId</code></td><td>inteiro</td><td>Referência a <code>dinosaurs.id</code>.</td></tr>
+                <tr><td><code>museumId</code></td><td>inteiro</td><td>Referência a <code>museums.id</code>.</td></tr>
+                <tr><td><code>discoveredBy</code></td><td>string</td><td>Pessoa ou equipe responsável.</td></tr>
+                <tr><td><code>year</code></td><td>inteiro</td><td>Ano da descoberta.</td></tr>
+                <tr><td><code>location</code></td><td>string</td><td>Local da descoberta.</td></tr>
+                <tr><td><code>description</code></td><td>string</td><td>Contexto histórico.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Exemplo</h4>
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">cURL e JavaScript</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code># cURL
+curl https://dinoapi-swg8.onrender.com/api/discoveries
+curl https://dinoapi-swg8.onrender.com/api/discoveries/1
+
+// JavaScript (Fetch)
+const resposta = await fetch(
+  "https://dinoapi-swg8.onrender.com/api/discoveries/1"
+);
+const corpo = await resposta.json();
+console.log(corpo.data.discoveredBy, corpo.data.year);</code></pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · GET /api/discoveries/1</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": {
+    "id": 1,
+    "dinosaurId": 1,
+    "museumId": 1,
+    "discoveredBy": "Barnum Brown",
+    "year": 1902,
+    "location": "Hell Creek, Montana, EUA",
+    "description": "Descoberta do primeiro esqueleto parcial documentado de T. rex."
+  }
+}</code></pre>
+          </div>
+
+          <div class="doc-nota doc-nota--info">
+            <strong><code>year</code> não é campo de ordenação de dinossauros.</strong> Ele existe em descobertas, mas não em <code>/api/dinosaurs?sort=...</code>. Para ordenar dinossauros, use apenas os 22 campos documentados em <a href="#ordenacao">Ordenação</a>.
+          </div>
+
+          <h4>Códigos HTTP</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Código</th><th>Situação</th></tr></thead>
+              <tbody>
+                <tr><td><code>200</code></td><td>Lista ou descoberta retornada.</td></tr>
+                <tr><td><code>400</code></td><td>ID sintaticamente inválido.</td></tr>
+                <tr><td><code>404</code></td><td><code>Descoberta não encontrada.</code></td></tr>
+                <tr><td><code>429</code></td><td>Limite de requisições excedido.</td></tr>
+                <tr><td><code>500</code></td><td>Falha interna ao ler os dados.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="doc-recurso" id="rec-museums">
+          <header class="doc-recurso__cabecalho">
+            <h3>Museus</h3>
+            <span class="doc-recurso__contagem">2 endpoints</span>
+          </header>
+          <p>Instituições que abrigam os espécimes. O catálogo possui 13 museus, referenciados por <code>museumId</code> em dinossauros e descobertas.</p>
+
+          <h4>Endpoints</h4>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/museums</code>
+            <span class="doc-endpoint__desc">Lista os 13 museus cadastrados.</span>
+          </div>
+          <div class="doc-endpoint">
+            <span class="doc-endpoint__metodo">GET</span>
+            <code class="doc-endpoint__caminho">/api/museums/:id</code>
+            <span class="doc-endpoint__desc">Retorna um museu pelo ID.</span>
+          </div>
+
+          <h4>Campos</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Campo</th><th>Tipo</th><th>Descrição</th></tr></thead>
+              <tbody>
+                <tr><td><code>id</code></td><td>inteiro</td><td>Identificador do museu.</td></tr>
+                <tr><td><code>name</code></td><td>string</td><td>Nome da instituição.</td></tr>
+                <tr><td><code>countryId</code></td><td>inteiro</td><td>Referência a <code>countries.id</code>.</td></tr>
+                <tr><td><code>city</code></td><td>string</td><td>Cidade do museu.</td></tr>
+                <tr><td><code>website</code></td><td>string</td><td>Site oficial.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Exemplo</h4>
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">cURL e JavaScript</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code># cURL
+curl https://dinoapi-swg8.onrender.com/api/museums
+curl https://dinoapi-swg8.onrender.com/api/museums/13
+
+// JavaScript (Fetch)
+const resposta = await fetch("https://dinoapi-swg8.onrender.com/api/museums/13");
+const corpo = await resposta.json();
+console.log(corpo.data.name, corpo.data.city);</code></pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code__header">
+              <span class="doc-code__rotulo">JSON · GET /api/museums/13</span>
+              <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+            </div>
+            <pre><code>{
+  "success": true,
+  "data": {
+    "id": 13,
+    "name": "Institute of Vertebrate Paleontology and Paleoanthropology",
+    "countryId": 10,
+    "city": "Pequim",
+    "website": "https://www.ivpp.cas.cn"
+  }
+}</code></pre>
+          </div>
+
+          <h4>Códigos HTTP</h4>
+          <div class="doc-tabela-wrap">
+            <table class="doc-tabela">
+              <thead><tr><th>Código</th><th>Situação</th></tr></thead>
+              <tbody>
+                <tr><td><code>200</code></td><td>Lista ou museu retornado.</td></tr>
+                <tr><td><code>400</code></td><td>ID sintaticamente inválido.</td></tr>
+                <tr><td><code>404</code></td><td><code>Museu não encontrado.</code></td></tr>
+                <tr><td><code>429</code></td><td>Limite de requisições excedido.</td></tr>
+                <tr><td><code>500</code></td><td>Falha interna ao ler os dados.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section id="paginacao" class="doc-secao">
+        <span class="doc-secao__rotulo">09 · Recursos</span>
+        <h2>Paginação</h2>
+        <p>Somente a listagem de dinossauros é paginada. Os demais catálogos retornam a coleção completa em <code>data</code>, sem <code>meta</code>. A paginação é aplicada depois dos filtros, da busca e da ordenação.</p>
+
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead><tr><th>Parâmetro</th><th>Padrão</th><th>Limite</th><th>Validação</th></tr></thead>
+            <tbody>
+              <tr><td><code>page</code></td><td><code>1</code></td><td>Sem máximo</td><td>Inteiro maior ou igual a 1.</td></tr>
+              <tr><td><code>limit</code></td><td><code>10</code></td><td><code>100</code></td><td>Inteiro entre 1 e 100.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>O objeto <code>meta</code> informa:</p>
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead><tr><th>Campo</th><th>Significado</th></tr></thead>
+            <tbody>
+              <tr><td><code>page</code></td><td>Página efetivamente retornada.</td></tr>
+              <tr><td><code>limit</code></td><td>Itens por página usados no cálculo.</td></tr>
+              <tr><td><code>total</code></td><td>Total de registros após filtros e busca.</td></tr>
+              <tr><td><code>totalPages</code></td><td>Quantidade total de páginas.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Exemplo</h3>
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">cURL e JavaScript</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code># cURL
+curl "https://dinoapi-swg8.onrender.com/api/dinosaurs?page=2&amp;limit=2"
+
+// JavaScript (Fetch)
+const url = new URL("https://dinoapi-swg8.onrender.com/api/dinosaurs");
+url.searchParams.set("page", "2");
+url.searchParams.set("limit", "2");
+
+const resposta = await fetch(url);
+const corpo = await resposta.json();
+console.log(corpo.meta.page, corpo.meta.totalPages);</code></pre>
+        </div>
+
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">JSON · 200 OK (trecho)</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code>{
+  "success": true,
+  "data": [
+    { "id": 3, "name": "Stegosaurus" },
+    { "id": 4, "name": "Brachiosaurus" }
+  ],
+  "meta": {
+    "page": 2,
+    "limit": 2,
+    "total": 100,
+    "totalPages": 50
+  }
+}</code></pre>
+        </div>
+
+        <h3>Página fora do intervalo</h3>
+        <p>Pedir uma página maior que <code>totalPages</code> não gera erro: a resposta é <strong>200</strong> com <code>data: []</code> e os metadados reais.</p>
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">JSON · GET /api/dinosaurs?page=999&amp;limit=2</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code>{
+  "success": true,
+  "data": [],
+  "meta": {
+    "page": 999,
+    "limit": 2,
+    "total": 100,
+    "totalPages": 50
+  }
+}</code></pre>
+        </div>
+
+        <h3>Parâmetros inválidos</h3>
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead><tr><th>Requisição</th><th>Resposta</th></tr></thead>
+            <tbody>
+              <tr><td><code>?page=0</code></td><td><code>400</code> — <code>O parâmetro 'page' deve ser um número inteiro maior ou igual a 1.</code></td></tr>
+              <tr><td><code>?page=1.5</code></td><td><code>400</code> — mesma mensagem de <code>page</code>.</td></tr>
+              <tr><td><code>?limit=0</code></td><td><code>400</code> — <code>O parâmetro 'limit' deve ser um número inteiro entre 1 e 100.</code></td></tr>
+              <tr><td><code>?limit=101</code></td><td><code>400</code> — mesma mensagem de <code>limit</code>.</td></tr>
+              <tr><td><code>?limit=abc</code></td><td><code>400</code> — mesma mensagem de <code>limit</code>.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="doc-nota doc-nota--info">
+          <strong>Zeros à esquerda.</strong> Parâmetros inteiros aceitam zeros à esquerda: <code>page=02</code> equivale a <code>2</code> e <code>limit=010</code> equivale a <code>10</code>. Decimais, sinais e notação científica são rejeitados.
+        </div>
       </section>
 
       <section id="filtros" class="doc-secao">
-        <h2>Filtros e Busca Avançada</h2>
-        <p>A rota <code>/api/dinosaurs</code> aceita parâmetros de Query String para refinar os resultados. Múltiplos filtros operam com lógica aditiva (AND).</p>
-        
-        <table class="doc-tabela">
-          <thead>
-            <tr>
-              <th>Parâmetro</th>
-              <th>Tipo</th>
-              <th>Descrição</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>search</code></td>
-              <td>String</td>
-              <td>Busca textual em nome, nome científico e descrição.</td>
-            </tr>
-            <tr>
-              <td><code>periodId</code></td>
-              <td>Number</td>
-              <td>Filtra pelo ID do período geológico.</td>
-            </tr>
-            <tr>
-              <td><code>countryId</code></td>
-              <td>Number</td>
-              <td>Filtra pelo ID do país de descoberta.</td>
-            </tr>
-            <tr>
-              <td><code>lengthMin</code></td>
-              <td>Number</td>
-              <td>Comprimento mínimo em metros.</td>
-            </tr>
-            <tr>
-              <td><code>weightMax</code></td>
-              <td>Number</td>
-              <td>Peso máximo em quilogramas.</td>
-            </tr>
-            <tr>
-              <td><code>sort</code></td>
-              <td>String</td>
-              <td>Campo de ordenação: <code>name</code>, <code>length</code>, <code>weight</code>.</td>
-            </tr>
-            <tr>
-              <td><code>order</code></td>
-              <td>String</td>
-              <td>Direção: <code>asc</code> ou <code>desc</code>.</td>
-            </tr>
-          </tbody>
-        </table>
+        <span class="doc-secao__rotulo">10 · Recursos</span>
+        <h2>Filtros</h2>
+        <p>A listagem de dinossauros aceita filtros relacionais e filtros numéricos de faixa. Todos podem ser combinados entre si e com <code>search</code>; a lógica é <strong>AND</strong> — o registro precisa satisfazer todos os critérios informados.</p>
 
-        <h3>Exemplo de Filtro Combinado</h3>
-        <p>Buscar carnívoros do Cretáceo com mais de 5 metros, ordenados do mais leve para o mais pesado:</p>
-        <div class="doc-code-block">
-          <span class="tk-string">/api/dinosaurs?dietId=1&periodId=3&lengthMin=5&sort=weight&order=asc</span>
+        <h3>Filtros relacionais</h3>
+        <p>Cada filtro recebe o ID inteiro positivo de um registro relacionado.</p>
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead><tr><th>Parâmetro</th><th>Campo no dinossauro</th><th>Exemplo</th><th>Referência</th></tr></thead>
+            <tbody>
+              <tr><td><code>periodId</code></td><td><code>periodId</code></td><td><code>3</code></td><td>Cretáceo</td></tr>
+              <tr><td><code>epochId</code></td><td><code>epochId</code></td><td><code>1</code></td><td>Cretáceo Superior</td></tr>
+              <tr><td><code>dietId</code></td><td><code>dietId</code></td><td><code>1</code></td><td>Carnívoro</td></tr>
+              <tr><td><code>continentId</code></td><td><code>continentId</code></td><td><code>2</code></td><td>América do Sul</td></tr>
+              <tr><td><code>countryId</code></td><td><code>countryId</code> (array)</td><td><code>16</code></td><td>Brasil</td></tr>
+              <tr><td><code>formationId</code></td><td><code>formationId</code> (array)</td><td><code>2</code></td><td>Formação Morrison</td></tr>
+              <tr><td><code>familyId</code></td><td><code>familyId</code></td><td><code>1</code></td><td>Tyrannosauridae</td></tr>
+              <tr><td><code>cladeId</code></td><td><code>cladeId</code></td><td><code>1</code></td><td>Coelurosauria</td></tr>
+              <tr><td><code>habitatId</code></td><td><code>habitatId</code></td><td><code>3</code></td><td>Desertos e Dunas</td></tr>
+              <tr><td><code>classificationId</code></td><td><code>classificationId</code></td><td><code>1</code></td><td>Theropoda</td></tr>
+              <tr><td><code>museumId</code></td><td><code>museumId</code></td><td><code>1</code></td><td>Field Museum of Natural History</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Filtros numéricos</h3>
+        <p>Aceitam números decimais maiores ou iguais a zero. Os limites são <strong>inclusivos</strong>: <code>lengthMin=12</code> inclui exatamente 12 metros e <code>lengthMax=13</code> inclui exatamente 13 metros.</p>
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead><tr><th>Parâmetro</th><th>Campo</th><th>Unidade</th><th>Comparação</th></tr></thead>
+            <tbody>
+              <tr><td><code>lengthMin</code></td><td><code>length</code></td><td>metros</td><td><code>length &gt;= valor</code></td></tr>
+              <tr><td><code>lengthMax</code></td><td><code>length</code></td><td>metros</td><td><code>length &lt;= valor</code></td></tr>
+              <tr><td><code>weightMin</code></td><td><code>weight</code></td><td>quilogramas</td><td><code>weight &gt;= valor</code></td></tr>
+              <tr><td><code>weightMax</code></td><td><code>weight</code></td><td>quilogramas</td><td><code>weight &lt;= valor</code></td></tr>
+              <tr><td><code>heightMin</code></td><td><code>height</code></td><td>metros</td><td><code>height &gt;= valor</code></td></tr>
+              <tr><td><code>heightMax</code></td><td><code>height</code></td><td>metros</td><td><code>height &lt;= valor</code></td></tr>
+              <tr><td><code>estimatedSpeedMin</code></td><td><code>estimatedSpeed</code></td><td>km/h</td><td><code>estimatedSpeed &gt;= valor</code></td></tr>
+              <tr><td><code>estimatedSpeedMax</code></td><td><code>estimatedSpeed</code></td><td>km/h</td><td><code>estimatedSpeed &lt;= valor</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Campos que são arrays</h3>
+        <p><code>countryId</code> e <code>formationId</code> são arrays no registro do dinossauro. O filtro correspondente encontra o registro quando o valor aparece em <strong>qualquer posição</strong> do array. Exemplo: um dinossauro com <code>"countryId": [16, 6]</code> corresponde tanto a <code>countryId=16</code> quanto a <code>countryId=6</code>.</p>
+
+        <h3>Exemplo combinado</h3>
+        <p>Carnívoros do Cretáceo com pelo menos 10 metros, ordenados do mais pesado para o mais leve:</p>
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">cURL e JavaScript</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code># cURL
+curl "https://dinoapi-swg8.onrender.com/api/dinosaurs?dietId=1&amp;periodId=3&amp;lengthMin=10&amp;sort=weight&amp;order=desc&amp;limit=1"
+
+// JavaScript (Fetch)
+const resposta = await fetch(
+  "https://dinoapi-swg8.onrender.com/api/dinosaurs" +
+  "?dietId=1&amp;periodId=3&amp;lengthMin=10&amp;sort=weight&amp;order=desc&amp;limit=1"
+);
+const corpo = await resposta.json();
+console.log(corpo.meta.total); // 8 dinossauros correspondem aos filtros</code></pre>
+        </div>
+
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">JSON · 200 OK (trecho)</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code>{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "name": "Tyrannosaurus Rex",
+      "dietId": 1,
+      "periodId": 3,
+      "length": 12.3,
+      "weight": 8400
+    }
+  ],
+  "meta": {
+    "page": 1,
+    "limit": 1,
+    "total": 8,
+    "totalPages": 8
+  }
+}</code></pre>
+        </div>
+
+        <h3>Validação</h3>
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead><tr><th>Entrada inválida</th><th>Resposta</th></tr></thead>
+            <tbody>
+              <tr><td><code>?periodId=0</code></td><td><code>400</code> — <code>O parâmetro 'periodId' deve ser um número inteiro positivo.</code></td></tr>
+              <tr><td><code>?countryId=abc</code></td><td><code>400</code> — <code>O parâmetro 'countryId' deve ser um número inteiro positivo.</code></td></tr>
+              <tr><td><code>?lengthMin=-1</code></td><td><code>400</code> — <code>O parâmetro 'lengthMin' deve ser um número maior ou igual a zero.</code></td></tr>
+              <tr><td><code>?weightMax=abc</code></td><td><code>400</code> — <code>O parâmetro 'weightMax' deve ser um número maior ou igual a zero.</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="doc-nota">
+          <strong>Parâmetros fora do contrato.</strong> Somente os filtros listados acima são validados e documentados. Parâmetros desconhecidos não fazem parte do contrato público e não devem ser usados em integrações.
+        </div>
+      </section>
+
+      <section id="ordenacao" class="doc-secao">
+        <span class="doc-secao__rotulo">11 · Recursos</span>
+        <h2>Ordenação</h2>
+        <p>A listagem de dinossauros pode ser ordenada por qualquer um dos 22 campos abaixo, com <code>sort</code> e <code>order</code>. A ordenação acontece depois dos filtros e da busca, e antes da paginação.</p>
+
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead><tr><th>Campos aceitos em <code>sort</code></th></tr></thead>
+            <tbody>
+              <tr><td><code>id</code>, <code>name</code>, <code>scientificName</code>, <code>meaning</code>, <code>classificationId</code>, <code>cladeId</code>, <code>familyId</code>, <code>periodId</code>, <code>epochId</code>, <code>dietId</code>, <code>habitatId</code>, <code>continentId</code>, <code>discoveryId</code>, <code>museumId</code>, <code>imageId</code>, <code>length</code>, <code>height</code>, <code>weight</code>, <code>estimatedSpeed</code>, <code>species</code>, <code>genus</code>, <code>status</code>.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead><tr><th>Parâmetro</th><th>Valores</th><th>Padrão</th><th>Regra</th></tr></thead>
+            <tbody>
+              <tr><td><code>sort</code></td><td>Um dos 22 campos</td><td>Sem ordenação</td><td>Comparação textual ou numérica conforme o tipo do campo.</td></tr>
+              <tr><td><code>order</code></td><td><code>asc</code>, <code>desc</code></td><td><code>asc</code></td><td>Não diferencia maiúsculas de minúsculas, mas só tem efeito quando <code>sort</code> é informado.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Exemplo</h3>
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">cURL e JavaScript</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code># cURL
+curl "https://dinoapi-swg8.onrender.com/api/dinosaurs?sort=length&amp;order=desc&amp;limit=1"
+
+// JavaScript (Fetch)
+const url = new URL("https://dinoapi-swg8.onrender.com/api/dinosaurs");
+url.searchParams.set("sort", "length");
+url.searchParams.set("order", "desc");
+url.searchParams.set("limit", "1");
+
+const resposta = await fetch(url);
+const corpo = await resposta.json();
+console.log(corpo.data[0].name); // Patagotitan</code></pre>
+        </div>
+
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">JSON · 200 OK (trecho)</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code>{
+  "success": true,
+  "data": [
+    {
+      "id": 89,
+      "name": "Patagotitan",
+      "length": 37,
+      "height": 15,
+      "weight": 70000,
+      "estimatedSpeed": 7
+    }
+  ],
+  "meta": {
+    "page": 1,
+    "limit": 1,
+    "total": 100,
+    "totalPages": 100
+  }
+}</code></pre>
+        </div>
+
+        <h3>Regras e validação</h3>
+        <ul class="doc-lista">
+          <li><code>order</code> sozinho é aceito, mas não altera a ordem original.</li>
+          <li><code>sort</code> diferencia maiúsculas de minúsculas: use exatamente os nomes listados.</li>
+          <li>Valores nulos ou ausentes vão para o final da ordenação.</li>
+          <li><code>year</code> não é um campo de dinossauro e, portanto, é rejeitado em <code>sort</code>.</li>
+          <li><code>sort</code> com campo fora da lista retorna <code>400</code>.</li>
+          <li><code>order</code> com valor diferente de <code>asc</code> ou <code>desc</code> retorna <code>400</code>.</li>
+        </ul>
+
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">JSON · 400 ao usar sort=year</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code>{
+  "success": false,
+  "message": "O parâmetro 'sort' deve ser um dos campos suportados: id, name, scientificName, meaning, classificationId, cladeId, familyId, periodId, epochId, dietId, habitatId, continentId, discoveryId, museumId, imageId, length, height, weight, estimatedSpeed, species, genus, status."
+}</code></pre>
+        </div>
+
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">JSON · 400 com order inválido</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code>{
+  "success": false,
+  "message": "O parâmetro 'order' deve ser 'asc' ou 'desc'."
+}</code></pre>
+        </div>
+      </section>
+
+      <section id="schemas" class="doc-secao">
+        <span class="doc-secao__rotulo">12 · Referência</span>
+        <h2>Schemas e estruturas de dados</h2>
+        <p>Os nomes de campos usam <code>camelCase</code>. Identificadores são inteiros positivos. Os campos <code>formationId</code> e <code>countryId</code> de dinossauros são <strong>arrays de inteiros</strong>; todos os demais campos de relacionamento são escalares.</p>
+
+        <h3>Dinossauro</h3>
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead><tr><th>Campo</th><th>Tipo</th><th>Descrição / relação</th></tr></thead>
+            <tbody>
+              <tr><td><code>id</code></td><td>inteiro</td><td>Identificador do dinossauro.</td></tr>
+              <tr><td><code>name</code></td><td>string</td><td>Nome popular ou de exibição.</td></tr>
+              <tr><td><code>scientificName</code></td><td>string</td><td>Nome científico.</td></tr>
+              <tr><td><code>meaning</code></td><td>string</td><td>Significado etimológico do nome.</td></tr>
+              <tr><td><code>classificationId</code></td><td>inteiro</td><td>→ <code>classifications.id</code>.</td></tr>
+              <tr><td><code>cladeId</code></td><td>inteiro</td><td>→ <code>clades.id</code>.</td></tr>
+              <tr><td><code>familyId</code></td><td>inteiro</td><td>→ <code>families.id</code>.</td></tr>
+              <tr><td><code>periodId</code></td><td>inteiro</td><td>→ <code>periods.id</code>.</td></tr>
+              <tr><td><code>epochId</code></td><td>inteiro</td><td>→ <code>epochs.id</code>.</td></tr>
+              <tr><td><code>dietId</code></td><td>inteiro</td><td>→ <code>diets.id</code>.</td></tr>
+              <tr><td><code>habitatId</code></td><td>inteiro</td><td>→ <code>habitats.id</code>.</td></tr>
+              <tr><td><code>formationId</code></td><td>array de inteiros</td><td>→ <code>formations.id</code>; aceita mais de uma formação.</td></tr>
+              <tr><td><code>continentId</code></td><td>inteiro</td><td>→ <code>continents.id</code>.</td></tr>
+              <tr><td><code>countryId</code></td><td>array de inteiros</td><td>→ <code>countries.id</code>; aceita mais de um país.</td></tr>
+              <tr><td><code>discoveryId</code></td><td>inteiro</td><td>→ <code>discoveries.id</code>.</td></tr>
+              <tr><td><code>museumId</code></td><td>inteiro</td><td>→ <code>museums.id</code>.</td></tr>
+              <tr><td><code>imageId</code></td><td>inteiro</td><td>→ <code>images.id</code>.</td></tr>
+              <tr><td><code>length</code></td><td>número</td><td>Comprimento em metros.</td></tr>
+              <tr><td><code>height</code></td><td>número</td><td>Altura em metros.</td></tr>
+              <tr><td><code>weight</code></td><td>número</td><td>Peso em quilogramas.</td></tr>
+              <tr><td><code>estimatedSpeed</code></td><td>número</td><td>Velocidade estimada em km/h.</td></tr>
+              <tr><td><code>species</code></td><td>string</td><td>Epíteto específico abreviado.</td></tr>
+              <tr><td><code>genus</code></td><td>string</td><td>Gênero.</td></tr>
+              <tr><td><code>status</code></td><td>string</td><td>Status taxonômico, como <code>Válido</code>.</td></tr>
+              <tr><td><code>description</code></td><td>string</td><td>Descrição textual.</td></tr>
+              <tr><td><code>characteristics</code></td><td>array de strings</td><td>Características morfológicas.</td></tr>
+              <tr><td><code>curiosities</code></td><td>array de strings</td><td>Curiosidades.</td></tr>
+              <tr><td><code>sources</code></td><td>array de strings</td><td>Fontes consultadas.</td></tr>
+              <tr><td><code>imagem</code></td><td>string ou null</td><td>Injetado: URL da imagem principal.</td></tr>
+              <tr><td><code>thumbnail</code></td><td>string ou null</td><td>Injetado: URL da miniatura.</td></tr>
+              <tr><td><code>imageAuthor</code></td><td>string ou null</td><td>Injetado: autor da imagem.</td></tr>
+              <tr><td><code>imageLicense</code></td><td>string ou null</td><td>Injetado: licença da imagem.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Os quatro campos injetados vêm da primeira imagem cujo <code>dinosaurId</code> corresponde ao <code>id</code> do dinossauro. Eles aparecem nas rotas de listagem, de ID único e de busca por nome.</p>
+
+        <h3>Imagem</h3>
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead><tr><th>Campo</th><th>Tipo</th><th>Descrição</th></tr></thead>
+            <tbody>
+              <tr><td><code>id</code></td><td>inteiro</td><td>Identificador da imagem.</td></tr>
+              <tr><td><code>dinosaurId</code></td><td>inteiro</td><td>→ <code>dinosaurs.id</code>.</td></tr>
+              <tr><td><code>thumbnail</code></td><td>string</td><td>URL da miniatura.</td></tr>
+              <tr><td><code>image</code></td><td>string</td><td>URL da imagem original.</td></tr>
+              <tr><td><code>author</code></td><td>string</td><td>Autor ou crédito.</td></tr>
+              <tr><td><code>license</code></td><td>string</td><td>Licença de uso.</td></tr>
+              <tr><td><code>modified</code></td><td>boolean</td><td>Indica se houve modificação.</td></tr>
+              <tr><td><code>modification</code></td><td>string</td><td>Descrição da modificação; pode ser vazia.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Demais recursos</h3>
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead><tr><th>Recurso</th><th>Campos (tipo)</th></tr></thead>
+            <tbody>
+              <tr><td><code>periods</code></td><td><code>id</code> (int), <code>name</code> (string), <code>startMillionYears</code> (number), <code>endMillionYears</code> (number), <code>description</code> (string).</td></tr>
+              <tr><td><code>epochs</code></td><td><code>id</code> (int), <code>name</code> (string), <code>periodId</code> (int → periods), <code>description</code> (string).</td></tr>
+              <tr><td><code>formations</code></td><td><code>id</code> (int), <code>name</code> (string), <code>countryId</code> (int → countries), <code>periodId</code> (int → periods), <code>description</code> (string).</td></tr>
+              <tr><td><code>continents</code></td><td><code>id</code> (int), <code>name</code> (string), <code>code</code> (string), <code>description</code> (string).</td></tr>
+              <tr><td><code>countries</code></td><td><code>id</code> (int), <code>name</code> (string), <code>continentId</code> (int → continents), <code>code</code> (string), <code>description</code> (string).</td></tr>
+              <tr><td><code>habitats</code></td><td><code>id</code> (int), <code>name</code> (string), <code>description</code> (string).</td></tr>
+              <tr><td><code>diets</code></td><td><code>id</code> (int), <code>name</code> (string), <code>description</code> (string).</td></tr>
+              <tr><td><code>families</code></td><td><code>id</code> (int), <code>name</code> (string), <code>description</code> (string).</td></tr>
+              <tr><td><code>clades</code></td><td><code>id</code> (int), <code>name</code> (string), <code>description</code> (string).</td></tr>
+              <tr><td><code>classifications</code></td><td><code>id</code> (int), <code>name</code> (string), <code>description</code> (string).</td></tr>
+              <tr><td><code>discoveries</code></td><td><code>id</code> (int), <code>dinosaurId</code> (int → dinosaurs), <code>museumId</code> (int → museums), <code>discoveredBy</code> (string), <code>year</code> (int), <code>location</code> (string), <code>description</code> (string).</td></tr>
+              <tr><td><code>museums</code></td><td><code>id</code> (int), <code>name</code> (string), <code>countryId</code> (int → countries), <code>city</code> (string), <code>website</code> (string).</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Relacionamentos</h3>
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead><tr><th>Origem</th><th>Destino</th><th>Cardinalidade</th></tr></thead>
+            <tbody>
+              <tr><td><code>dinosaurs.formationId[]</code></td><td><code>formations.id</code></td><td>Muitos para muitos (array).</td></tr>
+              <tr><td><code>dinosaurs.countryId[]</code></td><td><code>countries.id</code></td><td>Muitos para muitos (array).</td></tr>
+              <tr><td><code>dinosaurs.classificationId</code></td><td><code>classifications.id</code></td><td>Muitos para um.</td></tr>
+              <tr><td><code>dinosaurs.cladeId</code></td><td><code>clades.id</code></td><td>Muitos para um.</td></tr>
+              <tr><td><code>dinosaurs.familyId</code></td><td><code>families.id</code></td><td>Muitos para um.</td></tr>
+              <tr><td><code>dinosaurs.periodId</code></td><td><code>periods.id</code></td><td>Muitos para um.</td></tr>
+              <tr><td><code>dinosaurs.epochId</code></td><td><code>epochs.id</code></td><td>Muitos para um.</td></tr>
+              <tr><td><code>dinosaurs.dietId</code></td><td><code>diets.id</code></td><td>Muitos para um.</td></tr>
+              <tr><td><code>dinosaurs.habitatId</code></td><td><code>habitats.id</code></td><td>Muitos para um.</td></tr>
+              <tr><td><code>dinosaurs.continentId</code></td><td><code>continents.id</code></td><td>Muitos para um.</td></tr>
+              <tr><td><code>dinosaurs.discoveryId</code></td><td><code>discoveries.id</code></td><td>Um para um.</td></tr>
+              <tr><td><code>dinosaurs.museumId</code></td><td><code>museums.id</code></td><td>Muitos para um.</td></tr>
+              <tr><td><code>dinosaurs.imageId</code></td><td><code>images.id</code></td><td>Um para um.</td></tr>
+              <tr><td><code>formations.countryId</code></td><td><code>countries.id</code></td><td>Muitos para um.</td></tr>
+              <tr><td><code>formations.periodId</code></td><td><code>periods.id</code></td><td>Muitos para um.</td></tr>
+              <tr><td><code>epochs.periodId</code></td><td><code>periods.id</code></td><td>Muitos para um.</td></tr>
+              <tr><td><code>countries.continentId</code></td><td><code>continents.id</code></td><td>Muitos para um.</td></tr>
+              <tr><td><code>discoveries.dinosaurId</code></td><td><code>dinosaurs.id</code></td><td>Um para um.</td></tr>
+              <tr><td><code>discoveries.museumId</code></td><td><code>museums.id</code></td><td>Muitos para um.</td></tr>
+              <tr><td><code>museums.countryId</code></td><td><code>countries.id</code></td><td>Muitos para um.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="doc-nota doc-nota--info">
+          <strong>IDs não contíguos.</strong> Os catálogos podem ter lacunas de identificadores. Não presuma que o maior ID é igual à quantidade de registros; use os endpoints de listagem para descobrir os IDs existentes.
+        </div>
+      </section>
+
+      <section id="codigos-http" class="doc-secao">
+        <span class="doc-secao__rotulo">13 · Referência</span>
+        <h2>Códigos HTTP</h2>
+        <p>A API usa códigos HTTP convencionais. O corpo de erro sempre segue o envelope <code>{ success: false, message }</code>.</p>
+
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead><tr><th>Código</th><th>Significado na API</th><th>Quando ocorre</th></tr></thead>
+            <tbody>
+              <tr><td><code>200</code></td><td>OK</td><td>Consulta concluída. Inclui listas vazias por página fora do intervalo.</td></tr>
+              <tr><td><code>304</code></td><td>Not Modified</td><td>GET condicional com <code>If-None-Match</code> correspondente ao ETag atual; sem corpo.</td></tr>
+              <tr><td><code>400</code></td><td>Bad Request</td><td>ID, paginação, busca, filtro, ordenação ou nome sintaticamente inválido.</td></tr>
+              <tr><td><code>404</code></td><td>Not Found</td><td>Registro inexistente, nome sem correspondência ou rota/método não mapeado.</td></tr>
+              <tr><td><code>413</code></td><td>Payload Too Large</td><td>Corpo de requisição acima do limite aceito pelo parser.</td></tr>
+              <tr><td><code>429</code></td><td>Too Many Requests</td><td>Limite de 100 requisições por 15 minutos excedido.</td></tr>
+              <tr><td><code>500</code></td><td>Internal Server Error</td><td>Falha interna ao ler os dados ou processar a requisição.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Métodos não suportados</h3>
+        <p>A API não define <code>POST</code>, <code>PUT</code>, <code>PATCH</code> ou <code>DELETE</code>. Como não há rota correspondente, a resposta é <strong>404</strong>, não 405:</p>
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">HTTP · método não mapeado</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code>POST /api/dinosaurs
+
+HTTP/1.1 404 Not Found
+Content-Type: application/json; charset=utf-8
+
+{
+  "success": false,
+  "message": "Rota não encontrada."
+}</code></pre>
+        </div>
+
+        <h3>Cabeçalhos relevantes</h3>
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead><tr><th>Cabeçalho</th><th>Quando aparece</th><th>Uso</th></tr></thead>
+            <tbody>
+              <tr><td><code>Content-Type</code></td><td>Sempre em respostas JSON</td><td><code>application/json; charset=utf-8</code>.</td></tr>
+              <tr><td><code>ETag</code></td><td>Respostas 200</td><td>Permite GET condicional com <code>If-None-Match</code>.</td></tr>
+              <tr><td><code>X-Request-Id</code></td><td>Sempre</td><td>Correlação com logs e suporte.</td></tr>
+              <tr><td><code>RateLimit-*</code></td><td>Rotas sob <code>/api</code></td><td>Estado do limitador.</td></tr>
+              <tr><td><code>Retry-After</code></td><td>Resposta 429</td><td>Segundos até nova tentativa.</td></tr>
+              <tr><td><code>Access-Control-Allow-Origin</code></td><td>Respostas</td><td><code>*</code>, permitindo consumo no navegador.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="doc-nota doc-nota--info">
+          <strong>HEAD também é aceito.</strong> O Express responde automaticamente a <code>HEAD</code> nas rotas GET com os mesmos cabeçalhos e sem corpo. Para consumir dados, use <code>GET</code>.
+        </div>
+      </section>
+
+      <section id="erros" class="doc-secao">
+        <span class="doc-secao__rotulo">14 · Referência</span>
+        <h2>Tratamento de erros</h2>
+        <p>Erros sempre chegam com <code>success: false</code> e uma <code>message</code> pública. O status HTTP indica a categoria e a mensagem explica o que precisa ser corrigido.</p>
+
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">JSON · envelope de erro</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code>{
+  "success": false,
+  "message": "Rota não encontrada."
+}</code></pre>
+        </div>
+
+        <h3>Erros 400</h3>
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead><tr><th>Mensagem</th><th>Origem</th></tr></thead>
+            <tbody>
+              <tr><td><code>O ID fornecido é inválido. Deve ser um número inteiro positivo.</code></td><td>Parâmetro de rota <code>:id</code>.</td></tr>
+              <tr><td><code>O parâmetro 'page' deve ser um número inteiro maior ou igual a 1.</code></td><td><code>page</code>.</td></tr>
+              <tr><td><code>O parâmetro 'limit' deve ser um número inteiro entre 1 e 100.</code></td><td><code>limit</code> na listagem.</td></tr>
+              <tr><td><code>O parâmetro 'limit' deve ser um número inteiro entre 1 e 50.</code></td><td><code>limit</code> em <code>/random</code>.</td></tr>
+              <tr><td><code>O parâmetro 'sort' deve ser um dos campos suportados: ...</code></td><td><code>sort</code> fora dos 22 campos.</td></tr>
+              <tr><td><code>O parâmetro 'order' deve ser 'asc' ou 'desc'.</code></td><td><code>order</code> inválido.</td></tr>
+              <tr><td><code>O parâmetro 'search' deve ser um texto único.</code></td><td><code>search</code> enviado como array.</td></tr>
+              <tr><td><code>O parâmetro 'search' deve ter no máximo 100 caracteres.</code></td><td><code>search</code> longo demais.</td></tr>
+              <tr><td><code>O parâmetro '&lt;filtro&gt;' deve ser um número inteiro positivo.</code></td><td>Filtro relacional inválido.</td></tr>
+              <tr><td><code>O parâmetro '&lt;filtro&gt;' deve ser um número maior ou igual a zero.</code></td><td>Filtro numérico inválido.</td></tr>
+              <tr><td><code>O parâmetro 'name' deve ter no máximo 100 caracteres.</code></td><td>Parâmetro de rota <code>:name</code>.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Erros 404</h3>
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead><tr><th>Mensagem</th><th>Origem</th></tr></thead>
+            <tbody>
+              <tr><td><code>Dinossauro não encontrado.</code></td><td><code>/dinosaurs/:id</code> e <code>/dinosaurs/:id/images</code>.</td></tr>
+              <tr><td><code>Nenhum dinossauro encontrado com esse nome.</code></td><td><code>/dinosaurs/name/:name</code>.</td></tr>
+              <tr><td><code>Período não encontrado.</code></td><td><code>/periods/:id</code>.</td></tr>
+              <tr><td><code>Época não encontrada.</code></td><td><code>/epochs/:id</code>.</td></tr>
+              <tr><td><code>Formação geológica não encontrada.</code></td><td><code>/formations/:id</code> e <code>/formations/:id/dinosaurs</code>.</td></tr>
+              <tr><td><code>Continente não encontrado.</code></td><td><code>/continents/:id</code> e <code>/continents/:id/dinosaurs</code>.</td></tr>
+              <tr><td><code>País não encontrado.</code></td><td><code>/countries/:id</code> e <code>/countries/:id/dinosaurs</code>.</td></tr>
+              <tr><td><code>Habitat não encontrado.</code></td><td><code>/habitats/:id</code>.</td></tr>
+              <tr><td><code>Dieta não encontrada.</code></td><td><code>/diets/:id</code>.</td></tr>
+              <tr><td><code>Família não encontrada.</code></td><td><code>/families/:id</code>.</td></tr>
+              <tr><td><code>Clado não encontrado.</code></td><td><code>/clades/:id</code>.</td></tr>
+              <tr><td><code>Classificação não encontrada.</code></td><td><code>/classifications/:id</code>.</td></tr>
+              <tr><td><code>Descoberta não encontrada.</code></td><td><code>/discoveries/:id</code>.</td></tr>
+              <tr><td><code>Museu não encontrado.</code></td><td><code>/museums/:id</code>.</td></tr>
+              <tr><td><code>Rota não encontrada.</code></td><td>Rota ou método não mapeado.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Outros erros</h3>
+        <div class="doc-tabela-wrap">
+          <table class="doc-tabela">
+            <thead><tr><th>Código</th><th>Mensagem</th></tr></thead>
+            <tbody>
+              <tr><td><code>413</code></td><td><code>Payload muito grande.</code></td></tr>
+              <tr><td><code>429</code></td><td><code>Muitas requisições originadas deste IP. Por favor, tente novamente após 15 minutos.</code></td></tr>
+              <tr><td><code>500</code></td><td>Mensagem específica da operação, como <code>Erro ao buscar dinossauros</code>, ou <code>Erro interno do servidor.</code> para falhas não tratadas.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Como tratar</h3>
+        <ol class="doc-lista doc-lista--numerada">
+          <li>Leia <code>success</code> antes de acessar <code>data</code>.</li>
+          <li>Use <code>message</code> para exibir ou registrar o motivo, sem tentar interpretar detalhes internos.</li>
+          <li>Em <code>400</code>, corrija o parâmetro — não repita a mesma requisição.</li>
+          <li>Em <code>404</code> de ID, confirme se o registro existe na listagem correspondente.</li>
+          <li>Em <code>429</code>, aguarde <code>Retry-After</code> e aplique backoff.</li>
+          <li>Em <code>500</code>, registre o <code>X-Request-Id</code> e tente novamente mais tarde.</li>
+        </ol>
+
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">JavaScript · tratamento de erros</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code>async function consumir(url) {
+  const resposta = await fetch(url);
+
+  if (resposta.status === 429) {
+    const segundos = Number(resposta.headers.get("Retry-After")) || 60;
+    throw new Error(`Limite excedido. Tente novamente em ${segundos}s.`);
+  }
+
+  const corpo = await resposta.json();
+
+  if (!resposta.ok || !corpo.success) {
+    const requestId = resposta.headers.get("X-Request-Id");
+    throw new Error(`${corpo.message} (requestId: ${requestId})`);
+  }
+
+  return corpo;
+}</code></pre>
         </div>
       </section>
 
       <section id="exemplos" class="doc-secao">
-        <h2>Exemplos de Código</h2>
-        
-        <h3>JavaScript (Fetch API)</h3>
-        <div class="doc-code-block">
-<span class="tk-funcao">fetch</span>(<span class="tk-string">'/api/dinosaurs?limit=1&countryId=16'</span>)
-  .<span class="tk-funcao">then</span>(response => response.<span class="tk-funcao">json</span>())
-  .<span class="tk-funcao">then</span>(data => {
-    <span class="tk-comentario">// Data contém o array de dinossauros e metadados</span>
-    console.<span class="tk-funcao">log</span>(data.data[0].name);  <span class="tk-comentario">// Ex: "Irritator"</span>
-  })
-  .<span class="tk-funcao">catch</span>(error => console.<span class="tk-funcao">error</span>(<span class="tk-string">'Erro:'</span>, error));
+        <span class="doc-secao__rotulo">15 · Prática</span>
+        <h2>Exemplos de integração</h2>
+        <p>Os exemplos abaixo usam apenas recursos nativos: <code>fetch</code> em JavaScript e <code>curl</code> no terminal. Nenhuma dependência externa é necessária.</p>
+
+        <h3>Cliente reutilizável com Fetch</h3>
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">JavaScript · Fetch</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code>const BASE = "https://dinoapi-swg8.onrender.com/api";
+
+async function api(caminho, parametros = {}) {
+  const url = new URL(BASE + caminho);
+
+  Object.entries(parametros).forEach(([chave, valor]) => {
+    if (valor !== undefined &amp;&amp; valor !== null &amp;&amp; valor !== "") {
+      url.searchParams.set(chave, String(valor));
+    }
+  });
+
+  const resposta = await fetch(url, {
+    headers: { Accept: "application/json" }
+  });
+  const corpo = await resposta.json();
+
+  if (!resposta.ok || !corpo.success) {
+    throw new Error(`${resposta.status}: ${corpo.message}`);
+  }
+
+  return corpo;
+}</code></pre>
         </div>
 
-        <h3>Resposta JSON Esperada</h3>
-        <div class="doc-code-block">
-{
-  <span class="tk-chave">"success"</span>: <span class="tk-funcao">true</span>,
-  <span class="tk-chave">"data"</span>: [
-    {
-      <span class="tk-chave">"id"</span>: <span class="tk-funcao">48</span>,
-      <span class="tk-chave">"name"</span>: <span class="tk-string">"Irritator"</span>,
-      <span class="tk-chave">"scientificName"</span>: <span class="tk-string">"Irritator challengeri"</span>,
-      <span class="tk-chave">"length"</span>: <span class="tk-funcao">8.0</span>,
-      <span class="tk-chave">"countryId"</span>: [<span class="tk-funcao">16</span>],
-      <span class="tk-chave">"imagem"</span>: <span class="tk-string">"https://res.cloudinary.com/.../irritator.png"</span>
-    }
-  ],
-  <span class="tk-chave">"meta"</span>: {
-    <span class="tk-chave">"total"</span>: <span class="tk-funcao">1</span>,
-    <span class="tk-chave">"page"</span>: <span class="tk-funcao">1</span>,
-    <span class="tk-chave">"limit"</span>: <span class="tk-funcao">1</span>
-  }
+        <h3>Consultas comuns</h3>
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">JavaScript · uso do cliente</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code>// 1. Lista paginada e ordenada
+const lista = await api("/dinosaurs", {
+  page: 1,
+  limit: 5,
+  sort: "name",
+  order: "asc"
+});
+console.log(lista.meta.totalPages);
+console.log(lista.data.map((dino) => dino.name));
+
+// 2. Filtros combinados
+const carnivoros = await api("/dinosaurs", {
+  dietId: 1,
+  periodId: 3,
+  lengthMin: 10,
+  sort: "weight",
+  order: "desc"
+});
+
+// 3. Registro por ID
+const tRex = await api("/dinosaurs/1");
+console.log(tRex.data.length, tRex.data.weight);
+
+// 4. Busca por nome
+const rex = await api("/dinosaurs/name/rex");
+
+// 5. Imagens do dinossauro
+const imagens = await api("/dinosaurs/1/images");
+
+// 6. Dinossauros do Brasil (countryId 16)
+const brasil = await api("/countries/16/dinosaurs");
+console.log(brasil.meta.message, brasil.meta.count);
+
+// 7. Sorteio
+const aleatorio = await api("/dinosaurs/random", { limit: 3 });</code></pre>
+        </div>
+
+        <h3>Percorrer todas as páginas</h3>
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">JavaScript · paginação</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code>async function listarTodos() {
+  const nomes = [];
+  let pagina = 1;
+  let totalPaginas = 1;
+
+  do {
+    const resposta = await api("/dinosaurs", { page: pagina, limit: 20 });
+    resposta.data.forEach((dino) => nomes.push(dino.name));
+    totalPaginas = resposta.meta.totalPages;
+    pagina += 1;
+  } while (pagina &lt;= totalPaginas);
+
+  return nomes;
 }
+
+const todos = await listarTodos();
+console.log(todos.length); // 100</code></pre>
+        </div>
+
+        <h3>Requisições com cURL</h3>
+        <div class="doc-code">
+          <div class="doc-code__header">
+            <span class="doc-code__rotulo">cURL</span>
+            <button class="doc-copy" type="button" aria-label="Copiar bloco de código">Copiar</button>
+          </div>
+          <pre><code># Identificação da API
+curl https://dinoapi-swg8.onrender.com/api
+
+# Lista paginada com ordenação
+curl "https://dinoapi-swg8.onrender.com/api/dinosaurs?page=1&amp;limit=5&amp;sort=name&amp;order=asc"
+
+# Filtros combinados
+curl "https://dinoapi-swg8.onrender.com/api/dinosaurs?dietId=1&amp;periodId=3&amp;lengthMin=10&amp;sort=weight&amp;order=desc"
+
+# Registro por ID
+curl https://dinoapi-swg8.onrender.com/api/dinosaurs/1
+
+# Busca por nome
+curl https://dinoapi-swg8.onrender.com/api/dinosaurs/name/rex
+
+# Imagens do dinossauro
+curl https://dinoapi-swg8.onrender.com/api/dinosaurs/1/images
+
+# Dinossauros do Brasil
+curl https://dinoapi-swg8.onrender.com/api/countries/16/dinosaurs
+
+# Sorteio de três dinossauros
+curl "https://dinoapi-swg8.onrender.com/api/dinosaurs/random?limit=3"</code></pre>
+        </div>
+
+        <h3>Checklist de integração</h3>
+        <ul class="doc-lista">
+          <li>Trate <code>success</code> e <code>message</code> antes de acessar <code>data</code>.</li>
+          <li>Use <code>meta.totalPages</code> para controlar a paginação.</li>
+          <li>Reaproveite os IDs de catálogos retornados pela API para montar filtros.</li>
+          <li>Respeite <code>Retry-After</code> em respostas 429.</li>
+          <li>Registre o <code>X-Request-Id</code> em falhas 500.</li>
+          <li>Considere o cache HTTP com <code>ETag</code> e <code>If-None-Match</code> para reduzir chamadas.</li>
+        </ul>
+
+        <div class="doc-nota doc-nota--ok">
+          <strong>Você já pode integrar.</strong> Comece por <code>GET /api/dinosaurs</code>, use <code>meta</code> para navegar e consulte <a href="#schemas">Schemas</a> para interpretar cada campo. Em caso de dúvida sobre parâmetros, volte a <a href="#filtros">Filtros</a>, <a href="#ordenacao">Ordenação</a> e <a href="#paginacao">Paginação</a>.
         </div>
       </section>
 
     </main>
   </div>
 
-  <script src="../js/script.js"></script>
+  <script src="../js/documentacao.js" defer></script>
 </body>
 </html>
