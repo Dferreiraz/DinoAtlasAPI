@@ -1,0 +1,32 @@
+DinoAtlas API
+Copyright (c) 2026 Davi Ferreira
+Original project: DinoAtlas API — https://github.com/Dferreiraz/DinoAtlasAPI
+
+Required Notice: Copyright (c) 2026 Davi Ferreira — Original project: DinoAtlas API — https://github.com/Dferreiraz/DinoAtlasAPI
+
+Third-party materials
+=====================
+
+- Paleontological images are hosted externally and remain under the
+  licenses recorded in server/database/images.json (e.g., Creative Commons
+  Attribution, Attribution-ShareAlike, CC0 and public domain).
+- JavaScript dependencies retain their own licenses, as recorded in
+  package-lock.json.
+- The PolyForm Noncommercial License 1.0.0 does not relicense third-party
+  materials.
+
+Unverified local assets
+=======================
+
+The following files are excluded from the PolyForm Noncommercial 1.0.0
+grant until their origin and license are confirmed:
+
+- public/src/img/dinosaur.svg — contains the comment
+  "Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools".
+- public/src/img/dinoatlasapi_logo.png — contains PNG tEXt "AIGC" metadata
+  (AI-generated content label); authorship is not documented.
+- public/src/img/hero-skull.png — contains an APP1/EXIF profile referencing
+  Picasa; origin is not documented.
+- public/src/img/dino-placeholder.svg — no authorship metadata.
+
+These files were not removed, replaced or modified.

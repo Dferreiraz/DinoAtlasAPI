@@ -4,7 +4,7 @@
 
 <p align="center">
   <strong>Uma API REST para dados paleontológicos</strong><br>
-  <em>Back-End • Open Source • Em evolução</em>
+  <em>Back-End • Source-available • Em evolução</em>
 </p>
 
 <p align="center">
@@ -12,7 +12,7 @@
   <img src="https://img.shields.io/badge/Node.js-18%2B-green" alt="Node.js">
   <img src="https://img.shields.io/badge/Express-4.x-black" alt="Express">
   <img src="https://img.shields.io/badge/Status-Em%20desenvolvimento-orange" alt="Status">
-  <img src="https://img.shields.io/badge/License-MIT-yellow" alt="License">
+  <img src="https://img.shields.io/badge/License-PolyForm%20Noncommercial%201.0.0-yellow" alt="License: PolyForm Noncommercial 1.0.0">
 </p>
 
 <p align="center">
@@ -53,7 +53,7 @@ A DinoAtlas foi criada com os seguintes objetivos:
 * Praticar desenvolvimento Back-End e arquitetura de APIs REST;
 * Trabalhar com filtros, paginação e ordenação de dados;
 * Desenvolver uma estrutura modular e escalável;
-* Criar um projeto Open Source para portfólio;
+* Criar um projeto source-available para portfólio;
 * Servir futuramente como base para outros projetos do ecossistema DinoAtlas;
 * Continuar expandindo a base de dados paleontológica.
 
@@ -101,9 +101,8 @@ A DinoAtlas foi criada com os seguintes objetivos:
 A DinoAtlas API está disponível para consulta online.
 
 > **Versão em produção:** a instância pública abaixo corresponde à versão
-> **publicada** da API. A última release publicada é a **2.4.5**; a versão
-> **2.5.0** está preparada no repositório, mas ainda **não foi publicada** e
-> não está disponível nessa URL.
+> **2.5.0**, disponibilizada sob a **MIT License**. A última release com tag no
+> GitHub é a **2.4.5**; a versão **2.5.0** ainda **não possui tag Git**.
 
 **URL Base:**
 
@@ -165,7 +164,7 @@ O desenvolvimento da DinoAtlas é dividido em versões, permitindo que a API evo
 * Melhorias gerais na API
 * Evolução da documentação
 
-### 🔜 V2.5 — Consolidação (planejada, não publicada)
+### ✅ V2.5 — Consolidação (disponibilizada, sem tag)
 
 * Reorganização interna da arquitetura
 * Validação mais rigorosa de IDs, paginação, filtros, busca e ordenação
@@ -405,6 +404,75 @@ Desenvolvido por **Davi Ferreira**.
 
 ## 📄 Licença
 
-Este projeto está sob a licença **MIT**.
+As versões futuras da DinoAtlas API são distribuídas sob a
+**PolyForm Noncommercial License 1.0.0** — um modelo **source-available não
+comercial**. O projeto **não** é classificado como Open Source segundo a
+definição da OSI.
 
-Veja o arquivo [LICENSE](./LICENSE) para mais informações.
+O texto oficial integral está em [LICENSE](./LICENSE). Os avisos de copyright,
+a linha `Required Notice:` e os avisos de terceiros estão em
+[NOTICE](./NOTICE). A política completa, com o escopo por componente e a
+transição de licença, está em [docs/licensing.md](./docs/licensing.md).
+
+### Resumo
+
+| Atividade | Situação |
+| --- | --- |
+| Estudar o código e usar para aprendizado | Permitido |
+| Modificar, criar forks e versões derivadas | Permitido |
+| Redistribuir gratuitamente, inclusive modificações | Permitido |
+| Usar em organizações não comerciais (ensino, pesquisa pública, governo etc.) | Permitido |
+| Vender cópias, cobrar pelo acesso à API ou revender versões modificadas | Requer autorização comercial |
+| Comercializar a API como serviço ou incorporá-la a produtos comerciais | Requer autorização comercial |
+
+A PolyForm Noncommercial 1.0.0 permite qualquer finalidade **não comercial**.
+Usos comerciais não estão licenciados por esses termos e dependem de
+autorização expressa do titular.
+
+### Transição da licença MIT
+
+As distribuições anteriores, incluindo a versão **2.5.0** — já disponibilizada,
+mas ainda sem tag Git — e o histórico de commits até ela, permanecem
+licenciadas sob a **MIT License**. O commit
+`a9cde675870cff57632ee5af4b0c09081c53f625` (`a9cde67`) representa o estado
+funcional da 2.5.0, com a correção de privacidade do logger, e permanece sob
+MIT. A MIT é irrevogável para cópias já distribuídas sob ela: quem obteve o
+projeto sob MIT continua podendo usar aquela cópia nos termos da MIT.
+
+A PolyForm Noncommercial 1.0.0 aplica-se apenas a partir do commit futuro que
+efetivar a migração, substituindo o arquivo `LICENSE`, e às versões dele
+derivadas. A troca não revoga nem altera retroativamente as permissões já
+concedidas, e o histórico de licenciamento é preservado no Git.
+
+A futura tag Git `2.5.0` apontará para esse commit de migração, já sob PolyForm
+Noncommercial 1.0.0 — e **não** para `a9cde67`. A tag ainda **não existe** e
+não deve ser criada antes da efetivação da migração. Ela identifica o snapshot
+do repositório sob PolyForm; as cópias da 2.5.0 anteriormente disponibilizadas
+sob MIT continuam sujeitas às permissões da MIT.
+
+### Uso comercial
+
+Para uso comercial — incluindo venda, hospedagem paga, prestação de serviços ou
+incorporação a produtos comerciais — é necessário obter uma autorização
+comercial separada e por escrito do titular. Contato:
+[Dferreiraz](https://github.com/Dferreiraz).
+
+### Créditos e projetos derivados
+
+Projetos derivados devem manter a referência ao projeto original, conforme a
+seção *Notices* da licença e a linha `Required Notice:` em
+[NOTICE](./NOTICE):
+
+`Original project: DinoAtlas API — https://github.com/Dferreiraz/DinoAtlasAPI`
+
+### Dados e imagens de terceiros
+
+Fatos e informações paleontológicas não são relicenciados. As imagens
+paleontológicas são hospedadas externamente e permanecem sob as licenças
+Creative Commons ou de domínio público registradas em
+`server/database/images.json`. As dependências JavaScript mantêm suas próprias
+licenças. Os assets locais em `public/src/img/` têm origem/licença não
+confirmadas e estão **excluídos do escopo da PolyForm** até validação — veja
+[NOTICE](./NOTICE) e [docs/licensing.md](./docs/licensing.md).
+
+> Esta documentação é técnica e não substitui aconselhamento jurídico.
