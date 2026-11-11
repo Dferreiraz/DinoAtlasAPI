@@ -3,8 +3,8 @@
 | Campo | Valor |
 |---|---|
 | Projeto | DinoAtlas API (`dinoatlas`) |
-| Versão preparada | **2.5.0** (não publicada) |
-| Última versão publicada | 2.4.5 |
+| Versão homologada | **2.5.0** |
+| Última versão com tag | 2.4.5 |
 | Branch | `develop` |
 | Commit | `4ae65442ce31b3caf646c6deb2b5edefaf07aa5b` |
 | Upstream | `origin/develop` (`4e1efca`). Refs locais verificadas na análise: `release`/`develop` (`4ae6544`) está **31 commits à frente** e **0 atrás**; `origin/develop` é ancestral. Não é consulta ao servidor remoto |
@@ -14,6 +14,18 @@
 
 > Documento de consolidação. Números e resultados refletem as evidências
 > listadas na seção 10.
+>
+> **Atualização posterior:** a versão 2.5.0 foi disponibilizada sob a MIT
+> License e ainda não possui tag Git. Este relatório descreve o estado da
+> homologação em 2026-11-11, anterior à disponibilização.
+>
+> O commit `a9cde675870cff57632ee5af4b0c09081c53f625` (`a9cde67`) representa o
+> estado funcional da 2.5.0, com a correção de privacidade do logger, e
+> permanece sob MIT. A migração para a PolyForm Noncommercial 1.0.0 será
+> efetivada em um commit posterior; a futura tag `2.5.0` apontará para esse
+> commit de migração, já sob PolyForm — e não para `a9cde67`. A tag ainda não
+> existe. Este relatório histórico é preservado como registro do estado
+> homologado, sem alteração retroativa de licenciamento.
 
 **Legenda de evidência**
 
@@ -45,8 +57,9 @@
 
 Observações de versionamento:
 
-- A `2.5.0` está **preparada no repositório e não publicada**; o badge do
-  README em `2.4.5` é intencional.
+- No momento desta homologação, a `2.5.0` estava **preparada no repositório e
+  ainda não havia sido disponibilizada**; o badge do README em `2.4.5` era
+  intencional.
 - Não existe tag no commit `4ae6544`.
 - `server/database/metadata.json` mantém `lastUpdate: 2026-08-30`, anterior a
   esta homologação (pendência de conteúdo, não de infraestrutura).

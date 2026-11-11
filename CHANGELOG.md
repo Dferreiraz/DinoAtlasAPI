@@ -2,7 +2,19 @@
 
 Todas as mudanças relevantes deste projeto são registradas neste arquivo.
 
-## [2.5.0]
+## [2.5.0] — Disponibilizada (sem tag Git)
+
+> **Status:** esta versão foi disponibilizada sob a **MIT License**, mas ainda
+> **não possui tag Git**. A última release com tag no GitHub é a `2.4.5`.
+> As anotações abaixo registram as mudanças técnicas da linha 2.x.
+>
+> **Sobre a futura tag `2.5.0`:** o commit
+> `a9cde675870cff57632ee5af4b0c09081c53f625` (`a9cde67`) representa o estado
+> funcional da 2.5.0, com a correção de privacidade do logger, e permanece sob
+> MIT. A migração para a PolyForm Noncommercial 1.0.0 será efetivada em um
+> commit posterior; a futura tag `2.5.0` apontará para esse commit de migração,
+> já sob PolyForm — e não para `a9cde67`. A tag ainda não existe e não altera o
+> licenciamento das cópias já distribuídas sob MIT.
 
 ### Resumo
 

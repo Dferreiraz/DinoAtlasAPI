@@ -16,7 +16,7 @@ Fornecer uma base de dados centralizada, confiável e de fácil consumo sobre pa
 ## Filosofia do Projeto
 * **Simplicidade:** Fácil de entender e integrar.
 * **Organização:** Rotas semânticas e respostas padronizadas.
-* **Open Source:** Mantida pela comunidade, para a comunidade.
+* **Source-available:** Código público para estudo e uso não comercial, mantido pela comunidade.
 * **Zero Configuração:** Sem necessidade de chaves de API (API Keys) ou autenticação complexa.
 
 ## Tecnologias Utilizadas
