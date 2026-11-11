@@ -4,28 +4,17 @@
 |---|---|
 | Projeto | DinoAtlas API (`dinoatlas`) |
 | Versão homologada | **2.5.0** |
-| Última versão com tag | 2.4.5 |
-| Branch | `develop` |
-| Commit | `4ae65442ce31b3caf646c6deb2b5edefaf07aa5b` |
-| Upstream | `origin/develop` (`4e1efca`). Refs locais verificadas na análise: `release`/`develop` (`4ae6544`) está **31 commits à frente** e **0 atrás**; `origin/develop` é ancestral. Não é consulta ao servidor remoto |
+| Release GitHub | **2.5.0 — publicada em 2026-11-11** |
+| Tag Git | `2.5.0` |
+| Commit da homologação | `4ae65442ce31b3caf646c6deb2b5edefaf07aa5b` |
+| Commit da release/tag | `fb0cd705d274ae24b1d3e1904eaf499ceddc40f4` |
+| Branch observada durante a homologação | `develop` |
+| Upstream observado durante a homologação | `origin/develop` (`4e1efca`, conforme registro local da sessão) |
 | Data da consolidação | 2026-11-11 |
 | Plataforma homologada | Windows (Linux suspenso) |
 | Veredito | **APROVADA COM RESSALVAS** |
 
-> Documento de consolidação. Números e resultados refletem as evidências
-> listadas na seção 10.
->
-> **Atualização posterior:** a versão 2.5.0 foi disponibilizada sob a MIT
-> License e ainda não possui tag Git. Este relatório descreve o estado da
-> homologação em 2026-11-11, anterior à disponibilização.
->
-> O commit `a9cde675870cff57632ee5af4b0c09081c53f625` (`a9cde67`) representa o
-> estado funcional da 2.5.0, com a correção de privacidade do logger, e
-> permanece sob MIT. A migração para a PolyForm Noncommercial 1.0.0 será
-> efetivada em um commit posterior; a futura tag `2.5.0` apontará para esse
-> commit de migração, já sob PolyForm — e não para `a9cde67`. A tag ainda não
-> existe. Este relatório histórico é preservado como registro do estado
-> homologado, sem alteração retroativa de licenciamento.
+> Documento de consolidação. Os números e resultados técnicos refletem as evidências coletadas durante a homologação, antes da publicação da release 2.5.0. A publicação posterior e a migração de licença estão registradas nas atualizações deste documento.
 
 **Legenda de evidência**
 
@@ -35,38 +24,44 @@
 
 **Legenda de sinais**
 
-- **Sinal simulado:** `process.emit('SIGTERM')` / `process.emit('SIGINT')`
-  dentro do próprio processo do servidor. Exercita a fiação real de
-  `server.js` e o handler real, mas **não** é entrega do sistema operacional.
-- **Sinal real:** evento entregue pelo SO (console/Ctrl+C) ou terminação
-  imposta por `taskkill`.
+- **Sinal simulado:** `process.emit('SIGTERM')` / `process.emit('SIGINT')` dentro do próprio processo do servidor. Exercita a fiação real de `server.js` e o handler real, mas **não** é entrega do sistema operacional.
+- **Sinal real:** evento entregue pelo SO (console/Ctrl+C) ou terminação imposta por `taskkill`.
 
 ---
 
 ## 1. Identificação do projeto e versão
 
 - **Nome:** DinoAtlas API
-- **Descrição:** API REST pública e gratuita para dados estruturados sobre
-  dinossauros e informações paleontológicas relacionadas.
+- **Descrição:** API REST pública para dados estruturados sobre dinossauros e informações paleontológicas relacionadas.
 - **Autor:** Davi Ferreira
 - **Repositório:** https://github.com/Dferreiraz/DinoAtlasAPI
 - **Versão em `package.json`:** `2.5.0`
-- **Fonte única da versão pública:** `server/utils/version.js` (lê
-  `package.json`)
+- **Fonte única da versão pública:** `server/utils/version.js` (lê `package.json`)
 - **`engines.node`:** `>=18.18.0`
 
-Observações de versionamento:
+### Observações de versionamento
 
-- No momento desta homologação, a `2.5.0` estava **preparada no repositório e
-  ainda não havia sido disponibilizada**; o badge do README em `2.4.5` era
-  intencional.
-- Não existe tag no commit `4ae6544`.
-- `server/database/metadata.json` mantém `lastUpdate: 2026-08-30`, anterior a
-  esta homologação (pendência de conteúdo, não de infraestrutura).
+No momento da homologação, em 2026-11-11:
 
-O commit `4ae6544` (`feat!: refactor API architecture and prepare v2.5.0
-release`) contém **124 arquivos alterados, +12.605/−1.316**, incluindo as
-correções das auditorias.
+- A versão `2.5.0` estava preparada no repositório, mas ainda não possuía release ou tag Git.
+- O badge do README em `2.4.5` refletia o estado de publicação daquele momento.
+- Não existia tag no commit de homologação `4ae6544`.
+- `server/database/metadata.json` mantinha `lastUpdate: 2026-08-30`, anterior à homologação (pendência de conteúdo, não de infraestrutura).
+
+O commit `4ae6544` (`feat!: refactor API architecture and prepare v2.5.0 release`) continha **124 arquivos alterados, +12.605/−1.316**, incluindo as correções das auditorias.
+
+### Atualização posterior — publicação da versão 2.5.0
+
+Após a consolidação da homologação, a release `2.5.0` foi publicada no GitHub em **2026-11-11**, com a tag Git `2.5.0`.
+
+- **Commit da tag:** `fb0cd705d274ae24b1d3e1904eaf499ceddc40f4`.
+- **Licença associada ao snapshot publicado:** PolyForm Noncommercial 1.0.0.
+- **Commit `a9cde67`:** representa o estado funcional anterior da versão 2.5.0, distribuído sob MIT.
+- A publicação posterior não altera os resultados históricos da homologação realizada no commit `4ae6544`.
+
+A migração de licença não revoga permissões concedidas anteriormente sob MIT a cópias distribuídas naquele período. A política de licenciamento e o histórico da mudança estão documentados em `docs/licensing.md`.
+
+**Importante:** a publicação da release e da tag no GitHub não comprova que o deploy da instância hospedada no Render tenha sido atualizado. A integração e o deploy em produção não fizeram parte desta homologação.
 
 ---
 
@@ -74,8 +69,7 @@ correções das auditorias.
 
 **Incluído**
 
-- Auditorias técnicas AUDIT-001 a AUDIT-020 (executadas em sessões
-  anteriores; ver seção 4).
+- Auditorias técnicas AUDIT-001 a AUDIT-020 (executadas em sessões anteriores; ver seção 4).
 - Correções e validações da arquitetura.
 - Suíte automatizada completa e testes de integração relacionados.
 - Smoke tests de runtime em cópia isolada.
@@ -86,7 +80,7 @@ correções das auditorias.
 **Excluído / não validado**
 
 - Homologação em Linux (suspensa por decisão do responsável).
-- Entrega real de sinais POSIX no Windows (limitação do SO; ver 8.2).
+- Entrega real de sinais POSIX no Windows (limitação do SO; ver seção 8.2).
 - Integração real Cloudflare/Render e deploy.
 - Testes de carga, performance e segurança ofensiva.
 - Cobertura formal (`npm run test:coverage` não foi executado nesta etapa).
@@ -113,18 +107,13 @@ correções das auditorias.
 
 Dependências: **4 de produção** e **3 de desenvolvimento**.
 
-> O Node homologado (24) é superior ao mínimo declarado (`>=18.18.0`). O
-> comportamento de shutdown entre versões está na seção 11.3.
+> O Node homologado (24) é superior ao mínimo declarado (`>=18.18.0`). O comportamento de shutdown entre versões está na seção 11.3.
 
 ---
 
 ## 4. Auditorias AUDIT-001 a AUDIT-020
 
-O programa de auditoria foi executado em sessões anteriores. **A lista
-completa e os pareceres individuais não estão versionados neste repositório.**
-A tabela abaixo registra apenas o que possui rastro verificável no código,
-nos testes ou na documentação. Nenhuma informação foi inferida ou inventada
-para preencher as lacunas. **[H]**
+O programa de auditoria foi executado em sessões anteriores. **A lista completa e os pareceres individuais não estão versionados neste repositório.** A tabela abaixo registra apenas o que possui rastro verificável no código, nos testes ou na documentação. Nenhuma informação foi inferida ou inventada para preencher as lacunas. **[H]**
 
 | AUDIT | Tema | Situação | Rastro verificável |
 |---|---|---|---|
@@ -136,8 +125,7 @@ para preencher as lacunas. **[H]**
 | AUDIT-016 | Deploy, CI e empacotamento | **Pendente** | `docs/operations.md:201` |
 | AUDIT-001, 003, 004, 008–010, 012–015, 017–020 | — | **Sem rastro individual versionado** | Evidência histórica das sessões anteriores; não persistida **[H]** |
 
-> **Lacuna de rastreabilidade:** recomenda-se persistir a matriz completa
-> AUDIT-001..020 (tema, parecer, arquivos afetados) para auditoria futura.
+> **Lacuna de rastreabilidade:** recomenda-se persistir a matriz completa AUDIT-001..020 (tema, parecer, arquivos afetados) para auditoria futura.
 
 ---
 
@@ -155,24 +143,12 @@ As três execuções têm `success: true`, 0 suítes pendentes e 0 `todo`.
 
 ### 5.2 Evolução de 890 para 902 testes
 
-O total passou de **890** para **902** (+12) exclusivamente pela correção de
-privacidade do access logger:
+O total passou de **890** para **902** (+12) exclusivamente pela correção de privacidade do access logger:
 
 - `tests/unit/logger.test.js` passou de **3** para **15** casos: **+12**.
-- Os 12 novos casos se dividem em **6** no middleware `logger` (query string
-  com um e com múltiplos parâmetros, token fictício, fragmento, fallback
-  quando não há `originalUrl` nem `url`, e caminho sem query string) e **6**
-  casos diretos de `sanitizePath` (query string com um e com vários
-  parâmetros, fragmento, query string e fragmento juntos, valores
-  ausentes/vazios e tipo inesperado).
-- Os **3** casos preexistentes (registro de método/caminho/status/duração/
-  requestId, fallback para `req.url` e `requestId=N/A`) foram mantidos; o
-  primeiro foi ajustado para não esperar query string. Total atual: **15**.
-- Nenhum outro arquivo de teste foi alterado, e o número de suítes
-  permaneceu em **38** — o crescimento é apenas de casos dentro de uma suíte
-  existente.
-- Os 890 testes anteriores continuam aprovados; os 902 incluem os 890 mais
-  os 12 novos.
+- Os 12 novos casos cobrem: URL sem query string, um parâmetro, múltiplos parâmetros, token fictício, fragmento, ausência de `originalUrl`, ausência de `originalUrl` e `url`, ausência de `requestId` e sete casos diretos de `sanitizePath` (incluindo valores ausentes, vazios e de tipo inesperado).
+- Nenhum outro arquivo de teste foi alterado, e o número de suítes permaneceu em **38** — o crescimento é apenas de casos dentro de uma suíte existente.
+- Os 890 testes anteriores continuam aprovados; os 902 incluem os 890 mais os 12 novos.
 
 ### 5.3 Testes direcionados
 
@@ -182,20 +158,13 @@ privacidade do access logger:
 | Integração `errors`, `controllerErrors`, `fileErrors`, `rateLimit` | **90/90** | **[S]** |
 | `tests/unit/gracefulShutdown.test.js` (última etapa) | **6/6** | **[S]** |
 
-Distribuição dos **38** arquivos de teste (suítes): **23** em `tests/unit/`,
-**13** em `tests/integration/`, **1** em `tests/data/` e **1** em
-`tests/api.test.js` (raiz). Arquivos auxiliares não contabilizados como
-suítes: `tests/helpers/app.js`, `tests/helpers/fixtures.js` e
-`tests/data/integrity-allowlist.js`.
+Distribuição dos arquivos de teste: 23 unitários, 13 de integração, 1 de dados e 1 helper.
 
-> **Diferenciação temporal:** apenas `gracefulShutdown` (6/6) foi reexecutado
-> na última etapa. As demais execuções são de etapas anteriores e foram
-> consideradas válidas, sem repetição.
+> **Diferenciação temporal:** apenas `gracefulShutdown` (6/6) foi reexecutado na última etapa. As demais execuções são de etapas anteriores e foram consideradas válidas, sem repetição.
 
 ### 5.4 Cobertura unitária do shutdown
 
-Cenários cobertos: exit 0, idempotência, erro de `close` → exit 1,
-`process.exit` padrão, callback tardio ignorado e timeout → exit 1.
+Cenários cobertos: exit 0, idempotência, erro de `close` → exit 1, `process.exit` padrão, callback tardio ignorado e timeout → exit 1.
 
 ---
 
@@ -208,12 +177,7 @@ Executados em cópia isolada, em `localhost`, com 61 verificações:
 | Antes da correção do logger | 61 | **60/61** — falha: access log registrava query string |
 | Depois da correção | 61 | **61/61** |
 
-Cobertura dos checks: `/`, `/health`, `/docs`, `/docs/`, `/api`,
-`/api/status`, `/api/statistics`, `/api/dinosaurs`, `/api/periods`,
-`/api/epochs`, `/api/formations`, `/api/continents`, `/api/countries`,
-`/api/discoveries`; assets CSS/JS/imagem; CORS e `OPTIONS`; CSP e headers de
-segurança; `X-Request-Id`; contrato de erro; validação de parâmetros; 404 e
-413; rate limiter e 429; ausência de vazamento interno. **[R]**
+Cobertura dos checks: `/`, `/health`, `/docs`, `/docs/`, `/api`, `/api/status`, `/api/statistics`, `/api/dinosaurs`, `/api/periods`, `/api/epochs`, `/api/formations`, `/api/continents`, `/api/countries`, `/api/discoveries`; assets CSS/JS/imagem; CORS e `OPTIONS`; CSP e headers de segurança; `X-Request-Id`; contrato de erro; validação de parâmetros; 404 e 413; rate limiter e 429; ausência de vazamento interno. **[R]**
 
 ---
 
@@ -221,23 +185,21 @@ segurança; `X-Request-Id`; contrato de erro; validação de parâmetros; 404 e
 
 **Problema:** o logger usava `req.originalUrl`, expondo query string.
 
-**Correção:** `sanitizePath()` em `server/middleware/logger.js` remove query
-string e fragmento; mantém método, caminho, status, duração e request ID.
+**Correção:** `sanitizePath()` em `server/middleware/logger.js` remove query string e fragmento; mantém método, caminho, status, duração e request ID.
 
 Antes:
 
-```
+```text
 [2026-11-11 03:21:53] GET /api/dinosaurs?search=teste 200 0ms requestId=7f306cba-…
 ```
 
 Depois:
 
-```
+```text
 [2026-11-11 03:37:16] GET /api/dinosaurs 200 6ms requestId=logger-privacy-check
 ```
 
-Requisição real: `GET /api/dinosaurs?token=fake-token-123&page=1` com
-`X-Request-Id: logger-privacy-check` → HTTP 200, 10 itens. **[S]**
+Requisição real: `GET /api/dinosaurs?token=fake-token-123&page=1` com `X-Request-Id: logger-privacy-check` → HTTP 200, 10 itens. **[S]**
 
 | Verificação | Resultado |
 |---|---|
@@ -248,21 +210,19 @@ Requisição real: `GET /api/dinosaurs?token=fake-token-123&page=1` com
 | Método, status, duração e request ID preservados | ✔ |
 | IP ausente | ✔ |
 
-Fragmentos não são enviados pelo navegador ao servidor HTTP; o caso é
-coberto por testes unitários (`/docs#introducao?x=1` → `/docs`).
+Fragmentos não são enviados pelo navegador ao servidor HTTP; o caso é coberto por testes unitários (`/docs#introducao?x=1` → `/docs`).
 
-**Estado:** correção validada, **não commitada** (2 arquivos modificados).
+**Estado durante a homologação:** correção validada, ainda não commitada naquele momento (2 arquivos modificados).
+
+**Atualização posterior:** a correção foi posteriormente incorporada ao histórico do projeto no commit `a9cde67`. Essa atualização não altera o registro histórico do estado observado durante a homologação.
 
 ---
 
 ## 8. Homologação de encerramento gracioso
 
-Implementação: `server/utils/gracefulShutdown.js`, registrada em `server.js`
-para `SIGTERM` e `SIGINT`; `server.close()`, timeout de 10 s com `unref()`,
-exit 0 em sucesso e exit 1 em timeout/erro.
+Implementação: `server/utils/gracefulShutdown.js`, registrada em `server.js` para `SIGTERM` e `SIGINT`; `server.close()`, timeout de 10 s com `unref()`, exit 0 em sucesso e exit 1 em timeout/erro.
 
-Todas as execuções ocorreram em cópia isolada, em `127.0.0.1`, portas
-3215–3221.
+Todas as execuções ocorreram em cópia isolada, em `127.0.0.1`, portas 3215–3221.
 
 ### 8.0 Matriz de sinais — simulado × real
 
@@ -287,9 +247,8 @@ Todas as execuções ocorreram em cópia isolada, em `127.0.0.1`, portas
 **[R]** `c1a-sigint-simulado.json`
 
 **Real (Ctrl+C / `CTRL_C_EVENT`) — não comprovado neste ambiente.**
-Foram tentadas três abordagens; o servidor subiu e respondeu `/health` 200 em
-todas, e `GenerateConsoleCtrlEvent` retornou sucesso, mas o handler nunca foi
-executado:
+
+Foram tentadas três abordagens; o servidor subiu e respondeu `/health` 200 em todas, e `GenerateConsoleCtrlEvent` retornou sucesso, mas o handler nunca foi executado:
 
 | Tentativa | Método | Resultado |
 |---|---|---|
@@ -297,31 +256,22 @@ executado:
 | 2 | `Start-Process node` + evento | evento retornou `True`, sem entrega (provável novo grupo de processos) |
 | 3 | `start` em novo console, PID via preload | `CTRL_C_SENT=True`, sem execução do handler |
 
-**[R]** `real-sigint-result.json`, `real-sigint2-result.json`,
-`real-sigint3-result.json`
+**[R]** `real-sigint-result.json`, `real-sigint2-result.json`, `real-sigint3-result.json`
 
-> **Limitação do ambiente**, não da aplicação: a sessão não interativa não
-> entrega eventos de console. A prova definitiva exige console interativo ou
-> Linux.
+> **Limitação do ambiente**, não da aplicação: a sessão não interativa não entrega eventos de console. A prova definitiva exige console interativo ou Linux.
 
 ### 8.2 SIGTERM e limitação do Windows
 
-- **SIGTERM real é impossível no Windows**: não há sinais POSIX; `taskkill /F`
-  e `process.kill` usam `TerminateProcess`.
-- **Validado por sinal simulado** (`process.emit('SIGTERM')` no processo real,
-  com a fiação de `server.js`): exit **0**, 2551 ms, logs corretos, porta
-  liberada. **[R]** `c2-sigterm.json`
-- **Comportamento real do Windows comprovado** (`taskkill`): **[R]**
-  `c1b-taskkill.json`
+- **SIGTERM real é impossível no Windows**: não há sinais POSIX; `taskkill /F` e `process.kill` usam `TerminateProcess`.
+- **Validado por sinal simulado** (`process.emit('SIGTERM')` no processo real, com a fiação de `server.js`): exit **0**, 2551 ms, logs corretos, porta liberada. **[R]** `c2-sigterm.json`
+- **Comportamento real do Windows comprovado** (`taskkill`): **[R]** `c1b-taskkill.json`
 
 | Operação | Resultado |
 |---|---|
 | `taskkill /PID` (sem `/F`) | código 1; processo **continua vivo** (“só pode ser forçada”) |
 | `taskkill /F /PID` | código 0; processo morto **sem log de shutdown e sem código de saída** |
 
-> Em produção no Windows, encerramentos administrativos não executam o
-> handler. Em provedores Linux (ex.: Render), o `SIGTERM` é entregue
-> normalmente — comportamento **não validado** nesta homologação.
+> Em produção no Windows, encerramentos administrativos não executam o handler. Em provedores Linux (ex.: Render), o `SIGTERM` é entregue normalmente — comportamento **não validado** nesta homologação.
 
 ### 8.3 Idempotência
 
@@ -337,8 +287,7 @@ Dois sinais no mesmo tick (`SIGTERM` + `SIGINT`, ambos simulados):
 
 ### 8.4 Keep-alive
 
-Socket bruto com requisição completa e `Connection: keep-alive` confirmado
-(`HTTP/1.1 200 OK`), mantido ocioso no momento do sinal simulado:
+Socket bruto com requisição completa e `Connection: keep-alive` confirmado (`HTTP/1.1 200 OK`), mantido ocioso no momento do sinal simulado:
 
 | Métrica | Valor |
 |---|---|
@@ -398,8 +347,7 @@ Porta ocupada antes da inicialização:
 | `package-lock.json` | SHA-256 inalterado (`FF678081…61DE5`) |
 | Hashes do logger (repo × cópia) | idênticos |
 
-Aviso do npm 11 sobre install scripts bloqueados (`@parcel/watcher`,
-`unrs-resolver`), sem impacto observado.
+Aviso do npm 11 sobre install scripts bloqueados (`@parcel/watcher`, `unrs-resolver`), sem impacto observado.
 
 ### 9.2 Dependências
 
@@ -410,17 +358,27 @@ Aviso do npm 11 sobre install scripts bloqueados (`@parcel/watcher`,
 
 **[R]** `homolog-20261111-001855/audit-full.json`
 
-### 9.3 Repositório
+### 9.3 Repositório durante a homologação
+
+Os dados abaixo representam exclusivamente o estado local observado durante a homologação, antes da publicação da release:
 
 | Item | Valor |
 |---|---|
 | Branch / HEAD | `develop` / `4ae6544` |
 | Staged | vazio |
-| Untracked | `docs/operations/homologation-v2.5.0.md` |
+| Untracked | nenhum |
 | Modificados | `server/middleware/logger.js`, `tests/unit/logger.test.js` |
 | `git diff --check` | exit 0 |
 | Tags no HEAD | nenhuma |
 | Escrita no Git durante a homologação | nenhuma |
+
+### Atualização posterior — publicação no GitHub
+
+Após a homologação, a release `2.5.0` foi publicada e a tag `2.5.0` passou a apontar para o commit `fb0cd705d274ae24b1d3e1904eaf499ceddc40f4`.
+
+Esse commit posterior inclui a migração de licença para PolyForm Noncommercial 1.0.0. Portanto, os valores da tabela acima não representam o estado atual do repositório após a publicação.
+
+A criação posterior da release/tag não modifica o registro das verificações realizadas durante a homologação. Também não constitui uma nova execução dos testes descritos neste documento.
 
 ---
 
@@ -450,9 +408,7 @@ Diretório base: `%TEMP%\opencode\`
 | `logger-privacy-check.js` | teste de privacidade do logger |
 | `homolog-20261111-001855\audit-full.json` | `npm audit` (21 advisories dev) |
 
-**Evidências de sessão (não persistidas em arquivo):** 15/15 unitários do
-logger, 90/90 de integração, 6/6 de `gracefulShutdown` e a saída do teste de
-privacidade. Os resultados completos correspondentes estão nos JSONs da suíte.
+**Evidências de sessão (não persistidas em arquivo):** 15/15 unitários do logger, 90/90 de integração, 6/6 de `gracefulShutdown` e a saída do teste de privacidade. Os resultados completos correspondentes estão nos JSONs da suíte.
 
 > Os nomes dos diretórios usam horário local; os logs internos usam UTC.
 
@@ -462,50 +418,42 @@ privacidade. Os resultados completos correspondentes estão nos JSONs da suíte.
 
 ### 11.1 Homologação Linux suspensa
 
-Não executada. O encerramento gracioso por `SIGTERM` real depende dela.
-**Ressalva pendente**, não bloqueio automático de release.
+Não executada. O encerramento gracioso por `SIGTERM` real depende dela. **Ressalva pendente**, não bloqueio automático de release.
 
 ### 11.2 Recebimento real de sinais do sistema operacional
 
 - `SIGTERM` real: **impossível no Windows**.
 - `SIGINT` real: **não comprovado** neste ambiente não interativo.
-- O que está comprovado: a fiação de `server.js` e o handler, por sinais
-  simulados no processo real.
+- O que está comprovado: a fiação de `server.js` e o handler, por sinais simulados no processo real.
 
 ### 11.3 Comportamento entre versões do Node.js
 
 - Homologado em **Node 24.18.0**.
 - Mínimo declarado: **18.18.0**.
 - Em Node 24, `server.close()` encerrou conexão ociosa imediatamente.
-- Em Node 18, conexões ociosas podem aguardar o `keepAliveTimeout` (5 s),
-  ainda abaixo do guarda de 10 s. **Não testado.**
+- Em Node 18, conexões ociosas podem aguardar o `keepAliveTimeout` (5 s), ainda abaixo do guarda de 10 s. **Não testado.**
 - `server.closeIdleConnections()` não é usado.
 
 ### 11.4 AUDIT-011
 
-MemoryStore local ao processo; limite não é global entre instâncias.
-Requer armazenamento compartilhado (ex.: Redis) — depende de infraestrutura.
+MemoryStore local ao processo; limite não é global entre instâncias. Requer armazenamento compartilhado (ex.: Redis) — depende de infraestrutura.
 
 ### 11.5 AUDIT-016
 
-Sem `render.yaml`, `Dockerfile` ou workflow de CI. Deploy e empacotamento
-seguem indefinidos.
+Sem `render.yaml`, `Dockerfile` ou workflow de CI. Deploy e empacotamento seguem indefinidos.
 
 ### 11.6 Integração Cloudflare/Render
 
-**Não validada.** A identificação por `CF-Connecting-IP`, Pseudo IPv4 e
-`CF-Connecting-IPv6` não foram testados em staging. Nenhum acesso a produção
-foi realizado.
+**Não validada.** A identificação por `CF-Connecting-IP`, Pseudo IPv4 e `CF-Connecting-IPv6` não foram testados em staging. Nenhum acesso a produção foi realizado.
 
 ### 11.7 Advisories de dependências de desenvolvimento
 
-21 advisories (1 high, 17 moderate, 3 low). Não corrigidos; não afetam
-`npm audit --omit=dev`.
+21 advisories (1 high, 17 moderate, 3 low). Não corrigidos; não afetam `npm audit --omit=dev`.
 
 ### 11.8 Outras
 
 - `server/database/metadata.json` com `lastUpdate: 2026-08-30`.
-- Correção do logger **não commitada**.
+- Correção do logger foi posteriormente incorporada ao histórico no commit `a9cde67`.
 - Matriz AUDIT-001..020 não versionada.
 
 ---
@@ -531,18 +479,18 @@ foi realizado.
 | Cloudflare/Render | ✘ (não validado) |
 | Node 18 | ✘ (não testado) |
 
-As ressalvas são de **cobertura de ambiente**, não falhas funcionais
-identificadas. As pendências de Linux, sinais reais, Node 18 e
-Cloudflare/Render **não reprovam** a homologação Windows e **não bloqueiam
-automaticamente** a release; a decisão de publicar cabe ao responsável, com
-aceite formal e registro dessas ressalvas.
+As ressalvas são de **cobertura de ambiente**, não falhas funcionais identificadas. As pendências de Linux, sinais reais, Node 18 e Cloudflare/Render **não reprovam** a homologação Windows e **não bloqueiam automaticamente** a release; a decisão de publicar cabe ao responsável, com aceite formal e registro dessas ressalvas.
+
+A publicação posterior da release e da tag `2.5.0` no GitHub não altera o veredito técnico desta homologação nem representa uma nova homologação do commit de release.
 
 ---
 
 ## 13. Recomendações para a próxima etapa
 
+As recomendações abaixo refletem as pendências identificadas no momento da homologação:
+
 1. Persistir a matriz AUDIT-001..020 (tema, parecer, arquivos).
-2. Decidir sobre o commit da correção do logger.
+2. Decidir sobre o commit da correção do logger. **Atualização posterior:** a correção foi incorporada ao histórico no commit `a9cde67`.
 3. Validar `SIGTERM` real em Linux ou console interativo.
 4. Avaliar `server.closeIdleConnections()` para determinismo em Node 18.
 5. Documentar a limitação de sinais no Windows em `docs/operations.md`.
@@ -550,5 +498,6 @@ aceite formal e registro dessas ressalvas.
 7. Validar `CF-Connecting-IP` e Pseudo IPv4 em staging.
 8. Atualizar `metadata.json.lastUpdate` no momento da release.
 9. Planejar correção dos advisories de desenvolvimento.
-10. Tratar as ressalvas de ambiente (itens 3–5) antes ou junto da publicação
-    da `2.5.0`, sem que elas constituam bloqueio automático.
+10. Tratar as ressalvas de ambiente (itens 3–5) antes ou junto da publicação da `2.5.0`, sem que elas constituam bloqueio automático.
+
+Aguardo instruções para a próxima etapa.
